@@ -1,0 +1,27 @@
+// Paddings
+$pads-d: 30;
+$paddings-mobile: 8px;
+$paddings-desktop: $pads-d * 1px;
+
+// Viewports
+$min-mobile-width: 320px;
+$average-mobile-width: 400px;
+$tablet-width: 768px;
+$desktop-width-without-pads: 1121px;
+$desktop-width: 1121px + 2 * $paddings-desktop;
+$desktop-swiper-width: 1121px + 2 * $paddings-desktop + 150px;
+$max-mobile-width: $tablet-width - 1px;
+$max-tablet-width: $desktop-width - 1px;
+$side-panel-available: $desktop-width;
+
+// Colors
+$primary-color: #004496;
+$secondary-color: #fcc944;
+$dark-color: #2d303e;
+$dark-color-second: #3f3f3f;
+$white-color: #f3f3f3;
+$grey-color: #a9a9a9;
+
+// Font
+$main-font: "Proxima Nova", "Arial", sans-serif;
+$jost-font: "Jost", "Arial", sans-serif;

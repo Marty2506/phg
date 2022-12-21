@@ -1,0 +1,41 @@
+.scroll-up-button {
+  position: fixed;
+  right: 70px;
+  bottom: 100px;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+
+  background-color: transparent;
+  background-color: $primary-color;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.scroll-up-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 8px;
+  height: 20px;
+
+  background-color: $secondary-color;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+}
+
+.scroll-up-button--active {
+  display: block;
+
+  animation: 0.4s linear showing-animation forwards;
+}
+
+

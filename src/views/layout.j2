@@ -1,0 +1,24 @@
+{% set tabletWidth = "768px"%}
+{% set desktopWidth = "1181px"%}
+
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site_name }}</title>
+  {# <link rel="icon" href="favicon.ico"> #}
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="page__body">
+  {% include "header.j2" %}
+
+  {% block content %}{% endblock %}
+
+  {% include "footer.j2" %}
+
+  {% block modal %}{% endblock %}
+
+  {% block js %}{% endblock %}
+</body>
+</html>

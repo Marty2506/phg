@@ -1,0 +1,7 @@
+<header>
+  <nav>
+    {% for link in menu %}
+      <a{% if link.href == page %} class="{{active_menu_link}}"{% endif %} href="{{ link.href }}.html">{{ link.title }}</a>
+    {% endfor %}
+  </nav>
+</header>

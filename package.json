@@ -1,0 +1,57 @@
+{
+  "name": "phg",
+  "version": "1.0.0",
+  "description": "СБорка для powerhouse gym",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp dev",
+    "lintscss": "stylelint \"src/scss/**/**.scss\" --config .stylelintrc.json --customSyntax postcss-scss --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marty2506/my-gulp.git"
+  },
+  "author": "Marty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marty2506/phg/issues"
+  },
+  "homepage": "https://github.com/Marty2506/phg#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "browser-sync": "^2.27.11",
+    "del": "^7.0.0",
+    "fs": "^0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-csscomb": "^3.1.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-data": "^1.3.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-libsquoosh": "^1.1.2",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-svgstore": "^9.0.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss-bem-linter": "^3.3.0",
+    "postcss-scss": "^4.0.6",
+    "stylelint": "^14.16.0",
+    "stylelint-config-recess-order": "^3.1.0",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-config-standard-scss": "^6.1.0",
+    "stylelint-scss": "^4.3.0",
+    "webpack": "^5.75.0",
+    "webpack-stream": "^7.0.0"
+  }
+}
