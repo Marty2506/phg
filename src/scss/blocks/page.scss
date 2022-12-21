@@ -8,10 +8,11 @@
   min-width: $min-mobile-width;
   height: 100%;
   margin: 0 auto;
+
   font-size: 16px;
   line-height: 19px;
   font-family: $main-font;
-  color: $black-color;
+  color: $font-default;
 }
 
 .menu-opened {

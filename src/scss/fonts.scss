@@ -1,35 +1,51 @@
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "Proxima Nova";
+  font-family: "Circe";
+
   font-display: swap;
-  src: url("../fonts/ProximaNova-Regular.woff") format("woff");
-}
-@font-face {
-  font-style: italic;
-  font-weight: 400;
-  font-family: "Proxima Nova";
-  font-display: swap;
-  src: url("../fonts/ProximaNova-RegularIt.woff") format("woff");
+  src: url("../fonts/Circe-Regular.woff") format("woff");
 }
 @font-face {
   font-style: normal;
   font-weight: 300;
-  font-family: "Proxima Nova";
+  font-family: "Circe";
+
   font-display: swap;
-  src: url("../fonts/ProximaNova-Light.woff") format("woff");
-}
-@font-face {
-  font-style: normal;
-  font-weight: 600;
-  font-family: "Proxima Nova";
-  font-display: swap;
-  src: url("../fonts/ProximaNova-Semibold.woff") format("woff");
+  src: url("../fonts/Circe-Light.woff") format("woff");
 }
 @font-face {
   font-style: normal;
   font-weight: 700;
-  font-family: "Proxima Nova";
+  font-family: "Circe";
+
   font-display: swap;
-  src: url("../fonts/ProximaNova-Bold.woff") format("woff");
+  src: url("../fonts/Circe-Bold.woff") format("woff");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Next Art";
+
+  font-display: swap;
+  src: url("../fonts/NEXTART.woff2") format("woff2");
+  src: url("../fonts/NEXTART.woff") format("woff");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Next Art";
+
+  font-display: swap;
+  src: url("../fonts/NEXTART-SemiBold.woff2") format("woff2");
+  src: url("../fonts/NEXTART-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Next Art";
+
+  font-display: swap;
+  src: url("../fonts/NEXTART-Bold.woff2") format("woff2");
+  src: url("../fonts/NEXTART-Bold.woff") format("woff");
 }

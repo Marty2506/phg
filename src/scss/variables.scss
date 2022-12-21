@@ -15,13 +15,17 @@ $max-tablet-width: $desktop-width - 1px;
 $side-panel-available: $desktop-width;
 
 // Colors
-$primary-color: #004496;
-$secondary-color: #fcc944;
-$dark-color: #2d303e;
-$dark-color-second: #3f3f3f;
-$white-color: #f3f3f3;
-$grey-color: #a9a9a9;
+$primary-color: #292b30;
+$secondary-color: #e62f43;
+$white-color: #ffffff;
+$grey-color: #515151;
+$blue-color: #4092c0;
+$bg-color: #f2f2f2;
+$bg-color2: #f7f7f7;
+$green-color: #4aae66;
+$accent-color: #971010;
+$font-default: $primary-color;
 
 // Font
-$main-font: "Proxima Nova", "Arial", sans-serif;
-$jost-font: "Jost", "Arial", sans-serif;
+$main-font: "Circe", "Arial", sans-serif;
+$header-font: "Next Art", "Arial", sans-serif;

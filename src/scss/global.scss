@@ -15,10 +15,11 @@ picture {
 
 a {
   color: $blue-color;
-  transition: color .3s ease;
+
+  transition: color 0.3s ease;
 
   &:active {
-    opacity: .7;
+    opacity: 0.7;
   }
 }
 
@@ -26,6 +27,7 @@ ul,
 ol {
   margin: 0;
   padding: 0;
+
   list-style-type: none;
 }
 
