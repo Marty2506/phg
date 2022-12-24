@@ -1,18 +1,12 @@
-// Paddings
-$pads-d: 30;
-$paddings-mobile: 8px;
-$paddings-desktop: $pads-d * 1px;
-
-// Viewports
-$min-mobile-width: 320px;
-$average-mobile-width: 400px;
-$tablet-width: 768px;
-$desktop-width-without-pads: 1121px;
-$desktop-width: 1121px + 2 * $paddings-desktop;
-$desktop-swiper-width: 1121px + 2 * $paddings-desktop + 150px;
-$max-mobile-width: $tablet-width - 1px;
-$max-tablet-width: $desktop-width - 1px;
-$side-panel-available: $desktop-width;
+// Viewports and paddings
+$mobile-width: 320px;
+$mobile-paddings: 6px;
+$tablet-width: 748px;
+$tablet-paddings: 10px;
+$laptop-width: 1020px;
+$laptop-paddings: 22px;
+$desktop-width: 1707px; // 1647 + 30*2
+$desktop-paddings: 30px;
 
 // Colors
 $primary-color: #292b30;
@@ -25,6 +19,7 @@ $bg-color2: #f7f7f7;
 $green-color: #4aae66;
 $accent-color: #971010;
 $font-default: $primary-color;
+$page-header-bg: #05090a;
 
 // Font
 $main-font: "Circe", "Arial", sans-serif;

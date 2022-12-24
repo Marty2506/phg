@@ -1,7 +1,72 @@
-<header>
-  <nav>
-    {% for link in menu %}
-      <a{% if link.href == page %} class="{{active_menu_link}}"{% endif %} href="{{ link.href }}.html">{{ link.title }}</a>
-    {% endfor %}
-  </nav>
+<header class="page-header">
+  <div class="page-header__container container">
+    <div class="page-header__row">
+      <div class="page-header__logos">
+        <a class="page-header__logo logo" href="./index.html" >
+          <img class="page-header__logo-image" src="@img/phg-logo-header.svg" alt="Логотип POWRHOUSE GYM" width="168" height="73">
+        </a>
+        <div class="page-header__logo-addr">
+          <span class="page-header__logo-addr-city">Москва, м. Сокол</span>
+          <span class="page-header__logo-addr-street">Ленинградский проспект, 80к37</span>
+        </div>
+        <a class="page-header__logo logo page-header__logo--lesmills" href="./index.html" >
+          <img class="page-header__logo-image" src="@img/lesmils-logo-header.svg" alt="Логотип lesmills" width="119" height="16">
+        </a>
+      </div>
+      <div class="page-header__nav">
+        <ul class="page-header__nav-list">
+          {% for link in headerNav %}
+            <li class="page-header__nav-list-item">
+              {% if link.dropdown %}
+                <a class="page-header__nav-link page-header__nav-link--has-dropdown" href="{{link.href}}.html">{{ link.title }}</a>
+                <div class="page-header__nav-dropdown">
+                  <ul class="page-header__nav-dropdown-list">
+                    {% for dropdownLink in link.dropdown %}
+                      <li class="page-header__nav-dropdown-list-item">
+                        <a class="page-header__nav-dropdown-link" href="{{dropdownLink.href}}.html">{{ dropdownLink.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% else %}
+                <a class="page-header__nav-link" href="{{link.href}}.html">{{ link.title }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+        <div class="page-header__contacts">
+          <div class="page-header__messengers">
+            <a class="page-header__messenger messenger messenger--telegram" href="#!">
+              <svg class="messenger__icon" width="16" height="14" viewBox="0 0 16 14">
+                <use xlink:href="img/sprite.svg#telegram-icon"></use>
+              </svg>
+              <span class="visually-hidden">Контакт телеграма</span>
+            </a>
+            <a class="page-header__messenger messenger messenger--whatsapp" href="#!">
+              <svg class="messenger__icon" width="16" height="17" viewBox="0 0 16 17">
+                <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
+              </svg>
+              <span class="visually-hidden">Контакт вотсапа</span>
+            </a>
+          </div>
+          <a class="page-header__phone" href="tel:+74992131580">
+            <svg class="page-header__phone-icon" width="25" height="26" viewBox="0 0 25 26">
+              <use xlink:href="img/sprite.svg#tel-icon"></use>
+            </svg>
+            <span>+7 (903) 203-86-90</span>
+          </a>
+        </div>
+        <button class="page-header__search-button" type="button">
+          <svg class="page-header__search-button-icon" width="27" height="28" viewBox="0 0 27 28">
+            <use xlink:href="img/sprite.svg#search-icon"></use>
+          </svg>
+          <span class="visually-hidden">Поиск.</span>
+        </button>
+        <button class="page-header__burger burger">
+          <span class="burger__text">Меню</span>
+          <span class="burger__icon"></span>
+        </button>
+      </div>
+    </div>
+  </div>
 </header>

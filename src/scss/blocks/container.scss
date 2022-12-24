@@ -2,15 +2,22 @@
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: $paddings-mobile;
-  padding-left: $paddings-mobile;
+  padding-right: $mobile-paddings;
+  padding-left: $mobile-paddings;
 
-  @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
+  @media (width >= $tablet-width) {
+    // max-width: $tablet-width;
+    padding-right: $tablet-paddings;
+    padding-left: $tablet-paddings;
   }
-  @media (min-width: $desktop-width) {
-    max-width: $max-tablet-width;
-    padding-right: $paddings-desktop;
-    padding-left: $paddings-desktop;
+  @media (width >= $laptop-width) {
+    // max-width: $laptop-width;
+    padding-right: $laptop-paddings;
+    padding-left: $laptop-paddings;
+  }
+  @media (width >= $desktop-width) {
+    max-width: $desktop-width;
+    padding-right: $desktop-paddings;
+    padding-left: $desktop-paddings;
   }
 }

@@ -1,15 +1,40 @@
 {
   "debug": false,
   "site_name": "Powerhouse gym",
-  "active_menu_link": "link--active",
-  "menu": [
+  "headerNav": [
     {
-      "title": "Главная",
-      "href": "index"
+      "title": "Расписание",
+      "href": "timetable"
     },
     {
-      "title": "Контакты",
-      "href": "contacts"
+      "title": "Тренировки",
+      "href": "training",
+      "dropdown" : [
+        {
+          "title": "Бокс",
+          "href": "box"
+        },
+        {
+          "title": "Бокс для детей",
+          "href": "box-for-kids"
+        },
+        {
+          "title": "Бокс для женщин",
+          "href": "box-for-women"
+        },
+        {
+          "title": "Boxing Conditions",
+          "href": "boxing-conditions"
+        },
+        {
+          "title": "Кикбоксинг",
+          "href": "kickboxing"
+        }
+      ]
+    },
+    {
+      "title": "Расписание",
+      "href": "О клубе"
     }
   ]
 }

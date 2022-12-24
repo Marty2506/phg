@@ -6,8 +6,9 @@ import plumber from "gulp-plumber";
 import notify from "gulp-notify";
 import browserSync from 'browser-sync';
 import sass from 'gulp-dart-sass';
-import autoprefixer from 'gulp-autoprefixer';
-import csso from 'gulp-csso';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+import postcss from 'gulp-postcss';
 import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
 import cssSort from 'gulp-csscomb';
@@ -21,6 +22,7 @@ import render from 'gulp-nunjucks-render';
 import htmlmin from 'gulp-htmlmin';
 import { dir } from "console";
 import sourcemaps from "gulp-sourcemaps";
+
 
 /**
  *  Основные директории
@@ -45,7 +47,6 @@ const path = {
     js: `${dirs.src}/js/**/*.js`,
     jsVendor: `${dirs.src}/js/vendor/*.js`,
     scss: `${dirs.src}/scss/style.scss`,
-    //html: `${dirs.src}/*.html`,
     files: `${dirs.src}/files/**/*.*`,
     images: `${dirs.src}/img/**/*.{jpg,png,jpeg,gif}`,
     svg: `${dirs.src}/img/**/*.svg`,
@@ -59,7 +60,6 @@ const path = {
   watch: {
     js: `${dirs.src}/js/**/*.js`,
     scss: `${dirs.src}/scss/**/*.scss`,
-    //html: `${dirs.src}/**/*.html`,
     files: `${dirs.src}/files/**/*.*`,
     images: `${dirs.src}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     sprite: `${dirs.src}/img/sprite/*.svg`,
@@ -89,14 +89,6 @@ export const clean = () => {
   return deleteAsync(path.clean);
 }
 
-// Сборка html файлов
-// const html = () => {
-//   return gulp.src(path.src.html)
-//     .pipe(replace(/@img\//g, 'img/'))
-//     .pipe(gulp.dest(path.build.html))
-//     .pipe(browserSync.stream());
-// }
-
 // Сборка страничек в html
 export const views = () => {
   return gulp.src(path.src.pages)
@@ -125,11 +117,14 @@ export const scssSort = () => {
 
 // Сборка стилей
 const styles = () => {
+  var plugins = [
+      autoprefixer(),
+      cssnano()
+  ];
   return gulp.src(path.src.scss, {sourcemaps: true})
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(csso())
+    .pipe(postcss(plugins))
     .pipe(rename({
       extname: ".min.css"
     }))
