@@ -16,9 +16,9 @@
       <div class="page-header__nav">
         <ul class="page-header__nav-list">
           {% for link in headerNav %}
-            <li class="page-header__nav-list-item">
-              {% if link.dropdown %}
-                <a class="page-header__nav-link page-header__nav-link--has-dropdown" href="{{link.href}}.html">{{ link.title }}</a>
+            {% if link.dropdown %}
+              <li class="page-header__nav-list-item page-header__nav-list-item--has-dropdown">
+                <a class="page-header__nav-link page-header__nav-link--has-dropdown" href="{{link.href}}.html">{{ link.title | safe }}</a>
                 <div class="page-header__nav-dropdown">
                   <ul class="page-header__nav-dropdown-list">
                     {% for dropdownLink in link.dropdown %}
@@ -28,10 +28,12 @@
                     {% endfor %}
                   </ul>
                 </div>
-              {% else %}
-                <a class="page-header__nav-link" href="{{link.href}}.html">{{ link.title }}</a>
-              {% endif %}
-            </li>
+              </li>
+            {% else %}
+              <li class="page-header__nav-list-item">
+                <a class="page-header__nav-link" href="{{link.href}}.html">{{ link.title | safe }}</a>
+              </li>
+            {% endif %}
           {% endfor %}
         </ul>
         <div class="page-header__contacts">
@@ -56,6 +58,12 @@
             <span>+7 (903) 203-86-90</span>
           </a>
         </div>
+        <a class="page-header__timetable-button" href="./timetable.html">
+          <svg class="page-header__timetable-icon" width="25" height="26" viewBox="0 0 25 26">
+            <use xlink:href="img/sprite.svg#timetable-icon"></use>
+          </svg>
+          <span class="visually-hidden">Расписание.</span>
+        </a>
         <button class="page-header__search-button" type="button">
           <svg class="page-header__search-button-icon" width="27" height="28" viewBox="0 0 27 28">
             <use xlink:href="img/sprite.svg#search-icon"></use>
