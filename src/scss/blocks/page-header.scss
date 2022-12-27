@@ -1,8 +1,13 @@
 $page-header-paddigns: 7px;
 .page-header {
+  position: relative;
   padding: $page-header-paddigns 0;
   background-color: $page-header-bg;
   color: $bg-color;
+
+  @media (width < $laptop-width) {
+    max-height: 56px;
+  }
 
   @media (width >= $laptop-width) {
     min-height: 87px;
@@ -20,7 +25,7 @@ $page-header-paddigns: 7px;
   align-items: center;
   gap: 10px;
 
-  @media (width < $laptop-width) {
+  @media (width < $desktop-width) {
     gap: 30px;
   }
 }
@@ -44,7 +49,7 @@ $page-header-paddigns: 7px;
   display: flex;
   flex-direction: column;
 
-  @media (width < $laptop-width + 400px) {
+  @media (width < $desktop-width) {
     display: none;
   }
 }
@@ -180,11 +185,11 @@ $page-header-paddigns: 7px;
   background-color: $white-color;
   border: 1px solid transparent;
 
-  transition: 0.3s ease;
-  transition-property: background-color, opacity;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: $secondary-color;
+    color: $white-color;
   }
   &:focus-visible {
     border: 1px solid $secondary-color;
@@ -218,7 +223,6 @@ $page-header-paddigns: 7px;
 .page-header__messengers {
   display: flex;
   flex-wrap: wrap;
-  gap: 3px;
   max-width: fit-content;
 
   @media (width < $desktop-width) {

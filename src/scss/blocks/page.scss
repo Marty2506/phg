@@ -3,6 +3,7 @@
 }
 
 .page__body {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-width: $mobile-width;
@@ -15,18 +16,22 @@
   color: $font-default;
 }
 
-// .menu-opened {
-//   @media (max-width: $max-tablet-width) {
-//     & .page-main {
-//       display: none;
-//     }
+.menu-opened {
+  @media (width < $laptop-width) {
+    & .page-main {
+      display: none;
+    }
 
-//     & .page-footer {
-//       display: none;
-//     }
-//   }
-// }
+    & .page-footer {
+      display: none;
+    }
+  }
+}
+.page__body-wrapper {
+  overflow-x: hidden;
+  height: 100%;
+}
 
-// .modal-opened {
-//   overflow: hidden;
-// }
+.modal-opened {
+  overflow: hidden;
+}

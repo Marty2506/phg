@@ -3,14 +3,18 @@
     <div class="page-header__row">
       <div class="page-header__logos">
         <a class="page-header__logo logo" href="./index.html" >
-          <img class="page-header__logo-image" src="@img/phg-logo-header.svg" alt="Логотип POWRHOUSE GYM" width="168" height="73">
+          <picture>
+            <source media="(min-width: {{desktopWidth}}" srcset="@img/phg-logo-header.svg">
+            <source media="(min-width: {{laptopWidth}})" srcset="@img/phg-logo-header-laptop.svg">
+            <img class="logo__image" src="@img/phg-logo-header-mobile.svg" alt="Логотип POWRHOUSE GYM">
+          </picture>
         </a>
         <div class="page-header__logo-addr">
           <span class="page-header__logo-addr-city">Москва, м. Сокол</span>
           <span class="page-header__logo-addr-street">Ленинградский проспект, 80к37</span>
         </div>
         <a class="page-header__logo logo page-header__logo--lesmills" href="./index.html" >
-          <img class="page-header__logo-image" src="@img/lesmils-logo-header.svg" alt="Логотип lesmills" width="119" height="16">
+          <img class="logo__image" src="@img/lesmils-logo-header.svg" alt="Логотип lesmills" width="119" height="16">
         </a>
       </div>
       <div class="page-header__nav">
@@ -74,6 +78,95 @@
           <span class="burger__text">Меню</span>
           <span class="burger__icon"></span>
         </button>
+      </div>
+    </div>
+  </div>
+  <div class="menu">
+    <div class="menu__main">
+      <ul class="menu__list">
+        {% for link in menu %}
+          {% if link.sub %}
+            <li class="menu__list-item">
+              <a class="menu__link menu__link--has-sub" href="{{ link.href }}.html">{{ link.title | safe }}</a>
+              <div class="menu__sub">
+                <button class="menu__back-button" type="button">Назад</button>
+                <ul class="menu__list">
+                  {% for subLink in link.sub %}
+                    <li class="menu__list-item">
+                      <a class="menu__link" href="{{ subLink.href }}.html">{{ subLink.title | safe }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </li>
+          {% else %}
+            <li class="menu__list-item">
+               <a class="menu__link" href="{{ link.href }}.html">{{ link.title | safe }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="menu__footer">
+      <div class="menu__contacts">
+        <span class="menu__contacts-header">Телефон</span>
+        <div class="menu__phone-wrapper">
+          <a class="menu__phone" href="tel:+74992131580">
+            <span>+7 495 150-85-71</span>
+          </a>
+          <div class="menu__messengers">
+            <a class="menu__messenger messenger messenger--telegram messenger--red" href="#!">
+              <svg class="messenger__icon" width="16" height="14" viewBox="0 0 16 14">
+                <use xlink:href="img/sprite.svg#telegram-icon"></use>
+              </svg>
+              <span class="visually-hidden">Контакт телеграма.</span>
+            </a>
+            <a class="menu__messenger messenger messenger--whatsapp messenger--red" href="#!">
+              <svg class="messenger__icon" width="16" height="17" viewBox="0 0 16 17">
+                <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
+              </svg>
+              <span class="visually-hidden">Контакт вотсапа.</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button class="button button--mobile-reverse menu__backcall-button">
+        <span>Обратный звонок</span>
+        <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
+          <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
+        </svg>
+      </button>
+      <div class="menu__address">
+        <div class="menu__address-wrapper menu__address-wrapper--address">
+          <span class="menu__address-title">Адрес</span>
+          <p class="menu__address-text">Ленинградский проспект, 80к37</p>
+        </div>
+        <div class="menu__address-wrapper">
+          <span class="menu__address-title">Время работы</span>
+          <p class="menu__address-text">
+            Будни: 6:30–24:00<br>Выходные: 9:00–22:00
+          </p>
+        </div>
+      </div>
+      <div class="menu__social">
+        <a class="menu__messenger messenger messenger--vk messenger--red" href="#!">
+          <svg class="messenger__icon" width="23" height="14" viewBox="0 0 23 14">
+            <use xlink:href="img/sprite.svg#vk-icon"></use>
+          </svg>
+          <span class="visually-hidden">Мы в вк.</span>
+        </a>
+        <a class="menu__messenger messenger messenger--youtube messenger--red" href="#!">
+          <svg class="messenger__icon" width="23" height="27" viewBox="0 0 23 27" >
+            <use xlink:href="img/sprite.svg#youtube-icon"></use>
+          </svg>
+          <span class="visually-hidden">Мы в youtube.</span>
+        </a>
+        <a class="menu__messenger messenger messenger--insta messenger--red" href="#!">
+          <svg class="messenger__icon" width="26" height="27" viewBox="0 0 26 27">
+            <use xlink:href="img/sprite.svg#inst-icon"></use>
+          </svg>
+          <span class="visually-hidden">Мы в instagram.</span>
+        </a>
       </div>
     </div>
   </div>

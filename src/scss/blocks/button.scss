@@ -1,0 +1,54 @@
+.button {
+  display: flex;
+  align-self: stretch;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
+  height: 57px;
+  background-color: $white-color;
+  cursor: pointer;
+  border: 1px solid $secondary-color;
+  font-family: $header-font;
+  font-size: 14px;
+  line-height: 16px;
+  transition: all 0.3s ease;
+
+  & .button__icon {
+    fill: $secondary-color;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    background-color: $secondary-color;
+    color: $white-color;
+    & .button__icon {
+      fill: $white-color;
+    }
+  }
+  &:focus-visible {
+    outline: none;
+    border-color: $primary-color;
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}
+.button--mobile-reverse {
+  @media (width < $laptop-width) {
+    background-color: $secondary-color;
+    color: $white-color;
+    & .button__icon {
+      fill: $white-color;
+    }
+    &:hover {
+      background-color: $white-color;
+      color: $primary-color;
+      & .button__icon {
+        fill: $secondary-color;
+      }
+    }
+  }
+}
+

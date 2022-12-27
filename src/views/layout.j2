@@ -1,5 +1,6 @@
-{% set tabletWidth = "768px"%}
-{% set desktopWidth = "1181px"%}
+{% set tabletWidth = "748px"%}
+{% set laptopWidth = "1020px"%}
+{% set desktopWidth = "1707px"%}
 
 <!DOCTYPE html>
 <html class="page" lang="ru">
@@ -11,14 +12,17 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body">
-  {% include "header.j2" %}
+  <div class="page__body-wrapper">
+    {% include "header.j2" %}
 
-  {% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 
-  {% include "footer.j2" %}
+    {% include "footer.j2" %}
 
-  {% block modal %}{% endblock %}
+    {% block modal %}{% endblock %}
+  </div>
 
+  <script src="./js/global.min.js"></script>
   <script src="./js/burger.min.js"></script>
   {% block js %}{% endblock %}
 </body>

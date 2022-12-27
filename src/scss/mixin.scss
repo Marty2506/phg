@@ -1,0 +1,10 @@
+@mixin make-negative-paddings {
+  @media (width < $tablet-width) {
+    margin-left: -$mobile-paddings;
+    margin-right: -$mobile-paddings;
+  }
+  @media (width < $laptop-width) {
+    margin-left: -$tablet-paddings;
+    margin-right: -$tablet-paddings;
+  }
+}
