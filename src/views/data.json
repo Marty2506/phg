@@ -116,5 +116,97 @@
       "title": "Подбор тренировок",
       "href": "training-for-you"
     }
+  ],
+  "footerNav": [
+    [
+      {
+        "title": "Тренажёрный зал",
+        "href": "gym"
+      },
+      {
+        "title": "Групповые программы",
+        "href": "lesmills"
+      },
+      {
+        "title": "Кроссфит",
+        "href": "crossfit"
+      },
+      {
+        "title": "Зал единоборств",
+        "href": "martial-arts"
+      },
+      {
+        "title": "Сайкл",
+        "href": "cycle"
+      },
+      {
+        "title": "Фитнес-тестирование",
+        "href": "fitness-test"
+      },
+      {
+        "title": "Расписание",
+        "href": "timetable"
+      }
+    ],
+    [
+      {
+        "title": "Тренеры",
+        "href": "trainers"
+      },
+      {
+        "title": "Клубные карты",
+        "href": "club-cards"
+      },
+      {
+        "title": "Галерея",
+        "href": "gallery"
+      },
+      {
+        "title": "Блог",
+        "href": "blog"
+      },
+      {
+        "title": "Акции",
+        "href": "promo"
+      },
+      {
+        "title": "Мобильное приложение",
+        "href": "mobile-app"
+      },
+      {
+        "title": "Подбор тренировок",
+        "href": "training-for-you"
+      }
+    ],
+    [
+      {
+        "title": "О&nbsp;клубе",
+        "href": "about"
+      },
+      {
+        "title": "Новости",
+        "href": "news"
+      },
+      {
+        "title": "Отзывы",
+        "href": "reviews"
+      },
+      {
+        "title": "Вакансии",
+        "href": "jobs"
+      },
+      {
+        "title": "Удобства",
+        "href": "facilities"
+      },
+      {
+        "title": "FAQ",
+        "href": "faq"
+      },
+      {
+        "title": "Контакты",
+        "href": "contacts"
+      }
+    ]
   ]
 }
