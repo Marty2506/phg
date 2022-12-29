@@ -1,5 +1,6 @@
 $page-header-paddigns: 7px;
 .page-header {
+  display: flex;
   position: relative;
   padding: $page-header-paddigns 0;
   background-color: $page-header-bg;
@@ -14,7 +15,7 @@ $page-header-paddigns: 7px;
   }
 }
 .page-header__container {
-  height: 100%;
+  flex-grow: 1;
 }
 .page-header__row {
   display: flex;
@@ -224,6 +225,7 @@ $page-header-paddigns: 7px;
   display: flex;
   flex-wrap: wrap;
   max-width: fit-content;
+  gap: 3px;
 
   @media (width < $desktop-width) {
     order: 1;

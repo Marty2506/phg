@@ -23,7 +23,7 @@
             {% if link.dropdown %}
               <li class="page-header__nav-list-item page-header__nav-list-item--has-dropdown">
                 <a class="page-header__nav-link page-header__nav-link--has-dropdown" href="{{link.href}}.html">{{ link.title | safe }}</a>
-                <div class="page-header__nav-dropdown">
+                {# <div class="page-header__nav-dropdown">
                   <ul class="page-header__nav-dropdown-list">
                     {% for dropdownLink in link.dropdown %}
                       <li class="page-header__nav-dropdown-list-item">
@@ -31,7 +31,7 @@
                       </li>
                     {% endfor %}
                   </ul>
-                </div>
+                </div> #}
               </li>
             {% else %}
               <li class="page-header__nav-list-item">
