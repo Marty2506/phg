@@ -285,6 +285,7 @@ $page-header-paddigns: 7px;
   margin: -$page-header-paddigns 0;
   transition: 0.3s ease;
   transition-property: background-color, opacity;
+  overflow: hidden;
 
   &:hover {
     background-color: $secondary-color;

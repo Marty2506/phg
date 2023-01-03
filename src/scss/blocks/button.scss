@@ -9,12 +9,14 @@
   height: 57px;
   color: $primary-color;
   background-color: $white-color;
+  text-decoration: none;
   cursor: pointer;
   border: 1px solid $secondary-color;
   font-family: $header-font;
   font-size: 14px;
   line-height: 16px;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
+  transition-property: color, background-color, opacity;
 
   & .button__icon {
     fill: $secondary-color;
