@@ -47,14 +47,20 @@
 }
 .messenger--red {
   background-color: $secondary-color;
+
   & .messenger__icon {
     fill: $white-color;
   }
   &:hover {
-    opacity: 0.7;
+    background-color: $white-color;
+    // outline: $secondary-color solid 2px;
+    // border-radius: inherit;
+    & .messenger__icon {
+      fill: $secondary-color;
+    }
   }
   &:focus-visible {
-    outline: 2px solid $primary-color;
+    outline: -webkit-focus-ring-color auto 1px;
   }
   &:active {
     opacity: 0.5;

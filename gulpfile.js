@@ -188,7 +188,11 @@ const images = () => {
       })
     ))
     .pipe(newer(path.build.images))
-    .pipe(squoosh())
+    .pipe(squoosh({
+      oxipng: {
+        quality: 95
+      }
+    }))
     .pipe(gulp.dest(path.build.images))
     .pipe(browserSync.stream());
 }

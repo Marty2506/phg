@@ -125,7 +125,13 @@
       },
       {
         "title": "Групповые программы",
-        "href": "lesmills"
+        "href": "lesmills",
+        "icon": {
+          "name": "lesmills-href-logo.png",
+          "w": "90",
+          "h": "12",
+          "alt": ""
+        }
       },
       {
         "title": "Кроссфит",
@@ -141,7 +147,13 @@
       },
       {
         "title": "Фитнес-тестирование",
-        "href": "fitness-test"
+        "href": "fitness-test",
+        "icon": {
+          "name": "fitquest-href-logo.png",
+          "w": "72",
+          "h": "23",
+          "alt": ""
+        }
       },
       {
         "title": "Расписание",

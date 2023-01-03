@@ -3,16 +3,23 @@
   position: absolute;
   z-index: 999;
   top: 100%;
+  max-height: calc(100vh - 100%);
   right: 0;
   background-color: $white-color;
   transition-property: transform;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
   transition-duration: 0.5s;
   transform: translateX(100%);
+  overflow-y: scroll;
+  scrollbar-width: none;
 
   width: 100%;
   @media (width >= $laptop-width) {
     width: 457px;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 .menu--opened {

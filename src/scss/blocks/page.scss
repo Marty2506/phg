@@ -28,8 +28,10 @@
   }
 }
 .page__body-wrapper {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
   overflow-x: hidden;
-  height: 100%;
 }
 
 .modal-opened {

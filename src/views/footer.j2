@@ -11,13 +11,60 @@
             <span class="page-footer__logo-addr-street">Ленинградский проспект, 80к37</span>
           </div>
         </div>
+        <div class="page-footer__contacts">
+          <div class="page-footer__phone-wrapper">
+            <div class="page-footer__messengers">
+              <a class="page-footer__messenger messenger messenger--telegram" href="#!">
+                <svg class="messenger__icon" width="16" height="14" viewBox="0 0 16 14">
+                  <use xlink:href="img/sprite.svg#telegram-icon"></use>
+                </svg>
+                <span class="visually-hidden">Контакт телеграма</span>
+              </a>
+              <a class="page-footer__messenger messenger messenger--whatsapp" href="#!">
+                <svg class="messenger__icon" width="16" height="17" viewBox="0 0 16 17">
+                  <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
+                </svg>
+                <span class="visually-hidden">Контакт вотсапа</span>
+              </a>
+            </div>
+            <a class="page-footer__phone" href="tel:+79032038690">+7 (903) 203-86-90</a>
+          </div>
+          <button class="button button--reverse page-footer__backcall-button">Обратный звонок</button>
+          <div class="page-footer__social">
+            <span class="page-footer__social-title">Социальные сети</span>
+            <div class="page-footer__social-wrapper">
+              <a class="messenger messenger--vk messenger--red" href="#!">
+                <svg class="messenger__icon" width="23" height="14" viewBox="0 0 23 14">
+                  <use xlink:href="img/sprite.svg#vk-icon"></use>
+                </svg>
+                <span class="visually-hidden">Мы в вк.</span>
+              </a>
+              <a class="messenger messenger--youtube messenger--red" href="#!">
+                <svg class="messenger__icon" width="23" height="27" viewBox="0 0 23 27" >
+                  <use xlink:href="img/sprite.svg#youtube-icon"></use>
+                </svg>
+                <span class="visually-hidden">Мы в youtube.</span>
+              </a>
+              <a class="messenger messenger--insta messenger--red" href="#!">
+                <svg class="messenger__icon" width="26" height="27" viewBox="0 0 26 27">
+                  <use xlink:href="img/sprite.svg#inst-icon"></use>
+                </svg>
+                <span class="visually-hidden">Мы в instagram.</span>
+              </a>
+            </div>
+          </div>
+        </div>
         <nav class="page-footer__nav">
           {% for group in footerNav %}
             <div class="page-footer__nav-group">
               <ul class="page-footer__nav-list">
                 {% for link in group %}
                   <li class="page-footer__nav-item">
-                    <a class="page-footer__link" href="{{ link.href }}">{{ link.title | safe}}</a>
+                    <a class="page-footer__link" href="{{ link.href }}">{{ link.title | safe}}
+                        {% if link.icon %}
+                          <img class="page-footer__link-icon" src="@img/{{link.icon.name | safe}}" alt="{{link.icon.alt | safe}}" width="{{link.icon.w | safe}}" height="{{link.icon.h | safe}}">
+                        {% endif %}
+                    </a>
                   </li>
                 {% endfor %}
               </ul>
@@ -46,68 +93,39 @@
           </ul>
         </div>
       </div>
-      <div class="page-footer__contacts">
-        <div class="page-footer__phone-wrapper">
-          <div class="page-footer__messengers">
-            <a class="page-footer__messenger messenger messenger--telegram" href="#!">
-              <svg class="messenger__icon" width="16" height="14" viewBox="0 0 16 14">
-                <use xlink:href="img/sprite.svg#telegram-icon"></use>
-              </svg>
-              <span class="visually-hidden">Контакт телеграма</span>
-            </a>
-            <a class="page-footer__messenger messenger messenger--whatsapp" href="#!">
-              <svg class="messenger__icon" width="16" height="17" viewBox="0 0 16 17">
-                <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
-              </svg>
-              <span class="visually-hidden">Контакт вотсапа</span>
-            </a>
-          </div>
-          <a class="page-footer__phone" href="tel:+79032038690">
-            <svg class="page-header__phone-icon" width="25" height="26" viewBox="0 0 25 26">
-              <use xlink:href="img/sprite.svg#tel-icon"></use>
-            </svg>
-            <span>+7 (903) 203-86-90</span>
-          </a>
-        </div>
-        <button class="button button--reverse page-footer__backcall-button">Обратный звонок</button>
-        <div class="page-footer__social">
-          <span class="page-footer__social-title">Социальные сети</span>
-          <a class="menu__messenger messenger messenger--vk messenger--red" href="#!">
-            <svg class="messenger__icon" width="23" height="14" viewBox="0 0 23 14">
-              <use xlink:href="img/sprite.svg#vk-icon"></use>
-            </svg>
-            <span class="visually-hidden">Мы в вк.</span>
-          </a>
-          <a class="menu__messenger messenger messenger--youtube messenger--red" href="#!">
-            <svg class="messenger__icon" width="23" height="27" viewBox="0 0 23 27" >
-              <use xlink:href="img/sprite.svg#youtube-icon"></use>
-            </svg>
-            <span class="visually-hidden">Мы в youtube.</span>
-          </a>
-          <a class="menu__messenger messenger messenger--insta messenger--red" href="#!">
-            <svg class="messenger__icon" width="26" height="27" viewBox="0 0 26 27">
-              <use xlink:href="img/sprite.svg#inst-icon"></use>
-            </svg>
-            <span class="visually-hidden">Мы в instagram.</span>
-          </a>
-        </div>
-      </div>
     </div>
     <div class="page-footer__other">
       <ul class="page-footer__other-list">
         <li class="page-footer__other-list-item">
-          <a class="page-footer__other-link" href="#!">Политика конфиденциальности</a>
+          <a class="page-footer__other-link" href="#!">
+            <span>Политика конфиденциальности</span>
+            <svg class="page-footer__other-link-icon" width="7" height="9" viewBox="0 0 7 9">
+              <use xlink:href="img/sprite.svg#right-arrow"></use>
+            </svg>
+          </a>
         </li>
         <li class="page-footer__other-list-item">
-          <a class="page-footer__other-link" href="#!">Правила клуба</a>
+          <a class="page-footer__other-link" href="#!">
+            <span>Правила клуба</span>
+            <svg class="page-footer__other-link-icon" width="7" height="9" viewBox="0 0 7 9">
+              <use xlink:href="img/sprite.svg#right-arrow"></use>
+            </svg>
+          </a>
         </li>
         <li class="page-footer__other-list-item">
-          <a class="page-footer__other-link" href="#!">Договор</a>
+          <a class="page-footer__other-link" href="#!">
+            <span>Договор</span>
+            <svg class="page-footer__other-link-icon" width="7" height="9" viewBox="0 0 7 9">
+              <use xlink:href="img/sprite.svg#right-arrow"></use>
+            </svg>
+          </a>
         </li>
       </ul>
       <div class="page-footer__dev">
         <span class="page-footer__dev-title">Разработка сайта — </span>
-        <a class="page-footer__dev-link" href="#!">Бондарь Роман</a>
+        <a class="page-footer__dev-link" href="https://romanbondar.ru/">
+          <img src="@img/bondar-logo.svg" alt="Бондарь Роман." width="132" height="20">
+        </a>
       </div>
     </div>
   </div>
