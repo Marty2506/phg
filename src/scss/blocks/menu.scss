@@ -1,9 +1,9 @@
 .menu {
   display: block;
-  position: absolute;
+  position: fixed;
   z-index: 999;
-  top: 100%;
-  max-height: calc(100vh - 100%);
+  top: 52px;
+  bottom: 0;
   right: 0;
   background-color: $white-color;
   transition-property: transform;
@@ -15,6 +15,7 @@
 
   width: 100%;
   @media (width >= $laptop-width) {
+    top: 87px;
     width: 457px;
   }
 

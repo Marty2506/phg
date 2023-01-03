@@ -1,14 +1,14 @@
 $page-header-paddigns: 7px;
 .page-header {
   display: flex;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
   padding: $page-header-paddigns 0;
   background-color: $page-header-bg;
   color: $bg-color;
-
-  @media (width < $laptop-width) {
-    max-height: 56px;
-  }
 
   @media (width >= $laptop-width) {
     min-height: 87px;
