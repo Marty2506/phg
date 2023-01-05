@@ -4,6 +4,7 @@
 
 .page__body {
   position: relative;
+
   display: flex;
   flex-direction: column;
   min-width: $mobile-width;
@@ -31,8 +32,8 @@
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  overflow-x: clip;
   padding-top: 52px;
+  overflow-x: clip;
 
   @media (width >= $laptop-width) {
     padding-top: 87px;

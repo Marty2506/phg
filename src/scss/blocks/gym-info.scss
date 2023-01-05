@@ -1,8 +1,5 @@
-.gym-info {
 
-}
-.gym-info__container {
-}
+
 .gym-info__tabs {
   display: flex;
   flex-direction: column;
@@ -26,9 +23,8 @@
 }
 .gym-info__nav {
   display: flex;
-  overflow-x: auto;
   overflow: -moz-scrollbars-none; // Firefox
-
+  overflow-x: auto;
 
   @include make-negative-paddings;
 
@@ -38,6 +34,7 @@
 
   @media (width >= $laptop-width) {
     display: grid;
+
     grid-template-columns: repeat(7, 1fr);
   }
 }
@@ -47,20 +44,23 @@
 .gym-info__nav-link {
   display: flex;
   flex-direction: column;
-  gap: 7px;
   justify-content: center;
   align-items: center;
+  width: 135px;
   height: 80px;
-  font-family: $header-font;
+  padding: 10px 10px;
+
   font-size: 14px;
   line-height: 18px;
-  padding: 10px 10px;
-  text-decoration: none;
-  color: $gym-info-white-color;
+  font-family: $header-font;
   text-align: center;
-  width: 135px;
-  border-right: 1px  solid rgba(242, 242, 242, 0.26);
+  color: $gym-info-white-color;
+  text-decoration: none;
   word-spacing: 100vw; // делает перенос строки после каждого слова
+
+  border-right: 1px  solid rgba(242, 242, 242, 0.26);
+
+  gap: 7px;
 
   & .gym-info__nav-link-icon {
     fill: $gym-info-white-color;
@@ -71,12 +71,9 @@
 
   &:hover {
     background-color: $secondary-color;
-
     border-right-color: transparent;
   }
-  &:focus-visible {
 
-  }
   &:active {
     opacity: 0.7;
   }
@@ -88,14 +85,16 @@
   }
 
   @media (width >= $desktop-width) {
+    padding: 20px 50px;
+
     font-size: 20px;
     line-height: 26px;
-    padding: 20px 50px;
   }
 }
-.gym-info__nav-link.active  {
-  background-color: $bg-color;
+.gym-info__nav-link.active {
   color: $font-default;
+
+  background-color: $bg-color;
 
   & .gym-info__nav-link-icon {
     fill: $font-default;
@@ -105,9 +104,10 @@
   border-right-color: transparent;
 }
 .gym-info__tabs-content {
-  background-color: $bg-color;
   padding-top: 22px;
   padding-bottom: 50px;
+
+  background-color: $bg-color;
   @media (width >= $laptop-width) {
     padding-top: 60px;
   }
@@ -116,23 +116,23 @@
     padding-top: 0;
   }
 }
-.gym-info__panel {
-}
+
 .gym-info__panel-wrapper {
   display: grid;
 
   @media (width >= $tablet-width) {
-    grid-template-columns: 32% calc(68% - 10px);
     gap: 10px;
+    grid-template-columns: 32% calc(68% - 10px);
   }
   @media (width >= $laptop-width) {
-    grid-template-columns: 32% calc(68% - 50px);
     gap: 50px;
+    grid-template-columns: 32% calc(68% - 50px);
   }
 
   @media (width < $tablet-width) {
     display: flex;
     flex-direction: column;
+
     gap: 15px;
   }
 }
@@ -149,10 +149,11 @@
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
-  font-family: $header-font;
+
   font-weight: 600;
   font-size: 25px;
   line-height: 32px;
+  font-family: $header-font;
 
   @media (width >= $laptop-width) {
     font-size: 35px;
@@ -168,8 +169,8 @@
   }
 }
 .gym-info__panel-list {
-  margin-bottom: 32px;
   max-width: 320px;
+  margin-bottom: 32px;
 
   @media (width >= $desktop-width) {
     margin-bottom: 45px;
@@ -178,8 +179,9 @@
 .gym-info__panel-buttons {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   max-width: 220px;
+
+  gap: 10px;
 
   @media (width >= $laptop-width) {
     max-width: 273px;
@@ -187,6 +189,4 @@
   @media (width >= $desktop-width) {
     max-width: 302px;
   }
-}
-.gym-info__panel-gallery {
 }

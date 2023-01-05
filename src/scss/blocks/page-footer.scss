@@ -1,8 +1,9 @@
 .page-footer {
-  padding-top: 25px;
-  background-color: #05090a;
-  overflow: hidden;
   flex-shrink: 0;
+  padding-top: 25px;
+  overflow: hidden;
+
+  background-color: #05090a;
 
   @media (width >= $laptop-width) {
     padding-top: 32px;
@@ -11,10 +12,10 @@
     padding-top: 38px;
   }
 }
-.page-footer__container {
-}
+
 .page-footer__main {
   position: relative;
+
   display: flex;
   width: 100%;
   min-height: 280px;
@@ -37,11 +38,11 @@
   @media (width >= $laptop-width) {
     max-width: calc(100% - 220px);
   }
-
 }
 .page-footer__logos {
   display: flex;
   flex-direction: column;
+
   gap: 5px;
 
   @media (width >= $desktop-width) {
@@ -73,18 +74,20 @@
 }
 .page-footer__logo-image {
   flex-grow: 1;
+
   object-fit: contain;
 }
 .page-footer__logo-addr {
   display: flex;
   flex-direction: column;
+
   color: $bg-color;
 }
 .page-footer__logo-addr-city {
-  font-family: $header-font;
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
+  font-family: $header-font;
 
   @media (width >= $laptop-width) {
     font-size: 16px;
@@ -102,11 +105,13 @@
 }
 .page-footer__nav {
   display: flex;
+
   gap: 30px;
   @media (width < $laptop-width) {
     flex-direction: column;
-    gap: 25px;
     margin-bottom: 20px;
+
+    gap: 25px;
   }
 
   @media (width >= $desktop-width) {
@@ -117,27 +122,29 @@
     margin-bottom: 60px;
   }
 }
-.page-footer__nav-group {
-}
+
 .page-footer__nav-list {
   display: flex;
   flex-direction: column;
+
   gap: 5px;
 }
-.page-footer__nav-item {
-}
+
 .page-footer__link {
   display: flex;
   align-items: center;
-  gap: 5px;
-  text-decoration: none;
+
   font-size: 16px;
   line-height: 24px;
   color: $white-color;
+  text-decoration: none;
+
   opacity: 0.8;
 
   transition: 0.3s ease;
   transition-property: color, opacity;
+
+  gap: 5px;
 
   &:hover {
     color: $secondary-color;
@@ -152,7 +159,6 @@
       opacity: 0.7;
     }
   }
-
 }
 .page-footer__download {
   display: flex;
@@ -160,11 +166,13 @@
 
   @media (width < $desktop-width) {
     flex-direction: row;
+
     gap: 23px;
   }
 
   @media (width < $tablet-width) {
     flex-direction: column;
+
     gap: 9px;
   }
 }
@@ -176,29 +184,33 @@
 .page-footer__download-list {
   display: flex;
   flex-direction: column;
+
   gap: 7px;
 
   @media (width < $desktop-width) {
     flex-direction: row;
+
     gap: 23px;
   }
 }
-.page-footer__download-item {
-}
+
 .page-footer__download-link {
   display: flex;
   align-items: center;
-  gap: 4px;
+
   font-size: 16px;
   line-height: 24px;
-  text-decoration: none;
   color: $white-color;
+  text-decoration: none;
 
   transition: 0.3s ease;
   transition-property: color, opacity;
 
+  gap: 4px;
+
   & .page-footer__download-link-icon {
     transition: all 0.3s ease;
+
     fill: $white-color;
   }
 
@@ -213,8 +225,7 @@
     opacity: 0.5;
   }
 }
-.page-footer__download-link-text {
-}
+
 .page-footer__contacts {
   display: flex;
   flex-direction: column;
@@ -224,27 +235,32 @@
     position: absolute;
     top: 0;
     right: 0;
+
     align-items: flex-end;
   }
 }
 .page-footer__phone-wrapper {
   display: flex;
-  gap: 10px;
   align-items: center;
   margin-bottom: 10px;
 
+  gap: 10px;
+
   @media (width >= $laptop-width) {
     flex-direction: column;
+
     gap: 0;
   }
 
   @media (width >= $desktop-width) {
     flex-direction: row;
+
     gap: 10px;
   }
 }
 .page-footer__messengers {
   display: flex;
+
   gap: 3px;
 
   @media (width < $desktop-width) {
@@ -259,8 +275,9 @@
 .page-footer__phone {
   font-size: 25px;
   line-height: 37px;
-  text-decoration: none;
   color: $bg-color;
+  text-decoration: none;
+
   transition: 0.3s ease;
   transition-property: color, opacity;
 
@@ -291,6 +308,7 @@
 .page-footer__social {
   display: flex;
   flex-direction: column;
+
   gap: 3px;
 
 
@@ -300,12 +318,13 @@
 }
 .page-footer__social-title {
   display: block;
-  font-family: $header-font;
+
   font-weight: 600;
   font-size: 16px;
   line-height: 26px;
-  color: $bg-color;
+  font-family: $header-font;
   text-align: right;
+  color: $bg-color;
 
   @media (width >= $laptop-width) {
     font-size: 18px;
@@ -318,42 +337,49 @@
 .page-footer__social-wrapper {
   display: flex;
   flex-wrap: wrap;
+
   gap: 5px;
 }
 .page-footer__other {
-  padding: 16px 0 35px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 16px 0 35px;
+
   gap: 10px;
 }
 .page-footer__other-list {
   display: flex;
   flex-wrap: wrap;
+
   gap: 30px;
 
   @media (width < $tablet-width) {
     flex-direction: column;
+
     gap: 6px;
   }
 }
-.page-footer__other-list-item {
-}
+
 .page-footer__other-link {
   display: flex;
-  gap: 10px;
   align-items: center;
+
   font-size: 14px;
   line-height: 21px;
-  text-decoration: none;
   color: $white-color;
+  text-decoration: none;
+
   opacity: 0.6;
 
   transition: 0.3s ease;
   transition-property: color, opacity;
 
+  gap: 10px;
+
   & .page-footer__other-link-icon {
     transition: all 0.3s ease;
+
     fill: $white-color;
   }
 
@@ -367,11 +393,11 @@
   &:active {
     opacity: 0.5;
   }
-
 }
 .page-footer__dev {
   display: flex;
   align-items: flex-end;
+
   gap: 5px;
 }
 .page-footer__dev-title {
@@ -381,6 +407,7 @@
 }
 .page-footer__dev-link {
   text-decoration: none;
+
   transition: opacity 0.3s ease;
 
   &:hover {

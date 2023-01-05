@@ -1,8 +1,9 @@
 .logo {
   display: flex;
-  transition: opacity 0.3s ease;
   justify-content: flex-start;
   align-items: flex-start;
+
+  transition: opacity 0.3s ease;
 
   &:hover {
     opacity: 0.8;

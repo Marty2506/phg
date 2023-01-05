@@ -1,6 +1,8 @@
 .video-header {
   position: relative;
+
   padding: 40px 0 50px;
+
   color: $font-default;
   @media (width >= $laptop-width) {
     padding: 98px 0 134px;
@@ -19,17 +21,18 @@
   }
 }
 .video-header__emphasis {
-  font-family: $header-font;
   margin: 0;
   padding: 0;
+
+  font-weight: 700;
   font-size: 30px;
   line-height: 38px;
-  font-weight: 700;
+  font-family: $header-font;
 
   @media (width >= $laptop-width) {
-    color: $bg-color;
     font-size: 55px;
     line-height: 70px;
+    color: $bg-color;
   }
 
   @media (width >= $desktop-width) {
@@ -44,15 +47,17 @@
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
+
   font-weight: 700;
   font-size: 25px;
   line-height: 28px;
 
   @media (width >= $laptop-width) {
     margin-bottom: 30px;
-    color: $bg-color;
+
     font-size: 35px;
     line-height: 43px;
+    color: $bg-color;
   }
   @media (width >= $desktop-width) {
     font-size: 40px;
@@ -61,25 +66,30 @@
 }
 .video-header__buttons {
   display: flex;
+
   gap: 9px;
 
   @media (width < $tablet-width) {
     flex-direction: column;
+
     gap: 6px;
   }
 }
 .video-header__button {
   min-width: 184px;
+
   background-color: transparent;
 
   @media (width >= $laptop-width) {
-    border: 1px solid $bg-color2;
+    height: 84px;
     padding-right: 27px;
     padding-left: 27px;
-    height: 84px;
+
     font-size: 22px;
     line-height: 26px;
     color: $bg-color;
+
+    border: 1px solid $bg-color2;
   }
 
   &:hover {
@@ -93,6 +103,7 @@
   @media (width < $laptop-width) {
     width: 31px;
     height: 31px;
+
     object-fit: contain;
   }
 }
@@ -101,7 +112,8 @@
   font-size: 19px;
   line-height: 25px;
   color: $bg-color;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #FD2D2D;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #fd2d2d;
   border: none;
 
   @media (width >= $laptop-width) {
@@ -111,6 +123,7 @@
 
   &:hover {
     color: $secondary-color;
+
     background: initial;
     background-color: $white-color;
   }
@@ -124,8 +137,10 @@
   top: 0;
   left: 0;
   z-index: -1;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 
   @media (width < $laptop-width) {
