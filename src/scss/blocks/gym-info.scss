@@ -46,22 +46,32 @@
 }
 .gym-info__nav-link {
   display: flex;
+  flex-direction: column;
+  gap: 7px;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 80px;
   font-family: $header-font;
   font-size: 14px;
   line-height: 18px;
   padding: 10px 10px;
   text-decoration: none;
-  color: #ededed;
+  color: $gym-info-white-color;
   text-align: center;
   width: 135px;
   border-right: 1px  solid rgba(242, 242, 242, 0.26);
+  word-spacing: 100vw; // делает перенос строки после каждого слова
+
+  & .gym-info__nav-link-icon {
+    fill: $gym-info-white-color;
+    @media (width < $laptop-width) {
+      display: none;
+    }
+  }
 
   &:hover {
     background-color: $secondary-color;
-    color: #ededed;
+
     border-right-color: transparent;
   }
   &:focus-visible {
@@ -74,11 +84,22 @@
   @media (width >= $laptop-width) {
     width: 100%;
     height: 144px;
+    padding: 20px 15px;
+  }
+
+  @media (width >= $desktop-width) {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 20px 50px;
   }
 }
 .gym-info__nav-link.active  {
   background-color: $bg-color;
   color: $font-default;
+
+  & .gym-info__nav-link-icon {
+    fill: $font-default;
+  }
 }
 .gym-info__nav-item:last-child .gym-info__nav-link {
   border-right-color: transparent;

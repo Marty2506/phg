@@ -10,7 +10,7 @@ tabs.forEach(tabsElement => {
         panels[j].classList.remove('active');
         element.classList.remove('active');
       });
-      evt.target.classList.add('active');
+      tabButton.classList.add('active');
       panels[i].classList.add('active');
     })
   });

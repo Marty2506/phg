@@ -12,7 +12,6 @@ $page-header-paddigns: 7px;
 
   @media (width >= $laptop-width) {
     min-height: 87px;
-    // right: 17px;
   }
 }
 .page-header__container {
@@ -71,7 +70,8 @@ $page-header-paddigns: 7px;
   margin-left: auto;
 
   @media (width < $desktop-width) {
-    padding-left: 48px;
+    padding-left: 10px;
+    margin-left: auto;
   }
 
   @media (width >= $laptop-width) {

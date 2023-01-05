@@ -32,6 +32,11 @@
   flex-grow: 1;
   flex-direction: column;
   overflow-x: clip;
+  padding-top: 52px;
+
+  @media (width >= $laptop-width) {
+    padding-top: 87px;
+  }
 }
 
 .modal-opened {
