@@ -3,12 +3,17 @@
 @import "./mixin.scss";
 @import "./fonts.scss";
 //
+@import "./vendor/choices/choices.min.scss";
+@import "./vendor/swiper/swiper-bundle.scss";
+//
 @import "./blocks/visually-hidden.scss";
 @import "./blocks/container.scss";
 @import "./blocks/logo.scss";
 @import "./blocks/messenger.scss";
 @import "./blocks/burger.scss";
 @import "./blocks/button.scss";
+@import "./blocks/list.scss";
+@import "./blocks/swiper.scss";
 //
 @import "./blocks/page.scss";
 @import "./blocks/page-header.scss";
@@ -17,3 +22,7 @@
 @import "./blocks/page-footer.scss";
 @import "./blocks/title.scss";
 @import "./blocks/video-header.scss";
+@import "./blocks/tabs.scss";
+@import "./blocks/gallery.scss";
+@import "./blocks/gym-info.scss";
+

@@ -31,7 +31,7 @@
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .modal-opened {

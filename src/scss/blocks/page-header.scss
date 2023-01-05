@@ -5,13 +5,14 @@ $page-header-paddigns: 7px;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 999;
   padding: $page-header-paddigns 0;
   background-color: $page-header-bg;
   color: $bg-color;
 
   @media (width >= $laptop-width) {
     min-height: 87px;
+    // right: 17px;
   }
 }
 .page-header__container {

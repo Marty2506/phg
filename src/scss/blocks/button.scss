@@ -6,9 +6,9 @@
   justify-content: center;
   margin: 0;
   padding: 20px;
-  height: 57px;
+  // height: 57px;
   color: $primary-color;
-  background-color: $white-color;
+  background-color: transparent;
   text-decoration: none;
   cursor: pointer;
   border: 1px solid $secondary-color;
@@ -17,6 +17,7 @@
   line-height: 16px;
   transition: 0.3s ease;
   transition-property: color, background-color, opacity;
+  text-align: center;
 
   & .button__icon {
     fill: $secondary-color;

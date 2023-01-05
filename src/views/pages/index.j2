@@ -27,9 +27,259 @@
       </video>
     </section>
 
+    <sction class="gym-info">
+      <h2 class="visually-hidden">Информация о тренажерном зале</h2>
+      <div class="gym-info__tabs tabs">
+          <div class="gym-info__tabs-header">
+            <div class="container gym-info__tabs-header-container">
+              <ul class="gym-info__nav tabs__list" role="tablist">
+                <li class="gym-info__nav-item tabs__item tabs__item" role="presentation">
+                  <a class="gym-info__nav-link tabs__button active" href="#free-weights" aria-controls="free-weights" role="tab" data-toggle="tab">Свободные веса</a>
+                </li>
+                <li class="gym-info__nav-item tabs__item tabs__item" role="presentation">
+                  <a class="gym-info__nav-link tabs__button" href="#gym" aria-controls="gym" role="tab" data-toggle="tab">Тренажерный зал</a>
+                </li>
+                <li class="gym-info__nav-item tabs__item tabs__item" role="presentation">
+                  <a class="gym-info__nav-link tabs__button" href="#crossfit-studio" aria-controls="crossfit-studio" role="tab" data-toggle="tab">Студия кроссфита</a>
+                </li>
+                <li class="gym-info__nav-item tabs__item tabs__item" role="presentation">
+                  <a class="gym-info__nav-link tabs__button" href="#cycle-studio" aria-controls="cycle-studio" role="tab" data-toggle="tab">Студия сайкл</a>
+                </li>
+                <li class="gym-info__nav-item tabs__item tabs__item" role="presentation">
+                  <a class="gym-info__nav-link tabs__button" href="#trainings" aria-controls="trainings" role="tab" data-toggle="tab">Тренировки</a>
+                </li>
+                <li class="gym-info__nav-item tabs__item tabs__item" role="presentation">
+                  <a class="gym-info__nav-link tabs__button" href="#cardio-zone" aria-controls="cardio-zone" role="tab" data-toggle="tab">Зона кардио</a>
+                </li>
+                <li class="gym-info__nav-item tabs__item tabs__item" role="presentation">
+                  <a class="gym-info__nav-link tabs__button" href="#martial-arts-zone" aria-controls="martial-arts-zone" role="tab" data-toggle="tab">Зона единоборств</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="gym-info__tabs-content tabs__content">
+            <div class="gym-info__tabs-content-container container">
+              <div class="gym-info__panel tabs__panel active" role="tabpanel" id="free-weights">
+                <h3 class="visually-hidden">Свободные веса</h3>
+                <div class="gym-info__panel-wrapper">
+                  <div class="gym-info__panel-main">
+                    <p class="gym-info__panel-title">
+                      <span>В зоне свободных весов</span> каждый найдет&nbsp;то, что нужно
+                    </p>
+                    <ul class="gym-info__panel-list list">
+                      <li class="list__item"><b>7 скамеек для жима лежа</b> — всегда есть свободная</li>
+                      <li class="list__item"><b>Помосты для тяжелоатлетов</b> и пауэрлифтеров. Блины от&nbsp;1 до 50&nbsp;кг</li>
+                      <li class="list__item"><b>7 отдельных стоек для приседаний</b> и 4 в зоне кроссфита</li>
+                    </ul>
+                    <div class="gym-info__panel-buttons">
+                      <a class="button button--reverse" href="#!">Записаться на пробную тренировку</a>
+                      <a class="button" href="#!">
+                        <span>Подробнее о зале</span>
+                        <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
+                          <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="gym-info__panel-gallery gallery">
+                    {% set imageCount = 1 %}
+                    {% set gallerySwiperCnt = 1%}
+                    <div class="gallery__swiper-wrapper">
+                      <div class="gallery__swiper gallery__swiper--main swiper">
+                        <div class="swiper-wrapper">
+                          <div class="gallery__swiper-slide swiper-slide">
+                            <picture class="gallery__swiper-slide-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/1920/1080?random={{imageCount}} 1x, https://picsum.photos/1920/1080?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/1920/1080?random={{imageCount}}" srcset="https://picsum.photos/1920/1080?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-slide swiper-slide">
+                            <picture class="gallery__swiper-slide-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-slide swiper-slide">
+                            <picture class="gallery__swiper-slide-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-slide swiper-slide">
+                            <picture class="gallery__swiper-slide-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-slide swiper-slide">
+                            <picture class="gallery__swiper-slide-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-slide swiper-slide">
+                            <picture class="gallery__swiper-slide-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-slide swiper-slide">
+                            <picture class="gallery__swiper-slide-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-slide swiper-slide">
+                            <picture class="gallery__swiper-slide-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-slide swiper-slide">
+                            <picture class="gallery__swiper-slide-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-slide swiper-slide">
+                            <picture class="gallery__swiper-slide-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="gallery__swiper gallery__swiper--thumbs swiper">
+                        <div class="swiper-wrapper">
+                          {% set imageCount = imageCount - 10 %}
+                          <div class="gallery__swiper-thumb swiper-slide">
+                            <picture class="gallery__swiper-thumb-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-thumb swiper-slide">
+                            <picture class="gallery__swiper-thumb-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-thumb swiper-slide">
+                            <picture class="gallery__swiper-thumb-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-thumb swiper-slide">
+                            <picture class="gallery__swiper-thumb-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-thumb swiper-slide">
+                            <picture class="gallery__swiper-thumb-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-thumb swiper-slide">
+                            <picture class="gallery__swiper-thumb-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-thumb swiper-slide">
+                            <picture class="gallery__swiper-thumb-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-thumb swiper-slide">
+                            <picture class="gallery__swiper-thumb-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-thumb swiper-slide">
+                            <picture class="gallery__swiper-thumb-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                          <div class="gallery__swiper-thumb swiper-slide">
+                            <picture class="gallery__swiper-thumb-wrapper">
+                              <source type="image/webp" srcset="https://picsum.photos/600/600?random={{imageCount}} 1x, https://picsum.photos/600/600?random={{imageCount}} 2x">
+                              <img class="gallery__image" src="https://picsum.photos/600/600?random={{imageCount}}" srcset="https://picsum.photos/600/600?random={{imageCount}} 2x" alt="Описание картинки.">
+                              {% set imageCount = imageCount + 1%}
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button class="gallery__swiper-button gallery__swiper-button--prev" id="gallery-swiper-{{gallerySwiperCnt}}-prev" type="button">
+                        <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                          <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                        </svg>
+                        <span class="visually-hidden">Перелестнуть назад</span>
+                      </button>
+                      <button class="gallery__swiper-button gallery__swiper-button--next" id="gallery-swiper-{{gallerySwiperCnt}}-next" type="button">
+                        <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                          <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                        </svg>
+                        <span class="visually-hidden">Перелестнуть вперед</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gym-info__panel tabs__panel" role="tabpanel" id="gym">
+                <h3 class="gym-info__panel-title">Тренажерный зал</h3>
+              </div>
+              <div class="gym-info__panel tabs__panel" role="tabpanel" id="crossfit-studio">
+                <h3 class="gym-info__panel-title">Студия кроссфита</h3>
+              </div>
+              <div class="gym-info__panel tabs__panel" role="tabpanel" id="cycle-studio">
+                <h3 class="gym-info__panel-title">Студия сайкл</h3>
+              </div>
+              <div class="gym-info__panel tabs__panel" role="tabpanel" id="trainings">
+                <h3 class="gym-info__panel-title">Тренировки</h3>
+              </div>
+              <div class="gym-info__panel tabs__panel" role="tabpanel" id="cardio-zone">
+                <h3 class="gym-info__panel-title">Зона кардио</h3>
+              </div>
+              <div class="gym-info__panel tabs__panel" role="tabpanel" id="martial-arts-zone">
+                <h3 class="gym-info__panel-title">Зона единоборств</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+    </sction>
+
   </main>
 {% endblock content %}
 
 {% block js %}
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/gallery.min.js"></script>
   <script src="./js/main.min.js"></script>
+  <script src="./js/tabs.min.js"></script>
 {% endblock %}

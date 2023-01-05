@@ -1,0 +1,32 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (width >= $laptop-width) {
+    gap: 17px;
+  }
+}
+.list__item {
+  position: relative;
+  font-size: 16px;
+  line-height: 21px;
+  padding-left: 32px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 21px;
+    height: 5px;
+    background-color: $secondary-color;
+  }
+
+  @media (width >= $laptop-width) {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+
+}
