@@ -69,10 +69,18 @@
 
   background-color: $secondary-color;
 
+  & .button__icon {
+    fill: $white-color;
+  }
+
   &:hover {
     color: $primary-color;
 
     background-color: $bg-color;
+
+    & .button__icon {
+      fill: $secondary-color;
+    }
   }
   &:focus-visible {
     border-color: $bg-color;

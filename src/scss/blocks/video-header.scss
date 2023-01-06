@@ -80,6 +80,12 @@
 
   background-color: transparent;
 
+  @media (width < $tablet-width) {
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 200px;
+  }
+
   @media (width >= $laptop-width) {
     height: 84px;
     padding-right: 27px;

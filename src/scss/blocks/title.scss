@@ -1,8 +1,23 @@
 .title {
-  margin-bottom: 30px;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
 
   font-weight: 600;
-  font-size: 45px;
-  line-height: 128%;
+  font-size: 25px;
+  line-height: 32px;
   font-family: $header-font;
+
+  @media (width >= $laptop-width) {
+    font-size: 35px;
+    line-height: 42px;
+  }
+  @media (width >= $desktop-width) {
+    font-size: 40px;
+    line-height: 51px;
+  }
+
+  & > span {
+    color: $secondary-color;
+  }
 }

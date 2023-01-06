@@ -1,0 +1,68 @@
+.mini-info {
+  padding: 15px 10px;
+  background-color: $bg-color;
+
+  container-name: mini_info_card;
+  container-type: inline-size;
+
+  @media (width >= $tablet-width) {
+    background-color: $white-color;
+    padding: 30px 35px;
+  }
+}
+.mini-info__content {
+  display: flex;
+  gap: 30px;
+  font-size: 16px;
+  line-height: 21px;
+  flex-direction: column;
+  gap: 17px;
+
+  @media (width >= $laptop-width) {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+.mini-info__icon {
+  max-width: 80px;
+  max-height: 80px;
+  overflow: hidden;
+  align-self: flex-start;
+  justify-self: flex-start;
+  flex-shrink: 0;
+}
+.mini-info__main {
+  display: flex;
+  flex-direction: column;
+}
+.mini-info__text {
+  margin: 0;
+  padding: 0;
+}
+
+span.mini-info__text {
+  font-weight: 700;
+}
+.mini-info__list {
+
+}
+.mini-info__item {
+  position: relative;
+  padding-left: 25px;
+  &::before {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    content: "";
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: $font-default;
+  }
+}
+
+@container mini_info_card (width > 375px) {
+  .mini-info__content {
+    flex-direction: row;
+  }
+}

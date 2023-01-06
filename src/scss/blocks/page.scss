@@ -15,6 +15,10 @@
   line-height: 19px;
   font-family: $main-font;
   color: $font-default;
+
+  @media (width >= $laptop-width) {
+    background-color: $bg-color2;
+  }
 }
 
 .menu-opened {

@@ -1,0 +1,105 @@
+.fitquest {
+  padding-top: 50px;
+  padding-bottom: 35px;
+
+  @media (width >= $laptop-width) {
+    padding: 65px 0;
+  }
+
+  @media (width >= $desktop-width) {
+    padding: 100px 0;
+  }
+}
+.fitquest__container {
+  @media (width >= $desktop-width) {
+    max-width: 1920px;
+    padding-right: calc((1920px - $desktop-width) / 2);
+    padding-left: 0;
+  }
+}
+.fitquest__content {
+  display: flex;
+  flex-direction: column;
+
+  @media (width >= $laptop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, min-content);
+    gap: 10px;
+  }
+  @media (width >= $semi-desktop-width) {
+    column-gap: 50px;
+  }
+
+  @media (width >= $desktop-width) {
+    column-gap: 95px;
+  }
+}
+.fitquest__header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (width < $semi-desktop-width) {
+    grid-column: 1 / -1;
+  }
+
+}
+.fitquest__logo {
+}
+.fitquest__logo-image {
+}
+.fitquest__title {
+  @media (width >= $semi-desktop-width) {
+    margin-bottom: 35px;
+    max-width: 600px;
+  }
+
+}
+.fitquest__main {
+  display: flex;
+  flex-direction: column;
+
+  @media (width < $laptop-width) {
+    margin-bottom: 10px;
+  }
+}
+.fitquest__info-cards {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (width >= $desktop-width) {
+    margin-bottom: 35px;
+    gap: 20px;
+    flex-direction: row;
+  }
+}
+.fitquest__info-card {
+  width: 100%;
+
+  @media (width >= $semi-desktop-width) {
+    max-width: 455px;
+  }
+  @media (width >= $desktop-width) {
+    max-width: 350px;
+  }
+}
+.fitquest__button {
+  max-width: 380px;
+}
+.fitquest__video {
+  @media (width >= $laptop-width) {
+    height: 540px;
+  }
+
+  @media (width >= $semi-desktop-width) {
+    height: 840px;
+    grid-row: 1 / -1;
+  }
+
+  @media (width >= $desktop-width) {
+    height: 850px;
+  }
+}

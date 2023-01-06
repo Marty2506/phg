@@ -36,8 +36,12 @@
     max-height: 467px;
   }
 
-  @media (width >= $desktop-width) {
+  @media (width >= $semi-desktop-width) {
     max-height: 564px;
+  }
+
+  @media (width >= $desktop-width) {
+    max-height: 735px;
   }
 }
 .gallery__image {
