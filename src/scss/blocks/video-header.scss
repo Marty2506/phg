@@ -6,11 +6,23 @@
   color: $font-default;
   @media (width >= $laptop-width) {
     padding: 98px 0 134px;
-    // background-color: $grey-color;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $primary-color;
+      opacity: 0.3;
+      z-index: -1;
+    }
   }
   @media (width >= $desktop-width) {
     padding-bottom: 176px;
   }
+
 }
 .video-header__content {
   display: flex;
