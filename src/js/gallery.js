@@ -5,9 +5,8 @@ gallerySwipers.forEach((gallerySwiper, index) => {
   const thumbsSwiperOptions = {
     loop: false,
     spaceBetween: 0,
-    slidesPerView: 7,
     freeMode: true,
-    watchSlidesProgress: false,
+    watchSlidesProgress: true,
     simulateTouch: true,
     grabCursor: true,
     breakpoints: {

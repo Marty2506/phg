@@ -18,8 +18,6 @@
   // flex-grow: 1;
 }
 
-
-
 .gallery__swiper-slide-wrapper {
   display: flex;
   justify-content: center;
@@ -53,13 +51,22 @@
 
 .gallery__swiper--thumbs {
   flex-shrink: 0;
-  height: $gallery-thumbs-height * 1px;
+  // height: $gallery-thumbs-height * 1px;
+  overflow: visible;
+  overflow-x: clip;
   @media (width < $laptop-width) {
     display: none;
   }
 }
+.gallery__swiper--thumbs-has-title {
+  @media (width >= $laptop-width) {
+    padding-bottom: 40px;
+  }
+}
 .gallery__swiper-thumb {
   position: relative;
+  flex-direction: column;
+  height: $gallery-thumbs-height * 1px;
 
   &::after {
     content: "";
@@ -77,12 +84,27 @@
     &::after {
       background-color: rgba(230, 47, 67, 0.15);
     }
+    & .gallery__thumb-title {
+      display: block;
+      opacity: 0.6;
+    }
   }
 }
 .gallery__swiper-thumb-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.gallery__thumb-title {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+}
+.swiper-slide-thumb-active .gallery__thumb-title {
+  display: block;
 }
 .gallery__swiper-button {
   position: absolute;
@@ -126,30 +148,62 @@
     opacity: 0.7;
   }
 
-  // @media (max-width: $max-tablet-width) {
-  //   bottom: 50%;
-  // }
 }
 .gallery__swiper-button--prev {
   left: 0;
 
   transform: translateY(-50%) rotate(180deg);
-
-  // @media (width < $tablet-width) {
-  //   transform: translate(-$paddings-mobile, 50%) rotate(180deg);
-  // }
 }
 
 .gallery__swiper-button--next {
   right: 0;
 
   transform: translateY(-50%);
-
-  // @media (max-width: $max-mobile-width) {
-  //   transform: translate($paddings-mobile, 50%);
-  // }
 }
 .gallery__swiper-button--lock,
 .gallery__swiper-button--disabled {
   visibility: hidden;
 }
+
+.gallery__swiper--with-buttons-in-thumbs {
+  @media (width >= $laptop-width) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @media (width >= $desktop-width) {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+
+}
+
+@media (width >= $laptop-width) {
+  .gallery__swiper-button--in-thumbs.gallery__swiper-button {
+    top: initial;
+    bottom: 40px;
+    height: 100px;
+    width: 50px;
+    transform: none;
+    background-color: $secondary-color;
+
+    @media (width >= $desktop-width) {
+      width: 65px;
+    }
+
+    & .gallery__swiper-button-icon {
+      fill: $white-color;
+    }
+
+    &:hover {
+      background-color: $white-color;
+
+      & .gallery__swiper-button-icon {
+        fill: $secondary-color;
+      }
+    }
+  }
+  .gallery__swiper-button--in-thumbs.gallery__swiper-button--prev {
+    transform: rotate(180deg);
+  }
+}
+
