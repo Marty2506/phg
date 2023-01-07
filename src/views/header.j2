@@ -68,7 +68,7 @@
           </svg>
           <span class="visually-hidden">Расписание.</span>
         </a>
-        <button class="page-header__search-button" type="button">
+        <button class="page-header__search-button" type="button" id="show-searchbar-button">
           <svg class="page-header__search-button-icon" width="27" height="28" viewBox="0 0 27 28">
             <use xlink:href="img/sprite.svg#search-icon"></use>
           </svg>
@@ -168,6 +168,14 @@
           <span class="visually-hidden">Мы в instagram.</span>
         </a>
       </div>
+    </div>
+  </div>
+  <div class="searchbar searchbar--hidden">
+    <div class="searchbar__container container">
+      <form method="get" action="https://echo.htmlacademy.ru" class="searchbar__form">
+        <input class="searchbar__field" name="searchbar" type="text" placeholder="Начните вводить название..." autocomplete="off">
+        <button class="searchbar__button button button--reverse" type="submit">Искать</button>
+      </form>
     </div>
   </div>
 </header>
