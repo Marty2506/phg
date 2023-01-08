@@ -14,9 +14,13 @@ picture {
 }
 
 a {
-  color: $blue-color;
+  color: $secondary-color;
 
   transition: color 0.3s ease;
+
+  &:hover {
+    color: $primary-color;
+  }
 
   &:active {
     opacity: 0.7;

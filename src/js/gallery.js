@@ -44,3 +44,41 @@ gallerySwipers.forEach((gallerySwiper, index) => {
   }
   const mainSwiper = new Swiper(gallerySwiper, mainSwiperOptions);
 });
+
+const trainerSwipers = document.querySelectorAll('.trainers__swiper');
+
+trainerSwipers.forEach((trainerSwiper, index) => {
+  const swiperOptions = {
+    loop: false,
+    slidesPerView: 2,
+    speed: 700,
+    spaceBetween: 50,
+    simulateTouch: true,
+    grabCursor: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 50
+      },
+      748: {
+        slidesPerView: 2,
+        spaceBetween: 50
+      },
+      1020: {
+        slidesPerView: 2,
+        spaceBetween: 50
+      },
+      1030: {
+        slidesPerView: 2,
+        spaceBetween: 78
+      }
+    },
+    navigation: {
+      nextEl: `#trainers-swiper-next`,
+      prevEl: `#trainers-swiper-prev`,
+      lockClass: "swiper-button--lock",
+      disabledClass: "swiper-button--disabled",
+    },
+  }
+  const swiper = new Swiper(trainerSwiper, swiperOptions);
+});

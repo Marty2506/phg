@@ -1,0 +1,104 @@
+.trainers {
+  padding-top: 30px;
+  padding-bottom: 55px;
+  background-color: $primary-color;
+
+  @media (width >= $laptop-width) {
+    padding-top: 70px;
+    padding-bottom: 85px;
+  }
+
+  @media (width >= $desktop-width) {
+    padding-top: 115px;
+  }
+}
+.trainers__content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.trainers__header {
+  position: relative;
+  display: flex;
+  margin-bottom: 30px;
+  flex-direction: column;
+  gap: 5px;
+  color: $bg-color;
+
+  @media (width >= $laptop-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (width >= $desktop-width) {
+    margin-bottom: 60px;
+  }
+}
+.trainers__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-family: $header-font;
+  font-size: 25px;
+  line-height: 130%;
+
+  @media (width >= $laptop-width) {
+    font-size: 35px;
+  }
+
+  @media (width >= $semi-desktop-width) {
+    font-size: 40px;
+  }
+
+  @media (width >= $desktop-width) {
+    font-size: 45px;
+  }
+}
+.trainers__text {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 110%;
+
+  @media (width >= $laptop-width) {
+    font-size: 30px;
+  }
+}
+.trainers__swiper-wrapper {
+  position: relative;
+}
+.trainers__swiper-buttons {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+
+  @media (width >= $desktop-width - 2*$desktop-paddings + 2*$trainers-button-side-paddings) {
+    position: absolute;
+    bottom: 50%;
+    left: -$trainers-button-side-paddings;
+    right: -$trainers-button-side-paddings;
+    justify-content: space-between;
+  }
+}
+.trainers__swiper {
+  @media (width < $laptop-width) {
+    margin-bottom: 20px;
+  }
+}
+.trainers__card {
+}
+.trainers__show-all-button {
+  position: absolute;
+  right: 0;
+  @media (width < $tablet-width) {
+    bottom: 0;
+    transform: translateY(calc(100% + 15px));
+  }
+  @media (width < $laptop-width) {
+    max-width: 250px;
+  }
+  @media (width >= $tablet-width) {
+    width: 270px;
+
+    top: 10px;
+  }
+}

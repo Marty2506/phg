@@ -19,82 +19,55 @@
   }
 }
 
-// .swiper-button {
-//   position: absolute;
-//   top: 50%;
-//   z-index: 10;
+.swiper-button {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border: none;
+  background-color: $secondary-color;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
 
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   box-sizing: content-box;
-//   width: 44px;
-//   height: 44px;
-//   margin: 0;
-//   padding: 5px;
+  & .swiper-button-icon {
+    transition: fill 0.4s ease;
+    fill: $white-color;
+  }
 
-//   background-color: transparent;
-//   border: none;
-//   transform: translateY(-50%);
-//   cursor: pointer;
+  &--prev {
+    transform: rotate(180deg);
+  }
 
-//   &:hover {
-//     & .swiper-button-icon {
-//       fill: $secondary-color;
-//     }
-//   }
+  &--lock {
+    display: none;
+  }
 
-//   &:focus-visible {
-//     border-radius: 2px;
-//     outline: 2px solid $blue-color;
-//   }
+  &--disabled {
+    background-color: $grey-color;
+    pointer-events: none;
+  }
 
-//   &:active {
-//     opacity: 0.7;
-//   }
+  &:hover {
+    background-color: $white-color;
+    & .swiper-button-icon {
+      fill: $secondary-color;
+    }
+  }
+  &:focus-visible {
 
-//   @media (max-width: 1555px) {
-//     top: auto;
-//     bottom: 0;
-//   }
-// }
+  }
+  &:active {
+    opacity: 0.7;
+  }
 
-// .swiper-button--prev {
-//   left: -45px;
-
-//   transform: translateY(-50%) rotate(180deg);
-
-//   @media (max-width: 1555px) {
-//     left: calc(50% - 25px);
-//   }
-// }
-
-// .swiper-button--next {
-//   right: -45px;
-
-//   @media (max-width: 1555px) {
-//     right: auto;
-//     left: calc(50% + 25px);
-//   }
-// }
-
-// .swiper-button-icon {
-//   transition: fill 0.3s ease;
-
-//   fill: $blue-color;
-// }
-
-// .swiper-button--lock {
-//   display: none;
-// }
-
-// .swiper-button--disabled {
-//   pointer-events: none;
-
-//   & .swiper-button-icon {
-//     fill: $grey-color;
-//   }
-// }
+  @media (width < $laptop-width) {
+    width: 44px;
+    height: 44px;
+  }
+}
 
 .swiper-slide-thumb-active {
   position: relative;
