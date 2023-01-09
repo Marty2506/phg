@@ -49,3 +49,13 @@
   src: url("../fonts/NEXTART-Bold.woff2") format("woff2");
   src: url("../fonts/NEXTART-Bold.woff") format("woff");
 }
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Jost";
+
+  font-display: swap;
+  src: url("../fonts/Jost-Regular.woff2") format("woff2");
+  src: url("../fonts/Jost-Regular.woff") format("woff");
+}

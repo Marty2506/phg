@@ -1,0 +1,206 @@
+.get-card {
+  @media (width >= $tablet-width) {
+    background-color: $bg-color2;
+  }
+}
+.get-card__content {
+}
+.get-card__header {
+  display: flex;
+  justify-content: space-between;
+}
+.get-card__title {
+  @media (width >= $tablet-width) {
+    max-width: 60%;
+  }
+}
+.get-card__read-more-button {
+  max-width: 330px;
+  align-self: flex-start;
+
+  @media (width < $tablet-width) {
+    display: none;
+  }
+
+  @media (width >= $desktop-width) {
+    margin: auto 0;
+  }
+}
+.get-card__main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (width >= $semi-desktop-width) {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+  }
+}
+.get-card__about {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  @media (width >= $tablet-width) {
+    padding: 45px 25px 65px 40px;
+    flex-direction: row;
+    gap: 20px;
+    background-color: $white-color;
+  }
+  @media (width >= $laptop-width) {
+    padding: 45px 25px 65px 40px;
+    gap: 60px;
+  }
+  @media (width >= $semi-desktop-width) {
+    flex-direction: column;
+    padding: 65px 50px;
+    grid-row: 1 / 3;
+  }
+}
+.get-card__about-block {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 420px;
+}
+.get-card__about-sub-title {
+  margin: 0;
+  padding: 0;
+  font-family: $header-font;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 147.33%;
+
+  @media (width >= $laptop-width) {
+    font-size: 25px;
+  }
+}
+.get-card__about-list {
+}
+.get-card__about-timetable {
+  position: relative;
+  padding-left: 58px;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 42px;
+    height: 42px;
+    background-image: url("@img/icons/clock-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.get-card__about-timetable-line {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 140%;
+}
+.get-card__subcription {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+
+
+  @media (width < $semi-desktop-width) {
+    order: 99;
+  }
+
+  @media (width >= $tablet-width) {
+    padding: 27px 40px 35px 40px;
+    background-color: $white-color;
+  }
+
+  @media (width >= $semi-desktop-width) {
+    grid-row: 3 / 4;
+  }
+}
+.get-card__subscription-title {
+  position: relative;
+  padding-top: 55px;
+  margin-bottom: 0;
+  max-width: 400px;
+  @media (width >= $laptop-width) {
+    font-size: 35px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 42px;
+    height: 43px;
+    background-image: url("@img/icons/calendar-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.get-card__subscription-text {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  font-size: 20px;
+  line-height: 110%;
+
+  @media (width >= $tablet-width) {
+    margin-bottom: 15px;
+    font-size: 25px;
+    line-height: 125%;
+  }
+}
+.get-card__subscription-price {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  font-family: $jost-font;
+  font-size: 25px;
+  line-height: 36px;
+
+  @media (width >= $tablet-width) {
+    margin-bottom: 15px;
+    font-size: 50px;
+    line-height: 72px;
+  }
+}
+.get-card__subscription-button {
+  width: 295px;
+
+  @media (width < $tablet-width) {
+    width: 245px;
+  }
+}
+.button {
+}
+.get-card__list {
+  margin-bottom: auto;
+
+  @media (width >= $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    column-gap: 40px;
+    row-gap: 30px;
+  }
+
+  @media (width >= $laptop-width) {
+    column-gap: 40px;
+    row-gap: 40px;
+  }
+
+  @media (width >= $semi-desktop-width) {
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+  }
+}
+.get-card__list-item {
+  width: 100%;
+}
