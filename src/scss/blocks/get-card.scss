@@ -1,6 +1,6 @@
 .get-card {
   @media (width >= $tablet-width) {
-    background-color: $bg-color2;
+    background-color: $bg-color;
   }
 }
 .get-card__content {
@@ -179,6 +179,9 @@
 .button {
 }
 .get-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   margin-bottom: auto;
 
   @media (width >= $tablet-width) {
