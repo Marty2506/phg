@@ -1,0 +1,164 @@
+{% set newsCardCounter = 1 %}
+<section class="news section pads">
+  <div class="container">
+    <div class="news__content section__content">
+      <div class="news__header section__header">
+        <h2 class="news__title section__title title">Новости PHG</h2>
+        <div class="news__swiper-buttons section__swiper-buttons">
+          <button class="section__swiper-button swiper-button swiper-button--prev" id="news-swiper-btn-prev" type="button">
+            <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+              <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+            </svg>
+            <span class="visually-hidden">Перелестнуть назад</span>
+          </button>
+          <button class="section__swiper-button swiper-button swiper-button--next" id="news-swiper-btn-next" type="button">
+            <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+              <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+            </svg>
+            <span class="visually-hidden">Перелестнуть вперед</span>
+          </button>
+        </div>
+      </div>
+      <div class="news__swiper section__swiper swiper" id="news-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide section__swiper-slide">
+            <div class="news-card">
+              <div class="news-card__content">
+                <div class="news-card__image-wrapper">
+                  <picture>
+                    <source type="image/webp" srcset="@img/news-card-image-{{newsCardCounter}}.webp 1x">
+                    <img class="news-card__image" src="@img/news-card-image-{{newsCardCounter}}.jpg" alt="" width="280" height="162">
+                  </picture>
+                </div>
+                <span class="news-card__date">09.02.2022</span>
+                <p class="news-card__preview-text">В клубе прошло соревнование по пауэрлифтингу среди любителей</p>
+              </div>
+              <a class="news-card__link" href="#!"></a>
+              {% set newsCardCounter = newsCardCounter + 1 %}
+            </div>
+          </div>
+          <div class="swiper-slide section__swiper-slide">
+            <div class="news-card">
+              <div class="news-card__content">
+                <div class="news-card__image-wrapper">
+                  <picture>
+                    <source type="image/webp" srcset="@img/news-card-image-{{newsCardCounter}}.webp 1x">
+                    <img class="news-card__image" src="@img/news-card-image-{{newsCardCounter}}.jpg" alt="" width="280" height="162">
+                  </picture>
+                </div>
+                <span class="news-card__date">09.02.2022</span>
+                <p class="news-card__preview-text">В нашей студии Сайкла появилась 3 новых программы с яркими маршрутами. Доступны без тренера</p>
+              </div>
+              <a class="news-card__link" href="#!"></a>
+            </div>
+          </div>
+          <div class="swiper-slide section__swiper-slide">
+            <div class="news-card">
+              <div class="news-card__content">
+                <div class="news-card__image-wrapper">
+                  <picture>
+                    <source type="image/webp" srcset="@img/news-card-image-{{newsCardCounter}}.webp 1x">
+                    <img class="news-card__image" src="@img/news-card-image-{{newsCardCounter}}.jpg" alt="" width="280" height="162">
+                  </picture>
+                </div>
+                <span class="news-card__date">09.02.2022</span>
+                <p class="news-card__preview-text">В нашей студии Сайкла появилась 3 новых программы с яркими маршрутами. Доступны без тренера</p>
+              </div>
+              <a class="news-card__link" href="#!"></a>
+            </div>
+          </div>
+          <div class="swiper-slide section__swiper-slide">
+            <div class="news-card">
+              <div class="news-card__content">
+                <div class="news-card__image-wrapper">
+                  <picture>
+                    <source type="image/webp" srcset="@img/news-card-image-{{newsCardCounter}}.webp 1x">
+                    <img class="news-card__image" src="@img/news-card-image-{{newsCardCounter}}.jpg" alt="" width="280" height="162">
+                  </picture>
+                </div>
+                <span class="news-card__date">09.02.2022</span>
+                <p class="news-card__preview-text">В нашей студии Сайкла появилась 3 новых программы с яркими маршрутами. Доступны без тренера</p>
+              </div>
+              <a class="news-card__link" href="#!"></a>
+            </div>
+          </div>
+          <div class="swiper-slide section__swiper-slide">
+            <div class="news-card">
+              <div class="news-card__content">
+                <div class="news-card__image-wrapper">
+                  <picture>
+                    <source type="image/webp" srcset="@img/news-card-image-{{newsCardCounter}}.webp 1x">
+                    <img class="news-card__image" src="@img/news-card-image-{{newsCardCounter}}.jpg" alt="" width="280" height="162">
+                  </picture>
+                </div>
+                <span class="news-card__date">09.02.2022</span>
+                <p class="news-card__preview-text">В нашей студии Сайкла появилась 3 новых программы с яркими маршрутами. Доступны без тренера</p>
+              </div>
+              <a class="news-card__link" href="#!"></a>
+            </div>
+          </div>
+          <div class="swiper-slide section__swiper-slide">
+            <div class="news-card">
+              <div class="news-card__content">
+                <div class="news-card__image-wrapper">
+                  <picture>
+                    <source type="image/webp" srcset="@img/news-card-image-{{newsCardCounter}}.webp 1x">
+                    <img class="news-card__image" src="@img/news-card-image-{{newsCardCounter}}.jpg" alt="" width="280" height="162">
+                  </picture>
+                </div>
+                <span class="news-card__date">09.02.2022</span>
+                <p class="news-card__preview-text">В нашей студии Сайкла появилась 3 новых программы с яркими маршрутами. Доступны без тренера</p>
+              </div>
+              <a class="news-card__link" href="#!"></a>
+            </div>
+          </div>
+          <div class="swiper-slide section__swiper-slide">
+            <div class="news-card">
+              <div class="news-card__content">
+                <div class="news-card__image-wrapper">
+                  <picture>
+                    <source type="image/webp" srcset="@img/news-card-image-{{newsCardCounter}}.webp 1x">
+                    <img class="news-card__image" src="@img/news-card-image-{{newsCardCounter}}.jpg" alt="" width="280" height="162">
+                  </picture>
+                </div>
+                <span class="news-card__date">09.02.2022</span>
+                <p class="news-card__preview-text">В нашей студии Сайкла появилась 3 новых программы с яркими маршрутами. Доступны без тренера</p>
+              </div>
+              <a class="news-card__link" href="#!"></a>
+            </div>
+          </div>
+          <div class="swiper-slide section__swiper-slide">
+            <div class="news-card">
+              <div class="news-card__content">
+                <div class="news-card__image-wrapper">
+                  <picture>
+                    <source type="image/webp" srcset="@img/news-card-image-{{newsCardCounter}}.webp 1x">
+                    <img class="news-card__image" src="@img/news-card-image-{{newsCardCounter}}.jpg" alt="" width="280" height="162">
+                  </picture>
+                </div>
+                <span class="news-card__date">09.02.2022</span>
+                <p class="news-card__preview-text">В нашей студии Сайкла появилась 3 новых программы с яркими маршрутами. Доступны без тренера</p>
+              </div>
+              <a class="news-card__link" href="#!"></a>
+            </div>
+          </div>
+          <div class="swiper-slide section__swiper-slide">
+            <div class="news-card">
+              <div class="news-card__content">
+                <div class="news-card__image-wrapper">
+                  <picture>
+                    <source type="image/webp" srcset="@img/news-card-image-{{newsCardCounter}}.webp 1x">
+                    <img class="news-card__image" src="@img/news-card-image-{{newsCardCounter}}.jpg" alt="" width="280" height="162">
+                  </picture>
+                </div>
+                <span class="news-card__date">09.02.2022</span>
+                <p class="news-card__preview-text">В нашей студии Сайкла появилась 3 новых программы с яркими маршрутами. Доступны без тренера</p>
+              </div>
+              <a class="news-card__link" href="#!"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

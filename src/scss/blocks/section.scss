@@ -1,3 +1,6 @@
+.section__content {
+  position: relative;
+}
 .section__swiper-container {
   position: relative;
   display: flex;
@@ -15,6 +18,9 @@
   @media (width >= $tablet-width) {
     justify-content: space-between;
     align-items: center;
+  }
+  @media (width >= $desktop-width) {
+    margin-bottom: 30px;
   }
 
   & .section__title {

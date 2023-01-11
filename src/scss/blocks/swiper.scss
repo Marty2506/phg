@@ -46,7 +46,7 @@
   }
 
   &--disabled {
-    background-color: $grey-color;
+    background-color: lighten($grey-color, 40%);
     pointer-events: none;
   }
 
@@ -57,7 +57,8 @@
     }
   }
   &:focus-visible {
-
+    outline: 3px solid $primary-color;
+    border-radius: 3px;
   }
   &:active {
     opacity: 0.7;
