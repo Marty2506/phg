@@ -1,0 +1,42 @@
+.journal {
+}
+.journal__content {
+
+}
+.journal__title {
+}
+.journal__swiper-container {
+}
+.journal__swiper {
+}
+.journal__cards-container {
+  @media (width >= $laptop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  @media (width >= $desktop-width) {
+    grid-template-columns: 36fr 36fr 24fr;
+    grid-template-rows: auto auto;
+  }
+
+}
+.journal__cards-item {
+
+  @media ($laptop-width <= width < $desktop-width) {
+    &:nth-child(n+5) {
+      display: none;
+    }
+  }
+  @media (width >= $desktop-width) {
+    &:nth-child(n+6) {
+      display: none;
+    }
+  }
+}
+.journal__cards-item:nth-child(5) {
+  @media (width >= $desktop-width) {
+    grid-row: 1 / -1;
+    grid-column: -2 / -1;
+  }
+}

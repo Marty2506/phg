@@ -1,0 +1,113 @@
+.journal-card {
+  position: relative;
+  background-color: transparentize(#000, 0.3);
+  min-height: 328px;
+  height: 100%;
+
+  @media (width >= $semi-desktop-width) {
+    min-height: 385px;
+  }
+  @media (width >= $desktop-width) {
+    min-height: 397px;
+  }
+}
+.journal-card__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  padding: 30px 13px;
+  transition: background-color 0.3s ease;
+
+  @media (width >= $laptop-width) {
+    padding: 30px;
+  }
+}
+.journal-card__date {
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 130%;
+  color: $bg-color;
+  transition: color 0.3s ease;
+
+}
+.journal-card__title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  font-family: $header-font;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 124%;
+  color: $white-color;
+  transition: color 0.3s ease;
+
+  @media (width >= $laptop-width) {
+    font-size: 18px;
+  }
+  @media (width >= $semi-desktop-width) {
+    font-size: 22px;
+  }
+}
+.journal-card__hidden-content {
+  display: flex;
+  flex-direction: column;
+  // opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.journal-card__text {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  color: $bg-color;
+  font-size: 15px;
+  line-height: 130%;
+  transition: color 0.3s ease;
+}
+.journal-card__views-wrapper {
+}
+.journal-card__views {
+  display: flex;
+  gap: 8px;
+}
+.journal-card__views-cnt {
+  transition: color 0.3s ease;
+}
+.journal-card__views--comments {
+}
+.journal-card__bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.journal-card__link {
+}
+.journal-card {
+  transition: all 0.3s ease;
+  &:hover {
+    @media (width >= $laptop-width) {
+      & .journal-card__content {
+        background-color: $white-color;
+      }
+      & .journal-card__date {
+        color: $primary-color;
+      }
+      & .journal-card__title {
+        color: $primary-color;
+      }
+      & .journal-card__text {
+        color: $primary-color;
+      }
+      & .journal-card__views {
+        color: $primary-color;
+      }
+    }
+  }
+}
