@@ -1,4 +1,12 @@
 .journal {
+  @media (width >= $laptop-width) {
+    padding-top: 65px;
+    padding-bottom: 110px;
+  }
+  @media (width >= $desktop-width) {
+    padding-top: 80px;
+    padding-bottom: 155px;
+  }
 }
 .journal__content {
 
@@ -8,6 +16,12 @@
 .journal__swiper-container {
 }
 .journal__swiper {
+}
+.journal__swiper-buttons {
+  margin-bottom: 15px;
+  @media (width >= $desktop-width) {
+    display: none;
+  }
 }
 .journal__cards-container {
   @media (width >= $laptop-width) {
