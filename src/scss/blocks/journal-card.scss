@@ -132,6 +132,11 @@
   width: 100%;
   height: 100%;
   z-index: 1;
+
+  &:focus-visible {
+    outline: 3px solid $secondary-color;
+    outline-offset: -3px;
+  }
 }
 .journal-card {
   transition: all 0.3s ease;
@@ -157,5 +162,8 @@
         color: $primary-color;
       }
     }
+  }
+  &:active {
+    opacity: 0.5;
   }
 }
