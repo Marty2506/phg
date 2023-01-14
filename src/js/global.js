@@ -1,4 +1,5 @@
 const menu = document.querySelector('.menu');
+const pageHeader = document.querySelector('.page-header');
 
 /**
  * Проверяет, что нажатая клавиша соответствует клавише Escape

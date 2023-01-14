@@ -1,6 +1,4 @@
 .searchbar {
-  position: absolute;
-  top: 100%;
   width: 100%;
   background-color: #05090a;
   padding: 1px 0;
@@ -8,11 +6,15 @@
   animation: showing-animation 0.5s ease;
 
   @media (width < $laptop-width) {
-    height: calc(100vh - 52px);
+    flex-grow: 1;
   }
 
   @media (width >= $laptop-width) {
-    top: calc(100% + 15px);
+    position: absolute;
+    top: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 2px;
   }
 
 }
@@ -42,6 +44,7 @@
   padding: 16px 10px;
   color: $bg-color;
   flex-grow: 1;
+  font-family: $main-font;
 
   &::placeholder {
     color: $white-color;
@@ -50,7 +53,6 @@
 
   &:focus-visible {
     outline: none;
-    // background-color: $grey-color;
   }
 
   @media (width >= $laptop-width) {
@@ -60,11 +62,11 @@
 
 }
 .searchbar__button {
-  min-width: 210px;
+  min-width: 216px;
   height: 59px;
 
   @media (width < $laptop-width) {
     margin-left: -$tablet-paddings;
-    margin-left: -$tablet-paddings;
+    margin-right: -$tablet-paddings;
   }
 }

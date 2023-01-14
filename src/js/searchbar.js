@@ -4,11 +4,13 @@ const showSearchBarButton = document.querySelector('#show-searchbar-button');
 if (searchbar) {
   showSearchBarButton.addEventListener('click', () => {
     searchbar.classList.toggle('searchbar--hidden');
+    pageHeader.classList.toggle('page-header--searchbar-opened');
   })
 }
 
 function hideSearchBar() {
   searchbar.classList.add('searchbar--hidden');
+  pageHeader.classList.remove('page-header--searchbar-opened');
 }
 
 const onSearchBarEscKeydown = (evt) => {

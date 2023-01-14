@@ -87,11 +87,11 @@
 .trainers__card {
 }
 .trainers__show-all-button {
-  position: absolute;
-  right: 0;
-  @media (width < $tablet-width) {
-    bottom: 0;
-    transform: translateY(calc(100% + 15px));
+
+
+  @media (width >= $tablet-width) {
+    position: absolute;
+    right: 0;
   }
   @media (width < $laptop-width) {
     max-width: 250px;
