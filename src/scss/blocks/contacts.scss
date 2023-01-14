@@ -1,15 +1,21 @@
 .contacts {
+  padding-top: 30px;
   background-color: $white-color;
 
   @media (width >= $laptop-width) {
-    padding-top: 60px;
-  }
-
-  @media (width >= $desktop-width) {
-    padding-top: 70px;
+    padding-top: 0;
   }
 }
 .contacts__container {
+  @media (width >= $laptop-width) {
+    padding-right: 0;
+
+  }
+  @media (width >= $desktop-width) {
+    max-width: 1920px;
+    padding-right: 0;
+    padding-left: calc((1920px - $desktop-width) / 2);
+  }
 }
 .contacts__content {
   display: flex;
@@ -17,6 +23,7 @@
 
   @media (width >= $laptop-width) {
     flex-direction: row;
+    gap: 20px;
   }
 }
 .contacts__main {
@@ -25,16 +32,19 @@
   flex-shrink: 0;
 
   @media (width >= $laptop-width) {
+    padding-top: 60px;
     width: 450px;
   }
   @media (width >= $semi-desktop-width) {
     width: 490px;
   }
   @media (width >= $desktop-width) {
+    padding-top: 70px;
     width: 530px;
   }
 }
 .contacts__title {
+  max-width: 90%;
 }
 .contacts__address {
   display: flex;
@@ -43,9 +53,6 @@
     flex-direction: column;
 
     gap: 10px;
-  }
-  @media (width >= $laptop-width) {
-    margin-bottom: 80px;
   }
 }
 .contacts__block-wrapper {
@@ -151,8 +158,14 @@
   gap: 5px;
 }
 .contacts__map {
+  position: relative;
   display: flex;
   width: 100%;
+  cursor: help;
+
+  @media (width < $laptop-width) {
+    flex-direction: column;
+  }
 
   & iframe {
     width: 100%;
@@ -163,4 +176,74 @@
       height: 320px;
     }
   }
+}
+.contacts__map-parking {
+  display: flex;
+  cursor: default;
+  @media (width >= $laptop-width) {
+    max-width: 70%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 225px;
+  }
+  @media (width >= $desktop-width) {
+    height: 260px;
+  }
+}
+.contacts__map-parking-text-wrapper {
+  padding-top: 15px;
+  padding-bottom: 50px;
+
+  @media (width >= $laptop-width) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 190px;
+    background-color: $secondary-color;
+    padding: 20px 25px;
+
+    &::before {
+      content: "";
+      width: 28px;
+      height: 43px;
+      background-image: url("@img/icons/parking.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+.contacts__map-parking-text {
+  margin: 0;
+  padding: 0;
+  color: $bg-color;
+
+  @media (width < $laptop-width) {
+    color: $font-default;
+  }
+}
+.contacts__map-parking-image-wrapper {
+  @media (width < $laptop-width) {
+    display: none;
+  }
+}
+.contacts__map-parking-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contacts__map-tooltip {
+  position: absolute;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 5px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background: $bg-color;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $primary-color;
+  border-image: initial;
+}
+.contacts__map-tooltip--hidden {
+  display: none;
 }
