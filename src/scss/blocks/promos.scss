@@ -1,4 +1,19 @@
 .promos {
+
+  @media (width >= $tablet-width) {
+    background-color: $bg-color2;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (width >= $laptop-width) {
+    padding-top: 80px;
+    padding-bottom: 55px;
+  }
+  @media (width >= $semi-desktop-width) {
+    padding-top: 75px;
+    padding-bottom: 120px;
+  }
 }
 .promos__content {
 }
