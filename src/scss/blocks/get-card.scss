@@ -1,6 +1,12 @@
 .get-card {
+  padding-top: 50px;
   @media (width >= $tablet-width) {
     background-color: $bg-color;
+    padding-bottom: 60px;
+  }
+  @media (width >= $laptop-width) {
+    padding-top: 90px;
+    padding-bottom: 75px;
   }
 }
 .get-card__content {
@@ -8,8 +14,17 @@
 .get-card__header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 25px;
+
+  @media (width >= $semi-desktop-width) {
+    margin-bottom: 50px;
+  }
+  @media (width >= $desktop-width) {
+    margin-bottom: 70px;
+  }
 }
 .get-card__title {
+  margin-bottom: 0;
   @media (width >= $tablet-width) {
     max-width: 60%;
   }
@@ -55,7 +70,6 @@
   @media (width >= $semi-desktop-width) {
     flex-direction: column;
     padding: 65px 50px;
-    grid-row: 1 / 3;
   }
 }
 .get-card__about-block {
@@ -107,18 +121,13 @@
   flex-direction: column;
   padding: 30px 0;
 
-
-  @media (width < $semi-desktop-width) {
-    order: 99;
+  @media (width < $tablet-width) {
+    padding-top: 0;
   }
 
   @media (width >= $tablet-width) {
     padding: 27px 40px 35px 40px;
     background-color: $white-color;
-  }
-
-  @media (width >= $semi-desktop-width) {
-    grid-row: 3 / 4;
   }
 }
 .get-card__subscription-title {
@@ -176,14 +185,25 @@
     width: 245px;
   }
 }
-.button {
-}
-.get-card__list {
+.get-card__tariffs {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  width: 100%;
   margin-bottom: auto;
+  height: initial;
 
+  @media (width >= $semi-desktop-width) {
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+  }
+}
+.get-card__tariffs-buttons {
+  padding: 15px 0;
+  @media (width >= $tablet-width) {
+    display: none;
+  }
+}
+.get-card__list {
   @media (width >= $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -200,10 +220,12 @@
   @media (width >= $semi-desktop-width) {
     column-gap: 20px;
     row-gap: 20px;
-    grid-column: 2 / -1;
-    grid-row: 1 / -1;
   }
 }
 .get-card__list-item {
-  width: 100%;
+  width: min-content;
+
+  @media (width >= $tablet-width) {
+    width: 100%;
+  }
 }
