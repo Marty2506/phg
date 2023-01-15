@@ -44,7 +44,7 @@
     },
     {
       "title": "Групповые программы Les Mills",
-      "href": "lesmills"
+      "href": "programs"
     },
     {
       "title": "Кроссфит",
@@ -125,7 +125,7 @@
       },
       {
         "title": "Групповые программы",
-        "href": "lesmills",
+        "href": "programs",
         "icon": {
           "name": "lesmills-href-logo.png",
           "w": "90",

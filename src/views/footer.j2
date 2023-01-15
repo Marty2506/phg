@@ -60,7 +60,7 @@
               <ul class="page-footer__nav-list">
                 {% for link in group %}
                   <li class="page-footer__nav-item">
-                    <a class="page-footer__link" href="{{ link.href }}">{{ link.title | safe}}
+                    <a class="page-footer__link" href="{{ link.href }}.html">{{ link.title | safe}}
                         {% if link.icon %}
                           <img class="page-footer__link-icon" src="@img/{{link.icon.name | safe}}" alt="{{link.icon.alt | safe}}" width="{{link.icon.w | safe}}" height="{{link.icon.h | safe}}">
                         {% endif %}
