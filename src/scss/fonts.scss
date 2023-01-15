@@ -1,7 +1,7 @@
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "Circe";
+  font-family: Circe;
 
   font-display: swap;
   src: url("../fonts/Circe-Regular.woff") format("woff");
@@ -9,7 +9,7 @@
 @font-face {
   font-style: normal;
   font-weight: 300;
-  font-family: "Circe";
+  font-family: Circe;
 
   font-display: swap;
   src: url("../fonts/Circe-Light.woff") format("woff");
@@ -17,7 +17,7 @@
 @font-face {
   font-style: normal;
   font-weight: 700;
-  font-family: "Circe";
+  font-family: Circe;
 
   font-display: swap;
   src: url("../fonts/Circe-Bold.woff") format("woff");
@@ -49,11 +49,10 @@
   src: url("../fonts/NEXTART-Bold.woff2") format("woff2");
   src: url("../fonts/NEXTART-Bold.woff") format("woff");
 }
-
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "Jost";
+  font-family: Jost;
 
   font-display: swap;
   src: url("../fonts/Jost-Regular.woff2") format("woff2");

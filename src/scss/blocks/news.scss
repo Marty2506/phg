@@ -1,23 +1,13 @@
 .news {
   padding: 40px 0;
+
   background-color: $bg-color;
 
   @media (width >= $laptop-width) {
     padding-top: 50px;
     padding-bottom: 85px;
   }
-
   @media (width >= $desktop-width) {
     padding-bottom: 130px;
   }
-}
-.news__content {
-}
-.news__header {
-}
-.news__title {
-}
-.news__swiper-buttons {
-}
-.news__swiper {
 }

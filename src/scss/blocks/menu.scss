@@ -12,11 +12,12 @@
   background-color: $white-color;
   transform: translateX(100%);
 
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.5s;
   transition-property: transform;
 
   scrollbar-width: none;
+
   @media (width >= $laptop-width) {
     top: 87px;
 
@@ -27,6 +28,7 @@
     display: none;
   }
 }
+
 .menu--opened {
   box-shadow: -50px 0 35px rgba(#000000, 0.2);
   transform: translateX(0);
@@ -49,7 +51,7 @@
   text-decoration: none;
 
   background-color: $white-color;
-  border-bottom: 1px solid rgba(41, 43, 48, 0.25);
+  border-bottom: 1px solid rgb(41 43 48 / 25%);
   cursor: pointer;
 
   transition: all ease 0.3s;
@@ -73,6 +75,7 @@
     opacity: 0.7;
   }
 }
+
 .menu__link--has-sub {
   &::after {
     content: "";
@@ -86,6 +89,7 @@
     transform: rotate(180deg);
   }
 }
+
 .menu__sub {
   position: absolute;
   top: 0;
@@ -98,11 +102,13 @@
 
   background-color: $white-color;
 }
+
 .menu__sub--active {
   display: block;
 
   transform: translateX(0);
 }
+
 .menu__back-button {
   display: flex;
   align-items: center;
@@ -117,7 +123,7 @@
 
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid rgba(41, 43, 48, 0.25);
+  border-bottom: 1px solid rgb(41 43 48 / 25%);
   cursor: pointer;
 
   gap: 15px;
@@ -144,12 +150,14 @@
     opacity: 0.7;
   }
 }
+
 .menu__footer {
   display: flex;
   flex-direction: column;
   padding: 30px 22px;
 
   color: $font-default;
+
   @media (width < $laptop-width) {
     padding-bottom: 0;
   }
@@ -157,6 +165,7 @@
     padding-left: 70px;
   }
 }
+
 .menu__contacts {
   display: flex;
   flex-direction: column;
@@ -165,11 +174,13 @@
     margin-bottom: 15px;
   }
 }
+
 .menu__contacts-header {
   font-size: 18px;
   line-height: 26px;
   font-family: $header-font;
 }
+
 .menu__phone-wrapper {
   display: flex;
   align-items: center;
@@ -183,6 +194,7 @@
     gap: 0;
   }
 }
+
 .menu__phone {
   font-size: 30px;
   line-height: 44px;
@@ -194,6 +206,7 @@
     line-height: 52px;
   }
 }
+
 .menu__messengers {
   display: flex;
   align-items: center;
@@ -215,15 +228,18 @@
     margin-bottom: 30px;
   }
 }
+
 .menu__address {
   display: flex;
   margin-bottom: 25px;
+
   @media (width < $laptop-width) {
     flex-direction: column;
 
     gap: 10px;
   }
 }
+
 .menu__address-wrapper {
   display: flex;
   flex-direction: column;
@@ -245,15 +261,18 @@
     }
   }
 }
+
 .menu__address-wrapper--address {
   max-width: 160px;
 }
+
 .menu__address-title {
   font-weight: 600;
   font-size: 16px;
   line-height: 26px;
   font-family: $header-font;
 }
+
 .menu__address-text {
   display: block;
   margin: 0;
@@ -262,10 +281,12 @@
   font-size: 17px;
   line-height: 23px;
 }
+
 .menu__social {
   display: flex;
 
   gap: 5px;
+
   @media (width < $laptop-width) {
     margin-bottom: 35px;
   }

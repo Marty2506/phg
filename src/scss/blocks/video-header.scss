@@ -4,26 +4,29 @@
   padding: 40px 0 50px;
 
   color: $font-default;
+
   @media (width >= $laptop-width) {
     padding: 98px 0 134px;
 
     &::after {
-      position: absolute;
       content: "";
+      position: absolute;
       top: 0;
       left: 0;
+      z-index: -1;
+
       width: 100%;
       height: 100%;
-      background-color: #000;
+
+      background-color: #000000;
       opacity: 0.6;
-      z-index: -1;
     }
   }
   @media (width >= $desktop-width) {
     padding-bottom: 176px;
   }
-
 }
+
 .video-header__content {
   display: flex;
   flex-direction: column;
@@ -32,6 +35,7 @@
     max-width: 55%;
   }
 }
+
 .video-header__emphasis {
   margin: 0;
   padding: 0;
@@ -46,15 +50,16 @@
     line-height: 70px;
     color: $bg-color;
   }
-
   @media (width >= $desktop-width) {
     font-size: 70px;
     line-height: 90px;
   }
 }
+
 .video-header__emphasis--red {
   color: $secondary-color;
 }
+
 .video-header__text {
   margin: 0;
   margin-bottom: 20px;
@@ -76,6 +81,7 @@
     line-height: 49px;
   }
 }
+
 .video-header__buttons {
   display: flex;
 
@@ -87,17 +93,17 @@
     gap: 6px;
   }
 }
+
 .video-header__button {
   min-width: 184px;
 
   background-color: transparent;
 
   @media (width < $tablet-width) {
+    max-width: 200px;
     padding-right: 15px;
     padding-left: 15px;
-    max-width: 200px;
   }
-
   @media (width >= $laptop-width) {
     height: 84px;
     padding-right: 27px;
@@ -113,10 +119,12 @@
   &:hover {
     border-color: transparent;
   }
+
   &:focus-visible {
     outline: $white-color auto 1px;
   }
 }
+
 .video-header__button-icon {
   @media (width < $laptop-width) {
     width: 31px;
@@ -125,13 +133,14 @@
     object-fit: contain;
   }
 }
+
 .video-header__button--red {
   font-weight: 700;
   font-size: 19px;
   line-height: 25px;
   color: $bg-color;
 
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #fd2d2d;
+  background: linear-gradient(0deg, rgb(0 0 0 / 20%), rgb(0 0 0 / 20%)), #fd2d2d;
   border: none;
 
   @media (width >= $laptop-width) {
@@ -145,6 +154,7 @@
     background: initial;
     background-color: $white-color;
   }
+
   &:focus-visible {
     outline: $white-color auto 1px;
   }

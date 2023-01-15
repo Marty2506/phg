@@ -19,6 +19,7 @@
   display: flex;
   width: 100%;
   min-height: 280px;
+
   @media (width < $laptop-width) {
     flex-direction: column;
     margin-bottom: 50px;
@@ -27,6 +28,7 @@
     margin-bottom: 20px;
   }
 }
+
 .page-footer__main-wrapper {
   display: flex;
   flex-direction: column;
@@ -34,11 +36,11 @@
   @media (width >= $desktop-width) {
     flex-direction: row;
   }
-
   @media (width >= $laptop-width) {
     max-width: calc(100% - 220px);
   }
 }
+
 .page-footer__logos {
   display: flex;
   flex-direction: column;
@@ -48,15 +50,14 @@
   @media (width >= $desktop-width) {
     margin-right: 75px;
   }
-
   @media ($laptop-width <= width < $desktop-width) {
     margin-bottom: 25px;
   }
-
   @media (width < $laptop-width) {
     margin-bottom: 15px;
   }
 }
+
 .page-footer__logo {
   display: flex;
   max-width: 132px;
@@ -66,23 +67,25 @@
     max-width: 146px;
     max-height: 63px;
   }
-
   @media (width >= $desktop-width) {
     max-width: 169px;
     max-height: 73px;
   }
 }
+
 .page-footer__logo-image {
   flex-grow: 1;
 
   object-fit: contain;
 }
+
 .page-footer__logo-addr {
   display: flex;
   flex-direction: column;
 
   color: $bg-color;
 }
+
 .page-footer__logo-addr-city {
   font-weight: 600;
   font-size: 14px;
@@ -94,6 +97,7 @@
     line-height: 18px;
   }
 }
+
 .page-footer__logo-addr-street {
   font-size: 12px;
   line-height: 16px;
@@ -103,21 +107,21 @@
     line-height: 18px;
   }
 }
+
 .page-footer__nav {
   display: flex;
 
   gap: 30px;
+
   @media (width < $laptop-width) {
     flex-direction: column;
     margin-bottom: 20px;
 
     gap: 25px;
   }
-
   @media (width >= $desktop-width) {
     margin-right: 115px;
   }
-
   @media ($laptop-width <= width < $desktop-width) {
     margin-bottom: 60px;
   }
@@ -153,13 +157,16 @@
       opacity: 0.7;
     }
   }
+
   &:active {
     opacity: 0.5;
+
     & .page-footer__link-icon {
       opacity: 0.7;
     }
   }
 }
+
 .page-footer__download {
   display: flex;
   flex-direction: column;
@@ -169,18 +176,19 @@
 
     gap: 23px;
   }
-
   @media (width < $tablet-width) {
     flex-direction: column;
 
     gap: 9px;
   }
 }
+
 .page-footer__download-title {
   font-size: 16px;
   line-height: 24px;
   color: $white-color;
 }
+
 .page-footer__download-list {
   display: flex;
   flex-direction: column;
@@ -221,6 +229,7 @@
       fill: $secondary-color;
     }
   }
+
   &:active {
     opacity: 0.5;
   }
@@ -239,6 +248,7 @@
     align-items: flex-end;
   }
 }
+
 .page-footer__phone-wrapper {
   display: flex;
   align-items: center;
@@ -251,13 +261,13 @@
 
     gap: 0;
   }
-
   @media (width >= $desktop-width) {
     flex-direction: row;
 
     gap: 10px;
   }
 }
+
 .page-footer__messengers {
   display: flex;
 
@@ -267,11 +277,11 @@
     order: 99;
     margin-left: auto;
   }
-
   @media (width < $laptop-width) {
     margin-left: initial;
   }
 }
+
 .page-footer__phone {
   font-size: 25px;
   line-height: 37px;
@@ -284,9 +294,11 @@
   &:hover {
     color: $secondary-color;
   }
+
   &:focus-visible {
     outline: 1px solid $white-color;
   }
+
   &:active {
     opacity: 0.5;
   }
@@ -296,6 +308,7 @@
     line-height: 44px;
   }
 }
+
 .page-footer__backcall-button {
   width: 250px;
   margin-bottom: 17px;
@@ -305,6 +318,7 @@
     margin-bottom: 25px;
   }
 }
+
 .page-footer__social {
   display: flex;
   flex-direction: column;
@@ -316,6 +330,7 @@
     align-items: flex-end;
   }
 }
+
 .page-footer__social-title {
   display: block;
 
@@ -329,17 +344,18 @@
   @media (width >= $laptop-width) {
     font-size: 18px;
   }
-
   @media (width < $laptop-width) {
     text-align: left;
   }
 }
+
 .page-footer__social-wrapper {
   display: flex;
   flex-wrap: wrap;
 
   gap: 5px;
 }
+
 .page-footer__other {
   display: flex;
   flex-wrap: wrap;
@@ -348,6 +364,7 @@
 
   gap: 10px;
 }
+
 .page-footer__other-list {
   display: flex;
   flex-wrap: wrap;
@@ -390,21 +407,25 @@
       fill: $secondary-color;
     }
   }
+
   &:active {
     opacity: 0.5;
   }
 }
+
 .page-footer__dev {
   display: flex;
   align-items: flex-end;
 
   gap: 5px;
 }
+
 .page-footer__dev-title {
   font-size: 14px;
   line-height: 21px;
   color: $white-color;
 }
+
 .page-footer__dev-link {
   text-decoration: none;
 
@@ -413,6 +434,7 @@
   &:hover {
     opacity: 0.7;
   }
+
   &:active {
     opacity: 0.5;
   }

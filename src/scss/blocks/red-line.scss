@@ -1,13 +1,16 @@
 .red-line {
   position: relative;
+
   @media (width >= $tablet-width) {
     &::before {
-      position: absolute;
       content: "";
+      position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
+
       width: 8px;
+
       background-color: $secondary-color;
     }
   }

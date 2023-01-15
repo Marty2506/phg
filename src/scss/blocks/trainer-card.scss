@@ -1,158 +1,194 @@
 .trainer-card {
   position: relative;
+
   width: 100%;
   max-width: 784px;
+  height: 100%;
+
   background-color: $white-color;
+
   container-name: trainer;
   container-type: inline-size;
-  height: 100%;
 
   @media (width >= $laptop-width) {
     &::before {
-      position: absolute;
-      z-index: 1;
       content: "";
+      position: absolute;
       top: 0;
       bottom: 0;
+      z-index: 1;
+
       width: 8px;
+
       background-color: $secondary-color;
     }
   }
 }
+
 .trainer-card__content {
   display: flex;
   flex-direction: column;
 }
+
 .trainer-card__main {
   display: flex;
   flex-direction: column;
   padding: 23px 14px;
 }
+
 .trainer-card__title {
   margin: 0;
   margin-bottom: 18px;
   padding: 0;
-  font-family: $header-font;
+
   font-weight: 600;
   font-size: 20px;
   line-height: 128%;
+  font-family: $header-font;
 }
+
 .trainer-card__sub-title {
   margin: 0;
   margin-bottom: 15px;
   padding: 0;
-  font-family: $header-font;
+
   font-weight: 600;
   font-size: 16px;
   line-height: 128%;
+  font-family: $header-font;
 }
+
 .trainer-card__spec-list {
-  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 15px;
+
   gap: 1px;
 }
+
 .trainer-card__spec-item {
   font-size: 15px;
   line-height: 23px;
 }
+
 .trainer-card__spec-link {
   &:hover {
     color: $primary-color;
   }
 }
+
 .trainer-card__help {
-  gap: 11px;
   margin-bottom: 20px;
+
+  gap: 11px;
 }
+
 .trainer-card__help-item {
   font-size: 16px;
   line-height: 125%;
 }
+
 .trainer-card__photo {
   flex-grow: 1;
 }
+
 .trainer-card__photo-wrapper {
+  position: relative;
+
   display: flex;
   flex-direction: column;
-  position: relative;
+
   background-color: $grey-color;
 }
-.trainer-card__image {
-}
+
 .trainer-card__button {
   max-width: 250px;
 }
-.trainer-card__button-icon {
-}
+
 @container trainer (width < 560px) {
   .trainer-card__photo-wrapper {
     position: relative;
+
     width: 100%;
     height: 0;
     padding-bottom: 56.25%;
   }
+
   .trainer-card__image {
     position: absolute;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     object-fit: cover;
   }
+
   .trainer-card__video-button {
     height: 58px;
+
     & > .trainer-card__button-icon {
       width: 30px;
     }
   }
 }
-
 @container trainer (width >= 450px) {
   .trainer-card__main {
     padding: 35px 35px 35px 37px;
   }
 }
 @container trainer (width >= 560px) {
-
   .trainer-card__content {
     flex-direction: row;
     justify-content: space-between;
-    gap: 20px;
     min-height: 627px;
+
+    gap: 20px;
   }
+
   .trainer-card__main {
-    padding: 35px 0 35px 37px;
     width: 45%;
     min-width: 280px;
+    padding: 35px 0 35px 37px;
   }
+
   .trainer-card__title {
     margin-bottom: 28px;
+
     font-size: 30px;
   }
+
   .trainer-card__spec-list {
     margin-bottom: 28px;
   }
 
   .trainer-card__photo {
     position: relative;
+
     width: 100%;
     max-width: 60%;
   }
+
   .trainer-card__photo-wrapper {
     min-height: 60%;
   }
+
   .trainer-card__image {
     flex-grow: 1;
     width: 100%;
     height: 100%;
+
     object-fit: cover;
   }
+
   .trainer-card__video-button {
     position: absolute;
-    transform: translateY(-100%);
+
+    flex-direction: column;
     width: 110px;
     height: 115px;
-    flex-direction: column;
+
+    transform: translateY(-100%);
   }
 }

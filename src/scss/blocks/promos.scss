@@ -1,11 +1,10 @@
 .promos {
-
   @media (width >= $tablet-width) {
-    background-color: $bg-color2;
     padding-top: 40px;
     padding-bottom: 40px;
-  }
 
+    background-color: $bg-color2;
+  }
   @media (width >= $laptop-width) {
     padding-top: 80px;
     padding-bottom: 55px;
@@ -15,25 +14,18 @@
     padding-bottom: 120px;
   }
 }
-.promos__content {
-}
-.promos__swiper-container {
-}
+
+
 .promos__header {
   @media (width >= $desktop-width) {
     margin-bottom: 40px;
   }
 }
-.section__header {
-}
-.promos__title {
-}
-.title {
-}
+
+
+
 .promos__swiper-buttons {
   @media (width >= $desktop-width) {
     transform: none;
   }
-}
-.promos__swiper {
 }

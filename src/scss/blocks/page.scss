@@ -32,6 +32,7 @@
     }
   }
 }
+
 .page__body-wrapper {
   display: flex;
   flex-grow: 1;
@@ -50,17 +51,19 @@
 
 .page__title {
   display: block;
+  max-width: 80%;
   margin: 0;
   margin-bottom: 30px;
   padding: 0;
-  font-family: $header-font;
+
   font-weight: 600;
   font-size: 30px;
   line-height: 130%;
-  max-width: 80%;
+  font-family: $header-font;
 
   @media (width >= $laptop-width) {
-    font-size: 60px;
     margin-bottom: 50px;
+
+    font-size: 60px;
   }
 }

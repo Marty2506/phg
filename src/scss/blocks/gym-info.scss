@@ -1,9 +1,8 @@
-
-
 .gym-info__tabs {
   display: flex;
   flex-direction: column;
 }
+
 .gym-info__tabs-header-container {
   @media (width >= $desktop-width) {
     max-width: 1920px;
@@ -11,6 +10,7 @@
     padding-left: 0;
   }
 }
+
 .gym-info__tabs-content-container {
   @media (width >= $desktop-width) {
     max-width: 1920px;
@@ -18,9 +18,11 @@
     padding-left: calc((1920px - $desktop-width) / 2);
   }
 }
+
 .gym-info__tabs-header {
   background-color: #1f1f1f;
 }
+
 .gym-info__nav {
   display: flex;
   overflow: -moz-scrollbars-none; // Firefox
@@ -38,9 +40,11 @@
     grid-template-columns: repeat(7, 1fr);
   }
 }
+
 .gym-info__nav-item {
   position: relative;
 }
+
 .gym-info__nav-link {
   display: flex;
   flex-direction: column;
@@ -48,7 +52,7 @@
   align-items: center;
   width: 135px;
   height: 80px;
-  padding: 10px 10px;
+  padding: 10px;
 
   font-size: 14px;
   line-height: 18px;
@@ -58,12 +62,13 @@
   text-decoration: none;
   word-spacing: 100vw; // делает перенос строки после каждого слова
 
-  border-right: 1px  solid rgba(242, 242, 242, 0.26);
+  border-right: 1px  solid rgb(242 242 242 / 26%);
 
   gap: 7px;
 
   & .gym-info__nav-link-icon {
     fill: $gym-info-white-color;
+
     @media (width < $laptop-width) {
       display: none;
     }
@@ -83,7 +88,6 @@
     height: 144px;
     padding: 20px 15px;
   }
-
   @media (width >= $desktop-width) {
     padding: 20px 50px;
 
@@ -91,6 +95,7 @@
     line-height: 26px;
   }
 }
+
 .gym-info__nav-link.active {
   color: $font-default;
 
@@ -100,17 +105,19 @@
     fill: $font-default;
   }
 }
+
 .gym-info__nav-item:last-child .gym-info__nav-link {
   border-right-color: transparent;
 }
+
 .gym-info__tabs-content {
   padding-top: 22px;
 
   background-color: $bg-color;
+
   @media (width >= $laptop-width) {
     padding-top: 60px;
   }
-
   @media (width >= $desktop-width) {
     padding-top: 0;
   }
@@ -127,7 +134,6 @@
     gap: 50px;
     grid-template-columns: 32% calc(68% - 50px);
   }
-
   @media (width < $tablet-width) {
     display: flex;
     flex-direction: column;
@@ -135,15 +141,16 @@
     gap: 15px;
   }
 }
+
 .gym-info__panel-main {
   @media (width >= $tablet-width) {
     padding-bottom: 55px;
   }
-
   @media (width >= $desktop-width) {
     padding-top: 110px;
   }
 }
+
 .gym-info__panel-title {
   margin: 0;
   margin-bottom: 20px;
@@ -167,6 +174,7 @@
     color: $secondary-color;
   }
 }
+
 .gym-info__panel-list {
   max-width: 320px;
   margin-bottom: 32px;
@@ -175,6 +183,7 @@
     margin-bottom: 45px;
   }
 }
+
 .gym-info__panel-buttons {
   display: flex;
   flex-direction: column;

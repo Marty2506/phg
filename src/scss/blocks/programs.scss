@@ -1,22 +1,23 @@
 .programs {
   margin-bottom: 110px;
 }
-.programs__container {
-}
+
 .programs__content {
   display: flex;
   flex-direction: column;
 }
+
 .programs__tabs {
   display: flex;
   flex-direction: column;
 }
+
 .programs__tabs-list {
   display: flex;
   max-width: 100%;
+  margin-bottom: 20px;
   overflow: -moz-scrollbars-none; // Firefox
   overflow-x: auto;
-  margin-bottom: 20px;
 
   @media (width >= $laptop-width) {
     margin-bottom: 45px;
@@ -25,15 +26,15 @@
   &::-webkit-scrollbar {
     display: none; // Safari and Chrome
   }
+}
 
-}
-.programs__tabs-item {
-}
 .programs__tabs-item + .programs__tabs-item {
   margin-left: -1px;
 }
+
 .programs__tabs-button {
   padding: 17px 45px;
+
   font-size: 15px;
   line-height: 17px;
 
@@ -41,14 +42,14 @@
     padding: 17px 51px;
   }
 }
+
 .programs__tabs-button.active {
   color: $white-color;
+
   background-color: $secondary-color;
 }
-.programs__tabs-content {
-}
-.programs__panel {
-}
+
+
 .programs__panel-title {
   margin-bottom: 25px;
 
@@ -56,23 +57,26 @@
     margin-bottom: 30px;
   }
 }
+
 .programs__panel-list {
   margin-bottom: 20px;
+
   gap: 20px;
 
   @media (width >= $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
   }
-
   @media (width >= $laptop-width) {
     margin-bottom: 75px;
+
     gap: 35px;
   }
   @media (width >= $semi-desktop-width) {
     margin-bottom: 100px;
   }
 }
+
 .programs__panel-list-item {
   @media (width >= $tablet-width) {
     max-width: 35%;
@@ -81,15 +85,18 @@
     max-width: 30%;
   }
 }
+
 .programs__cards {
   display: flex;
   flex-direction: column;
+
   gap: 15px;
 
   @media (width >= 670px) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
     gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
   }
   @media (width >= $laptop-width) {
     gap: 35px;
@@ -100,6 +107,4 @@
   @media (width >= $desktop-width) {
     gap: 30px;
   }
-}
-.programs__cards-item {
 }

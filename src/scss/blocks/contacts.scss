@@ -1,15 +1,16 @@
 .contacts {
   padding-top: 30px;
+
   background-color: $white-color;
 
   @media (width >= $laptop-width) {
     padding-top: 0;
   }
 }
+
 .contacts__container {
   @media (width >= $laptop-width) {
     padding-right: 0;
-
   }
   @media (width >= $desktop-width) {
     max-width: 1920px;
@@ -17,59 +18,70 @@
     padding-left: calc((1920px - $desktop-width) / 2);
   }
 }
+
 .contacts__content {
   display: flex;
   flex-direction: column;
 
   @media (width >= $laptop-width) {
     flex-direction: row;
+
     gap: 20px;
   }
 }
+
 .contacts__main {
   display: flex;
-  flex-direction: column;
   flex-shrink: 0;
+  flex-direction: column;
 
   @media (width >= $laptop-width) {
-    padding-top: 60px;
     width: 450px;
+    padding-top: 60px;
   }
   @media (width >= $semi-desktop-width) {
     width: 490px;
   }
   @media (width >= $desktop-width) {
-    padding-top: 70px;
     width: 530px;
+    padding-top: 70px;
   }
 }
+
 .contacts__title {
   max-width: 90%;
 }
+
 .contacts__address {
   display: flex;
   margin-bottom: 25px;
+
   @media (width < $laptop-width) {
     flex-direction: column;
 
     gap: 10px;
   }
 }
+
 .contacts__block-wrapper {
   position: relative;
-  padding-bottom: 15px;
+
   display: flex;
   flex-direction: column;
+  padding-bottom: 15px;
+
   gap: 7px;
 
   &::after {
     @media (width >= $laptop-width) {
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
-      content: "";
+
       width: 34px;
       height: 4px;
+
       background-color: $secondary-color;
     }
   }
@@ -77,34 +89,39 @@
   &--address {
     max-width: 160px;
   }
+
   &--tels {
-    padding-bottom: 20px;
     margin-bottom: 20px;
+    padding-bottom: 20px;
   }
+
   &--email {
-    padding-bottom: 20px;
     margin-bottom: 20px;
+    padding-bottom: 20px;
   }
+
   &--social {
     @media (width < $laptop-width) {
       display: none;
     }
+
     &::after {
       content: none;
     }
+
     @media (width >= $laptop-width) {
       padding-bottom: 35px;
     }
   }
-
-
 }
+
 .contacts__sub-title {
   font-weight: 600;
   font-size: 20px;
   line-height: 26px;
   font-family: $header-font;
 }
+
 .contacts__text {
   display: block;
   margin: 0;
@@ -113,15 +130,15 @@
   font-size: 17px;
   line-height: 23px;
 }
-.contacts__tels {
-}
-.contacts__sub-title {
-}
+
+
 .contacts__phone-wrapper {
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
+
+  gap: 10px;
 }
+
 .contacts__phone {
   font-size: 30px;
   line-height: 44px;
@@ -133,6 +150,7 @@
     line-height: 59px;
   }
 }
+
 .contacts__messengers {
   display: flex;
   align-items: center;
@@ -140,27 +158,34 @@
 
   gap: 3px;
 }
+
 .contacts__button {
   max-width: 250px;
 }
+
 .contacts__email-link {
   font-size: 18px;
   line-height: 27px;
-  text-decoration: none;
   color: $primary-color;
+  text-decoration: none;
 
   &:hover {
     color: $secondary-color;
   }
 }
+
 .contacts__social {
   display: flex;
+
   gap: 5px;
 }
+
 .contacts__map {
   position: relative;
+
   display: flex;
   width: 100%;
+
   cursor: help;
 
   @media (width < $laptop-width) {
@@ -170,6 +195,7 @@
   & iframe {
     width: 100%;
     height: 100%;
+
     border: none;
 
     @media (width < $laptop-width) {
@@ -177,20 +203,25 @@
     }
   }
 }
+
 .contacts__map-parking {
   display: flex;
+
   cursor: default;
+
   @media (width >= $laptop-width) {
-    max-width: 70%;
     position: absolute;
     bottom: 0;
     left: 0;
+
+    max-width: 70%;
     height: 225px;
   }
   @media (width >= $desktop-width) {
     height: 260px;
   }
 }
+
 .contacts__map-parking-text-wrapper {
   padding-top: 15px;
   padding-bottom: 50px;
@@ -198,52 +229,65 @@
   @media (width >= $laptop-width) {
     display: flex;
     flex-direction: column;
-    gap: 15px;
     width: 190px;
-    background-color: $secondary-color;
     padding: 20px 25px;
+
+    background-color: $secondary-color;
+
+    gap: 15px;
 
     &::before {
       content: "";
+
       width: 28px;
       height: 43px;
+
       background-image: url("@img/icons/parking.svg");
-      background-position: center;
       background-repeat: no-repeat;
+      background-position: center;
     }
   }
 }
+
 .contacts__map-parking-text {
   margin: 0;
   padding: 0;
+
   color: $bg-color;
 
   @media (width < $laptop-width) {
     color: $font-default;
   }
 }
+
 .contacts__map-parking-image-wrapper {
   @media (width < $laptop-width) {
     display: none;
   }
 }
+
 .contacts__map-parking-image {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 }
+
 .contacts__map-tooltip {
   position: absolute;
   z-index: 1000;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 5px;
+
   padding: 5px 20px;
-  border-radius: 5px;
+
   background: $bg-color;
   border-width: 1px;
   border-style: solid;
   border-color: $primary-color;
+  border-radius: 5px;
   border-image: initial;
+  box-shadow: rgb(0 0 0 / 25%) 0 0 5px;
 }
+
 .contacts__map-tooltip--hidden {
   display: none;
 }

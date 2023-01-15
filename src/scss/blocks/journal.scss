@@ -1,5 +1,6 @@
 .journal {
   padding-top: 25px;
+
   @media (width >= $laptop-width) {
     padding-top: 65px;
     padding-bottom: 110px;
@@ -9,38 +10,36 @@
     padding-bottom: 155px;
   }
 }
-.journal__content {
 
-}
 .journal__title {
   @media (width >= $laptop-width) {
     margin-bottom: 35px;
   }
 }
-.journal__swiper-container {
-}
-.journal__swiper {
-}
+
+
 .journal__swiper-buttons {
   margin-bottom: 15px;
+
   @media (width >= $desktop-width) {
     display: none;
   }
 }
+
 .journal__cards-container {
   @media (width >= $laptop-width) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
     gap: 14px;
+    grid-template-columns: repeat(2, 1fr);
   }
   @media (width >= $desktop-width) {
     grid-template-columns: 36fr 36fr 24fr;
     grid-template-rows: auto auto;
   }
-
 }
-.journal__cards-item {
 
+.journal__cards-item {
   @media ($laptop-width <= width < $desktop-width) {
     &:nth-child(n+5) {
       display: none;
@@ -52,9 +51,10 @@
     }
   }
 }
+
 .journal__cards-item:nth-child(5) {
   @media (width >= $desktop-width) {
-    grid-row: 1 / -1;
     grid-column: -2 / -1;
+    grid-row: 1 / -1;
   }
 }

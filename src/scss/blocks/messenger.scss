@@ -21,14 +21,17 @@
 
   &:hover {
     background-color: $secondary-color;
+
     & .messenger__icon {
       fill: $bg-color;
     }
   }
+
   &:focus-visible {
     outline: 2px solid $secondary-color;
     outline-offset: -1px;
   }
+
   &:active {
     opacity: 0.7;
   }
@@ -37,22 +40,26 @@
 .messenger--telegram .messenger__icon {
   transform: translate(-1px);
 }
+
 .messenger--telegram,
 .messenger--whatsapp {
   @media (width < $desktop-width) {
     width: 27px;
     height: 27px;
   }
+
   & .messenger__icon {
     scale: 0.9;
   }
 }
+
 .messenger--red {
   background-color: $secondary-color;
 
   & .messenger__icon {
     fill: $white-color;
   }
+
   &:hover {
     background-color: $white-color;
     // outline: $secondary-color solid 2px;
@@ -61,13 +68,16 @@
       fill: $secondary-color;
     }
   }
+
   &:focus-visible {
     outline: -webkit-focus-ring-color auto 1px;
   }
+
   &:active {
     opacity: 0.5;
   }
 }
+
 .messenger--vk,
 .messenger--youtube,
 .messenger--insta {

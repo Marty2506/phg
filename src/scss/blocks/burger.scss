@@ -10,6 +10,7 @@
 
   gap: 10px;
 }
+
 .burger__text {
   font-size: 17px;
   line-height: 20px;
@@ -20,6 +21,7 @@
     display: none;
   }
 }
+
 .burger__icon {
   position: relative;
 
@@ -46,6 +48,7 @@
     transition-property: transform, background-color, box-shadow;
   }
 }
+
 .burger {
   &:hover {
     & .burger__icon {
@@ -56,6 +59,7 @@
       }
     }
   }
+
   &:focus-visible {
     border-radius: 2px;
     outline: 2px solid $white-color;
@@ -83,6 +87,7 @@
     transform: translateY(-50%) rotate(-45deg);
   }
 }
+
 .burger--opened {
   &:hover {
     & .burger__icon {
