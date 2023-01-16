@@ -97,5 +97,7 @@
 }
 
 .button--has-dark-background {
-  color: $bg-color;
+  @media (width >= $laptop-width) {
+    color: $bg-color;
+  }
 }

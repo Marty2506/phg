@@ -3,7 +3,7 @@
 
   color: #515151;
 
-  @media (width < $tablet-width) {
+  @media (width < $laptop-width) {
     display: none;
   }
 }

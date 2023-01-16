@@ -1,0 +1,63 @@
+{% extends "layout.j2" %}
+
+{% set page = "program-page" %}
+
+{% block content %}
+  <main class="page-main">
+    <section class="video-header video-header--program">
+      <div class="breadcumbs breadcumbs--has-drak-bg">
+        <div class="breadcumbs__container container">
+          <ul class="breadcumbs__list">
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./index.html">Главная</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./programs.html">Программы</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <span class="breadcumbs__link breadcumbs__link--current">LesMills BodyPump</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="video-header__content">
+          <div class="video-header__header">
+            <h1 class="video-header__title page__title page__title--light">LesMills BODYPUMP</h1>
+            <picture class="video-header__program-icon">
+              <source media="(min-width: {{laptopWidth}}" srcset="@img/lesmills/bodypump.png">
+              <img src="@img/lesmills/bodypump-black.png" alt="">
+            </picture>
+          </div>
+          <p class="video-header__text">Самая популярная в мире силовая тренировка со штангой&nbsp;с&nbsp;научно доказанной эффективностью</p>
+          <ul class="video-header__list list">
+            <li class="video-header__list-item list__item"><b>Продолжительность:</b><br>30-60 минут</li>
+            <li class="video-header__list-item list__item"><b>Уровень:</b><br>Новичок</li>
+            <li class="video-header__list-item list__item"><b>Сжигает:</b><br>до 540 калорий</li>
+          </ul>
+          <div class="video-header__buttons">
+            <a class="button button--reverse video-header__program-button" href="#!">посмотреть расписание</a>
+            <a class="button button--has-dark-background video-header__program-button" href="#!">пробная тренировка</a>
+
+          </div>
+        </div>
+      </div>
+      <video class="video-header__video" preload="none" loop muted poster="@img/video-header-bg.jpg">
+        <source src="./files/gym-video.mp4" type="video/mp4">
+      </video>
+    </section>
+
+
+  </main>
+{% endblock content %}
+
+{% block js %}
+  <script src="./js/main.min.js"></script>
+  {# <script src="./js/tabs.min.js"></script> #}
+{% endblock %}

@@ -1,5 +1,9 @@
 .programs {
   margin-bottom: 110px;
+
+  @media (width < $laptop-width) {
+    padding-top: 45px;
+  }
 }
 
 .programs__content {

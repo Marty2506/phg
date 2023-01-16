@@ -67,3 +67,8 @@
     font-size: 60px;
   }
 }
+.page__title--light {
+  @media (width >= $laptop-width) {
+    color: $bg-color;
+  }
+}
