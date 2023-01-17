@@ -1,0 +1,22 @@
+.photos {
+  padding-top: 35px;
+  padding-bottom: 55px;
+
+  @media (width >= $laptop-width) {
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
+}
+.photos__container {
+}
+.photos__title {
+  margin-bottom: 30px;
+
+  @media (width >= $desktop-width) {
+    margin-bottom: 45px;
+  }
+}
+.photos__gallery {
+}
+.gallery {
+}

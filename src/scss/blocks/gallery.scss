@@ -25,10 +25,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (width < $tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .gallery__swiper--main .swiper-slide {
-  max-height: 220px;
+
+
+  @media (width < $tablet-width) {
+    // max-height: 220px;
+    position: relative;
+    height: 0;
+    padding-bottom: 66.6%;
+
+  }
 
   @media (width >= $tablet-width) {
     max-height: 400px;
