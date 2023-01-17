@@ -1,5 +1,6 @@
 .mini-info {
   padding: 15px 10px;
+  height: 100%;
 
   background-color: $bg-color;
 
@@ -74,5 +75,11 @@ span.mini-info__text {
 @container mini_info_card (width > 375px) {
   .mini-info__content {
     flex-direction: row;
+  }
+}
+
+.mini-info--always-column {
+  .mini-info__content {
+    flex-direction: column;
   }
 }

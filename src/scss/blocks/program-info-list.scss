@@ -1,0 +1,27 @@
+.program-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (width >= $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  @media (width >= $laptop-width) {
+    margin-top: -105px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 38px;
+  }
+  @media (width >= $semi-desktop-width) {
+    margin-top: -170px;
+  }
+  @media (width >= $desktop-width) {
+    margin-top: -130px;
+  }
+}
+.program-info-list__item {
+  @media (width >= $laptop-width) {
+    min-height: 277px;
+  }
+}

@@ -44,14 +44,58 @@
           <div class="video-header__buttons">
             <a class="button button--reverse video-header__program-button" href="#!">посмотреть расписание</a>
             <a class="button button--has-dark-background video-header__program-button" href="#!">пробная тренировка</a>
-
           </div>
         </div>
       </div>
       <video class="video-header__video" preload="none" loop muted poster="@img/video-header-bg.jpg">
         <source src="./files/gym-video.mp4" type="video/mp4">
       </video>
+      <div class="container">
+        <div class="video-header__mobile-image-wrapper">
+          <picture>
+            <source type="image/webp" srcset="@img/video-header-program-mobile.webp 1x">
+            <img class="video-header__mobile-image" src="@img/video-header-program-mobile.jpg" alt="">
+          </picture>
+        </div>
+      </div>
     </section>
+
+    <div class="container">
+        <ul class="program-info-list">
+          <li class="program-info-list__item mini-info">
+            <div class="mini-info__content">
+              <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+              <div class="mini-info__main">
+                <p class="mini-info__text">Способствует сжиганию калорий и помогает набрать сухую мышечную массу</p>
+              </div>
+            </div>
+          </li>
+          <li class="program-info-list__item mini-info">
+            <div class="mini-info__content">
+              <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+              <div class="mini-info__main">
+                <p class="mini-info__text">Основана на многоповторных упражнениях с лёгкими и средними весами в быстром темпе</p>
+              </div>
+            </div>
+          </li>
+          <li class="program-info-list__item mini-info">
+            <div class="mini-info__content">
+              <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+              <div class="mini-info__main">
+                <p class="mini-info__text">Усиливает выносливость и взрывную силу в короткие сроки</p>
+              </div>
+            </div>
+          </li>
+          <li class="program-info-list__item mini-info">
+            <div class="mini-info__content">
+              <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+              <div class="mini-info__main">
+                <p class="mini-info__text">За одну тренировку вы прорабатывает все основные группы мышц</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+    </div>
 
 
   </main>
