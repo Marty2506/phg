@@ -2,8 +2,12 @@
   <div class="container">
     <div class="trainers__content">
       <div class="trainers__header">
-        <h2 class="trainers__title">Сертифицированные тренеры</h2>
-        <p class="trainers__text">помогают достичь результатов ещё быстрее</p>
+        {% if trainersTitle %}
+          <h2 class="trainers__title">{{trainersTitle | safe}}</h2>
+        {% else %}
+          <h2 class="trainers__title">Сертифицированные тренеры</h2>
+          <p class="trainers__text">помогают достичь результатов ещё быстрее</p>
+        {% endif%}
       </div>
       <div class="trainers__swiper-wrapper">
 
@@ -31,11 +35,11 @@
                     <p class="trainer-card__sub-title">Специализации:</p>
                     <ul class="trainer-card__spec-list">
                       <li class="trainer-card__spec-item">
-                        <a class="trainer-card__spec-link" href="#!">LesMillsBody Pupm</a>
+                        <a class="trainer-card__spec-link" href="#!">LesMills BodyPupm</a>
                         <span>(с 2017 года)</span>
                       </li>
                       <li class="trainer-card__spec-item">
-                        <a class="trainer-card__spec-link" href="#!">LesMills Body Combat</a>
+                        <a class="trainer-card__spec-link" href="#!">LesMills BodyCombat</a>
                         <span>(с 2015 года)</span>
                       </li>
                       <li class="trainer-card__spec-item">
@@ -81,11 +85,11 @@
                     <p class="trainer-card__sub-title">Специализации:</p>
                     <ul class="trainer-card__spec-list">
                       <li class="trainer-card__spec-item">
-                        <a class="trainer-card__spec-link" href="#!">LesMillsBody Pupm</a>
+                        <a class="trainer-card__spec-link" href="#!">LesMills BodyPupm</a>
                         <span>(с 2017 года)</span>
                       </li>
                       <li class="trainer-card__spec-item">
-                        <a class="trainer-card__spec-link" href="#!">LesMills Body Combat</a>
+                        <a class="trainer-card__spec-link" href="#!">LesMills BodyCombat</a>
                         <span>(с 2015 года)</span>
                       </li>
                       <li class="trainer-card__spec-item">
@@ -131,11 +135,11 @@
                     <p class="trainer-card__sub-title">Специализации:</p>
                     <ul class="trainer-card__spec-list">
                       <li class="trainer-card__spec-item">
-                        <a class="trainer-card__spec-link" href="#!">LesMillsBody Pupm</a>
+                        <a class="trainer-card__spec-link" href="#!">LesMills BodyPupm</a>
                         <span>(с 2017 года)</span>
                       </li>
                       <li class="trainer-card__spec-item">
-                        <a class="trainer-card__spec-link" href="#!">LesMills Body Combat</a>
+                        <a class="trainer-card__spec-link" href="#!">LesMills BodyCombat</a>
                         <span>(с 2015 года)</span>
                       </li>
                       <li class="trainer-card__spec-item">

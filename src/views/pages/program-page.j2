@@ -43,7 +43,7 @@
           </ul>
           <div class="video-header__buttons">
             <a class="button button--reverse video-header__program-button" href="#!">посмотреть расписание</a>
-            <a class="button button--has-dark-background video-header__program-button" href="#!">пробная тренировка</a>
+            <a class="button button--has-dark-bg-laptop video-header__program-button" href="#!">пробная тренировка</a>
           </div>
         </div>
       </div>
@@ -294,11 +294,18 @@
     </section>
 
 
+    {% set trainersTitle = "Тренеры LesMills BodyPump" %}
+    {% include "./blocks/trainers.j2" %}
+
+     {% include "./blocks/get-card.j2" %}
+
+
   </main>
 {% endblock content %}
 
 {% block js %}
   <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/tariffs.min.js"></script>
   <script src="./js/main.min.js"></script>
   <script src="./js/gallery.min.js"></script>
   {# <script src="./js/tabs.min.js"></script> #}

@@ -95,8 +95,10 @@
     outline: none;
   }
 }
-
 .button--has-dark-background {
+  color: $bg-color;
+}
+.button--has-dark-bg-laptop {
   @media (width >= $laptop-width) {
     color: $bg-color;
   }
