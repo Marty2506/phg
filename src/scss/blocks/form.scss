@@ -1,0 +1,88 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.form__label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+.form__label-text {
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  line-height: 25px;
+  color: $font-default;
+}
+.form__field {
+  padding: 20px 16px;
+  border: none;
+  background-color: $white-color;
+  border-radius: 1px;
+  font-size: 17px;
+  line-height: 25px;
+  color: $font-default;
+
+  &:hover,
+  &:focus-visible {
+    outline: 2px solid $secondary-color;
+  }
+
+  &::placeholder {
+    opacity: 0.7;
+  }
+}
+.form__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.form__sumbit-button {
+}
+.form__messengers {
+  display: flex;
+  gap: 3px;
+}
+.form__label--checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: initial;
+
+  gap: 7px;
+}
+.form__checkbox {
+}
+.form__mark {
+  width: 17px;
+  height: 17px;
+
+  background-color: $bg-color;
+  border: 1px solid transparent;
+
+  transition: border 0.5s ease;
+}
+.form__checkbox:checked + .form__mark {
+  background-image: url("@img/icons/select-check-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form__checkbox:hover + .form__mark,
+.form__checkbox:focus + .form__mark {
+  border-color: $secondary-color;
+}
+.form__checkbox-label-text {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+  opacity: 0.7;
+}
+.form__error-message {
+  padding-left: 10px;
+  color: red;
+}

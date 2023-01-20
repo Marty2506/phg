@@ -31,6 +31,12 @@ ol {
   list-style-type: none;
 }
 
+.link {
+  &:hover {
+    color: $font-default;
+  }
+}
+
 .pads {
   padding-top: 20px;
   padding-bottom: 20px;

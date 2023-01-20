@@ -33,7 +33,8 @@
   flex-shrink: 0;
   align-self: flex-start;
   max-width: 80px;
-  max-height: 80px;
+  height: 45px;
+  object-fit: contain;
   overflow: hidden;
 
   justify-self: flex-start;

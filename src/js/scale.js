@@ -7,7 +7,6 @@ class TrainingScale {
   }
 
   createScale() {
-    console.log("HI!");
     const container = document.createElement('div');
     container.classList.add('trainingScale');
     const item = document.createElement('div');

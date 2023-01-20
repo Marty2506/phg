@@ -1,0 +1,78 @@
+<section class="test-train section pads">
+  <h2 class="visually-hidden">Тестовая тренировка</h2>
+  <div class="container">
+    <div class="test-train__content">
+      <p class="test-train__title title">Познакомьтесь с клубом <span>powerhouse gym</span> на пробной тренировке</p>
+      <div class="test-train__info">
+        <p class="test-train__info-text">Пробная тренировка включает:</p>
+        <ul class="test-train__info-list">
+          <li class="test-train__info-list-item mini-info">
+            <div class="mini-info__content">
+              <img class="mini-info__icon" src="@img/icons/fitquest-logo.png" alt="" width="145" height="45">
+              <div class="mini-info__main">
+                <p class="mini-info__text">Фитнес-тестирование FitQuest, которое покажет реальное состояние вашего организма</p>
+              </div>
+            </div>
+          </li>
+          <li class="test-train__info-list-item mini-info">
+            <div class="mini-info__content">
+              <img class="mini-info__icon" src="@img/icons/quote-icon.svg" alt="" width="42" height="35">
+              <div class="mini-info__main">
+                <p class="mini-info__text">Рекомендации от тренера по итогам тестирования. Он расскажет с каких тренировок и с каких весов начинать</p>
+              </div>
+            </div>
+          </li>
+          <li class="test-train__info-list-item mini-info">
+            <div class="mini-info__content">
+              <img class="mini-info__icon" src="@img/icons/dumbbell-icon.svg" alt="" width="46" height="25">
+              <div class="mini-info__main">
+                <p class="mini-info__text">Тренировка в любой зоне клуба
+с тренером, который покажет как правильно делать упражнения</p>
+              </div>
+            </div>
+          </li>
+          <li class="test-train__info-list-item mini-info">
+            <div class="mini-info__content">
+              <img class="mini-info__icon" src="@img/icons/route-icon.svg" alt="" width="34" height="36">
+              <div class="mini-info__main">
+                <p class="mini-info__text">Экскурсия по клубу. Менеджер покажет вам все наши зоны, а вы сможете позаниматься на тренажёрах</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <form action="https://echo.htmlacademy.ru" method="post" class="test-train__form form" id="test-train-form">
+        <label class="form__label">
+          <span class="form__label-text">Ваше имя</span>
+          <input class="form__field" type="text" id="test-train-form-client-name" name="test-train-form-client-name" placeholder="Введите ваше имя">
+        </label>
+        <label class="form__label">
+          <span class="form__label-text">Телефон</span>
+          <input class="form__field" type="tel" id="test-train-form-phone" name="test-train-form-phone" placeholder="+7 (999) 999-99-99" required data-pristine-required-message="Обязательно к заполнению">
+        </label>
+        <div class="form__row">
+          <button class="form__sumbit-button button button--reverse" type="submit">Записаться на тренировку</button>
+          <div class="form__messengers">
+            <a class="messenger messenger--telegram messenger--red" href="#!">
+              <svg class="messenger__icon" width="16" height="14" viewBox="0 0 16 14">
+                <use xlink:href="img/sprite.svg#telegram-icon"></use>
+              </svg>
+              <span class="visually-hidden">Контакт телеграма.</span>
+            </a>
+            <a class="messenger messenger--whatsapp messenger--red" href="#!">
+              <svg class="messenger__icon" width="16" height="17" viewBox="0 0 16 17">
+                <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
+              </svg>
+              <span class="visually-hidden">Контакт вотсапа.</span>
+            </a>
+          </div>
+        </div>
+        <label class="form__label form__label--checkbox">
+          <input class="form__checkbox visually-hidden" type="checkbox" name="test-train-form-politics" id="modal-pricelist-politics" checked>
+          <span class="form__mark"></span>
+          <span class="form__checkbox-label-text">Согласен с <a class="link" href="#!">Политикой конфиденциальности сайта</a></span>
+        </label>
+      </form>
+    </div>
+  </div>
+</section>
