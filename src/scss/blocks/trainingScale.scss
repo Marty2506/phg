@@ -1,0 +1,17 @@
+.trainingScale {
+  display: flex;
+  gap: 4px;
+}
+.trainingScale--hovered {
+  & .trainingScale__item {
+    transition: opacity 0.2s ease;
+    opacity: 1;
+  }
+}
+.trainingScale__item {
+  width: 10px;
+  height: 25px;
+  background-color: $secondary-color;
+  opacity: 0;
+  transition: none;
+}

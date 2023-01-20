@@ -297,7 +297,9 @@
     {% set trainersTitle = "Тренеры LesMills BodyPump" %}
     {% include "./blocks/trainers.j2" %}
 
-     {% include "./blocks/get-card.j2" %}
+    {% include "./blocks/get-card.j2" %}
+
+    {% include "./blocks/train-pack.j2" %}
 
 
   </main>
@@ -306,7 +308,9 @@
 {% block js %}
   <script src="./js/swiper-bundle.min.js"></script>
   <script src="./js/tariffs.min.js"></script>
+  <script src="./js/train-pack.min.js"></script>
   <script src="./js/main.min.js"></script>
   <script src="./js/gallery.min.js"></script>
+  <script src="./js/scale.min.js"></script>
   {# <script src="./js/tabs.min.js"></script> #}
 {% endblock %}
