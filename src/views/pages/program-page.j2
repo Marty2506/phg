@@ -292,6 +292,7 @@
         </div>
       </div>
     </section>
+    {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
 
 
     {% set trainersTitle = "Тренеры LesMills BodyPump" %}
@@ -302,6 +303,11 @@
     {% include "./blocks/train-pack.j2" %}
     {% include "./blocks/test-train.j2" %}
     {% include "./blocks/max-result.j2" %}
+    {% include "./blocks/contacts.j2" %}
+    {% include "./blocks/gym-walk.j2" %}
+    {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
+    {% include "./blocks/promos.j2" %}
+    {% include "./blocks/other-trainings.j2" %}
 
 
 
@@ -316,5 +322,7 @@
   <script src="./js/gallery.min.js"></script>
   <script src="./js/scale.min.js"></script>
   <script src="./js/test-train.min.js"></script>
-  {# <script src="./js/tabs.min.js"></script> #}
+  <script src="./js/map.min.js"></script>
+  <script src="./js/promos.min.js"></script>
+  <script src="./js/tabs.min.js"></script>
 {% endblock %}
