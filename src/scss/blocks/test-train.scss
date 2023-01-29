@@ -1,5 +1,18 @@
 .test-train {
   background-color: $bg-color2;
+  padding: 50px 0;
+
+  @media (width >= $laptop-width) {
+    padding-top: 90px;
+    padding-bottom: 80px;
+  }
+  @media (width >= $semi-desktop-width) {
+    padding-top: 115px;
+  }
+  @media (width >= $desktop-width) {
+    padding-top: 90px;
+    padding-bottom: 130px;
+  }
 }
 .test-train__content {
   display: flex;
