@@ -1,0 +1,128 @@
+.max-result {
+  background-color: $bg-color;
+  padding-top: 50px;
+  padding-bottom: 60px;
+
+  @media (width >= $laptop-width) {
+    padding-top: 105px;
+    padding-bottom: 75px;
+  }
+  @media (width >= $semi-desktop-width) {
+    padding-top: 115px;
+    padding-bottom: 130px;
+  }
+}
+.max-result__container {
+  @media (width >= $tablet-width) {
+    padding-right: 0;
+  }
+  @media (width >= $desktop-width) {
+    max-width: 1920px;
+    padding-left: calc((1920px - $desktop-width) / 2);
+  }
+}
+.max-result__content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media (width >= $tablet-width) {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+  }
+  @media (width >= $laptop-width) {
+    grid-template-columns: 430px 1fr;
+    gap: 25px;
+  }
+  @media (width >= $semi-desktop-width) {
+    grid-template-columns: 490px 1fr;
+    gap: 40px;
+  }
+  @media (width >= $desktop-width) {
+    grid-template-columns: 545px 1fr;
+    gap: 85px;
+  }
+}
+.max-result__main {
+}
+.max-result__title {
+  @media (width >= $tablet-width) {
+    max-width: 90%;
+  }
+}
+.max-result__list {
+  margin-bottom: 24px;
+  @media (width >= $tablet-width) {
+    max-width: 90%;
+  }
+}
+.max-result__list-item {
+}
+.max-result__list-item-logos {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 6px;
+}
+.max-result__button {
+  max-width: 385px;
+}
+.max-result__image-content {
+  position: relative;
+  z-index: 1;
+}
+.max-result__image-wrapper {
+  position: relative;
+
+  @media (width >= $tablet-width) {
+    height: 575px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: -10px;
+      bottom: -10px;
+      width: 185px;
+      height: 185px;
+      background-color: $secondary-color;
+    }
+  }
+  @media (width >= $laptop-width) {
+    height: 615px;
+  }
+
+  @media (width >= $desktop-width) {
+    height: 0;
+    padding-bottom: 59.375%;
+  }
+  @media (width < $tablet-width) {
+    height: 0;
+    padding-bottom: 59.375%;
+  }
+}
+.max-result__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  object-position: top left;
+
+  @media (width < $tablet-width) {
+    object-fit: cover;
+  }
+}
+.max-result__video-button {
+  text-align: left;
+  height: 100px;
+
+  @media (width >= $tablet-width) {
+    position: absolute;
+    top: 450px;
+    left: 50px;
+    max-width: 340px;
+  }
+}
