@@ -2,10 +2,26 @@
   background-color: $bg-color2;
 }
 .test-train__content {
+  display: flex;
+  flex-direction: column;
+
+  @media (width >= $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    grid-template-rows: auto 1fr;
+  }
 }
 .test-train__title {
+  @media (width >= $laptop-width) {
+    max-width: 80%;
+  }
 }
 .test-train__info {
+  @media (width >= $desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+  }
 }
 .test-train__info-text {
   margin: 0;
@@ -39,6 +55,9 @@
 
   @media (width >= $tablet-width) {
     padding: 40px;
+  }
+  @media (width >= $laptop-width) {
+    min-height: 260px;
   }
 }
 .test-train__form {

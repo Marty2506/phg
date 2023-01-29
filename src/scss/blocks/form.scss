@@ -34,6 +34,21 @@
     opacity: 0.7;
   }
 }
+.form__col-row-wrapper {
+  display: flex;
+  gap: 10px;
+
+  @media (width < $tablet-width) {
+    flex-direction: column;
+  }
+  @media (width >= $desktop-width) {
+    flex-direction: column;
+  }
+
+  & .form__label {
+    max-width: 325px;
+  }
+}
 .form__row {
   display: flex;
   flex-wrap: wrap;
