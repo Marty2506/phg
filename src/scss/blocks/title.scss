@@ -9,6 +9,7 @@
   font-family: $header-font;
 
   @media (width >= $laptop-width) {
+    margin-bottom: 40px;
     font-size: 35px;
     line-height: 42px;
   }

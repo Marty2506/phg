@@ -118,12 +118,53 @@
       </div>
     </section>
 
+    <section class="grid-gallery section pads">
+      <div class="container">
+        <div class="grid-gallery__content">
+          <h2 class="grid-gallery__title title">Фото с тренировок в зоне свободных весов</h2>
+          <div class="grid-gallery__gallery-container">
+            <div class="grid-gallery__swiper-buttons section__swiper-buttons">
+              <button class="section__swiper-button swiper-button swiper-button--prev" id="grid-gallery-swiper-btn-prev" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть назад</span>
+              </button>
+              <button class="section__swiper-button swiper-button swiper-button--next" id="grid-gallery-swiper-btn-next" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть вперед</span>
+              </button>
+            </div>
+            <div class="grid-gallery__gallery grid-gallery__swiper section__swiper" id="grid-gallery-swiper">
+              <div class="grid-gallery__gallery-wrapper swiper-wrapper">
+                {% for gridGalleryImageCounter in range(12) %}
+                  <div class="grid-gallery__slide swiper-slide">
+                    <a class="grid-gallery__link-image" href="@img/grid-gallery/{{gridGalleryImageCounter + 1}}.webp">
+                      <picture>
+                        <source type="image/webp" srcset="@img/grid-gallery/{{gridGalleryImageCounter + 1}}-preview.webp 1x">
+                        <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{gridGalleryImageCounter + 1}}-preview.jpg" alt="">
+                      </picture>
+                    </a>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          <button class="button button--show-more" type="button">показать еще</button>
+        </div>
+      </div>
+    </section>
+
 
   </main>
 {% endblock content %}
 
 {% block js %}
   <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/macy.min.js"></script>
   <script src="./js/about-zone.min.js"></script>
   <script src="./js/main.min.js"></script>
+  <script src="./js/grid-gallery.min.js"></script>
 {% endblock %}
