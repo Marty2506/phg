@@ -1,0 +1,47 @@
+.about-gym {
+  padding: 50px 0;
+  padding-top: 20px;
+
+  @media (width >= $laptop-width) {
+    padding-top: 0;
+    padding-bottom: 120px;
+  }
+  @media (width >= $desktop-width) {
+    padding-bottom: 150px;
+  }
+}
+.about-gym__content {
+}
+.about-gym__title {
+  @media (width >= $laptop-width) {
+    margin-bottom: 50px;
+    max-width: 70%;
+  }
+}
+.about-gym__cards {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+
+  @media (width >= 670px) {
+    display: grid;
+
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (width >= $laptop-width) {
+    gap: 30px;
+  }
+  @media (width >= $semi-desktop-width) {
+    column-gap: 60px;
+    row-gap: 55px;
+  }
+  @media (width >= $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+    row-gap: 25px;
+  }
+}
+.about-gym__card {
+}

@@ -1,0 +1,119 @@
+{% extends "layout.j2" %}
+
+{% set page = "gym" %}
+
+{% block content %}
+  <main class="page-main">
+    <div class="breadcumbs">
+      <div class="breadcumbs__container container">
+        <ul class="breadcumbs__list">
+          <li class="breadcumbs__item">
+            <a class="breadcumbs__link" href="./index.html">Главная</a>
+            <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+              <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcumbs__item">
+            <span class="breadcumbs__link breadcumbs__link--current">О зале</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="about-gym">
+      <h1 class="visually-hidden">О зале клуба</h1>
+      <div class="container">
+        <div class="about-gym__content">
+          <p class="about-gym__title page__title">В зале клуба <span>powerhouse gym</span> каждый найдёт то, что нужно для достижения результата</p>
+          <ul class="about-gym__cards">
+            <li class="about-gym__card card">
+              <div class="card__content">
+                <div class="card__header">
+                  <h3 class="card__title">Зона свободных весов</h3>
+                </div>
+                <div class="card__body">
+                  <ul class="card__list list">
+                    <li class="card__list-item list__item">Велосипеды, многофункциональные беговые дорожки, степперы, ходьба в гору, лестница, эллипсы и гребные тренажеры</li>
+                    <li class="card__list-item list__item">Панорамные окна</li>
+                  </ul>
+                  <a class="card__body-button button button--reverse" href="./free-weights-zone.html" tabindex="-1">Подробнее</a>
+                </div>
+              </div>
+              <img class="card__bg-image" src="@img/gym-card-bg.jpg" alt="">
+              <a class="card__link" href="./free-weights-zone.html"></a>
+            </li>
+            <li class="about-gym__card card">
+              <div class="card__content">
+                <div class="card__header">
+                  <h3 class="card__title">Зона кардио</h3>
+                </div>
+                <div class="card__body">
+                  <ul class="card__list list">
+                    <li class="card__list-item list__item">Велосипеды, многофункциональные беговые дорожки, степперы, ходьба в гору, лестница, эллипсы и гребные тренажеры</li>
+                    <li class="card__list-item list__item">Панорамные окна</li>
+                  </ul>
+                  <a class="card__body-button button button--reverse" href="./free-weights-zone.html" tabindex="-1">Подробнее</a>
+                </div>
+              </div>
+              <img class="card__bg-image" src="@img/gym-card-bg.jpg" alt="">
+              <a class="card__link" href="./free-weights-zone.html"></a>
+            </li>
+            <li class="about-gym__card card">
+              <div class="card__content">
+                <div class="card__header">
+                  <h3 class="card__title">Зона для пауэрлифтеров и тежелоатлетов</h3>
+                </div>
+                <div class="card__body">
+                  <ul class="card__list list">
+                    <li class="card__list-item list__item">Велосипеды, многофункциональные беговые дорожки, степперы, ходьба в гору, лестница, эллипсы и гребные тренажеры</li>
+                    <li class="card__list-item list__item">Панорамные окна</li>
+                  </ul>
+                  <a class="card__body-button button button--reverse" href="./free-weights-zone.html" tabindex="-1">Подробнее</a>
+                </div>
+              </div>
+              <img class="card__bg-image" src="@img/gym-card-bg.jpg" alt="">
+              <a class="card__link" href="./free-weights-zone.html"></a>
+            </li>
+            <li class="about-gym__card card">
+              <div class="card__content">
+                <div class="card__header">
+                  <h3 class="card__title">Зона премиальных тренажеров</h3>
+                </div>
+                <div class="card__body">
+                  <ul class="card__list list">
+                    <li class="card__list-item list__item">Велосипеды, многофункциональные беговые дорожки, степперы, ходьба в гору, лестница, эллипсы и гребные тренажеры</li>
+                    <li class="card__list-item list__item">Панорамные окна</li>
+                  </ul>
+                  <a class="card__body-button button button--reverse" href="./free-weights-zone.html" tabindex="-1">Подробнее</a>
+                </div>
+              </div>
+              <img class="card__bg-image" src="@img/gym-card-bg.jpg" alt="">
+              <a class="card__link" href="./free-weights-zone.html"></a>
+            </li>
+            <li class="about-gym__card card">
+              <div class="card__content">
+                <div class="card__header">
+                  <h3 class="card__title">Зона кроссфита</h3>
+                </div>
+                <div class="card__body">
+                  <ul class="card__list list">
+                    <li class="card__list-item list__item">Велосипеды, многофункциональные беговые дорожки, степперы, ходьба в гору, лестница, эллипсы и гребные тренажеры</li>
+                    <li class="card__list-item list__item">Панорамные окна</li>
+                  </ul>
+                  <a class="card__body-button button button--reverse" href="./free-weights-zone.html" tabindex="-1">Подробнее</a>
+                </div>
+              </div>
+              <img class="card__bg-image" src="@img/gym-card-bg.jpg" alt="">
+              <a class="card__link" href="./free-weights-zone.html"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+{% endblock content %}
+
+{% block js %}
+
+{% endblock %}

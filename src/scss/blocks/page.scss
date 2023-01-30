@@ -66,6 +66,10 @@
 
     font-size: 60px;
   }
+
+  & span {
+    color: $secondary-color;
+  }
 }
 .page__title--light {
   @media (width >= $laptop-width) {
