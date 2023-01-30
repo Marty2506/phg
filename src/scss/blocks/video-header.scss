@@ -254,7 +254,8 @@
   object-fit: cover;
 }
 
-.video-header--program {
+.video-header--program,
+.video-header--zone {
   display: flex;
   flex-direction: column;
   padding-top: 45px;
@@ -293,5 +294,18 @@
   }
   @media (width >= $desktop-width) {
     padding-bottom: 210px;
+  }
+}
+
+.video-header--zone {
+  @media (width >= $laptop-width) {
+    padding-top: 0;
+    padding-bottom: 120px;
+  }
+
+  & .video-header__content {
+    @media (width >= $laptop-width) {
+      max-width: 80%;
+    }
   }
 }

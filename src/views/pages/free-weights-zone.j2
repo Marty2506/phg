@@ -1,0 +1,129 @@
+{% extends "layout.j2" %}
+
+{% set page = "free-weights-zone" %}
+
+{% block content %}
+  <main class="page-main">
+    <section class="video-header video-header--zone">
+      <div class="breadcumbs breadcumbs--has-drak-bg">
+        <div class="breadcumbs__container container">
+          <ul class="breadcumbs__list">
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./index.html">Главная</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./gym.html">О зале</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <span class="breadcumbs__link breadcumbs__link--current">Зона свободных весов</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="video-header__content">
+          <div class="video-header__header">
+            <h1 class="visually-hidden">Зона свободных весов</h1>
+            <p class="video-header__title page__title page__title--light">В зоне свободных весов каждый найдет то, что нужно</p>
+          </div>
+          <ul class="video-header__list list">
+            <li class="video-header__list-item list__item">7 скамеек для жима лежа<br>— всегда есть свободная</li>
+            <li class="video-header__list-item list__item">7 отдельных стоек для приседаний<br>и 4 в зоне кроссфита</li>
+          </ul>
+          <div class="video-header__buttons">
+            <a class="button button--reverse video-header__program-button" href="#!">Записаться на пробную тренировку</a>
+          </div>
+        </div>
+      </div>
+      <video class="video-header__video" preload="none" loop muted poster="@img/video-header-bg.jpg">
+        <source src="./files/gym-video.mp4" type="video/mp4">
+      </video>
+      <div class="container">
+        <div class="video-header__mobile-image-wrapper">
+          <picture>
+            <source type="image/webp" srcset="@img/video-header-program-mobile.webp 1x">
+            <img class="video-header__mobile-image" src="@img/video-header-program-mobile.jpg" alt="">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-zone section pads">
+      <div class="container">
+        <div class="about-zone__content">
+          <h2 class="about-zone__title title">Преимущества зоны свободных весов</h2>
+          <div class="about-zone__swiper-container">
+            <div class="about-zone__swiper-buttons section__swiper-buttons">
+              <button class="section__swiper-button swiper-button swiper-button--prev" id="about-zone-swiper-btn-prev" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть назад</span>
+              </button>
+              <button class="section__swiper-button swiper-button swiper-button--next" id="about-zone-swiper-btn-next" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть вперед</span>
+              </button>
+            </div>
+            <div class="about-zone__swiper swiper section__swiper" id="about-zone-swiper">
+              <div class="swiper-wrapper">
+                <div class="about-zone__card swiper-slide section__swiper-slide">
+                  <div class="about-zone__card-content">
+                    <p class="about-zone__card-title">7 скамеек для жима лежа</p>
+                    <picture class="about-zone__card-image-wrapper">
+                      <source type="image/webp" srcset="@img/about-zone-image.webp 1x">
+                      <img class="about-zone__card-image" src="@img/about-zone-image.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="about-zone__card swiper-slide section__swiper-slide">
+                  <div class="about-zone__card-content">
+                    <p class="about-zone__card-title">4 стойки для становой тяги</p>
+                    <picture class="about-zone__card-image-wrapper">
+                      <source type="image/webp" srcset="@img/about-zone-image.webp 1x">
+                      <img class="about-zone__card-image" src="@img/about-zone-image.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="about-zone__card swiper-slide section__swiper-slide">
+                  <div class="about-zone__card-content">
+                    <p class="about-zone__card-title">7 скамеек для жима лежа</p>
+                    <picture class="about-zone__card-image-wrapper">
+                      <source type="image/webp" srcset="@img/about-zone-image.webp 1x">
+                      <img class="about-zone__card-image" src="@img/about-zone-image.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="about-zone__card swiper-slide section__swiper-slide">
+                  <div class="about-zone__card-content">
+                    <p class="about-zone__card-title">7 скамеек для жима лежа</p>
+                    <picture class="about-zone__card-image-wrapper">
+                      <source type="image/webp" srcset="@img/about-zone-image.webp 1x">
+                      <img class="about-zone__card-image" src="@img/about-zone-image.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+{% endblock content %}
+
+{% block js %}
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/about-zone.min.js"></script>
+  <script src="./js/main.min.js"></script>
+{% endblock %}
