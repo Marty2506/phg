@@ -34,6 +34,7 @@
 }
 
 .program-card__header {
+  position: relative;
   flex-shrink: 0;
   margin-bottom: 10px;
 }
@@ -65,6 +66,12 @@
 .program-card__logo {
   max-width: 95%;
   max-height: 100px;
+}
+.program-card__logo--hovered {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
 }
 
 .program-card__description {
@@ -138,6 +145,14 @@
       }
 
       & .program-card__body {
+        opacity: 1;
+      }
+
+      & .program-card__logo {
+        opacity: 0;
+      }
+
+      & .program-card__logo--hovered {
         opacity: 1;
       }
     }
