@@ -17,10 +17,12 @@
 
   @media (width >= $laptop-width) {
     margin-bottom: 40px;
+    max-width: 70%;
   }
   @media (width >= $desktop-width) {
     margin-bottom: 55px;
   }
+
 }
 .about-zone__swiper-container {
   position: relative;

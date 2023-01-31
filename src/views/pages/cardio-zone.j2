@@ -1,0 +1,194 @@
+{% extends "layout.j2" %}
+
+{% set page = "cardio-zone" %}
+
+{% block content %}
+  <main class="page-main">
+    <section class="video-header video-header--zone">
+      <div class="breadcumbs breadcumbs--has-drak-bg">
+        <div class="breadcumbs__container container">
+          <ul class="breadcumbs__list">
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./index.html">Главная</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./gym.html">О зале</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <span class="breadcumbs__link breadcumbs__link--current">Зона кардио</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="video-header__content">
+          <div class="video-header__header">
+            <h1 class="visually-hidden">Зона кардио</h1>
+            <p class="video-header__title page__title page__title--light">Большая зона для кардио тренировок с продвинутыми тренажерами</p>
+          </div>
+          <p class="video-header__text">Укрепляйте сердце и сосуды, развивайте легкие, разгоняйте метаболизм, жгите калории и забудьте про очереди на тренажеры</p>
+          <div class="video-header__buttons">
+            <a class="button button--reverse video-header__program-button" href="#!">Записаться на пробную тренировку</a>
+          </div>
+        </div>
+      </div>
+      <video class="video-header__video" preload="none" loop muted poster="@img/video-header-bg.jpg">
+        <source src="./files/gym-video.mp4" type="video/mp4">
+      </video>
+      <div class="container">
+        <div class="video-header__mobile-image-wrapper">
+          <picture>
+            <source type="image/webp" srcset="@img/video-header-program-mobile.webp 1x">
+            <img class="video-header__mobile-image" src="@img/video-header-program-mobile.jpg" alt="">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-zone section pads">
+      <div class="container">
+        <div class="about-zone__content">
+          <h2 class="about-zone__title title">40+ американских тренажеров Life Fitness, разработанных с учетом биомеханики человека</h2>
+          <div class="about-zone__swiper-container">
+            <div class="about-zone__swiper-buttons section__swiper-buttons">
+              <button class="section__swiper-button swiper-button swiper-button--prev" id="about-zone-swiper-btn-prev" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть назад</span>
+              </button>
+              <button class="section__swiper-button swiper-button swiper-button--next" id="about-zone-swiper-btn-next" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть вперед</span>
+              </button>
+            </div>
+            <div class="about-zone__swiper swiper section__swiper" id="about-zone-swiper">
+              <div class="swiper-wrapper">
+                <div class="about-zone__card swiper-slide section__swiper-slide">
+                  <div class="about-zone__card-content">
+                    <p class="about-zone__card-title">Многофункциональные беговые дорожки</p>
+                    <picture class="about-zone__card-image-wrapper">
+                      <source type="image/webp" srcset="@img/about-zone-image.webp 1x">
+                      <img class="about-zone__card-image" src="@img/about-zone-image.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="about-zone__card swiper-slide section__swiper-slide">
+                  <div class="about-zone__card-content">
+                    <p class="about-zone__card-title">Степперы</p>
+                    <picture class="about-zone__card-image-wrapper">
+                      <source type="image/webp" srcset="@img/about-zone-image.webp 1x">
+                      <img class="about-zone__card-image" src="@img/about-zone-image.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="about-zone__card swiper-slide section__swiper-slide">
+                  <div class="about-zone__card-content">
+                    <p class="about-zone__card-title">Степперы</p>
+                    <picture class="about-zone__card-image-wrapper">
+                      <source type="image/webp" srcset="@img/about-zone-image.webp 1x">
+                      <img class="about-zone__card-image" src="@img/about-zone-image.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="about-zone__card swiper-slide section__swiper-slide">
+                  <div class="about-zone__card-content">
+                    <p class="about-zone__card-title">Степперы</p>
+                    <picture class="about-zone__card-image-wrapper">
+                      <source type="image/webp" srcset="@img/about-zone-image.webp 1x">
+                      <img class="about-zone__card-image" src="@img/about-zone-image.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-gallery section pads">
+      <div class="container">
+        <div class="grid-gallery__content">
+          <h2 class="grid-gallery__title title">Фото с тренировок в зоне кардио</h2>
+          <div class="grid-gallery__gallery-container">
+            <div class="grid-gallery__swiper-buttons section__swiper-buttons">
+              <button class="section__swiper-button swiper-button swiper-button--prev" id="grid-gallery-swiper-btn-prev" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть назад</span>
+              </button>
+              <button class="section__swiper-button swiper-button swiper-button--next" id="grid-gallery-swiper-btn-next" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть вперед</span>
+              </button>
+            </div>
+            <div class="grid-gallery__gallery grid-gallery__swiper section__swiper" id="grid-gallery-swiper">
+              <div class="grid-gallery__gallery-wrapper swiper-wrapper">
+                {% for gridGalleryImageCounter in range(12) %}
+                  <div class="grid-gallery__slide swiper-slide">
+                    <a class="grid-gallery__link-image" href="@img/grid-gallery/{{gridGalleryImageCounter + 1}}.webp" data-grid-gallery-link>
+                      <picture>
+                        <source type="image/webp" srcset="@img/grid-gallery/{{gridGalleryImageCounter + 1}}-preview.webp 1x">
+                        <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{gridGalleryImageCounter + 1}}-preview.jpg" alt="">
+                      </picture>
+                    </a>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          <button class="button button--show-more" type="button">показать еще</button>
+        </div>
+      </div>
+    </section>
+
+    {% set trainersTitle = "Опытные тренеры помогут достичь результата" %}
+    {% set trainersText = "Помогут подобрать подходящие веса, достичь правильной техники выполнения упражнений и отследить прогресс" %}
+    {% include "./blocks/trainers.j2" %}
+    {% set getCardTitle = "Получите неограниченный доступ <span>к зоне кардио</span>, оформив клубную карту" %}
+    {% include "./blocks/get-card.j2" %}
+    {% include "./blocks/test-train.j2" %}
+    {% include "./blocks/max-result.j2" %}
+    {% include "./blocks/contacts.j2" %}
+    {# Счетчик для свайпера в gym-walk #}
+    {% set gallerySwiperCnt = 1 %}
+    {% include "./blocks/gym-walk.j2" %}
+    {% include "./blocks/promos.j2" %}
+    {# Счетчик для свайпера в other-trainings #}
+    {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
+    {% include "./blocks/other-trainings.j2" %}
+
+
+  </main>
+{% endblock content %}
+
+{% block modal %}
+  {% include "./blocks/modal-image.j2" %}
+{% endblock %}
+
+{% block js %}
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/macy.min.js"></script>
+  <script src="./js/about-zone.min.js"></script>
+  <script src="./js/grid-gallery.min.js"></script>
+  <script src="./js/modal-image.min.js"></script>
+  <script src="./js/gallery.min.js"></script>
+  <script src="./js/tariffs.min.js"></script>
+  <script src="./js/test-train.min.js"></script>
+  <script src="./js/map.min.js"></script>
+  <script src="./js/promos.min.js"></script>
+  <script src="./js/tabs.min.js"></script>
+  <script src="./js/main.min.js"></script>
+{% endblock %}
