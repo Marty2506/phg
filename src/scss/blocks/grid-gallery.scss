@@ -1,9 +1,13 @@
 .grid-gallery {
-  padding-top: 0;
+  padding-top: 20px;
   padding-bottom: 50px;
 
   @media (width >= $laptop-width) {
+    padding-top: 80px;
     padding-bottom: 110px;
+  }
+  @media (width >= $desktop-width) {
+    padding-top: 110px;
   }
 }
 .grid-gallery__content {

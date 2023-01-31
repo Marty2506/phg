@@ -1,13 +1,14 @@
 .about-zone {
-  padding: 50px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   @media (width >= $laptop-width) {
     padding-top: 100px;
-    padding-bottom: 80px;
+    // padding-bottom: 80px;
   }
 
   @media (width >= $desktop-width) {
-    padding-bottom: 110px;
+    // padding-bottom: 110px;
   }
 }
 .about-zone__content {
