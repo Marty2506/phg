@@ -49,6 +49,7 @@
   font-family: $header-font;
 
   @media (width >= $laptop-width) {
+    max-width: 80%;
     font-size: 35px;
   }
   @media (width >= $semi-desktop-width) {
@@ -68,6 +69,12 @@
 
   @media (width >= $laptop-width) {
     font-size: 30px;
+  }
+}
+
+.trainers__text--zone {
+  @media (width >= $laptop-width) {
+    max-width: 60%;
   }
 }
 

@@ -157,6 +157,19 @@
       </div>
     </section>
 
+    {% set trainersTitle = "Опытные тренеры помогут достичь результата" %}
+    {% set trainersText = "Помогут подобрать подходящие веса, достичь правильной техники выполнения упражнений и отследить прогресс" %}
+    {% include "./blocks/trainers.j2" %}
+    {% set getCardTitle = "Получите неограниченный доступ <span>к зоне свободных весов</span>, оформив клубную карту" %}
+    {% include "./blocks/get-card.j2" %}
+    {% include "./blocks/test-train.j2" %}
+    {% include "./blocks/max-result.j2" %}
+    {% include "./blocks/contacts.j2" %}
+    {% include "./blocks/gym-walk.j2" %}
+    {% set gallerySwiperCnt = 1 %}
+    {% include "./blocks/promos.j2" %}
+    {% include "./blocks/other-trainings.j2" %}
+
 
   </main>
 {% endblock content %}
@@ -169,7 +182,13 @@
   <script src="./js/swiper-bundle.min.js"></script>
   <script src="./js/macy.min.js"></script>
   <script src="./js/about-zone.min.js"></script>
-  <script src="./js/main.min.js"></script>
   <script src="./js/grid-gallery.min.js"></script>
   <script src="./js/modal-image.min.js"></script>
+  <script src="./js/gallery.min.js"></script>
+  <script src="./js/tariffs.min.js"></script>
+  <script src="./js/test-train.min.js"></script>
+  <script src="./js/map.min.js"></script>
+  <script src="./js/promos.min.js"></script>
+  <script src="./js/tabs.min.js"></script>
+  <script src="./js/main.min.js"></script>
 {% endblock %}

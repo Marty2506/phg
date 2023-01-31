@@ -4,6 +4,9 @@
       <div class="trainers__header">
         {% if trainersTitle %}
           <h2 class="trainers__title">{{trainersTitle | safe}}</h2>
+          {% if trainersText %}
+            <p class="trainers__text trainers__text--zone">{{trainersText | safe}}</p>
+          {% endif %}
         {% else %}
           <h2 class="trainers__title">Сертифицированные тренеры</h2>
           <p class="trainers__text">помогают достичь результатов ещё быстрее</p>

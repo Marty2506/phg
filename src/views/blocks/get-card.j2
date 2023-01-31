@@ -3,7 +3,11 @@
   <div class="container">
     <div class="get-card__content">
       <div class="get-card__header">
-        <p class="title get-card__title">Получите доступ к этой тренировке, оформив <span>клубную&nbsp;карту&nbsp;PHG</span></p>
+        {% if getCardTitle %}
+          <p class="title get-card__title">{{getCardTitle | safe}}</p>
+        {% else %}
+          <p class="title get-card__title">Получите доступ к этой тренировке, оформив <span>клубную&nbsp;карту&nbsp;PHG</span></p>
+        {% endif %}
         <a class="get-card__read-more-button button" href="#!">
           <span>Подробнее о картах</span>
           <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
