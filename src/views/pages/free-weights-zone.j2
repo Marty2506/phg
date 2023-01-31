@@ -141,7 +141,7 @@
               <div class="grid-gallery__gallery-wrapper swiper-wrapper">
                 {% for gridGalleryImageCounter in range(12) %}
                   <div class="grid-gallery__slide swiper-slide">
-                    <a class="grid-gallery__link-image" href="@img/grid-gallery/{{gridGalleryImageCounter + 1}}.webp">
+                    <a class="grid-gallery__link-image" href="@img/grid-gallery/{{gridGalleryImageCounter + 1}}.webp" data-grid-gallery-link>
                       <picture>
                         <source type="image/webp" srcset="@img/grid-gallery/{{gridGalleryImageCounter + 1}}-preview.webp 1x">
                         <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{gridGalleryImageCounter + 1}}-preview.jpg" alt="">
@@ -161,10 +161,15 @@
   </main>
 {% endblock content %}
 
+{% block modal %}
+  {% include "./blocks/modal-image.j2" %}
+{% endblock %}
+
 {% block js %}
   <script src="./js/swiper-bundle.min.js"></script>
   <script src="./js/macy.min.js"></script>
   <script src="./js/about-zone.min.js"></script>
   <script src="./js/main.min.js"></script>
   <script src="./js/grid-gallery.min.js"></script>
+  <script src="./js/modal-image.min.js"></script>
 {% endblock %}
