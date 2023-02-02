@@ -38,6 +38,7 @@
 
 .programs__tabs-button {
   padding: 17px 45px;
+  white-space: nowrap;
 
   font-size: 15px;
   line-height: 17px;
@@ -72,12 +73,12 @@
     flex-wrap: wrap;
   }
   @media (width >= $laptop-width) {
-    margin-bottom: 75px;
+    margin-bottom: 55px;
 
     gap: 35px;
   }
   @media (width >= $semi-desktop-width) {
-    margin-bottom: 100px;
+    margin-bottom: 55px;
   }
 }
 

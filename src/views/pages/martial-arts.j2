@@ -1,0 +1,140 @@
+{% extends "layout.j2" %}
+
+{% set page = "martial-arts" %}
+
+{% block content %}
+  <main class="page-main">
+    <div class="breadcumbs">
+      <div class="breadcumbs__container container">
+        <ul class="breadcumbs__list">
+          <li class="breadcumbs__item">
+            <a class="breadcumbs__link" href="./index.html">Главная</a>
+            <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+              <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcumbs__item">
+            <span class="breadcumbs__link breadcumbs__link--current">Единоборства</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="arts programs">
+      <div class="container">
+        <h1 class="page__title">Единоборства</h1>
+      </div>
+      <div class="programs__container container">
+        <div class="programs__content">
+          <div class="programs__tabs tabs">
+            <ul class="programs__tabs-list tabs__list" role="tablist">
+              <li class="programs__tabs-item tabs__item" role="presentation">
+                <button class="programs__tabs-button tabs__button active button" type="button">Бокс</button>
+              </li>
+              <li class="programs__tabs-item tabs__item" role="presentation">
+                <button class="programs__tabs-button tabs__button button" type="button">ММА</button>
+              </li>
+              <li class="programs__tabs-item tabs__item" role="presentation">
+                <button class="programs__tabs-button tabs__button button" type="button">Кикбоксинг</button>
+              </li>
+              <li class="programs__tabs-item tabs__item" role="presentation">
+                <button class="programs__tabs-button tabs__button button" type="button">Бразильский джиу-джутсу</button>
+              </li>
+            </ul>
+            <div class="programs__tabs-content tabs__content">
+              <div class="programs__panel tabs__panel active" role="tabpanel">
+                <h2 class="visually-hidden">Бокс</h2>
+                <ul class="programs__panel-list list">
+                  <li class="programs__panel-list-item list__item">Тренеры — профессиональные боксёры со 100+ боев в карьрере, титулами и тренерским опытом от 5 лет</li>
+                  <li class="programs__panel-list-item list__item">Тренировки подходят не только начинающим, но и продвинутым любителям единоборств</li>
+                  <li class="programs__panel-list-item list__item">Ощутимый результат после первого месяца тренировок</li>
+                </ul>
+                <ul class="programs__cards">
+                  <li class="card">
+                    <div class="card__content">
+                      <div class="card__header">
+                        <h3 class="card__title">Бокс для взрослых</h3>
+                      </div>
+                      <div class="card__body">
+                        <ul class="card__list list">
+                          <li class="card__list-item list__item">Групповые тренировки до 12 человек</li>
+                          <li class="card__list-item list__item">Сплит-тренировок (2 боксёра + тренер)</li>
+                          <li class="card__list-item list__item">Персональные тренировки в удобное для вас время</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <img class="card__bg-image" src="@img/box-card-bg.jpg" alt="">
+                    <a class="card__link" href="./box.html"></a>
+                  </li>
+                  <li class="card">
+                    <div class="card__content">
+                      <div class="card__header">
+                        <h3 class="card__title">Бокс для детей от 5 лет</h3>
+                      </div>
+                      <div class="card__body">
+                        <ul class="card__list list">
+                          <li class="card__list-item list__item">Групповые тренировки до 12 человек</li>
+                          <li class="card__list-item list__item">Сплит-тренировок (2 боксёра + тренер)</li>
+                          <li class="card__list-item list__item">Персональные тренировки в удобное для вас время</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <img class="card__bg-image" src="@img/box-card-bg.jpg" alt="">
+                    <a class="card__link" href="./box-for-kids.html"></a>
+                  </li>
+                  <li class="card">
+                    <div class="card__content">
+                      <div class="card__header">
+                        <h3 class="card__title">Бокс для женщин</h3>
+                      </div>
+                      <div class="card__body">
+                        <ul class="card__list list">
+                          <li class="card__list-item list__item">Групповые тренировки до 12 человек</li>
+                          <li class="card__list-item list__item">Сплит-тренировок (2 боксёра + тренер)</li>
+                          <li class="card__list-item list__item">Персональные тренировки в удобное для вас время</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <img class="card__bg-image" src="@img/box-card-bg.jpg" alt="">
+                    <a class="card__link" href="./box-for-women.html"></a>
+                  </li>
+                  <li class="card">
+                    <div class="card__content">
+                      <div class="card__header">
+                        <h3 class="card__title">Boxing conditions</h3>
+                      </div>
+                      <div class="card__body">
+                        <ul class="card__list list">
+                          <li class="card__list-item list__item">Групповые тренировки до 12 человек</li>
+                          <li class="card__list-item list__item">Сплит-тренировок (2 боксёра + тренер)</li>
+                          <li class="card__list-item list__item">Персональные тренировки в удобное для вас время</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <img class="card__bg-image" src="@img/box-card-bg.jpg" alt="">
+                    <a class="card__link" href="./boxing-conditions.html"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="programs__panel tabs__panel" role="tabpanel">
+                <h2 class="programs__panel-title title">ММА</h2>
+              </div>
+              <div class="programs__panel tabs__panel" role="tabpanel">
+                <h2 class="programs__panel-title title">Кикбоксинг</h2>
+              </div>
+              <div class="programs__panel tabs__panel" role="tabpanel">
+                <h2 class="programs__panel-title title">Бразильский джиу-джутсу</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+{% endblock content %}
+
+{% block js %}
+  <script src="./js/main.min.js"></script>
+  <script src="./js/tabs.min.js"></script>
+{% endblock %}
