@@ -1,0 +1,449 @@
+{% extends "layout.j2" %}
+
+{% set page = "box" %}
+
+{% block content %}
+  <main class="page-main">
+    <section class="video-header video-header--program">
+      <div class="breadcumbs breadcumbs--has-drak-bg">
+        <div class="breadcumbs__container container">
+          <ul class="breadcumbs__list">
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./index.html">Главная</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./martial-arts.html">Единоборства</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <span class="breadcumbs__link breadcumbs__link--current">Бокс</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="video-header__content">
+          <div class="video-header__header">
+            <h1 class="video-header__title page__title page__title--light">Занятия по боксу в клубе <span>powerhouse gym</span></h1>
+          </div>
+          <p class="video-header__text">Освойте технические навыки, получите опыт в спаррингах, улучшите физическую форму, обретите спокойствие и повысьте самооценку</p>
+          <ul class="video-header__list list">
+            <li class="video-header__list-item list__item"><b>Продолжительность:</b><br>30-60 минут</li>
+            <li class="video-header__list-item list__item"><b>Сжигает:</b><br>до 540 калорий</li>
+          </ul>
+          <div class="video-header__buttons">
+            <a class="button button--reverse video-header__program-button" href="#!">посмотреть расписание</a>
+            <a class="button button--has-dark-bg-laptop video-header__program-button" href="#!">пробная тренировка</a>
+          </div>
+        </div>
+      </div>
+      <video class="video-header__video" preload="none" loop muted poster="@img/video-header-bg.jpg">
+        <source src="./files/gym-video.mp4" type="video/mp4">
+      </video>
+      <div class="container">
+        <div class="video-header__mobile-image-wrapper">
+          <picture>
+            <source type="image/webp" srcset="@img/video-header-program-mobile.webp 1x">
+            <img class="video-header__mobile-image" src="@img/video-header-program-mobile.jpg" alt="">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+        <ul class="program-info-list">
+          <li class="program-info-list__item mini-info">
+            <div class="mini-info__content">
+              <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+              <div class="mini-info__main">
+                <p class="mini-info__text">Тренеры - профессиональные боксеры со 100+ боев в карьере, титулами и тренерским опытом от 5 лет</p>
+              </div>
+            </div>
+          </li>
+          <li class="program-info-list__item mini-info">
+            <div class="mini-info__content">
+              <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+              <div class="mini-info__main">
+                <p class="mini-info__text">Тренировки подходят не только начинающим, но и продвинутым любителям бокса</p>
+              </div>
+            </div>
+          </li>
+          <li class="program-info-list__item mini-info">
+            <div class="mini-info__content">
+              <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+              <div class="mini-info__main">
+                <p class="mini-info__text">Способствует сжиганию калорий и помогает набрать сухую мышечную массу</p>
+              </div>
+            </div>
+          </li>
+          <li class="program-info-list__item mini-info">
+            <div class="mini-info__content">
+              <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+              <div class="mini-info__main">
+                <p class="mini-info__text">Ощутимый результат после первого месяца тренировок</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+    </div>
+
+    <section class="tabs-section programs">
+      <div class="container">
+        <div class="programs__content">
+          <h2 class="tabs-section__title title">Как проходят тренировки по боксу</h2>
+          <div class="programs__tabs tabs">
+            <ul class="programs__tabs-list tabs__list" role="tablist">
+              <li class="programs__tabs-item tabs__item" role="presentation">
+                <button class="programs__tabs-button tabs__button active button" type="button">Групповая (12 человек)</button>
+              </li>
+              <li class="programs__tabs-item tabs__item" role="presentation">
+                <button class="programs__tabs-button tabs__button button" type="button">Сплит (2 человека + тренер)</button>
+              </li>
+              <li class="programs__tabs-item tabs__item" role="presentation">
+                <button class="programs__tabs-button tabs__button button" type="button">Персональная тренировка </button>
+              </li>
+              <li class="programs__tabs-item tabs__item" role="presentation">
+                <button class="programs__tabs-button tabs__button button" type="button">Boxing Conditions </button>
+              </li>
+            </ul>
+            <div class="programs__tabs-content tabs__content">
+              <div class="programs__panel tabs__panel active" role="tabpanel">
+                <div class="tabs-section__panel-content training-video video-section">
+                  <div class="training-video__content video-section__content">
+                    <div class="training-video__main video-section__main">
+                      <h3 class="training-video__subtitle">Групповая тренировка до 12 человек длится 60 минут</h3>
+                      <ul class="training-video__list list">
+                        <li class="training-video__item list__item">В начале тренировки обязательная разминка</li>
+                        <li class="training-video__item list__item">Отработка техники нанесения ударов</li>
+                        <li class="training-video__item list__item">Отработка в парах или упражнения на снарядах (боксёрский мешок, груша)</li>
+                        <li class="training-video__item list__item">Для желающих регулярные спарринги</li>
+                        <li class="training-video__item list__item">Специальная физическая подготовка: упражнения со скакалкой, набивным мячом, гирей, грифом от штанги, на турнике, брусьях</li>
+                        <li class="training-video__item list__item">В конце каждой тренировки заминка и самостоятельная растяжка</li>
+                      </ul>
+                      <button class="training-video__button button button--reverse" type="button">Записаться на пробную тренировку</button>
+                    </div>
+                    <div class="training-video__video-wrapper video-section__video-wrapper">
+                      <iframe class="video-section__video" width="560" height="315" src="https://www.youtube.com/embed/vtIQcIMr7iM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="programs__panel tabs__panel" role="tabpanel">
+                <div class="tabs-section__panel-content training-video video-section">
+                  <div class="training-video__content video-section__content">
+                    <div class="training-video__main video-section__main">
+                      <h3 class="training-video__subtitle">Сплит длится 60 минут</h3>
+                      <ul class="training-video__list list">
+                        <li class="training-video__item list__item">В начале тренировки обязательная разминка</li>
+                        <li class="training-video__item list__item">Отработка техники нанесения ударов</li>
+                        <li class="training-video__item list__item">Отработка в парах или упражнения на снарядах (боксёрский мешок, груша)</li>
+                        <li class="training-video__item list__item">Для желающих регулярные спарринги</li>
+                        <li class="training-video__item list__item">Специальная физическая подготовка: упражнения со скакалкой, набивным мячом, гирей, грифом от штанги, на турнике, брусьях</li>
+                        <li class="training-video__item list__item">В конце каждой тренировки заминка и самостоятельная растяжка</li>
+                      </ul>
+                      <button class="training-video__button button button--reverse" type="button">Записаться на пробную тренировку</button>
+                    </div>
+                    <div class="training-video__video-wrapper video-section__video-wrapper">
+                      <iframe class="video-section__video" width="560" height="315" src="https://www.youtube.com/embed/vtIQcIMr7iM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="programs__panel tabs__panel" role="tabpanel">
+                <div class="tabs-section__panel-content training-video video-section">
+                  <div class="training-video__content video-section__content">
+                    <div class="training-video__main video-section__main">
+                      <h3 class="training-video__subtitle">Персональная тренировка длится 60 минут</h3>
+                      <ul class="training-video__list list">
+                        <li class="training-video__item list__item">В начале тренировки обязательная разминка</li>
+                        <li class="training-video__item list__item">Отработка техники нанесения ударов</li>
+                        <li class="training-video__item list__item">Отработка в парах или упражнения на снарядах (боксёрский мешок, груша)</li>
+                        <li class="training-video__item list__item">Для желающих регулярные спарринги</li>
+                        <li class="training-video__item list__item">Специальная физическая подготовка: упражнения со скакалкой, набивным мячом, гирей, грифом от штанги, на турнике, брусьях</li>
+                        <li class="training-video__item list__item">В конце каждой тренировки заминка и самостоятельная растяжка</li>
+                      </ul>
+                      <button class="training-video__button button button--reverse" type="button">Записаться на пробную тренировку</button>
+                    </div>
+                    <div class="training-video__video-wrapper video-section__video-wrapper">
+                      <iframe class="video-section__video" width="560" height="315" src="https://www.youtube.com/embed/vtIQcIMr7iM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="programs__panel tabs__panel" role="tabpanel">
+                <div class="tabs-section__panel-content training-video video-section">
+                  <div class="training-video__content video-section__content">
+                    <div class="training-video__main video-section__main">
+                      <h3 class="training-video__subtitle">Boxing Conditions длится 60 минут</h3>
+                      <ul class="training-video__list list">
+                        <li class="training-video__item list__item">В начале тренировки обязательная разминка</li>
+                        <li class="training-video__item list__item">Отработка техники нанесения ударов</li>
+                        <li class="training-video__item list__item">Отработка в парах или упражнения на снарядах (боксёрский мешок, груша)</li>
+                        <li class="training-video__item list__item">Для желающих регулярные спарринги</li>
+                        <li class="training-video__item list__item">Специальная физическая подготовка: упражнения со скакалкой, набивным мячом, гирей, грифом от штанги, на турнике, брусьях</li>
+                        <li class="training-video__item list__item">В конце каждой тренировки заминка и самостоятельная растяжка</li>
+                      </ul>
+                      <button class="training-video__button button button--reverse" type="button">Записаться на пробную тренировку</button>
+                    </div>
+                    <div class="training-video__video-wrapper video-section__video-wrapper">
+                      <iframe class="video-section__video" width="560" height="315" src="https://www.youtube.com/embed/vtIQcIMr7iM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% set gallerySwiperCnt = 1 %}
+    <section class="photos pads">
+      <div class="photos__container container">
+        <h2 class="photos__title title">фото с тренировок по боксу</h2>
+        <div class="photos__gallery gallery">
+          {% set imageCount = 1 %}
+          <div class="gallery__swiper-wrapper">
+            <div class="gallery__swiper gallery__swiper--main swiper">
+              <div class="swiper-wrapper">
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="gallery__swiper gallery__swiper--thumbs gallery__swiper--thumbs-has-title gallery__swiper--with-buttons-in-thumbs swiper">
+              <div class="swiper-wrapper">
+                {% set imageCount = imageCount - 10 %}
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <button class="gallery__swiper-button gallery__swiper-button--prev gallery__swiper-button--in-thumbs" id="gallery-swiper-{{gallerySwiperCnt}}-prev" type="button">
+              <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+              </svg>
+              <span class="visually-hidden">Перелестнуть назад</span>
+            </button>
+            <button class="gallery__swiper-button gallery__swiper-button--next gallery__swiper-button--in-thumbs" id="gallery-swiper-{{gallerySwiperCnt}}-next" type="button">
+              <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+              </svg>
+              <span class="visually-hidden">Перелестнуть вперед</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
+
+
+    {% set trainersTitle = "Тренеры по боксу" %}
+    {% include "./blocks/trainers.j2" %}
+
+    <section class="grid-gallery section pads">
+      <div class="container">
+        <div class="grid-gallery__content">
+          <h2 class="grid-gallery__title title">Тренировки проходят в оборудованном зале единоборств powerhouse gym</h2>
+          <div class="grid-gallery__gallery-container">
+            <div class="grid-gallery__swiper-buttons section__swiper-buttons">
+              <button class="section__swiper-button swiper-button swiper-button--prev" id="grid-gallery-swiper-btn-prev" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть назад</span>
+              </button>
+              <button class="section__swiper-button swiper-button swiper-button--next" id="grid-gallery-swiper-btn-next" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть вперед</span>
+              </button>
+            </div>
+            <div class="grid-gallery__gallery grid-gallery__swiper section__swiper" id="grid-gallery-swiper">
+              <div class="grid-gallery__gallery-wrapper swiper-wrapper">
+                {% for gridGalleryImageCounter in range(12) %}
+                  <div class="grid-gallery__slide swiper-slide">
+                    <a class="grid-gallery__link-image" href="@img/grid-gallery/{{gridGalleryImageCounter + 1}}.webp" data-grid-gallery-link>
+                      <picture>
+                        <source type="image/webp" srcset="@img/grid-gallery/{{gridGalleryImageCounter + 1}}-preview.webp 1x">
+                        <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{gridGalleryImageCounter + 1}}-preview.jpg" alt="">
+                      </picture>
+                    </a>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include "./blocks/box-trains.j2" %}
+    {% include "./blocks/max-result.j2" %}
+    {% include "./blocks/contacts.j2" %}
+    {% include "./blocks/gym-walk.j2" %}
+    {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
+    {% include "./blocks/promos.j2" %}
+    {% include "./blocks/other-trainings.j2" %}
+
+
+    {% block modal %}
+      {% include "./blocks/modal-image.j2" %}
+    {% endblock %}
+  </main>
+{% endblock content %}
+
+{% block js %}
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/tariffs.min.js"></script>
+  <script src="./js/train-pack.min.js"></script>
+  <script src="./js/grid-gallery.min.js"></script>
+  <script src="./js/modal-image.min.js"></script>
+  <script src="./js/main.min.js"></script>
+  <script src="./js/gallery.min.js"></script>
+  <script src="./js/scale.min.js"></script>
+  <script src="./js/map.min.js"></script>
+  <script src="./js/promos.min.js"></script>
+  <script src="./js/tabs.min.js"></script>
+{% endblock %}

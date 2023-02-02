@@ -9,18 +9,31 @@
     padding: 100px 0;
   }
 }
-.training-video__content {
-}
-.training-video__main {
-
-}
 .training-video__title {
   margin-bottom: 30px;
 }
-.training-video__video-wrapper {
+.training-video__subtitle {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: $header-font;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 130%;
 
+  @media (width >= $laptop-width) {
+    margin-bottom: 30px;
+    font-size: 35px;
+  }
 }
-.training-video__video {
+.training-video__list {
+  margin-bottom: 20px;
 
+  @media (width >= $laptop-width) {
+    margin-bottom: 30px;
+  }
+}
+.training-video__button {
+  max-width: 305px;
 }
 

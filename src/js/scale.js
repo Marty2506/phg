@@ -23,9 +23,10 @@ class TrainingScale {
 }
 
 const trainCards = document.querySelectorAll('.train-pack__card');
-trainCards.forEach((trainCard, index) => {
+trainCards.forEach(trainCard => {
   const trainingScaleParent = trainCard.querySelector('.train-pack__card-scale-wrapper');
-  const trainigScale = new TrainingScale(4 * (index + 1), trainingScaleParent);
+  const barNum = parseInt(trainCard.querySelector('.train-pack__card-number').textContent, 10);
+  const trainigScale = new TrainingScale(barNum, trainingScaleParent);
   const btn = trainCard.querySelector('.train-pack__card-button');
   trainCard.addEventListener('mouseover', () => {
     trainigScale.scale.classList.add('trainingScale--hovered');

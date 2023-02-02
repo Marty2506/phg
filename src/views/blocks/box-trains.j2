@@ -1,0 +1,102 @@
+<section class="box-trains tabs-section programs">
+  <div class="container">
+    <div class="programs__content">
+      <h2 class="tabs-section__title title">Стоимость тренировок по боксу</h2>
+      <ul class="box-trains__info-list list">
+        <li class="list__item">Вы оплачиваете тренировку напрямую выбранному вами тренеру</li>
+      </ul>
+      <div class="programs__tabs tabs">
+        <ul class="programs__tabs-list tabs__list" role="tablist">
+          <li class="programs__tabs-item tabs__item" role="presentation">
+            <button class="programs__tabs-button tabs__button active button" type="button">Групповая (12 человек)</button>
+          </li>
+          <li class="programs__tabs-item tabs__item" role="presentation">
+            <button class="programs__tabs-button tabs__button button" type="button">Сплит (2 человека + тренер)</button>
+          </li>
+          <li class="programs__tabs-item tabs__item" role="presentation">
+            <button class="programs__tabs-button tabs__button button" type="button">Персональная тренировка </button>
+          </li>
+          <li class="programs__tabs-item tabs__item" role="presentation">
+            <button class="programs__tabs-button tabs__button button" type="button">Boxing Conditions </button>
+          </li>
+        </ul>
+        <div class="programs__tabs-content tabs__content">
+          {% for index in range(4) %}
+            <div class="programs__panel tabs__panel {% if index == 0 %} active {% endif %}" role="tabpanel">
+              <div class="box-trains__pack tabs-section__panel-content train-pack">
+                <div class="train-pack__content">
+                  <div class="train-pack__swiper swiper" id="train-pack-swiper-{{index + 1}}" data-train-pack-swiper>
+                    <div class="train-pack__swiper-buttons section__swiper-buttons">
+                      <button class="section__swiper-button swiper-button swiper-button--prev" id="train-pack-swiper-{{index + 1}}-btn-prev" type="button">
+                        <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                          <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                        </svg>
+                        <span class="visually-hidden">Перелестнуть назад</span>
+                      </button>
+                      <button class="section__swiper-button swiper-button swiper-button--next" id="train-pack-swiper-{{index + 1}}-btn-next" type="button">
+                        <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                          <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                        </svg>
+                        <span class="visually-hidden">Перелестнуть вперед</span>
+                      </button>
+                    </div>
+                    <ul class="train-pack__cards swiper-wrapper">
+                      <li class="box-trains__card train-pack__card swiper-slide">
+                        <div class="train-pack__card-content">
+                          <span class="train-pack__card-number">1</span>
+                          <span class="train-pack__card-word">тренировка</span>
+                          <div class="train-pack__card-price-wrapper">
+                            <span class="train-pack__card-price">1 000 ₽</span>
+                          </div>
+                          <button class="train-pack__card-button button">Записаться</button>
+                          <div class="train-pack__card-scale-wrapper"></div>
+                        </div>
+                      </li>
+                      <li class="box-trains__card train-pack__card swiper-slide">
+                        <div class="train-pack__card-content">
+                          <span class="train-pack__card-number">8</span>
+                          <span class="train-pack__card-word">тренировок</span>
+                          <div class="train-pack__card-price-wrapper">
+                            <span class="train-pack__card-price">7 200 ₽</span>
+                            <span class="train-pack__card-price-per-train">980 ₽ за тренировку</span>
+                          </div>
+                          <button class="train-pack__card-button button">ОФОРМИТЬ пакет</button>
+                          <div class="train-pack__card-scale-wrapper"></div>
+                        </div>
+                      </li>
+                      <li class="box-trains__card train-pack__card swiper-slide">
+                        <div class="train-pack__card-content">
+                          <span class="train-pack__card-number">12</span>
+                          <span class="train-pack__card-word">тренировок</span>
+                          <div class="train-pack__card-price-wrapper">
+                            <span class="train-pack__card-price">21 900 ₽</span>
+                            <span class="train-pack__card-price-per-train">1 380 ₽ за тренировку</span>
+                          </div>
+                          <button class="train-pack__card-button button">ОФОРМИТЬ пакет</button>
+                          <div class="train-pack__card-scale-wrapper"></div>
+                        </div>
+                      </li>
+                      <li class="box-trains__card train-pack__card swiper-slide">
+                        <div class="train-pack__card-content">
+                          <span class="train-pack__card-number">16</span>
+                          <span class="train-pack__card-word">тренировок</span>
+                          <div class="train-pack__card-price-wrapper">
+                            <span class="train-pack__card-price">29 900 ₽</span>
+                            <span class="train-pack__card-price-per-train">1 280 ₽ за тренировку</span>
+                          </div>
+                          <button class="train-pack__card-button button">ОФОРМИТЬ пакет</button>
+                          <div class="train-pack__card-scale-wrapper"></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

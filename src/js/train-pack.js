@@ -1,6 +1,6 @@
-const trainPackItem = document.querySelector('#train-pack-swiper');
+const trainPackItems = document.querySelectorAll('[data-train-pack-swiper]');
 
-if (trainPackItem) {
+trainPackItems.forEach((trainPackItem, index) => {
   const swiperOptions = {
     loop: false,
     slidesPerView: "auto",
@@ -9,8 +9,8 @@ if (trainPackItem) {
     simulateTouch: false,
     watchSlidesProgress: true,
     navigation: {
-      nextEl: `#train-pack-swiper-btn-next`,
-      prevEl: `#train-pack-swiper-btn-prev`,
+      nextEl: `#train-pack-swiper-${index + 1}-btn-next`,
+      prevEl: `#train-pack-swiper-${index + 1}-btn-prev`,
       lockClass: "swiper-button--lock",
       disabledClass: "swiper-button--disabled",
     },
@@ -36,4 +36,4 @@ if (trainPackItem) {
   }
 
   const swiper = new Swiper(trainPackItem, swiperOptions);
-}
+});
