@@ -17,7 +17,7 @@
   font-family: $header-font;
   color: $white-color;
 
-  @media (width < $laptop-width) {
+  @media (width < $semi-desktop-width) {
     display: none;
   }
 }

@@ -123,12 +123,15 @@ $page-header-paddigns: 7px;
   flex-wrap: wrap;
   align-items: center;
   min-width: 340px;
-  padding: 0 30px;
+  padding: 0 20px;
 
   gap: 12px;
 
   @media (width < $laptop-width) {
     display: none;
+  }
+  @media (width >= $semi-desktop-width) {
+    padding: 0 30px;
   }
   @media (width >= $desktop-width) {
     padding: 0 50px;
@@ -332,7 +335,7 @@ $page-header-paddigns: 7px;
   }
 }
 
-.page-header__search-button {
+.page-header__action-button {
   display: flex;
   align-items: center;
   margin: -$page-header-paddigns 0;
@@ -385,7 +388,7 @@ $page-header-paddigns: 7px;
   }
 }
 
-.page-header__search-button-icon {
+.page-header__action-button-icon {
   fill: $white-color;
 }
 
