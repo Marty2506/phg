@@ -1,0 +1,157 @@
+{% extends "layout.j2" %}
+
+{% set page = "trainers" %}
+
+{% block content %}
+  <main class="page-main">
+    <div class="breadcumbs">
+      <div class="breadcumbs__container container">
+        <ul class="breadcumbs__list">
+          <li class="breadcumbs__item">
+            <a class="breadcumbs__link" href="./index.html">Главная</a>
+            <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+              <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcumbs__item">
+            <span class="breadcumbs__link breadcumbs__link--current">Тренеры POWERHOUSE GYM</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="select-trainer">
+      <div class="container">
+        <div class="select-trainer__content">
+          <h1 class="select-trainer__title page__title">Тренеры Powerhouse gym</h1>
+          <p class="select-trainer__text">С персональным тренером результаты будут еще быстрее. Он составит программу тренировок и питания, грамотно потренирует, мотивирует и поможет добиться результата.</p>
+          <form class="select-trainer__form form" action="https://echo.htmlacademy.ru" method="get" id="select-trainers-form">
+            <div class="form__row">
+              <label class="select-trainer__form-label form__label">
+                <span class="select-trainer__form-label-text form__label-text">Направления</span>
+                <select class="form__select" id="select-trainers-path" name="select-trainers-path" data-form-select>
+                  <option value="Единоборства">Единоборства</option>
+                  <option value="Lesmills">Lesmills</option>
+                  <option value="Опция 3">Опция 3</option>
+                </select>
+              </label>
+              <label class="select-trainer__form-label form__label">
+                <span class="select-trainer__form-label-text form__label-text">Программы</span>
+                <select class="form__select" id="select-trainers-program" name="select-trainers-program" data-form-select>
+                  <option value="Единоборства">Единоборства</option>
+                  <option value="Lesmills">Lesmills</option>
+                  <option value="Опция 3">Опция 3</option>
+                </select>
+              </label>
+            </div>
+          </form>
+          <ol class="select-trainer__list">
+            <li class="select-trainer__list-item trainer-card">
+              <div class="trainer-card__content">
+                <div class="trainer-card__main">
+                  <p class="trainer-card__title">Милана Иванова</p>
+                  <p class="trainer-card__sub-title">Специализации:</p>
+                  <ul class="trainer-card__spec-list">
+                    <li class="trainer-card__spec-item">
+                      <a class="trainer-card__spec-link" href="#!">LesMills BodyPupm</a>
+                      <span>(с 2017 года)</span>
+                    </li>
+                    <li class="trainer-card__spec-item">
+                      <a class="trainer-card__spec-link" href="#!">LesMills BodyCombat</a>
+                      <span>(с 2015 года)</span>
+                    </li>
+                    <li class="trainer-card__spec-item">
+                      <a class="trainer-card__spec-link" href="#!">LesMills Cycle Sprint</a>
+                      <span>(с 2020 года)</span>
+                    </li>
+                  </ul>
+                  <p class="trainer-card__sub-title">Может помочь:</p>
+                  <ul class="trainer-card__help list">
+                    <li class="trainer-card__help-item list__item">Скорректировать фигуру</li>
+                    <li class="trainer-card__help-item list__item">Набрать массу</li>
+                    <li class="trainer-card__help-item list__item">Увеличить силовые показатели</li>
+                    <li class="trainer-card__help-item list__item">Улучшить выносливость</li>
+                    <li class="trainer-card__help-item list__item">Коррекция осанки</li>
+                    <li class="trainer-card__help-item list__item">Индивидуальные программы для возраста +60</li>
+                  </ul>
+                  <a class="trainer-card__button button" href="#!">
+                    <span>Больше о тренере</span>
+                    <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
+                      <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="trainer-card__photo">
+                  <div class="trainer-card__photo-wrapper">
+                    <img class="trainer-card__image" src="@img/milana-ivanova.jpg" alt="Фотографи Миланы Ивановой">
+                  </div>
+                  <a class="trainer-card__video-button button button--reverse" href="#!">
+                    <svg class="trainer-card__button-icon button__icon" width="46" height="46" viewBox="0 0 35 40">
+                      <use xlink:href="img/sprite.svg#play-icon"></use>
+                    </svg>
+                    <span>Видео обращение</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="select-trainer__list-item trainer-card">
+              <div class="trainer-card__content">
+                <div class="trainer-card__main">
+                  <p class="trainer-card__title">Милана Иванова</p>
+                  <p class="trainer-card__sub-title">Специализации:</p>
+                  <ul class="trainer-card__spec-list">
+                    <li class="trainer-card__spec-item">
+                      <a class="trainer-card__spec-link" href="#!">LesMills BodyPupm</a>
+                      <span>(с 2017 года)</span>
+                    </li>
+                    <li class="trainer-card__spec-item">
+                      <a class="trainer-card__spec-link" href="#!">LesMills BodyCombat</a>
+                      <span>(с 2015 года)</span>
+                    </li>
+                    <li class="trainer-card__spec-item">
+                      <a class="trainer-card__spec-link" href="#!">LesMills Cycle Sprint</a>
+                      <span>(с 2020 года)</span>
+                    </li>
+                  </ul>
+                  <p class="trainer-card__sub-title">Может помочь:</p>
+                  <ul class="trainer-card__help list">
+                    <li class="trainer-card__help-item list__item">Скорректировать фигуру</li>
+                    <li class="trainer-card__help-item list__item">Набрать массу</li>
+                    <li class="trainer-card__help-item list__item">Увеличить силовые показатели</li>
+                    <li class="trainer-card__help-item list__item">Улучшить выносливость</li>
+                    <li class="trainer-card__help-item list__item">Коррекция осанки</li>
+                    <li class="trainer-card__help-item list__item">Индивидуальные программы для возраста +60</li>
+                  </ul>
+                  <a class="trainer-card__button button" href="#!">
+                    <span>Больше о тренере</span>
+                    <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
+                      <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="trainer-card__photo">
+                  <div class="trainer-card__photo-wrapper">
+                    <img class="trainer-card__image" src="@img/milana-ivanova.jpg" alt="Фотографи Миланы Ивановой">
+                  </div>
+                  <a class="trainer-card__video-button button button--reverse" href="#!">
+                    <svg class="trainer-card__button-icon button__icon" width="46" height="46" viewBox="0 0 35 40">
+                      <use xlink:href="img/sprite.svg#play-icon"></use>
+                    </svg>
+                    <span>Видео обращение</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+{% endblock content %}
+
+{% block js %}
+  <script src="./js/choices.min.js"></script>
+  <script src="./js/select-trainers.min.js"></script>
+  <script src="./js/main.min.js"></script>
+  <script src="./js/tabs.min.js"></script>
+{% endblock %}

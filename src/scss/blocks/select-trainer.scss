@@ -1,0 +1,50 @@
+.select-trainer {
+}
+.container {
+}
+.select-trainer__content {
+}
+.select-trainer__title {
+  margin-bottom: 20px;
+}
+.page__title {
+  max-width: 70%;
+}
+.select-trainer__text {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (width >= $laptop-width) {
+    max-width: 60%;
+    margin-bottom: 25px;
+  }
+}
+.select-trainer__list {
+  display: flex;
+  flex-direction: column;
+
+  @media (width >= $laptop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    row-gap: 50px;
+  }
+  @media (width >= $desktop-width) {
+    column-gap: 80px;
+    row-gap: 70px;
+  }
+}
+.select-trainer__form {
+  margin-bottom: 25px;
+}
+.select-trainer__form-label {
+  gap: 9px;
+  width: 275px;
+}
+.select-trainer__form-label-text {
+  font-family: $header-font;
+  font-size: 17px;
+  line-height: 19px;
+  color: #000;
+}
