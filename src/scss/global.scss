@@ -38,12 +38,16 @@ ol {
 }
 
 .pads {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
-  @media (min-width: $desktop-width) {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  @media (width >= $laptop-width) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  @media (width >= $desktop-width) {
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 }
 

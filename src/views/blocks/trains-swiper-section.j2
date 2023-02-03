@@ -1,0 +1,103 @@
+<section class="trains-swiper-section section pads">
+  <div class="container">
+    <div class="trains-swiper-section__content">
+      {% if trainsSwiperTitle %}
+        <h2 class="trains-swiper-section__title title">{{trainsSwiperTitle | safe}}</h2>
+      {% else %}
+        <h2 class="trains-swiper-section__title title">Другие тренировки по боксу</h2>
+      {% endif %}
+      <div class="trains-swiper-section__swiper-container">
+        <div class="trains-swiper-section__swiper-buttons section__swiper-buttons">
+          <button class="section__swiper-button swiper-button swiper-button--prev" id="trains-swiper-btn-prev" type="button">
+            <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+              <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+            </svg>
+            <span class="visually-hidden">Перелестнуть назад</span>
+          </button>
+          <button class="section__swiper-button swiper-button swiper-button--next" id="trains-swiper-btn-next" type="button">
+            <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+              <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+            </svg>
+            <span class="visually-hidden">Перелестнуть вперед</span>
+          </button>
+          </div>
+        <div class="trains-swiper-section__swiper section__swiper swiper" id="trains-swiper">
+          <div class="swiper-wrapper">
+            <div class="trains-swiper-section__swiper-slide swiper-slide">
+              <div class="card">
+                <div class="card__content">
+                  <div class="card__header">
+                    <h3 class="card__title">Бокс для взрослых</h3>
+                  </div>
+                  <div class="card__body">
+                    <ul class="card__list list">
+                      <li class="card__list-item list__item">Групповые тренировки до 12 человек</li>
+                      <li class="card__list-item list__item">Сплит-тренировок (2 боксёра + тренер)</li>
+                      <li class="card__list-item list__item">Персональные тренировки в удобное для вас время</li>
+                    </ul>
+                  </div>
+                </div>
+                <img class="card__bg-image" src="@img/box-card-bg.jpg" alt="">
+                <a class="card__link" href="./box.html"></a>
+              </div>
+            </div>
+            <div class="trains-swiper-section__swiper-slide swiper-slide">
+              <li class="card">
+                <div class="card__content">
+                  <div class="card__header">
+                    <h3 class="card__title">Бокс для детей от 5 лет</h3>
+                  </div>
+                  <div class="card__body">
+                    <ul class="card__list list">
+                      <li class="card__list-item list__item">Групповые тренировки до 12 человек</li>
+                      <li class="card__list-item list__item">Сплит-тренировок (2 боксёра + тренер)</li>
+                      <li class="card__list-item list__item">Персональные тренировки в удобное для вас время</li>
+                    </ul>
+                  </div>
+                </div>
+                <img class="card__bg-image" src="@img/box-card-bg.jpg" alt="">
+                <a class="card__link" href="./box-for-kids.html"></a>
+              </li>
+            </div>
+            <div class="trains-swiper-section__swiper-slide swiper-slide">
+              <li class="card">
+                <div class="card__content">
+                  <div class="card__header">
+                    <h3 class="card__title">Бокс для женщин</h3>
+                  </div>
+                  <div class="card__body">
+                    <ul class="card__list list">
+                      <li class="card__list-item list__item">Групповые тренировки до 12 человек</li>
+                      <li class="card__list-item list__item">Сплит-тренировок (2 боксёра + тренер)</li>
+                      <li class="card__list-item list__item">Персональные тренировки в удобное для вас время</li>
+                    </ul>
+                  </div>
+                </div>
+                <img class="card__bg-image" src="@img/box-card-bg.jpg" alt="">
+                <a class="card__link" href="./box-for-women.html"></a>
+              </li>
+            </div>
+            <div class="trains-swiper-section__swiper-slide swiper-slide">
+              <li class="card">
+                <div class="card__content">
+                  <div class="card__header">
+                    <h3 class="card__title">Boxing conditions</h3>
+                  </div>
+                  <div class="card__body">
+                    <ul class="card__list list">
+                      <li class="card__list-item list__item">Групповые тренировки до 12 человек</li>
+                      <li class="card__list-item list__item">Сплит-тренировок (2 боксёра + тренер)</li>
+                      <li class="card__list-item list__item">Персональные тренировки в удобное для вас время</li>
+                    </ul>
+                  </div>
+                </div>
+                <img class="card__bg-image" src="@img/box-card-bg.jpg" alt="">
+                <a class="card__link" href="./boxing-conditions.html"></a>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -95,10 +95,10 @@
 
   object-fit: cover;
 
-  @media (width < $laptop-width) {
-    object-fit: none;
-    object-position: top;
-  }
+  // @media (width < $laptop-width) {
+  //   object-fit: none;
+  //   object-position: top;
+  // }
 }
 .card__link {
   position: absolute;
