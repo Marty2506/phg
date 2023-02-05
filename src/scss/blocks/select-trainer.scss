@@ -23,6 +23,7 @@
 .select-trainer__list {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 
   @media (width >= $laptop-width) {
     display: grid;
@@ -35,12 +36,18 @@
     row-gap: 70px;
   }
 }
+.select-trainer__list-item--hidden {
+  display: none;
+}
 .select-trainer__form {
   margin-bottom: 25px;
 }
 .select-trainer__form-label {
   gap: 9px;
-  width: 275px;
+  min-width: 275px;
+  width: max-content;
+  max-width: 100%;
+  align-self: flex-start;
 }
 .select-trainer__form-label-text {
   font-family: $header-font;

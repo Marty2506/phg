@@ -130,16 +130,15 @@
     }
   }
 
-  &.is-flipped {
-    & .form-choices__list[aria-expanded],
-    & .form-choices__list--dropdown {
-      top: auto;
-      bottom: 100%;
-
-      margin-top: 0;
-      margin-bottom: -1px;
-    }
-  }
+  // &.is-flipped {
+  //   @media (width >= $laptop-width) {
+  //     & .form-choices__list[aria-expanded],
+  //     & .form-choices__list--dropdown {
+  //       top: auto;
+  //       bottom: 100%;
+  //     }
+  //   }
+  // }
 }
 // Стрелочка выпдающего списка
 .form-choices[data-type*="select-one"]::after {
@@ -170,6 +169,7 @@
   line-height: 130%;
   font-family: inherit;
   border: 1px solid $secondary-color;
+  min-height: 64px;
 
   &:hover {
     & .form-choices__item {
@@ -177,20 +177,37 @@
     }
   }
 }
+.form-choices[data-type*="select-one"] {
+  & .form-choices__inner {
+    & .form-choices__item  {
+      padding: 22px 33px;
+      padding-right: 50px;
+
+      background-color: $white-color;
+      font-family: $header-font;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+.form-choices[data-type*="select-multiple"] {
+  & .form-choices__inner {
+    padding: 7px 10px;
+    padding-bottom: 5.5px;
+    cursor: text;
+    background-color: $white-color;
+  }
+}
 
 .form-choices__item {
   position: relative;
-
-  padding: 22px 33px;
-  padding-right: 50px;
-
-  background-color: $white-color;
-  font-family: $header-font;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-
-  cursor: default;
+}
+.form-choices__item--disabled {
+  display: none;
 }
 
 .form-choices__list {
@@ -205,11 +222,11 @@
   top: 100%;
   z-index: 1;
 
-  width: 100%;
+  width: calc(100% + 50px);
   // margin-top: -1px;
   overflow: hidden;
 
-  word-break: break-all;
+  // word-break: break-all;
 
   visibility: hidden;
 
@@ -217,23 +234,45 @@
 
   &.is-active {
     visibility: visible;
+    opacity: 1;
+  }
+
+  @media (width < $laptop-width) {
+    width: 100%;
+    position: fixed;
+    top: 52px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    overflow-y: scroll;
   }
 }
 .form-choices__list--dropdown {
   padding-top: 10px;
+  box-shadow: 10px 10px 10px fade-out(#000, 0.5);
+
   & .form-choices__item {
 
-    border-bottom: 1px solid #D7D7D7;
+    padding: 22px 33px;
+    padding-right: 50px;
+
+    background-color: $white-color;
+    font-family: $header-font;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    border: 1px solid #d7d7d7;
 
     transition: background-color 0.2s ease;
 
-    &:hover {
+    &:hover,
+    &.is-highlighted{
       background-color: $secondary-color;
       color: $white-color;
-    }
-
-    &:last-child {
-      border-bottom: none;
     }
   }
 
@@ -259,6 +298,22 @@
     }
   }
 }
+.form-choices__list--multiple {
+  display: inline;
+  // gap: 5px;
+  & .form-choices__item {
+    display: inline-block;
+    padding: 12px 15px;
+    border-radius: 20px;
+    background-color: $secondary-color;
+    color: $white-color;
+    flex-shrink: 0;
+    word-break: keep-all;
+    margin-right: 5px;
+    margin-bottom: 4px;
+  }
+}
+
 
 .form-choices__list--dropdown.is-active {
   z-index: 10;
@@ -273,5 +328,77 @@
     & .is-selected.form-choices__paceholder {
       display: none;
     }
+  }
+}
+
+.form-choices__input {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 12px 2px;
+  padding-top: 13px;
+  font-family: $header-font;
+  font-size: 16px;
+  line-height: 18px;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+.form-choices__input::-webkit-search-cancel-button,
+.form-choices__input::-webkit-search-decoration,
+.form-choices__input::-webkit-search-results-button,
+.form-choices__input::-webkit-search-results-decoration {
+  display: none;
+}
+.form-choices__button {
+  position: relative;
+  padding-left: 16px;
+  width: 20px;
+  height: 20px;
+  margin-left: 7px;
+  border: none;
+  border-left: 1px solid $white-color;
+  background-color: transparent;
+  cursor: pointer;
+
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 16px;
+    height: 2px;
+    background-color: $white-color;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  &::after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      opacity: 0.7;
+    }
+
+  }
+}
+
+.form-choices__apply-button {
+  margin: 10px;
+  width: 300px;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  @media (width >= $laptop-width) {
+    display: none;
   }
 }
