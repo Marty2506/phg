@@ -1,6 +1,7 @@
 .test-train {
-  background-color: $bg-color2;
   padding: 50px 0;
+
+  background-color: $bg-color2;
 
   @media (width >= $laptop-width) {
     padding-top: 90px;
@@ -14,56 +15,69 @@
     padding-bottom: 130px;
   }
 }
+
 .test-train__content {
   display: flex;
   flex-direction: column;
 
   @media (width >= $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
     column-gap: 50px;
+
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto 1fr;
   }
 }
+
 .test-train__title {
   @media (width >= $laptop-width) {
     max-width: 80%;
   }
 }
+
 .test-train__info {
   @media (width >= $desktop-width) {
     grid-column: 2 / 3;
     grid-row: 1 / -1;
   }
 }
+
 .test-train__info-text {
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
-  font-family: $header-font;
+
   font-weight: 600;
   font-size: 18px;
   line-height: 130%;
+  font-family: $header-font;
 
   @media (width >= $laptop-width) {
     margin-bottom: 25px;
+
     font-size: 22px;
   }
 }
+
 .test-train__info-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
   margin-bottom: 20px;
+
+  gap: 15px;
 
   @media (width >= $tablet-width) {
     display: grid;
+
     gap: 20px;
     grid-template-columns: repeat(2, minmax(auto, 405px));
   }
 }
+
 .test-train__info-list-item {
   padding: 26px 20px;
+
   background-color: $white-color;
 
   @media (width >= $tablet-width) {
@@ -72,6 +86,4 @@
   @media (width >= $laptop-width) {
     min-height: 260px;
   }
-}
-.test-train__form {
 }

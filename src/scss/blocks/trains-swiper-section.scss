@@ -6,23 +6,29 @@
     padding-bottom: 120px;
   }
 }
+
 .trains-swiper-section__content {
   display: flex;
   flex-direction: column;
 }
+
 .trains-swiper-section__title {
   @media (width >= $laptop-width) {
     max-width: 70%;
   }
 }
+
 .trains-swiper-section__swiper-container {
+  position: relative;
+
   display: flex;
   flex-direction: column;
-  position: relative;
 }
+
 .trains-swiper-section__swiper-buttons {
   margin-bottom: 15px;
 }
+
 .trains-swiper-section__swiper-slide {
   @media (width < $laptop-width) {
     width: min-content;

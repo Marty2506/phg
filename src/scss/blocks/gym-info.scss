@@ -1,8 +1,10 @@
 .gym-info {
   background-color: $bg-color;
 }
+
 .gym-info--other-trainings {
   padding: 50px 0;
+
   background-color: $white-color;
 
   @media (width >= $laptop-width) {
@@ -16,13 +18,14 @@
     padding-top: 90px;
     padding-bottom: 130px;
   }
-
 }
+
 .gym-info__title {
   @media (width >= $desktop-width) {
     margin-bottom: 45px;
   }
 }
+
 .gym-info__tabs {
   display: flex;
   flex-direction: column;

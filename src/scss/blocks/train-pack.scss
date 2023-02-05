@@ -1,6 +1,7 @@
 .train-pack {
   padding-top: 80px;
   padding-bottom: 60px;
+
   background-color: $white-color;
 
   @media (width >= $laptop-width) {
@@ -11,39 +12,44 @@
     padding-top: 120px;
   }
 }
+
 .train-pack__content {
   display: flex;
   flex-direction: column;
 }
+
 .train-pack__title {
   margin-bottom: 15px;
 
   @media (width >= $laptop-width) {
-    margin-bottom: 25px;
     max-width: 80%;
+    margin-bottom: 25px;
   }
   @media (width >= $semi-desktop-width) {
     margin-bottom: 35px;
   }
-
 }
+
 .train-pack__info-list {
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 10px;
   margin-bottom: 30px;
 
+  gap: 10px;
+
   @media (width >= $laptop-width) {
-    gap: 37px;
     margin-bottom: 55px;
+
+    gap: 37px;
   }
 }
+
 .train-pack__info-list-item {
   max-width: 320px;
 }
-.train-pack__swiper {
 
-}
+
+
 .train-pack__swiper-buttons {
   padding-bottom: 15px;
 
@@ -51,113 +57,131 @@
     display: none;
   }
 }
+
 .train-pack__cards {
   @media (width >= $tablet-width) {
     display: grid;
-    grid-template-columns: repeat(2, minmax(auto, 580px));
+
     gap: 30px;
+    grid-template-columns: repeat(2, minmax(auto, 580px));
   }
   @media (width >= $laptop-width) {
     gap: 47px;
   }
   @media (width >= $desktop-width) {
-    grid-template-columns: repeat(4, 1fr);
     gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
+
 .train-pack__card {
-  min-height: 475px;
-  padding: 22px;
-  padding-bottom: 45px;
+  justify-content: flex-start;
   width: 308px;
   min-width: 308px;
   max-width: 580px;
-  justify-content: flex-start;
+  min-height: 475px;
+  padding: 22px;
+  padding-bottom: 45px;
+
   background-color: $bg-color2;
   border: 1px solid transparent;
-  transition: border-color 0.3s ease;
   cursor: default;
+
+  transition: border-color 0.3s ease;
 
   &:hover,
   &:focus-within {
-    border-color: rgba(230, 47, 67, 0.75);
+    border-color: rgb(230 47 67 / 75%);
   }
 
 
   @media (width >= $tablet-width) {
     width: 100%;
   }
-
   @media (width >= $laptop-width) {
-    padding-left: 35px;
-    padding-bottom: 60px;
     min-height: 580px;
+    padding-bottom: 60px;
+    padding-left: 35px;
   }
 }
+
 .train-pack__card-content {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
+
 .train-pack__card-number {
   display: block;
   margin: 0;
   padding: 0;
-  font-family: $header-font;
+
   font-size: 120px;
   line-height: 100%;
+  font-family: $header-font;
   color: $secondary-color;
 
   @media (width >= $laptop-width) {
     font-size: 150px;
   }
 }
+
 .train-pack__card-word {
   display: block;
   margin: 0;
   margin-bottom: 48px;
   padding: 0;
-  font-family: $header-font;
+
   font-weight: 600;
   font-size: 30px;
   line-height: 130%;
+  font-family: $header-font;
   color: #343434;
 
   @media (width >= $laptop-width) {
-    font-size: 35px;
     margin-bottom: 65px;
+
+    font-size: 35px;
   }
 }
+
 .train-pack__card-price-wrapper {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
   margin-top: auto;
+  margin-bottom: 20px;
 }
+
 .train-pack__card-price {
   margin: 0;
   padding: 0;
-  font-family: $jost-font;
+
   font-size: 40px;
   line-height: 58px;
+  font-family: $jost-font;
 }
+
 .train-pack__card-price-per-train {
   margin: 0;
   padding: 0;
+
   font-size: 17px;
   line-height: 130%;
   color: #8f8f8f;
 }
+
 .train-pack__card-button {
-  padding: 25px 49px;
   align-self: flex-start;
+  padding: 25px 49px;
 
   @media (width >= $laptop-width) {
     padding: 36px 40px;
+
     font-size: 17px;
     line-height: 19px;
   }
 }
+
 .train-pack__card-scale-wrapper {
   margin-top: auto;
 }

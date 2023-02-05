@@ -1,6 +1,6 @@
 .mini-info {
-  padding: 15px 10px;
   height: 100%;
+  padding: 15px 10px;
 
   background-color: $bg-color;
 
@@ -34,10 +34,10 @@
   align-self: flex-start;
   max-width: 80px;
   height: 45px;
-  object-fit: contain;
   overflow: hidden;
 
   justify-self: flex-start;
+  object-fit: contain;
 }
 
 .mini-info__main {

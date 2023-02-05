@@ -79,6 +79,7 @@
 }
 
 /* Auto Height */
+
 .swiper-autoheight,
 .swiper-autoheight .swiper-slide {
   height: auto;
@@ -93,10 +94,10 @@
 .swiper-backface-hidden .swiper-slide {
   transform: translateZ(0);
   backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 /* 3D Effects */
+
 .swiper-3d,
 .swiper-3d.swiper-css-mode .swiper-wrapper {
   perspective: 1200px;
@@ -150,6 +151,7 @@
 }
 
 /* CSS Mode */
+
 .swiper-css-mode > .swiper-wrapper {
   overflow: auto;
   /* For Firefox */
@@ -349,6 +351,7 @@
 }
 
 /* Common Styles */
+
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-horizontal > .swiper-pagination-bullets,
@@ -360,6 +363,7 @@
 }
 
 /* Bullets */
+
 .swiper-pagination-bullets-dynamic {
   overflow: hidden;
 
@@ -413,7 +417,6 @@ button.swiper-pagination-bullet {
   border: none;
   box-shadow: none;
 
-  appearance: none;
   appearance: none;
 }
 
@@ -484,6 +487,7 @@ button.swiper-pagination-bullet {
 }
 
 /* Progress */
+
 .swiper-pagination-progressbar {
   position: absolute;
 
@@ -534,6 +538,7 @@ button.swiper-pagination-bullet {
 }
 
 /* Scrollbar */
+
 .swiper-scrollbar {
   position: relative;
 
@@ -614,6 +619,7 @@ button.swiper-pagination-bullet {
 }
 
 /* Preloader */
+
 :root {
   /*
   --swiper-preloader-color: var(--swiper-theme-color);
@@ -662,6 +668,7 @@ button.swiper-pagination-bullet {
 }
 
 /* a11y */
+
 .swiper .swiper-notification {
   position: absolute;
   top: 0;
@@ -719,7 +726,6 @@ button.swiper-pagination-bullet {
 
   transform-origin: 0 0;
   backface-visibility: hidden;
-  backface-visibility: hidden;
   visibility: hidden;
 
   pointer-events: none;
@@ -753,7 +759,6 @@ button.swiper-pagination-bullet {
 .swiper-cube .swiper-slide-shadow-right {
   z-index: 0;
 
-  backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -789,7 +794,6 @@ button.swiper-pagination-bullet {
   z-index: 1;
 
   backface-visibility: hidden;
-  backface-visibility: hidden;
 
   pointer-events: none;
 }
@@ -810,13 +814,11 @@ button.swiper-pagination-bullet {
   z-index: 0;
 
   backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 .swiper-creative .swiper-slide {
   overflow: hidden;
 
-  backface-visibility: hidden;
   backface-visibility: hidden;
 
   transition-property: transform, opacity, height;
@@ -830,6 +832,5 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 
   transform-origin: center bottom;
-  backface-visibility: hidden;
   backface-visibility: hidden;
 }

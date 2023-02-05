@@ -6,78 +6,88 @@
     padding-top: 100px;
     // padding-bottom: 80px;
   }
-
   @media (width >= $desktop-width) {
     // padding-bottom: 110px;
   }
 }
-.about-zone__content {
-}
+
 .about-zone__title {
   margin-bottom: 23px;
 
   @media (width >= $laptop-width) {
-    margin-bottom: 40px;
     max-width: 70%;
+    margin-bottom: 40px;
   }
   @media (width >= $desktop-width) {
     margin-bottom: 55px;
   }
-
 }
+
 .about-zone__swiper-container {
   position: relative;
 }
+
 .about-zone__swiper-buttons {
   margin-bottom: 15px;
 }
-.about-zone__swiper {
-}
+
 .about-zone__card {
   width: 100%;
 }
+
 .about-zone__card-content {
   width: 100%;
 }
+
 .about-zone__card-title {
-  padding: 18px 14px;
   display: block;
   margin: 0;
+  padding: 18px 14px;
+
   font-size: 18px;
   line-height: 27px;
+
   background-color: $bg-color2;
 
   @media (width >= $laptop-width) {
-    background-color: $white-color;
     padding: 24px 21px;
+
     font-size: 22px;
     line-height: 32px;
-  }
 
+    background-color: $white-color;
+  }
   @media (width >= $semi-desktop-width) {
     padding: 33px 21px;
+
     font-size: 25px;
     line-height: 37px;
   }
-
   @media (width >= $desktop-width) {
     padding: 40px 34px;
+
     font-size: 30px;
     line-height: 44px;
   }
 }
+
 .about-zone__card-image-wrapper {
-  display: block;
   position: relative;
+
+  display: block;
   height: 0;
   padding-bottom: 58.65%;
+
   background-color: $grey-color;
 }
+
 .about-zone__card-image {
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 }

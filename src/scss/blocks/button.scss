@@ -95,18 +95,22 @@
     outline: none;
   }
 }
+
 .button--has-dark-background {
   color: $bg-color;
 }
+
 .button--has-dark-bg-laptop {
   @media (width >= $laptop-width) {
     color: $bg-color;
   }
 }
+
 .button--show-more {
-  background-color: $white-color;
-  width: 335px;
   align-self: center;
+  width: 335px;
+
+  background-color: $white-color;
 
   @media (width < $laptop-width) {
     display: none;

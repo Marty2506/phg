@@ -10,58 +10,67 @@
     padding-bottom: 110px;
   }
 }
-.container {
-}
-.select-trainer__content {
-}
+
 .select-trainer__title {
   margin-bottom: 20px;
 }
+
 .page__title {
   max-width: 70%;
 }
+
 .select-trainer__text {
-  padding: 0;
   margin: 0;
   margin-bottom: 20px;
+  padding: 0;
 
   @media (width >= $laptop-width) {
     max-width: 60%;
     margin-bottom: 25px;
   }
 }
+
 .select-trainer__list {
   display: flex;
   flex-direction: column;
+
   gap: 15px;
 
   @media (width >= $laptop-width) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
     column-gap: 50px;
+
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 50px;
   }
   @media (width >= $desktop-width) {
     column-gap: 80px;
+
     row-gap: 70px;
   }
 }
+
 .select-trainer__list-item--hidden {
   display: none;
 }
+
 .select-trainer__form {
   margin-bottom: 25px;
 }
+
 .select-trainer__form-label {
-  gap: 9px;
-  min-width: 275px;
-  width: max-content;
-  max-width: 100%;
   align-self: flex-start;
+  width: max-content;
+  min-width: 275px;
+  max-width: 100%;
+
+  gap: 9px;
 }
+
 .select-trainer__form-label-text {
-  font-family: $header-font;
   font-size: 17px;
   line-height: 19px;
-  color: #000;
+  font-family: $header-font;
+  color: #000000;
 }

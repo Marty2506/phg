@@ -1,18 +1,17 @@
 .tabs-section {
-  padding: 60px 0;
   margin: 0;
+  padding: 60px 0;
 
   @media (width >= $desktop-width) {
     padding: 90px 0;
   }
-
   @media (width >= $desktop-width) {
     padding: 100px 0;
   }
 }
-.tabs-section__title {
 
-}
+
+
 .tabs-section__panel-content {
   padding: 0;
 }

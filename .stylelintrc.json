@@ -1,12 +1,6 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-    "at-rule-no-unknown": [
-      true,
-      {
-        "ignoreAtRules": ["function", "include", "mixin", "return", "use"]
-      }
-    ],
     "at-rule-empty-line-before": [
       "always",
       {
@@ -14,8 +8,10 @@
         "ignore": ["after-comment"]
       }
     ],
+    "rule-empty-line-before": "always-multi-line",
+    "selector-class-pattern": null,
     "color-hex-case": "lower",
-    "color-hex-length": "short",
+    "color-hex-length": null,
     "color-no-invalid-hex": true,
     "font-family-name-quotes": "always-where-recommended",
     "number-leading-zero": "never",
@@ -31,6 +27,7 @@
     "value-list-comma-space-after": "always",
     "property-case": "lower",
     "property-no-vendor-prefix": true,
+    "declaration-empty-line-before": null,
     "declaration-colon-space-after": "always",
     "declaration-colon-space-before": "never",
     "declaration-block-no-duplicate-properties": true,

@@ -10,14 +10,16 @@
     padding-bottom: 150px;
   }
 }
-.about-gym__content {
-}
+
+
+
 .about-gym__title {
   @media (width >= $laptop-width) {
-    margin-bottom: 50px;
     max-width: 70%;
+    margin-bottom: 50px;
   }
 }
+
 .about-gym__cards {
   display: flex;
   flex-direction: column;
@@ -35,13 +37,13 @@
   }
   @media (width >= $semi-desktop-width) {
     column-gap: 60px;
+
     row-gap: 55px;
   }
   @media (width >= $desktop-width) {
-    grid-template-columns: repeat(3, 1fr);
     column-gap: 25px;
+
+    grid-template-columns: repeat(3, 1fr);
     row-gap: 25px;
   }
-}
-.about-gym__card {
 }
