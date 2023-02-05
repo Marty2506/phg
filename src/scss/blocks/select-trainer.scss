@@ -1,4 +1,14 @@
 .select-trainer {
+  padding-top: 30px;
+  padding-bottom: 40px;
+
+  @media (width >= $laptop-width) {
+    padding-top: 0;
+    padding-bottom: 70px;
+  }
+  @media (width >= $desktop-width) {
+    padding-bottom: 110px;
+  }
 }
 .container {
 }
