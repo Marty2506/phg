@@ -1,0 +1,38 @@
+.reviews {
+  padding-bottom: 50px;
+  @media (width >= $laptop-width) {
+    padding-bottom: 70px;
+  }
+  @media (width >= $desktop-width) {
+    padding-top: 70px;
+    padding-bottom: 160px;
+  }
+}
+.reviews__content {
+}
+.reviews__title {
+}
+.reviews__videos {
+  position: relative;
+}
+.reviews__videos-swiper {
+}
+.reviews__video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 60.1%;
+}
+.reviews__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.reviews__in-messengers {
+  position: relative;
+}
+.reviews__in-messengers-swiper-slide {
+  min-width: 308px;
+}

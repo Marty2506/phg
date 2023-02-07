@@ -35,9 +35,9 @@
 
 .section__swiper-buttons {
   display: flex;
+  margin-bottom: 20px;
 
   gap: 5px;
-  // margin-bottom: 15px;
 
   @media (width >= $desktop-width - 2*$desktop-paddings + 2*$trainers-button-side-paddings) {
     position: absolute;
@@ -51,9 +51,51 @@
   }
 }
 
-
 .section__swiper-slide {
   @media (width < $laptop-width) {
     width: min-content;
   }
+}
+.section__tabs {
+  display: flex;
+  flex-direction: column;
+}
+.section__tabs-list {
+  display: flex;
+  max-width: 100%;
+  margin-bottom: 20px;
+  overflow: -moz-scrollbars-none; // Firefox
+  overflow-x: auto;
+
+  @media (width >= $laptop-width) {
+    margin-bottom: 45px;
+  }
+
+  &::-webkit-scrollbar {
+    display: none; // Safari and Chrome
+  }
+}
+.section__tabs-item + .section__tabs-item {
+  margin-left: -1px;
+}
+.section__tabs-button {
+  padding: 17px 45px;
+
+  font-size: 15px;
+  line-height: 17px;
+  white-space: nowrap;
+
+  &.active {
+    color: $white-color;
+
+    background-color: $secondary-color;
+  }
+
+  @media (width >= $laptop-width) {
+    padding: 17px 51px;
+  }
+}
+.section__tabs-content {
+}
+.section__tabs-panel {
 }

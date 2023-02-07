@@ -109,11 +109,95 @@
       </div>
     </section>
 
+    {% set VIDEO_REVIEWS_NUM = 3 %}
+    {% set MESSENGERS_REVIEWS_NUM = 10 %}
+    <section class="reviews section">
+      <div class="container">
+        <div class="reviews__content">
+          <h2 class="reviews__title title">Отзывы о тренере</h2>
+          <div class="section__tabs tabs">
+            <ul class="section__tabs-list tabs__list" role="tablist">
+              <li class="section__tabs-item tabs__item" role="presentation">
+                <button class="section__tabs-button tabs__button active button" type="button">Видео</button>
+              </li>
+              <li class="section__tabs-item tabs__item" role="presentation">
+                <button class="section__tabs-button tabs__button button" type="button">В мессенджерах</button>
+              </li>
+            </ul>
+            <div class="section__tabs-content tabs__content">
+              <div class="section__tabs-panel tabs__panel active" role="tabpanel">
+                <div class="reviews__videos">
+                  {% set reviewsVideoSwiperCnt = 1 %}
+                  <div class="section__swiper-buttons">
+                    <button class="section__swiper-button swiper-button swiper-button--prev" id="reviews-video-swiper-{{reviewsVideoSwiperCnt}}-btn-prev" type="button">
+                      <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                        <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                      </svg>
+                      <span class="visually-hidden">Перелестнуть назад</span>
+                    </button>
+                    <button class="section__swiper-button swiper-button swiper-button--next" id="reviews-video-swiper-{{reviewsVideoSwiperCnt}}-btn-next" type="button">
+                      <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                        <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                      </svg>
+                      <span class="visually-hidden">Перелестнуть вперед</span>
+                    </button>
+                  </div>
+                  <div class="reviews__videos-swiper section__swiper swiper" id="section-swiper-{{reviewsVideoSwiperCnt}}" data-reviews-video-swiper>
+                    <div class="swiper-wrapper">
+                      {% for slideIndex in range(VIDEO_REVIEWS_NUM) %}
+                        <div class="reviews__videos-swiper-slide section__swiper-slide swiper-slide">
+                          <div class="reviews__video-wrapper">
+                            <iframe class="reviews__video" width="560" height="315" src="https://www.youtube.com/embed/vtIQcIMr7iM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                          </div>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section__tabs-panel tabs__panel" role="tabpanel">
+                <div class="reviews__in-messengers">
+                  {% set reviewsInMessengersSwiperCnt = 1 %}
+                  <div class="section__swiper-buttons">
+                    <button class="section__swiper-button swiper-button swiper-button--prev" id="reviews-video-swiper-{{reviewsInMessengersSwiperCnt}}-btn-prev" type="button">
+                      <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                        <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                      </svg>
+                      <span class="visually-hidden">Перелестнуть назад</span>
+                    </button>
+                    <button class="section__swiper-button swiper-button swiper-button--next" id="reviews-video-swiper-{{reviewsInMessengersSwiperCnt}}-btn-next" type="button">
+                      <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                        <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                      </svg>
+                      <span class="visually-hidden">Перелестнуть вперед</span>
+                    </button>
+                  </div>
+                  <div class="reviews__in-messengers-swiper section__swiper swiper" id="section-swiper-{{reviewsInMessengersSwiperCnt}}" data-reviews-in-messengers-swiper>
+                    <div class="swiper-wrapper">
+                      {% for slideIndex in range(MESSENGERS_REVIEWS_NUM) %}
+                        <div class="reviews__in-messengers-swiper-slide section__swiper-slide swiper-slide">
+                          <picture>
+                            <source type="image/webp" srcset="@img/messenger-review.webp 1x">
+                            <img class="reviews__in-messengers-image" src="@img/messenger-review.jpg" alt="Отзыв в мессенджере {{slideIndex + 1}}">
+                          </picture>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 {% endblock content %}
 
 {% block js %}
   <script src="./js/swiper-bundle.min.js"></script>
   <script src="./js/gallery.min.js"></script>
+  <script src="./js/reviews-swipers.min.js"></script>
   <script src="./js/main.min.js"></script>
   <script src="./js/tabs.min.js"></script>
 {% endblock %}
