@@ -116,3 +116,18 @@
     display: none;
   }
 }
+.button--play {
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  & .button__icon {
+    transform: translateX(4px);
+  }
+
+  @media (width < $tablet-width) {
+    width: 70px;
+    height: 70px;
+  }
+}

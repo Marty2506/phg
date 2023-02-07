@@ -1,5 +1,5 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": ["stylelint-config-standard", "stylelint-config-standard-scss"],
   "rules": {
     "at-rule-empty-line-before": [
       "always",
@@ -8,13 +8,18 @@
         "ignore": ["after-comment"]
       }
     ],
-    "rule-empty-line-before": "always-multi-line",
+    "rule-empty-line-before": [
+      "always-multi-line",
+      {
+        "ignore": ["inside-block"]
+      }
+    ],
     "selector-class-pattern": null,
     "color-hex-case": "lower",
     "color-hex-length": null,
     "color-no-invalid-hex": true,
     "font-family-name-quotes": "always-where-recommended",
-    "number-leading-zero": "never",
+    "number-leading-zero": "always",
     "number-max-precision": 3,
     "number-no-trailing-zeros": true,
     "length-zero-no-unit": true,
@@ -50,6 +55,7 @@
     "no-invalid-double-slash-comments": true,
     "no-invalid-position-at-import-rule": null,
     "no-missing-end-of-source-newline": true,
-    "import-notation": null
+    "import-notation": null,
+    "no-descending-specificity": null
   }
 }

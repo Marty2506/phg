@@ -19,8 +19,11 @@ gallerySwipers.forEach((gallerySwiper, index) => {
       1020: {
         slidesPerView: 6,
       },
-      1707: {
+      1020: {
         slidesPerView: 7,
+      },
+      1707: {
+        slidesPerView: 8,
       },
     }
   }
@@ -82,3 +85,4 @@ trainerSwipers.forEach((trainerSwiper, index) => {
   }
   const swiper = new Swiper(trainerSwiper, swiperOptions);
 });
+

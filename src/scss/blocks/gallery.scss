@@ -85,6 +85,10 @@
   flex-direction: column;
   height: $gallery-thumbs-height * 1px;
 
+  @media (width < $desktop-width) {
+    height: 80px;
+  }
+
   &::after {
     content: "";
     position: absolute;

@@ -1,0 +1,119 @@
+{% extends "layout.j2" %}
+
+{% set page = "trainers" %}
+
+{% set TRAINER_SWIPER_SLIDES_NUM = 10 %}
+
+{% block content %}
+  <main class="page-main bg">
+    <div class="breadcumbs">
+      <div class="breadcumbs__container container">
+        <ul class="breadcumbs__list">
+          <li class="breadcumbs__item">
+            <a class="breadcumbs__link" href="./index.html">Главная</a>
+            <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+              <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcumbs__item">
+            <a class="breadcumbs__link" href="./trainers.html">Тренеры POWERHOUSE GYM</a>
+            <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+              <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcumbs__item">
+            <span class="breadcumbs__link breadcumbs__link--current">Ибрагим Нурмагомедов</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {% set gallerySwiperCnt = 1 %}
+    <section class="trainer section">
+      <div class="container">
+        <h1 class="trainer__title page__title">Ибрагим Нурмагомедов</h1>
+      </div>
+      <div class="trainer__container container">
+        <div class="trainer__content">
+          <div class="trainer__main">
+            <h3 class="trainer__sub-title">Специализации:</h3>
+            <p class="trainer__text">Групповые и персональыне <span>тренировки по боксу</span> Boxing Conditions</p>
+            <h3 class="trainer__sub-title">Образование</h3>
+            <p class="trainer__text">Высшее физкультурное, Московская Государственная академия физической культуры (2011 год)</p>
+            <h3 class="trainer__sub-title">Звания</h3>
+            <ul class="trainer__list list">
+              <li class="trainer__list-item list__item">Мастер спорта (2007 год)</li>
+              <li class="trainer__list-item list__item">Чемпион Краснодарского Края 2006 года</li>
+              <li class="trainer__list-item list__item">Финалиста кубка России по боксу до 19 лет 2007 года</li>
+            </ul>
+            <h3 class="trainer__sub-title">Может помочь</h3>
+            <ul class="trainer__list list">
+              <li class="trainer__list-item list__item">Скорректировать фигуру</li>
+              <li class="trainer__list-item list__item">Набрать массу</li>
+              <li class="trainer__list-item list__item">Увеличить силовые показатели</li>
+              <li class="trainer__list-item list__item">Улучшить выносливость</li>
+            </ul>
+            <h3 class="trainer__sub-title">Карьера</h3>
+            <p class="trainer__text">185 боев - 160 побед</p>
+            <h3 class="trainer__sub-title">Обращение</h3>
+            <p class="trainer__text">Правый - коронный. Левый похоронный! Хотите также? Тогда скорее записываться в PHG на Соколе!</p>
+          </div>
+          <div class="trainer__gallery trainer__gallery--has-video gallery">
+            <div class="gallery__swiper-wrapper">
+              <div class="trainer__main-swiper gallery__swiper gallery__swiper--main swiper" id="trainer-main-swiper">
+                <button class="gallery__swiper-button gallery__swiper-button--prev" id="gallery-swiper-{{gallerySwiperCnt}}-prev" type="button">
+                  <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                    <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                  </svg>
+                  <span class="visually-hidden">Перелестнуть назад</span>
+                </button>
+                <button class="gallery__swiper-button gallery__swiper-button--next" id="gallery-swiper-{{gallerySwiperCnt}}-next" type="button">
+                  <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                    <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                  </svg>
+                  <span class="visually-hidden">Перелестнуть вперед</span>
+                </button>
+                <div class="swiper-wrapper">
+                  {% for slideIndex in range(TRAINER_SWIPER_SLIDES_NUM) %}
+                    <div class="trainer__main-swiper-slide gallery__swiper-slide swiper-slide">
+                      <picture class="trainer__slide-wrapper">
+                        <source type="image/webp" srcset="@img/trainer-slide-{{slideIndex + 1}}.webp 1x">
+                        <img class="gallery__image" src="@img/trainer-slide-{{slideIndex + 1}}.jpg" alt="Описание слайда {{slideIndex + 1}}">
+                      </picture>
+                      {% if slideIndex == 0 %}
+                        <a class="trainer__play-video-button button button--reverse button--play" href="#!">
+                          <svg class="button__icon" width="33" height="30" viewBox="0 0 35 40">
+                            <use xlink:href="img/sprite.svg#play-icon"></use>
+                          </svg>
+                          <span class="visually-hidden">Воспроизвести видео.</span>
+                        </a>
+                      {% endif %}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="trainer__thumbs-swiper gallery__swiper gallery__swiper--thumbs swiper" id="trainer-thumbs-swiper">
+                <div class="swiper-wrapper">
+                  {% for slideIndex in range(TRAINER_SWIPER_SLIDES_NUM) %}
+                    <div class="gallery__swiper-thumb swiper-slide">
+                      <picture class="gallery__swiper-thumb-wrapper">
+                        <source type="image/webp" srcset="@img/trainer-slide-{{slideIndex + 1}}-preview.webp 1x">
+                        <img class="gallery__image" src="@img/trainer-slide-{{slideIndex + 1}}-preview.jpg" alt="Превью слайда {{slideIndex + 1}}">
+                      </picture>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+{% endblock content %}
+
+{% block js %}
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/gallery.min.js"></script>
+  <script src="./js/main.min.js"></script>
+  <script src="./js/tabs.min.js"></script>
+{% endblock %}
