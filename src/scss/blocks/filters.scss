@@ -1,0 +1,29 @@
+.filters {
+}
+.filters__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filters__item {
+  margin-bottom: 5px;
+}
+.filters__item + .filters__item {
+  margin-left: -1px;
+}
+.filters__button {
+  padding: 17px 45px;
+
+  font-size: 15px;
+  line-height: 17px;
+  white-space: nowrap;
+
+  &.active {
+    color: $white-color;
+
+    background-color: $secondary-color;
+  }
+
+  @media (width >= $laptop-width) {
+    padding: 17px 51px;
+  }
+}
