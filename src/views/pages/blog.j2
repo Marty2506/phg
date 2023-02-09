@@ -94,10 +94,42 @@
       </div>
     </section>
 
+    <section class="subscribe">
+      <h2 class="visually-hidden">Подписка на журнал PHG</h2>
+      <div class="container">
+        <div class="subscribe__content red-line">
+          <p class="subscribe__title page__title">Подпишитесь на журнал PHG</p>
+          <p class="subscribe__sub-title">и получайте интересные материалы каждую неделю</p>
+          <ul class="subscribe__list list">
+            <li class="subscribe__list-item list__item">Подборки тренировочных программ под любые цели - дома и в зале.</li>
+            <li class="subscribe__list-item list__item">Советы по питанию от нутрициологов.</li>
+            <li class="subscribe__list-item list__item">Истории успеха членов клуба.</li>
+            <li class="subscribe__list-item list__item">Новости и изменения в клубе.</li>
+          </ul>
+          <form class="subscribe__form form form--has-white-bg" id="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="subscribe__form-row">
+              <label class="form__label">
+                <input class="form__field" type="email" id="subscribe-form-mail" name="subscribe-form-mail" placeholder="pochta@mail.ru" required data-pristine-required-message="Обязательно к заполнению" data-pristine-email-message="Неправильный формат e-mail">
+              </label>
+              <div class="form__button-plus-policy">
+                <button class="form__button button button--reverse" type="submit">Подписаться</button>
+                <label class="form__label form__label--checkbox">
+                  <input class="form__checkbox visually-hidden" type="checkbox" name="test-train-form-politics" id="modal-pricelist-politics" checked>
+                  <span class="form__mark"></span>
+                  <span class="form__checkbox-label-text">Согласен с <a class="link" href="#!">Политикой конфиденциальности</a></span>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
 {% endblock content %}
 
 {% block js %}
   <script src="./js/blog-filters.min.js"></script>
+  <script src="./js/subscribe.min.js"></script>
   <script src="./js/main.min.js"></script>
   <script src="./js/tabs.min.js"></script>
 {% endblock %}

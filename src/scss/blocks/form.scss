@@ -120,6 +120,24 @@
   color: red;
 }
 
+.form__button-plus-policy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  & .form__button {
+    padding-top: 21.5px;
+    padding-bottom: 21.5px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+.form--has-white-bg {
+  & .form__field {
+    background-color: $bg-color;
+  }
+}
+
 // ============= Настройка выпадающего селекта
 
 .form-choices {

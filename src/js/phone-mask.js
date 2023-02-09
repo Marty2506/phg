@@ -7,3 +7,11 @@ phoneFields.forEach(phoneField => {
   IMask(phoneField, phoneMaskOptions);
 });
 
+const mailFields = document.querySelectorAll('.form input[type="email"]');
+var mailMaskOptions = {
+  mask: /^\S*@?\S*$/
+};
+
+mailFields.forEach(mailField => {
+  IMask(mailField, mailMaskOptions);
+});

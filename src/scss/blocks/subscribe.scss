@@ -1,0 +1,98 @@
+.subscribe {
+  background-color: $white-color;
+
+  margin-bottom: 40px;
+
+  @media (width >= $laptop-width) {
+    margin-bottom: 70px;
+  }
+  @media (width >= $desktop-width) {
+    margin-bottom: 110px;
+  }
+}
+.subscribe__content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+
+  @media (width >= $tablet-width) {
+    padding-left: 50px;
+    padding-right: 20px;
+  }
+
+  @media (width >= $laptop-width) {
+    padding-left: 70px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (width >= $desktop-width) {
+    padding: 55px 30px 45px 100px;
+  }
+
+}
+.subscribe__title {
+  position: relative;
+  margin: 0;
+  padding-top: 65px;
+  max-width: initial;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 48px;
+    height: 48px;
+
+    background-image: url("@img/icons/mail-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (width >= $laptop-width) {
+    max-width: 80%;
+  }
+}
+.subscribe__sub-title {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 125%;
+
+  @media (width >= $laptop-width) {
+    max-width: 70%;
+    font-size: 25px;
+  }
+  @media (width >= $desktop-width) {
+    font-size: 30px;
+  }
+}
+.subscribe__list {
+  gap: 10px;
+  margin-bottom: 20px;
+
+  @media (width >= $laptop-width) {
+    margin-bottom: 40px;
+  }
+}
+.subscribe__list-item {
+}
+.subscribe__form {
+
+}
+.subscribe__form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media (width >= $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 650px;
+  }
+}
