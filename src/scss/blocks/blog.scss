@@ -1,4 +1,14 @@
 .blog {
+  padding-top: 30px;
+  padding-bottom: 40px;
+
+  @media (width >= $laptop-width) {
+    padding-top: 0;
+    padding-bottom: 70px;
+  }
+  @media (width >= $desktop-width) {
+    padding-bottom: 85px;
+  }
 }
 .blog__content {
   display: flex;
@@ -32,7 +42,13 @@
     grid-auto-rows: auto;
   }
 }
+
 .blog__cards-item {
+  &:nth-child(10n +7) {
+    & .blog__card::after {
+      background-color: transparentize($secondary-color, 0.3);
+    }
+  }
   @media (width >= $desktop-width) {
     grid-column: span 6;
     &:nth-child(10n + 3),
@@ -41,4 +57,8 @@
       grid-row: span 2;
     }
   }
+}
+
+.blog__cards-item--hidden {
+  display: none;
 }

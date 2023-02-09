@@ -55,6 +55,24 @@
   transition: color 0.3s ease;
 }
 
+.journal-card__logos {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.journal-card__logo {
+  max-width: 95%;
+  max-height: 100px;
+}
+
+.journal-card__logo--hovered {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+}
+
 .journal-card__title {
   margin: 0;
   margin-bottom: 10px;
@@ -73,6 +91,17 @@
   }
   @media (width >= $semi-desktop-width) {
     font-size: 22px;
+  }
+
+  &--big {
+    font-weight: 400;
+    font-size: 20px;
+    @media (width >= $laptop-width) {
+      font-size: 25px;
+    }
+    @media (width >= $desktop-width) {
+      font-size: 30px;
+    }
   }
 }
 
@@ -97,6 +126,25 @@
   color: $bg-color;
 
   transition: color 0.3s ease;
+}
+.journal-card__price {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  font-family: $jost-font;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 140%;
+  color: $white-color;
+
+  @media (width >= $desktop-width) {
+    font-size: 45px;
+  }
+
+  @media (width >= $desktop-width) {
+    font-size: 60px;
+  }
+
 }
 
 .journal-card__views-wrapper {
@@ -191,20 +239,20 @@
         opacity: 1;
       }
 
-      & .journal-card__date {
+      & .journal-card__date,
+      & .journal-card__title,
+      & .journal-card__text,
+      & .journal-card__views-cnt,
+      & .journal-card__price {
         color: $primary-color;
       }
 
-      & .journal-card__title {
-        color: $primary-color;
+      & .journal-card__logo {
+        opacity: 0;
       }
 
-      & .journal-card__text {
-        color: $primary-color;
-      }
-
-      & .journal-card__views-cnt {
-        color: $primary-color;
+      & .journal-card__logo--hovered {
+        opacity: 1;
       }
     }
   }

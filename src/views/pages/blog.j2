@@ -28,48 +28,66 @@
           <div class="blog__filters filters">
             <ul class="filters__list">
               <li class="filters__item">
-                <buttton class="filters__button active button" data-filter-name="">Все материалы</buttton>
+                <buttton class="filters__button active button" type="button" data-filter-name="">Все материалы</buttton>
               </li>
               <li class="filters__item">
-                <buttton class="filters__button button" data-filter-name="Тренировки">Тренировки</buttton>
+                <buttton class="filters__button button" type="button" data-filter-name="Тренировки">Тренировки</buttton>
               </li>
               <li class="filters__item">
-                <buttton class="filters__button button" data-filter-name="Питание">Питание</buttton>
+                <buttton class="filters__button button" type="button" data-filter-name="Питание">Питание</buttton>
               </li>
               <li class="filters__item">
-                <buttton class="filters__button button" data-filter-name="Истории успеха">Истории успеха</buttton>
+                <buttton class="filters__button button" type="button" data-filter-name="Истории успеха">Истории успеха</buttton>
               </li>
             </ul>
           </div>
           <ol class="blog__cards-list">
             {% for cardIndex in range (BLOG_CARDS_NUMBER) %}
-              <li class="blog__cards-item">
-                <div class="journal-card">
-                  <div class="journal-card__content">
-                    <span class="journal-card__date">09.02.2022</span>
-                    <p class="journal-card__title">Как набрать массу эктоморфу в тренажёрном зале, занимаясь 3 раза в неделю</p>
-                    <div class="journal-card__hidden-content">
-                      <p class="journal-card__text">Функциональный тренинг — это система физических упражнений, гармонично развивает все физические качества человека: сила, выносливость, скорость, ловкость и гибкость.</p>
-                      <div class="journal-card__views-wrapper">
-                        <div class="journal-card__views">
-                          <span class="visually-hidden">Количество просомтров.</span>
-                          <span class="journal-card__views-cnt">99</span>
-                        </div>
-                        <div class="journal-card__views journal-card__views--comments">
-                          <span class="visually-hidden">Количество комментариев.</span>
-                          <span class="journal-card__views-cnt">12</span>
+              {% if ((cardIndex + 1) % 10 == 7) %}
+                <li class="blog__cards-item">
+                  <div class="blog__card blog__card--advertisement journal-card" data-filter-tags="Питание, Истории успеха">
+                    <div class="journal-card__content">
+                      <div class="journal-card__logos">
+                        <img class="journal-card__logo" src="@img/icons/fitquest-logo-white.png" alt="" width="167" height="52">
+                        <img class="journal-card__logo journal-card__logo--hovered" src="@img/icons/fitquest-logo-white.png" alt="" width="167" height="52">
+                      </div>
+
+                      <p class="journal-card__title journal-card__title--big">Фитнес-тестирование + любая групповая тренировка на выбор</p>
+                      <span class="journal-card__price">за 800 ₽</span>
+                    </div>
+                    <img class="journal-card__bg" src="@img/journal-card-image-fitquest.jpg" alt="">
+                    <a class="journal-card__link" href="#!"></a>
+                  </div>
+                </li>
+              {% else %}
+                <li class="blog__cards-item">
+                  <div class="blog__card journal-card" data-filter-tags="Тренировки">
+                    <div class="journal-card__content">
+                      <span class="journal-card__date">{{cardIndex + 1}}.02.2022</span>
+                      <p class="journal-card__title">Как набрать массу эктоморфу в тренажёрном зале, занимаясь 3 раза в неделю</p>
+                      <div class="journal-card__hidden-content">
+                        <p class="journal-card__text">Функциональный тренинг — это система физических упражнений, гармонично развивает все физические качества человека: сила, выносливость, скорость, ловкость и гибкость.</p>
+                        <div class="journal-card__views-wrapper">
+                          <div class="journal-card__views">
+                            <span class="visually-hidden">Количество просомтров.</span>
+                            <span class="journal-card__views-cnt">99</span>
+                          </div>
+                          <div class="journal-card__views journal-card__views--comments">
+                            <span class="visually-hidden">Количество комментариев.</span>
+                            <span class="journal-card__views-cnt">12</span>
+                          </div>
                         </div>
                       </div>
                     </div>
+                    {% if ((cardIndex + 1) % 10 == 3) or ((cardIndex + 1) % 10 == 6) %}
+                      <img class="journal-card__bg" src="@img/journal-card-image-2.jpg" alt="">
+                    {% else %}
+                      <img class="journal-card__bg" src="@img/journal-card-image-1.jpg" alt="">
+                    {% endif %}
+                    <a class="journal-card__link" href="#!"></a>
                   </div>
-                  {% if ((cardIndex + 1) % 10 == 3) or ((cardIndex + 1) % 10 == 6) %}
-                    <img class="journal-card__bg" src="@img/journal-card-image-2.jpg" alt="">
-                  {% else %}
-                    <img class="journal-card__bg" src="@img/journal-card-image-1.jpg" alt="">
-                  {% endif %}
-                  <a class="journal-card__link" href="#!"></a>
-                </div>
-              </li>
+                </li>
+              {% endif %}
             {% endfor %}
           </ol>
         </div>
@@ -79,9 +97,7 @@
 {% endblock content %}
 
 {% block js %}
-  <script src="./js/swiper-bundle.min.js"></script>
-  <script src="./js/gallery.min.js"></script>
-  <script src="./js/reviews-swipers.min.js"></script>
+  <script src="./js/blog-filters.min.js"></script>
   <script src="./js/main.min.js"></script>
   <script src="./js/tabs.min.js"></script>
 {% endblock %}
