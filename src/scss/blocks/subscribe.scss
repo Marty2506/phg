@@ -1,6 +1,4 @@
 .subscribe {
-  background-color: $white-color;
-
   margin-bottom: 40px;
 
   @media (width >= $laptop-width) {
@@ -14,6 +12,7 @@
   display: flex;
   flex-direction: column;
   padding: 30px 0;
+  background-color: $white-color;
 
   @media (width >= $tablet-width) {
     padding-left: 50px;

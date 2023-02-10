@@ -44,10 +44,8 @@
 }
 
 .blog__cards-item {
-  &:nth-child(10n +7) {
-    & .blog__card::after {
-      background-color: transparentize($secondary-color, 0.3);
-    }
+  & .blog__card--advertisement::after {
+    background-color: transparentize($secondary-color, 0.3);
   }
   @media (width >= $desktop-width) {
     grid-column: span 6;

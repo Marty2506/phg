@@ -69,6 +69,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  filter: invert(1) grayscale(.5);
 
   opacity: 0;
 }
