@@ -1,8 +1,6 @@
 .news {
   padding: 40px 0;
 
-  background-color: $bg-color;
-
   @media (width >= $laptop-width) {
     padding-top: 50px;
     padding-bottom: 85px;
@@ -10,4 +8,48 @@
   @media (width >= $desktop-width) {
     padding-bottom: 130px;
   }
+}
+
+.news--carousel {
+  background-color: $bg-color;
+}
+
+.news__title {
+  @media (width >= $laptop-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.news__filters-form {
+  margin-bottom: 20px;
+
+  @media (width >= $laptop-width) {
+    margin-bottom: 35px;
+  }
+}
+
+.news__filters-form-label {
+  min-width: 275px;
+  width: fit-content;
+}
+
+.news__cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media (width >= $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(308px, max-content));
+    gap: 25px;
+  }
+
+  @media (width >= $laptop-width) {
+    grid-template-columns: repeat(auto-fill, minmax(308px, 1fr));
+    gap: 25px;
+  }
+}
+
+.news__cards-item {
+
 }
