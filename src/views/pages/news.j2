@@ -14,19 +14,13 @@
             </svg>
           </li>
           <li class="breadcumbs__item">
-            <a class="breadcumbs__link" href="./about.html">О клубе</a>
-            <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
-              <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
-            </svg>
-          </li>
-          <li class="breadcumbs__item">
             <span class="breadcumbs__link breadcumbs__link--current">Новости</span>
           </li>
         </ul>
       </div>
     </div>
 
-    {% set NEWS_CARDS_NUMBER = 12 %}
+    {% set NEWS_CARDS_NUMBER = 6 %}
     <section class="news">
       <div class="container">
         <div class="news__content">
@@ -41,8 +35,8 @@
             </label>
           </form>
           <ol class="news__cards-list">
-            {% for cardIndex in range(NEWS_CARDS_NUMBER) %}
-              <div class="news__cards-item news-card">
+            {% for cardIndex in range(2*NEWS_CARDS_NUMBER) %}
+              <div class="news__cards-item news-card" data-date="09.02.2023">
                 <div class="news-card__content">
                   <div class="news-card__image-wrapper">
                     <picture>
@@ -50,7 +44,22 @@
                       <img class="news-card__image" src="@img/news-card-image-1.jpg" alt="" width="280" height="162">
                     </picture>
                   </div>
-                  <span class="news-card__date">09.02.2022</span>
+                  <span class="news-card__date">09.02.2023</span>
+                  <p class="news-card__preview-text">В клубе прошло соревнование по пауэрлифтингу среди любителей</p>
+                </div>
+                <a class="news-card__link" href="#!"></a>
+              </div>
+            {% endfor %}
+            {% for cardIndex in range(NEWS_CARDS_NUMBER) %}
+              <div class="news__cards-item news-card" data-date="09.01.2023">
+                <div class="news-card__content">
+                  <div class="news-card__image-wrapper">
+                    <picture>
+                      <source type="image/webp" srcset="@img/news-card-image-1.webp 1x">
+                      <img class="news-card__image" src="@img/news-card-image-1.jpg" alt="" width="280" height="162">
+                    </picture>
+                  </div>
+                  <span class="news-card__date">09.01.2023</span>
                   <p class="news-card__preview-text">В клубе прошло соревнование по пауэрлифтингу среди любителей</p>
                 </div>
                 <a class="news-card__link" href="#!"></a>
