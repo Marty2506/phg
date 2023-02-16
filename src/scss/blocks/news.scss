@@ -2,7 +2,7 @@
   padding: 40px 0;
 
   @media (width >= $laptop-width) {
-    padding-top: 50px;
+    padding-top: 0;
     padding-bottom: 85px;
   }
   @media (width >= $desktop-width) {
@@ -12,6 +12,9 @@
 
 .news--carousel {
   background-color: $bg-color;
+  @media (width >= $laptop-width) {
+    padding-top: 50px;
+  }
 }
 
 .news__title {
