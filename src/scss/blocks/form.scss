@@ -42,6 +42,14 @@
     opacity: 0.7;
   }
 }
+.has-white-bg .form__field {
+  outline: 1px solid transparentize($secondary-color, 0.5);
+
+  &:hover,
+  &:focus-visible {
+    outline: 2px solid $secondary-color;
+  }
+}
 
 .form__col-row-wrapper {
   display: flex;

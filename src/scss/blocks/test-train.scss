@@ -87,3 +87,11 @@
     min-height: 260px;
   }
 }
+
+.has-white-bg.test-train {
+  background-color: $white-color;
+
+  & .test-train__info-list-item {
+    background-color: $bg-color2;
+  }
+}

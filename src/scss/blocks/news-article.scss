@@ -1,0 +1,27 @@
+.news-article {
+  padding-bottom: 10px;
+
+  @media (width >= $laptop-width) {
+    padding-bottom: 30px;
+    padding-top: 0;
+  }
+}
+.news-article__content {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 1100px;
+}
+.news-article__title {
+}
+.page__title {
+  max-width: initial;
+}
+.news-article__paragraph {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+}
+.news-article__image {
+  margin-bottom: 25px;
+}

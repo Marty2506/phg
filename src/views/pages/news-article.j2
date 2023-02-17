@@ -1,0 +1,57 @@
+{% extends "layout.j2" %}
+
+{% set page = "news-article" %}
+
+{% block content %}
+  <main class="page-main bg">
+    <div class="breadcumbs">
+      <div class="breadcumbs__container container">
+        <ul class="breadcumbs__list">
+          <li class="breadcumbs__item">
+            <a class="breadcumbs__link" href="./index.html">Главная</a>
+            <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+              <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcumbs__item">
+            <a class="breadcumbs__link" href="./news.html">Главная</a>
+            <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+              <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcumbs__item">
+            <span class="breadcumbs__link breadcumbs__link--current">В клубе прошло соревнование по пауэрлифтингу средилюбителей</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <article class="news-article pads">
+      <div class="container">
+        <div class="news-article__content">
+          <h1 class="news-article__title page__title">В клубе прошло соревнование по пауэрлифтингу среди любителей</h1>
+          <p class="news-article__paragraph">Мы рассчитываем на долгие и счастливые отношения с нашими заказчиками и поэтому делаем первый шаг - предоставляем скидку 10% на печать любой полиграфической продукции при оформлении первого заказа в нашей типографии. Мы рассчитываем на долгие и счастливые отношения с нашими заказчиками и поэтому делаем первый шаг - предоставляем скидку 10% на печать любой полиграфической продукции при оформлении первого заказа в нашей типографии.
+          </p>
+          <p class="news-article__paragraph">Мы рассчитываем на долгие и счастливые отношения с нашими заказчиками и поэтому делаем первый шаг - предоставляем скидку 10% на печать любой полиграфической продукции при оформлении первого заказа в нашей типографии. Мы рассчитываем на долгие и счастливые отношения с нашими заказчиками и поэтому делаем первый шаг - предоставляем скидку 10% на печать любой полиграфической продукции при оформлении первого заказа в нашей типографии.
+          </p>
+          <img class="news-article__image" src="@img/news-article-img.jpg" alt="Изображение входа в зал PHG." width="1100" height="574">
+        </div>
+      </div>
+    </article>
+
+    {% set newsTitle = "Другие новости"%}
+    {% include "./blocks/news.j2" %}
+    {% set testTrainAdditionalCLass = "has-white-bg"%}
+    {% include "./blocks/test-train.j2" %}
+
+
+{% endblock content %}
+
+{% block js %}
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/news.min.js"></script>
+  <script src="./js/test-train.min.js"></script>
+  <script src="./js/main.min.js"></script>
+  <script src="./js/tabs.min.js"></script>
+{% endblock %}

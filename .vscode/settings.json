@@ -2,5 +2,6 @@
   "editor.formatOnSave": true,
   "prettier.arrowParens": "avoid",
   "prettier.semi": false,
-  "prettier.proseWrap": "preserve"
+  "prettier.proseWrap": "preserve",
+  "prettier.printWidth": 150
 }
