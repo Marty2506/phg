@@ -29,3 +29,25 @@
     transform: none;
   }
 }
+
+.promos__cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media (width >= $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(308px, 1fr));
+  }
+  @media (width >= $semi-desktop-width) {
+    gap: 35px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// Для отдельной страницы с акциями
+.promos--own-page {
+  @media (width >= $laptop-width) {
+    padding-top: 0;
+  }
+}

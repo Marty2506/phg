@@ -1,4 +1,6 @@
 .promo-card {
+  container-name: promo-card;
+  container-type: inline-size;
   position: relative;
 
   width: 100%;
@@ -6,13 +8,25 @@
   max-width: 523px;
   min-height: 208px;
   padding: 20px 30px;
+  z-index: 1;
 
   color: $bg-color;
 
-  transition: background-color 0.3s ease;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.3s ease;
+  }
 
   @media (width < $laptop-width) {
-    background-color: rgba($color: #000000, $alpha: 30%);
+    &::after {
+      background-color: transparentize(#000000, 0.7);
+    }
   }
   @media (width >= $laptop-width) {
     height: 250px;
@@ -23,6 +37,8 @@
   @media (width >= $desktop-width) {
     height: 350px;
   }
+
+
 }
 
 .promo-card__content {
@@ -33,7 +49,7 @@
   display: inline-flex;
   margin: 0;
   margin-bottom: 7px;
-  padding: 3px 6px;
+  padding: 4px 6px 3px;
 
   font-size: 10px;
   line-height: 145%;
@@ -41,17 +57,25 @@
   background-color: $secondary-color;
 
   @media (width >= $laptop-width) {
-    padding: 4px 7px;
+    margin-bottom: 15px;
+    padding: 6px 7px 5px;
 
     font-size: 12px;
   }
   @media (width >= $desktop-width) {
-    padding: 5px 10px;
+    padding: 6px 10px 5px;
 
     font-size: 17px;
   }
 }
-
+.promo-card__price {
+  margin: 0;
+  margin-bottom: -8px;
+  padding: 0;
+  font-family: $header-font;
+  font-size: 45px;
+  line-height: 140%;
+}
 .promo-card__title {
   margin: 0;
   margin-bottom: 7px;
@@ -61,6 +85,7 @@
   font-size: 17px;
   line-height: 140%;
   font-family: $header-font;
+  max-width: 80%;
 
   @media (width >= $semi-desktop-width) {
     margin-bottom: 10px;
@@ -122,7 +147,9 @@
 
 .promo-card {
   &:hover {
-    background-color: rgba($color: #000000, $alpha: 30%);
+    &::after {
+      background-color: transparentize(#000000, 0.7);
+    }
 
     & .promo-card__description {
       opacity: 1;
@@ -131,5 +158,12 @@
 
   &:active {
     opacity: 0.7;
+  }
+}
+
+@container promo-card (width > 330px) {
+  .promo-card__price {
+    font-size: 60px;
+    margin-bottom: -10px;
   }
 }
