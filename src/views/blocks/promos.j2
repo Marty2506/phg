@@ -3,7 +3,11 @@
     <div class="promos__content">
       <div class="promos__swiper-container section__swiper-container">
         <div class="promos__header section__header">
-          <h2 class="promos__title title section__title"><a href="./promos.html">Акции клуба</a></h2>
+          {% if promosTitle %}
+            <h2 class="promos__title title section__title"><a href="./promos.html">{{promosTitle | safe}}</a></h2>
+          {% else %}
+            <h2 class="promos__title title section__title"><a href="./promos.html">Акции клуба</a></h2>
+          {% endif %}
           <div class="promos__swiper-buttons section__swiper-buttons">
             <button class="section__swiper-button swiper-button swiper-button--prev" id="promos-swiper-btn-prev" type="button">
               <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
