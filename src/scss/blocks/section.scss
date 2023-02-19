@@ -63,17 +63,23 @@
 .section__tabs-list {
   display: flex;
   max-width: 100%;
-  margin-bottom: 20px;
-  overflow: -moz-scrollbars-none; // Firefox
-  overflow-x: auto;
+  margin-bottom: 10px;
+
+  @media (width < $laptop-width) {
+    overflow: -moz-scrollbars-none; // Firefox
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none; // Safari and Chrome
+    }
+  }
 
   @media (width >= $laptop-width) {
-    margin-bottom: 45px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
   }
-
-  &::-webkit-scrollbar {
-    display: none; // Safari and Chrome
-  }
+}
+.section__tabs-item {
+  margin-bottom: 10px;
 }
 .section__tabs-item + .section__tabs-item {
   margin-left: -1px;

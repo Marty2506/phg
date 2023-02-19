@@ -49,7 +49,7 @@
   font-family: $header-font;
 
   @media (width >= $laptop-width) {
-    max-width: 80%;
+    max-width: calc(100% - 290px);
 
     font-size: 35px;
   }
@@ -106,10 +106,6 @@
 }
 
 .trainers__show-all-button {
-  @media (width >= $tablet-width) {
-    position: absolute;
-    right: 0;
-  }
   @media (width < $laptop-width) {
     max-width: 250px;
   }
@@ -117,5 +113,9 @@
     top: 10px;
 
     width: 270px;
+  }
+  @media (width >= $laptop-width) {
+    position: absolute;
+    right: 0;
   }
 }
