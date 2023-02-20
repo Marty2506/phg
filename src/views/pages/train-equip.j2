@@ -1,6 +1,6 @@
 {% extends "layout.j2" %}
 
-{% set page = "gallery" %}
+{% set page = "train-equip" %}
 
 {% block content %}
   <main class="page-main bg">
@@ -14,11 +14,133 @@
             </svg>
           </li>
           <li class="breadcumbs__item">
-            <span class="breadcumbs__link breadcumbs__link--current">Галерея клуба</span>
+            <span class="breadcumbs__link breadcumbs__link--current">Тренажеры</span>
           </li>
         </ul>
       </div>
     </div>
+
+    <section class="simulators pads section">
+      <div class="container">
+        <div class="simulators__content">
+          <div class="simulators__header">
+            <h1 class="simulators__title page__title">Премиальные тренажеры</h1>
+            <div class="simulators__logos">
+              <div class="simulators__logos-item">
+                <picture>
+                  <source type="image/webp" srcset="@img/simulators/life-fitness-logo.webp 1x">
+                  <img class="simulators__logo-image" src="@img/simulators/life-fitness-logo.png" alt="Логотип life-fitness" width="182" height="53">
+                </picture>
+              </div>
+              <div class="simulators__logos-item">
+                <picture>
+                  <source type="image/webp" srcset="@img/simulators/hammer-strength-logo.webp 1x">
+                  <img class="simulators__logo-image" src="@img/simulators/hammer-strength-logo.png" alt="Логотип hammer-strength" width="111" height="43">
+                </picture>
+              </div>
+              <div class="simulators__logos-item">
+                <picture>
+                  <source type="image/webp" srcset="@img/simulators/you-steel-logo.webp 1x">
+                  <img class="simulators__logo-image" src="@img/simulators/you-steel-logo.png" alt="Логотип yousteel" width="94" height="49">
+                </picture>
+              </div>
+            </div>
+            <p class="simulators__text">Обеспечивают правильную технику исполнения безопасность упражнений. В итоге Вы работаете эффективней и сводите к нулю риск получить травму</p>
+          </div>
+          <div class="section__tabs tabs">
+            <ul class="section__tabs-list tabs__list" role="tablist">
+              <li class="section__tabs-item tabs__item" role="presentation">
+                <button class="section__tabs-button tabs__button active button" type="button">Руки</button>
+              </li>
+              <li class="section__tabs-item tabs__item" role="presentation">
+                <button class="section__tabs-button tabs__button button" type="button">Плечи</button>
+              </li>
+              <li class="section__tabs-item tabs__item" role="presentation">
+                <button class="section__tabs-button tabs__button button" type="button">Спина</button>
+              </li>
+              <li class="section__tabs-item tabs__item" role="presentation">
+                <button class="section__tabs-button tabs__button button" type="button">Шея</button>
+              </li>
+              <li class="section__tabs-item tabs__item" role="presentation">
+                <button class="section__tabs-button tabs__button button" type="button">Ноги</button>
+              </li>
+              <li class="section__tabs-item tabs__item" role="presentation">
+                <button class="section__tabs-button tabs__button button" type="button">Торс</button>
+              </li>
+            </ul>
+            <div class="section__tabs-content tabs__content">
+              <div class="section__tabs-panel tabs__panel active" role="tabpanel">
+                <h3 class="visually-hidden">Тренажеры для рук</h3>
+                <ul class="simulators__cards">
+                  {% set SIMULATORS_NUM = 9 %}
+                  {% for index in range(SIMULATORS_NUM) %}
+                    {# Особая карточка для рекламы #}
+                    {% if index == 3 %}
+                      <li class="simulators__card simulators__card--ad">
+                        <div class="simulators__card-content">
+                          <div class="simulators__card-main">
+                            <h4 class="simulators__card-title">Тренажеры разработаны с учетом биомеханики человека</h4>
+                            <p class="simulators__text">В каждом тренажере сочетаются последние достижения исследований в области биомеханики человека и эргономичная конструкция</p>
+                            <button class="simulators__button button" type="button">
+                              <span>Гостевой визит</span>
+                              <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
+                                <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          {# <div class="simulators__card-image-wrapper">
+                            <picture>
+                              <source type="image/webp" srcset="@img/simulators/photo-1.webp 1x">
+                              <img class="simulators__card-image" src="@img/simulators/photo-1.jpg" alt="">
+                            </picture>
+                          </div> #}
+                        </div>
+                      </li>
+                    {% else %}
+                      <li class="simulators__card red-line">
+                        <div class="simulators__card-content">
+                          <div class="simulators__card-main">
+                            <h4 class="simulators__card-title">Signature Cable Motion (CMSP)</h4>
+                            <span class="simulators__card-title-add">для жима от плеч</span>
+                            <ul class="simulators__card-list list">
+                              <li class="simulators__card-list-item list__item">Плавная, легкая регулировка положения сиденья о на газовой пружине помогает занять удобное положение и избежать травм</li>
+                              <li class="simulators__card-list-item list__item">Можно одновременно тренировать разные группы мышц (работать одной рукой (ногой) или сразу двумя, используя при этом разные весовые нагрузки)</li>
+                              <li class="simulators__card-list-item list__item">Гибкие рукояти расширят выбор упражнений и разнообразят любую тренировку</li>
+                            </ul>
+                          </div>
+                          <div class="simulators__card-image-wrapper">
+                            <picture>
+                              <source type="image/webp" srcset="@img/simulators/photo-1.webp 1x">
+                              {# <img class="simulators__card-image" src="@img/simulators/photo-1.jpg" alt="" width="412" height="646"> #}
+                              <img class="simulators__card-image" src="@img/simulators/photo-1.jpg" alt="">
+                            </picture>
+                          </div>
+                        </div>
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+              <div class="section__tabs-panel tabs__panel" role="tabpanel">
+                <h3 class="visually-hidden">Тренажеры для плеч</h3>
+              </div>
+              <div class="section__tabs-panel tabs__panel" role="tabpanel">
+                <h3 class="visually-hidden">Тренажеры для плеч</h3>
+              </div>
+              <div class="section__tabs-panel tabs__panel" role="tabpanel">
+                <h3 class="visually-hidden">Тренажеры для плеч</h3>
+              </div>
+              <div class="section__tabs-panel tabs__panel" role="tabpanel">
+                <h3 class="visually-hidden">Тренажеры для плеч</h3>
+              </div>
+              <div class="section__tabs-panel tabs__panel" role="tabpanel">
+                <h3 class="visually-hidden">Тренажеры для плеч</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     {% set IMAGES_NUM = 24 %}
     <section class="gallery-page pads section">
@@ -65,7 +187,7 @@
                         <div class="grid-gallery__slide">
                           <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
                             <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x">
+                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
                               <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
                             </picture>
                           </a>
@@ -85,7 +207,7 @@
                         <div class="grid-gallery__slide">
                           <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
                             <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x">
+                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
                               <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
                             </picture>
                           </a>
@@ -105,7 +227,7 @@
                         <div class="grid-gallery__slide">
                           <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
                             <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x">
+                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
                               <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
                             </picture>
                           </a>
@@ -125,7 +247,7 @@
                         <div class="grid-gallery__slide">
                           <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
                             <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x">
+                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
                               <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
                             </picture>
                           </a>
@@ -145,7 +267,7 @@
                         <div class="grid-gallery__slide">
                           <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
                             <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x">
+                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
                               <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
                             </picture>
                           </a>
@@ -165,7 +287,7 @@
                         <div class="grid-gallery__slide">
                           <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
                             <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x">
+                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
                               <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
                             </picture>
                           </a>
@@ -185,7 +307,7 @@
                         <div class="grid-gallery__slide">
                           <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
                             <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x">
+                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
                               <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
                             </picture>
                           </a>
@@ -205,7 +327,7 @@
                         <div class="grid-gallery__slide">
                           <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
                             <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x">
+                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
                               <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
                             </picture>
                           </a>
@@ -225,7 +347,7 @@
                         <div class="grid-gallery__slide">
                           <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
                             <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x">
+                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
                               <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
                             </picture>
                           </a>
@@ -243,6 +365,11 @@
     </section>
 
   </main>
+
+
+
+
+
 
 {% endblock content %}
 

@@ -93,6 +93,10 @@
       "href": "trainers"
     },
     {
+      "title": "Тренажеры",
+      "href": "train-equip"
+    },
+    {
       "title": "Тарифы",
       "href": "tariffs"
     },
