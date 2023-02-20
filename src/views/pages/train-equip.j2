@@ -142,221 +142,38 @@
       </div>
     </section>
 
-    {% set IMAGES_NUM = 24 %}
-    <section class="gallery-page pads section">
+    {% set IMAGES_NUM = 12 %}
+    <section class="grid-gallery section pads">
       <div class="container">
-        <div class="gallery-page__content">
-          <h1 class="gallery-page__title page__title">Галерея</h1>
-          <div class="section__tabs tabs">
-            <ul class="section__tabs-list tabs__list" role="tablist">
-              <li class="section__tabs-item tabs__item" role="presentation">
-                <button class="section__tabs-button tabs__button active button" type="button">Тренажеры</button>
-              </li>
-              <li class="section__tabs-item tabs__item" role="presentation">
-                <button class="section__tabs-button tabs__button button" type="button">Зона свободных весов</button>
-              </li>
-              <li class="section__tabs-item tabs__item" role="presentation">
-                <button class="section__tabs-button tabs__button button" type="button">Зона кроссфита</button>
-              </li>
-              <li class="section__tabs-item tabs__item" role="presentation">
-                <button class="section__tabs-button tabs__button button" type="button">Залы для групповых тренировок</button>
-              </li>
-              <li class="section__tabs-item tabs__item" role="presentation">
-                <button class="section__tabs-button tabs__button button" type="button">Студия сайкла</button>
-              </li>
-              <li class="section__tabs-item tabs__item" role="presentation">
-                <button class="section__tabs-button tabs__button button" type="button">Зал для единоборств</button>
-              </li>
-              <li class="section__tabs-item tabs__item" role="presentation">
-                <button class="section__tabs-button tabs__button button" type="button">Удобства</button>
-              </li>
-              <li class="section__tabs-item tabs__item" role="presentation">
-                <button class="section__tabs-button tabs__button button" type="button">Бар и ресепшн</button>
-              </li>
-              <li class="section__tabs-item tabs__item" role="presentation">
-                <button class="section__tabs-button tabs__button button" type="button">Остальные фото</button>
-              </li>
-            </ul>
-            <div class="section__tabs-content tabs__content">
-              <div class="section__tabs-panel tabs__panel active" role="tabpanel">
-                <div class="grid-gallery__content">
-                  <h2 class="visually-hidden">Фото тренажеров</h2>
-                  <div class="grid-gallery__gallery-container">
-                    <div class="grid-gallery__gallery-wrapper grid-gallery__gallery-wrapper--no-slider">
-                      {% for gridGalleryImageCounter in range(IMAGES_NUM) %}
-                        <div class="grid-gallery__slide">
-                          <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
-                            <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
-                              <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
-                            </picture>
-                          </a>
-                        </div>
-                      {% endfor %}
-                    </div>
+        <div class="grid-gallery__content">
+          <h2 class="grid-gallery__title title">Фото с тренировок в тренажерной зоне</h2>
+          <div class="grid-gallery__gallery-container">
+            <div class="grid-gallery__swiper-buttons section__swiper-buttons">
+              <button class="section__swiper-button swiper-button swiper-button--prev" id="grid-gallery-swiper-btn-prev" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть назад</span>
+              </button>
+              <button class="section__swiper-button swiper-button swiper-button--next" id="grid-gallery-swiper-btn-next" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть вперед</span>
+              </button>
+            </div>
+            <div class="grid-gallery__gallery grid-gallery__swiper section__swiper" id="grid-gallery-swiper">
+              <div class="grid-gallery__gallery-wrapper swiper-wrapper">
+                {% for gridGalleryImageCounter in range(IMAGES_NUM) %}
+                  <div class="grid-gallery__slide swiper-slide">
+                    <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
+                      <picture>
+                        <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x">
+                        <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
+                      </picture>
+                    </a>
                   </div>
-                  {# <button class="button button--show-more" type="button">показать еще</button> #}
-                </div>
-              </div>
-              <div class="section__tabs-panel tabs__panel" role="tabpanel">
-                <div class="grid-gallery__content">
-                  <h2 class="visually-hidden">Фото зоны свободных весов</h2>
-                  <div class="grid-gallery__gallery-container">
-                    <div class="grid-gallery__gallery-wrapper grid-gallery__gallery-wrapper--no-slider">
-                      {% for gridGalleryImageCounter in range(IMAGES_NUM) %}
-                        <div class="grid-gallery__slide">
-                          <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
-                            <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
-                              <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
-                            </picture>
-                          </a>
-                        </div>
-                      {% endfor %}
-                    </div>
-                  </div>
-                  {# <button class="button button--show-more" type="button">показать еще</button> #}
-                </div>
-              </div>
-              <div class="section__tabs-panel tabs__panel" role="tabpanel">
-                <div class="grid-gallery__content">
-                  <h2 class="visually-hidden">Фото зоны кроссфита</h2>
-                  <div class="grid-gallery__gallery-container">
-                    <div class="grid-gallery__gallery-wrapper grid-gallery__gallery-wrapper--no-slider">
-                      {% for gridGalleryImageCounter in range(IMAGES_NUM) %}
-                        <div class="grid-gallery__slide">
-                          <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
-                            <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
-                              <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
-                            </picture>
-                          </a>
-                        </div>
-                      {% endfor %}
-                    </div>
-                  </div>
-                  {# <button class="button button--show-more" type="button">показать еще</button> #}
-                </div>
-              </div>
-              <div class="section__tabs-panel tabs__panel" role="tabpanel">
-                <div class="grid-gallery__content">
-                  <h2 class="visually-hidden">Фото залов для групповых тренировок</h2>
-                  <div class="grid-gallery__gallery-container">
-                    <div class="grid-gallery__gallery-wrapper grid-gallery__gallery-wrapper--no-slider">
-                      {% for gridGalleryImageCounter in range(IMAGES_NUM) %}
-                        <div class="grid-gallery__slide">
-                          <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
-                            <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
-                              <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
-                            </picture>
-                          </a>
-                        </div>
-                      {% endfor %}
-                    </div>
-                  </div>
-                  {# <button class="button button--show-more" type="button">показать еще</button> #}
-                </div>
-              </div>
-              <div class="section__tabs-panel tabs__panel" role="tabpanel">
-                <div class="grid-gallery__content">
-                  <h2 class="visually-hidden">Фото студии сайкла</h2>
-                  <div class="grid-gallery__gallery-container">
-                    <div class="grid-gallery__gallery-wrapper grid-gallery__gallery-wrapper--no-slider">
-                      {% for gridGalleryImageCounter in range(IMAGES_NUM) %}
-                        <div class="grid-gallery__slide">
-                          <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
-                            <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
-                              <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
-                            </picture>
-                          </a>
-                        </div>
-                      {% endfor %}
-                    </div>
-                  </div>
-                  {# <button class="button button--show-more" type="button">показать еще</button> #}
-                </div>
-              </div>
-              <div class="section__tabs-panel tabs__panel" role="tabpanel">
-                <div class="grid-gallery__content">
-                  <h2 class="visually-hidden">Фото зала для единоборств</h2>
-                  <div class="grid-gallery__gallery-container">
-                    <div class="grid-gallery__gallery-wrapper grid-gallery__gallery-wrapper--no-slider">
-                      {% for gridGalleryImageCounter in range(IMAGES_NUM) %}
-                        <div class="grid-gallery__slide">
-                          <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
-                            <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
-                              <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
-                            </picture>
-                          </a>
-                        </div>
-                      {% endfor %}
-                    </div>
-                  </div>
-                  {# <button class="button button--show-more" type="button">показать еще</button> #}
-                </div>
-              </div>
-              <div class="section__tabs-panel tabs__panel" role="tabpanel">
-                <div class="grid-gallery__content">
-                  <h2 class="visually-hidden">Фото удобств</h2>
-                  <div class="grid-gallery__gallery-container">
-                    <div class="grid-gallery__gallery-wrapper grid-gallery__gallery-wrapper--no-slider">
-                      {% for gridGalleryImageCounter in range(IMAGES_NUM) %}
-                        <div class="grid-gallery__slide">
-                          <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
-                            <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
-                              <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
-                            </picture>
-                          </a>
-                        </div>
-                      {% endfor %}
-                    </div>
-                  </div>
-                  {# <button class="button button--show-more" type="button">показать еще</button> #}
-                </div>
-              </div>
-              <div class="section__tabs-panel tabs__panel" role="tabpanel">
-                <div class="grid-gallery__content">
-                  <h2 class="visually-hidden">Фото бара и респепшна</h2>
-                  <div class="grid-gallery__gallery-container">
-                    <div class="grid-gallery__gallery-wrapper grid-gallery__gallery-wrapper--no-slider">
-                      {% for gridGalleryImageCounter in range(IMAGES_NUM) %}
-                        <div class="grid-gallery__slide">
-                          <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
-                            <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
-                              <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
-                            </picture>
-                          </a>
-                        </div>
-                      {% endfor %}
-                    </div>
-                  </div>
-                  {# <button class="button button--show-more" type="button">показать еще</button> #}
-                </div>
-              </div>
-              <div class="section__tabs-panel tabs__panel" role="tabpanel">
-                <div class="grid-gallery__content">
-                  <h2 class="visually-hidden">Остальные фото</h2>
-                  <div class="grid-gallery__gallery-container">
-                    <div class="grid-gallery__gallery-wrapper grid-gallery__gallery-wrapper--no-slider">
-                      {% for gridGalleryImageCounter in range(IMAGES_NUM) %}
-                        <div class="grid-gallery__slide">
-                          <a class="grid-gallery__link-image" href="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
-                            <picture>
-                              <source type="image/webp" srcset="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.webp 1x" loading="lazy">
-                              <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{ (gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="" loading="lazy">
-                            </picture>
-                          </a>
-                        </div>
-                      {% endfor %}
-                    </div>
-                  </div>
-                  {# <button class="button button--show-more" type="button">показать еще</button> #}
-                </div>
+                {% endfor %}
               </div>
             </div>
           </div>
@@ -364,12 +181,23 @@
       </div>
     </section>
 
+    {% set trainersTitle = "Опытные тренеры помогут достичь результата" %}
+    {% set trainersText = "Помогут подобрать подходящие веса, достичь правильной техники выполнения упражнений и отследить прогресс" %}
+    {% include "./blocks/trainers.j2" %}
+    {% set getCardTitle = "Получите неограниченный доступ <span>к зоне кардио</span>, оформив клубную карту" %}
+    {% include "./blocks/get-card.j2" %}
+    {% include "./blocks/test-train.j2" %}
+    {% include "./blocks/max-result.j2" %}
+    {% include "./blocks/contacts.j2" %}
+    {# Счетчик для свайпера в gym-walk #}
+    {% set gallerySwiperCnt = 1 %}
+    {% include "./blocks/gym-walk.j2" %}
+    {% include "./blocks/promos.j2" %}
+    {# Счетчик для свайпера в other-trainings #}
+    {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
+    {% include "./blocks/other-trainings.j2" %}
+
   </main>
-
-
-
-
-
 
 {% endblock content %}
 
@@ -379,7 +207,13 @@
 
 {% block js %}
   <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/grid-gallery.min.js"></script>
+  <script src="./js/gallery.min.js"></script>
   <script src="./js/tabs.min.js"></script>
   <script src="./js/modal-image.min.js"></script>
+  <script src="./js/tariffs.min.js"></script>
+  <script src="./js/test-train.min.js"></script>
+  <script src="./js/map.min.js"></script>
+  <script src="./js/promos.min.js"></script>
   <script src="./js/main.min.js"></script>
 {% endblock %}
