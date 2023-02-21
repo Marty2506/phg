@@ -10,6 +10,18 @@
   }
 }
 
+.tabs-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs-section__title {
+  @media (width >= $laptop-width) {
+    max-width: 80%;
+  }
+}
+
 .tabs-section__panel-content {
   padding: 0;
 }
+
