@@ -1,9 +1,9 @@
 .gallery-page {
-
   @media (width >= $laptop-width) {
     padding-top: 0;
   }
 }
+
 .gallery-page__content {
   display: flex;
   flex-direction: column;

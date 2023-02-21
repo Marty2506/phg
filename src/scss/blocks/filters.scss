@@ -1,15 +1,16 @@
-.filters {
-}
 .filters__list {
   display: flex;
   flex-wrap: wrap;
 }
+
 .filters__item {
   margin-bottom: 5px;
 }
+
 .filters__item + .filters__item {
   margin-left: -1px;
 }
+
 .filters__button {
   padding: 17px 45px;
 

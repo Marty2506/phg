@@ -34,6 +34,7 @@
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
+
   font-size: 18px;
 }
 
@@ -48,12 +49,14 @@
 .training-video__buttons-wrapper {
   display: flex;
   flex-direction: column;
+
   gap: 15px;
 }
 
 .training-video__button {
   max-width: 305px;
+  min-height: 75px;
+
   font-size: 16px;
   line-height: 18px;
-  min-height: 75px;
 }

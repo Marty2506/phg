@@ -36,7 +36,6 @@
 }
 
 .grid-gallery__gallery-wrapper {
-
   @media (width >= $laptop-width) {
     display: grid;
     margin-bottom: 50px;
@@ -50,12 +49,14 @@
     @media (width < $tablet-width) {
       display: flex;
       flex-direction: column;
+
       gap: 15px;
     }
     @media (width >= $tablet-width) and (width < $laptop-width) {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
       gap: 15px;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

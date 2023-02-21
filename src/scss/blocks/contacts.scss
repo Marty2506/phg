@@ -191,7 +191,6 @@
   @media (width < $laptop-width) {
     flex-direction: column;
   }
-
   @media (width >= $laptop-width) {
     min-height: 900px;
   }
@@ -297,6 +296,7 @@
 }
 
 // Для страницы contacts
+
 .contacts--own-page {
   background-color: transparent;
 

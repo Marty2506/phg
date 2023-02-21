@@ -1,31 +1,38 @@
 .cycle-about__container {
   @media (width >= $desktop-width) {
     max-width: 1920px;
-    padding-left: 0;
     padding-right: calc((100% - $desktop-width) / 2 + $desktop-paddings);
+    padding-left: 0;
   }
 }
+
 .cycle-about__main {
   padding-bottom: 20px;
+
   @media (width >= $laptop-width) {
     padding-top: 60px;
   }
 }
+
 .cycle-about__title {
   margin-bottom: 7px;
 }
+
 .cycle-about__subtitle {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
-  font-family: $header-font;
+
   font-weight: 600;
   font-size: 17px;
   line-height: 130%;
+  font-family: $header-font;
 }
+
 .cycle-about__list {
   gap: 14px;
 }
+
 .cycle-about__list-item {
   font-size: 16px;
 }

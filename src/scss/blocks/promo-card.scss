@@ -1,25 +1,28 @@
 .promo-card {
-  container-name: promo-card;
-  container-type: inline-size;
   position: relative;
+  z-index: 1;
 
   width: 100%;
   min-width: 308px;
   max-width: 523px;
   min-height: 208px;
   padding: 20px 30px;
-  z-index: 1;
 
   color: $bg-color;
+
+  container-name: promo-card;
+  container-type: inline-size;
 
   &::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
+
     width: 100%;
     height: 100%;
-    z-index: -1;
+
     transition: background-color 0.3s ease;
   }
 
@@ -37,8 +40,6 @@
   @media (width >= $desktop-width) {
     height: 350px;
   }
-
-
 }
 
 .promo-card__content {
@@ -68,15 +69,19 @@
     font-size: 17px;
   }
 }
+
 .promo-card__price {
   margin: 0;
   margin-bottom: -8px;
   padding: 0;
-  font-family: $header-font;
+
   font-size: 45px;
   line-height: 140%;
+  font-family: $header-font;
 }
+
 .promo-card__title {
+  max-width: 80%;
   margin: 0;
   margin-bottom: 7px;
   padding: 0;
@@ -85,7 +90,6 @@
   font-size: 17px;
   line-height: 140%;
   font-family: $header-font;
-  max-width: 80%;
 
   @media (width >= $semi-desktop-width) {
     margin-bottom: 10px;
@@ -163,7 +167,8 @@
 
 @container promo-card (width > 330px) {
   .promo-card__price {
-    font-size: 60px;
     margin-bottom: -10px;
+
+    font-size: 60px;
   }
 }

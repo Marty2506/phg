@@ -12,6 +12,7 @@
 
 .news--carousel {
   background-color: $bg-color2;
+
   @media (width >= $laptop-width) {
     padding-top: 50px;
   }
@@ -32,24 +33,25 @@
 }
 
 .news__filters-form-label {
-  min-width: 275px;
   width: fit-content;
+  min-width: 275px;
 }
 
 .news__cards-list {
   display: flex;
   flex-direction: column;
+
   gap: 15px;
 
   @media (width >= $tablet-width) {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(308px, max-content));
-    gap: 25px;
-  }
 
-  @media (width >= $laptop-width) {
-    grid-template-columns: repeat(auto-fill, minmax(308px, 1fr));
     gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(308px, max-content));
+  }
+  @media (width >= $laptop-width) {
+    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(308px, 1fr));
   }
 }
 

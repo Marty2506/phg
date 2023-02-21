@@ -56,10 +56,12 @@
     width: min-content;
   }
 }
+
 .section__tabs {
   display: flex;
   flex-direction: column;
 }
+
 .section__tabs-list {
   display: flex;
   max-width: 100%;
@@ -72,18 +74,20 @@
       display: none; // Safari and Chrome
     }
   }
-
   @media (width >= $laptop-width) {
-    margin-bottom: 35px;
     flex-wrap: wrap;
+    margin-bottom: 35px;
   }
 }
+
 .section__tabs-item {
   margin-bottom: 10px;
 }
+
 .section__tabs-item + .section__tabs-item {
   margin-left: -1px;
 }
+
 .section__tabs-button {
   padding: 17px 45px;
 
@@ -100,8 +104,4 @@
   @media (width >= $laptop-width) {
     padding: 17px 51px;
   }
-}
-.section__tabs-content {
-}
-.section__tabs-panel {
 }

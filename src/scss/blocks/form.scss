@@ -42,6 +42,7 @@
     opacity: 0.7;
   }
 }
+
 .has-white-bg .form__field {
   outline: 1px solid transparentize($secondary-color, 0.5);
 
@@ -131,10 +132,12 @@
 .form__button-plus-policy {
   display: flex;
   flex-direction: column;
+
   gap: 4px;
   & .form__button {
     padding-top: 21.5px;
     padding-bottom: 21.5px;
+
     font-size: 18px;
     line-height: 20px;
   }
@@ -179,6 +182,7 @@
   //   }
   // }
 }
+
 // Стрелочка выпдающего списка
 
 .form-choices[data-type*="select-one"]::after {
@@ -197,6 +201,7 @@
 
   pointer-events: none;
 }
+
 // Стрелочка выпдающего списка (открыта)
 
 .is-open.form-choices[data-type*="select-one"]::after {
@@ -275,8 +280,10 @@
   z-index: 1;
 
   width: calc(100% + 50px);
+
   // margin-top: -1px;
   overflow: hidden;
+
   // word-break: break-all;
 
   visibility: hidden;
@@ -358,6 +365,7 @@
 
 .form-choices__list--multiple {
   display: inline;
+
   // gap: 5px;
 
   & .form-choices__item {
