@@ -3,7 +3,7 @@
 {% set page = "cycle" %}
 
 {% block content %}
-  <main class="page-main">
+  <main class="page-main bg">
     <section class="video-header video-header--program">
       <div class="breadcumbs breadcumbs--has-drak-bg">
         <div class="breadcumbs__container container">
@@ -231,6 +231,43 @@
       <video class="video-bg__video" muted="" loop="" playsinline="" preload="none" poster="https://lmimirroralphapvr.azureedge.net/static/media/7754/1676f553-04c5-445e-9393-8cf85d2fe1f5/june-2017-les-mills-sprint-social-tile.jpg">
         <source src="./files/gym-video.mp4" type="video/mp4">
       </video>
+    </section>
+
+    <section class="cycle-about img-cont">
+      <div class="cycle-about__container container">
+        <div class="cycle-about__content img-cont__content">
+          <div class="img-cont__image-wrapper">
+            <picture>
+              <source type="image/webp" srcset="@img/cycle-simulator.webp 1x">
+              <img class="img-cont__image" src="@img/cycle-simulator.jpg" alt="">
+            </picture>
+          </div>
+          <div class="cycle-about__main img-cont__main">
+            <p class="cycle-about__title title">Современные сайклы</з>
+            <p class="cycle-about__subtitle">разработаны с учетом биомеханики человека</p>
+            <div class="simulators__logos">
+              <div class="simulators__logos-item">
+                <picture>
+                  <source type="image/webp" srcset="@img/simulators/life-fitness-logo.webp 1x">
+                  <img class="simulators__logo-image" src="@img/simulators/life-fitness-logo.png" alt="Логотип life-fitness" width="182" height="53">
+                </picture>
+              </div>
+              <div class="simulators__logos-item">
+                <picture>
+                  <source type="image/webp" srcset="@img/simulators/hammer-strength-logo.webp 1x">
+                  <img class="simulators__logo-image" src="@img/simulators/hammer-strength-logo.png" alt="Логотип hammer-strength" width="111" height="43">
+                </picture>
+              </div>
+            </div>
+            <ul class="cycle-about__list list">
+              <li class="cycle-about__list-item list__item">Магнитная ручка позволяет пользователю моментально выбрать нужное сопротивление</li>
+              <li class="cycle-about__list-item list__item">Эргономичный руль из мягкого ПВХ. Оснащен  дополнительной парой рожек для гонок на время и центральным выступом для упора во время легкой езды</li>
+              <li class="cycle-about__list-item list__item">Максимальные возможности настройки велотренажера в 4 направлениях: Седло по высоте, седло в продольном направлении, руль по высоте, руль в продольном направлении</li>
+              <li class="cycle-about__list-item list__item">Режим тренировки с измерением сердечного ритма подсказывает темп с учетом ритма.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     {% set gallerySwiperCnt = 1 %}
