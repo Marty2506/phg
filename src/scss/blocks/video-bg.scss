@@ -1,0 +1,47 @@
+.video-bg {
+  position: relative;
+  padding: 20px 0;
+
+  min-height: 400px;
+
+  @media (width >= $laptop-width) {
+    padding-top: 40px;
+    min-height: 685px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #000000;
+    opacity: 0.5;
+  }
+}
+.video-bg__container {
+}
+.video-bg__title {
+  margin: 0;
+  margin-bottom: 20px;
+  color: $white-color;
+
+  @media (width >= $laptop-width) {
+    max-width: 70%;
+  }
+}
+.video-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
