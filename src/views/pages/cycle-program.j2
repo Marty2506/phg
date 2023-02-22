@@ -1,6 +1,6 @@
 {% extends "layout.j2" %}
 
-{% set page = "cycle" %}
+{% set page = "cycle-program" %}
 
 {% block content %}
   <main class="page-main bg">
@@ -15,13 +15,13 @@
               </svg>
             </li>
             <li class="breadcumbs__item">
-              <a class="breadcumbs__link" href="./programs.html">Единоборства</a>
+              <a class="breadcumbs__link" href="./programs.html">Программы</a>
               <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
                 <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
               </svg>
             </li>
             <li class="breadcumbs__item">
-              <span class="breadcumbs__link breadcumbs__link--current">Сайкл</span>
+              <span class="breadcumbs__link breadcumbs__link--current">LesMills RPM</span>
             </li>
           </ul>
         </div>
@@ -29,7 +29,12 @@
       <div class="container">
         <div class="video-header__content">
           <div class="video-header__header">
-            <h1 class="video-header__title page__title page__title--light">Групповые кардиотренировки Сайкл по программам LesMills</h1>
+            <h1 class="video-header__title page__title page__title--light">Групповые кардиотренировки по Сайклу RPM LesMills
+              <picture class="video-header__program-icon">
+                <source media="(min-width: {{laptopWidth}})" srcset="@img/lesmills/card-logos/rpm.png">
+                <img src="@img/lesmills/card-logos/rpm-black.png" alt="" width="110" height="44">
+              </picture>
+            </h1>
           </div>
           <p class="video-header__text">Каждая тренировка - шоу и соревнование, а тренер - ведущий. Пока вы путешествуете на велосипеде по вымышленным мирам, ваше тело тело становится сильнее</p>
           <ul class="video-header__list list">
@@ -38,7 +43,7 @@
             <li class="video-header__list-item list__item"><b>Сжигает:</b><br>до 540 калорий</li>
           </ul>
           <div class="video-header__buttons">
-            <a class="button button--reverse video-header__program-button" href="#!">выбрать программу cycle</a>
+            <a class="button button--reverse video-header__program-button" href="#!">Посмотреть расписание</a>
             <a class="button button--has-dark-bg-laptop video-header__program-button" href="#!">пробная тренировка</a>
           </div>
         </div>
@@ -93,132 +98,28 @@
         </ul>
     </div>
 
-    <section class="tabs-section section">
+    <section class="training-video video-section">
       <div class="container">
-        <div class="tabs-section__content">
-          <h2 class="visually-hidden">Виды програм сайкла</h2>
-          <p class="tabs-section__title title">В нашей студии сайкла проходят тренировки по всемирно известным программам Les Mills </p>
-          <div class="section__tabs tabs">
-            <ul class="section__tabs-list tabs__list" role="tablist">
-              <li class="section__tabs-item tabs__item" role="presentation">
-                <button class="section__tabs-button tabs__button active button" type="button">RMP</button>
-              </li>
-              <li class="section__tabs-item tabs__item" role="presentation">
-                <button class="section__tabs-button tabs__button button" type="button">THE trip</button>
-              </li>
-              <li class="section__tabs-item tabs__item" role="presentation">
-                <button class="section__tabs-button tabs__button button" type="button">Sprint</button>
-              </li>
-              <li class="section__tabs-item tabs__item" role="presentation">
-                <button class="section__tabs-button tabs__button button" type="button">Boxing Conditions</button>
-              </li>
+        <div class="training-video__content video-section__content">
+          <div class="training-video__main video-section__main">
+            <h2 class="training-video__title title">Как проходит тренировка LesMills RPM</h2>
+            <p class="trainig-video__text">Групповая тренировка на велотренажерах, построенная по принципу велогонок. Специально подобранная музыка поднимает настроение и помогает не сбавлять темп</p>
+            <ul class="training-video__list list">
+              <li class="training-video__item list__item">Тренировки построены по принципу велогонок, в программе которых используется ряд имитационных подъемов и коротких ускорений.</li>
+              <li class="training-video__item list__item">Регулировка интенсивности тренировки, контроль уровня сопротивления и скорости спринта, что позволяет постепенно повышать интенсивность тренировки.</li>
             </ul>
-            <div class="section__tabs-content tabs__content">
-              <div class="section__tabs-panel tabs__panel active" role="tabpanel">
-                <div class="tabs-section__panel-content training-video video-section">
-                  <div class="training-video__content video-section__content">
-                    <div class="training-video__main video-section__main">
-                      <h3 class="training-video__subtitle">lesmills RMP</h3>
-                      <p class="trainig-video__text">Групповая тренировка на велотренажерах, построенная по принципу велогонок. Специально подобранная музыка поднимает настроение и помогает не сбавлять темп</p>
-                      <ul class="training-video__list list">
-                        <li class="training-video__item list__item">Тренировки построены по принципу велогонок, в программе которых используется ряд имитационных подъемов и коротких ускорений.</li>
-                        <li class="training-video__item list__item">Регулировка интенсивности тренировки, контроль уровня сопротивления и скорости спринта, что позволяет постепенно повышать интенсивность тренировки.</li>
-                      </ul>
-                      <div class="training-video__buttons-wrapper">
-                        <button class="training-video__button button button--reverse" type="button">Записаться на пробную тренировку</button>
-                        <button class="training-video__button button" type="button">
-                          <span>подробнее о тренировке</span>
-                          <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
-                            <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="training-video__video-wrapper video-section__video-wrapper">
-                      <iframe class="video-section__video" width="560" height="315" src="https://www.youtube.com/embed/bK9ZwzDDrM0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="section__tabs-panel tabs__panel" role="tabpanel">
-                <div class="tabs-section__panel-content training-video video-section">
-                  <div class="training-video__content video-section__content">
-                    <div class="training-video__main video-section__main">
-                      <h3 class="training-video__subtitle">The trip</h3>
-                      <p class="trainig-video__text">Групповая тренировка на велотренажерах, построенная по принципу велогонок. Специально подобранная музыка поднимает настроение и помогает не сбавлять темп</p>
-                      <ul class="training-video__list list">
-                        <li class="training-video__item list__item">Тренировки построены по принципу велогонок, в программе которых используется ряд имитационных подъемов и коротких ускорений.</li>
-                        <li class="training-video__item list__item">Регулировка интенсивности тренировки, контроль уровня сопротивления и скорости спринта, что позволяет постепенно повышать интенсивность тренировки.</li>
-                      </ul>
-                      <div class="training-video__buttons-wrapper">
-                        <button class="training-video__button button button--reverse" type="button">Записаться на пробную тренировку</button>
-                        <button class="training-video__button button" type="button">
-                          <span>подробнее о тренировке</span>
-                          <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
-                            <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="training-video__video-wrapper video-section__video-wrapper">
-                      <iframe class="video-section__video" width="560" height="315" src="https://www.youtube.com/embed/bK9ZwzDDrM0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="section__tabs-panel tabs__panel" role="tabpanel">
-                <div class="tabs-section__panel-content training-video video-section">
-                  <div class="training-video__content video-section__content">
-                    <div class="training-video__main video-section__main">
-                      <h3 class="training-video__subtitle">Sprint</h3>
-                      <p class="trainig-video__text">Групповая тренировка на велотренажерах, построенная по принципу велогонок. Специально подобранная музыка поднимает настроение и помогает не сбавлять темп</p>
-                      <ul class="training-video__list list">
-                        <li class="training-video__item list__item">Тренировки построены по принципу велогонок, в программе которых используется ряд имитационных подъемов и коротких ускорений.</li>
-                        <li class="training-video__item list__item">Регулировка интенсивности тренировки, контроль уровня сопротивления и скорости спринта, что позволяет постепенно повышать интенсивность тренировки.</li>
-                      </ul>
-                      <div class="training-video__buttons-wrapper">
-                        <button class="training-video__button button button--reverse" type="button">Записаться на пробную тренировку</button>
-                        <button class="training-video__button button" type="button">
-                          <span>подробнее о тренировке</span>
-                          <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
-                            <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="training-video__video-wrapper video-section__video-wrapper">
-                      <iframe class="video-section__video" width="560" height="315" src="https://www.youtube.com/embed/bK9ZwzDDrM0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="section__tabs-panel tabs__panel" role="tabpanel">
-                <div class="tabs-section__panel-content training-video video-section">
-                  <div class="training-video__content video-section__content">
-                    <div class="training-video__main video-section__main">
-                      <h3 class="training-video__subtitle">Boxing Conditions</h3>
-                      <p class="trainig-video__text">Групповая тренировка на велотренажерах, построенная по принципу велогонок. Специально подобранная музыка поднимает настроение и помогает не сбавлять темп</p>
-                      <ul class="training-video__list list">
-                        <li class="training-video__item list__item">Тренировки построены по принципу велогонок, в программе которых используется ряд имитационных подъемов и коротких ускорений.</li>
-                        <li class="training-video__item list__item">Регулировка интенсивности тренировки, контроль уровня сопротивления и скорости спринта, что позволяет постепенно повышать интенсивность тренировки.</li>
-                      </ul>
-                      <div class="training-video__buttons-wrapper">
-                        <button class="training-video__button button button--reverse" type="button">Записаться на пробную тренировку</button>
-                        <button class="training-video__button button" type="button">
-                          <span>подробнее о тренировке</span>
-                          <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
-                            <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="training-video__video-wrapper video-section__video-wrapper">
-                      <iframe class="video-section__video" width="560" height="315" src="https://www.youtube.com/embed/bK9ZwzDDrM0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="training-video__buttons-wrapper">
+              <button class="training-video__button button button--reverse" type="button">Записаться на пробную тренировку</button>
+              <button class="training-video__button button" type="button">
+                <span>подробнее о тренировке</span>
+                <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
+                  <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
+                </svg>
+              </button>
             </div>
+          </div>
+          <div class="training-video__video-wrapper video-section__video-wrapper">
+            <iframe class="video-section__video" width="560" height="315" src="https://www.youtube.com/embed/bK9ZwzDDrM0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -463,7 +364,7 @@
 
   </main>
 
-    {% include "./blocks/side-panel.j2" %}
+  {% include "./blocks/side-panel.j2" %}
 
 {% endblock content %}
 
