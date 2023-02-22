@@ -433,10 +433,14 @@
       {% include "./blocks/modal-image.j2" %}
     {% endblock %}
   </main>
+
+  {% include "./blocks/side-panel.j2" %}
+
 {% endblock content %}
 
 {% block js %}
   <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/side-panel.min.js"></script>
   <script src="./js/tariffs.min.js"></script>
   <script src="./js/train-pack.min.js"></script>
   <script src="./js/grid-gallery.min.js"></script>
