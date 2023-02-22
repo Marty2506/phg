@@ -1,0 +1,86 @@
+.side-panel {
+  display: none;
+
+  @media (width >= $side-panel-available) {
+    position: fixed;
+    top: 129px;
+    right: 30px;
+    z-index: 10;
+
+    flex-direction: column;
+    width: 135px;
+    min-height: 457px;
+    padding: 25px 0;
+
+    background-color: $secondary-color;
+
+    gap: 21px;
+  }
+
+}
+.side-panel--active {
+  @media (width >= $side-panel-available) {
+    display: flex;
+
+    animation: showing-animation 0.5s;
+  }
+}
+.side-panel__button {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+.side-panel__button--test-train {
+}
+.side-panel__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background-color: $white-color;
+  transition: background-color 0.3s ease;
+}
+.side-panel__button-icon {
+  fill: $secondary-color;
+  transition: fill 0.3s ease;
+}
+.side-panel__button-text {
+  margin: 0;
+  padding: 0 15px;
+  font-family: $main-font;
+  font-size: 17px;
+  line-height: 115%;
+  text-align: center;
+  font-weight: 700;
+  color: $white-color;
+}
+.side-panel__button {
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    & .side-panel__icon-wrapper {
+      background-color: transparentize($white-color, 0.5);
+    }
+    & .side-panel__button-icon {
+      fill: $white-color;
+    }
+  }
+}
+.side-panel__button--schedule {
+}
+.side-panel__button--tarif {
+}
+.side-panel__button--go-to-top {
+  & .side-panel__button-icon {
+    transform: rotate(-90deg);
+  }
+}
