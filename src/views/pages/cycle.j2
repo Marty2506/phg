@@ -271,9 +271,13 @@
     </section>
 
     {% set gallerySwiperCnt = 1 %}
+
+    {% set trainersTitle = "Тренеры по сайклу" %}
+    {% include "./blocks/trainers.j2" %}
+
     <section class="photos pads">
       <div class="photos__container container">
-        <h2 class="photos__title title">фото с тренировок по боксу</h2>
+        <h2 class="photos__title title">Фото с тренировок LesMills Cycle</h2>
         <div class="photos__gallery gallery">
           {% set imageCount = 1 %}
           <div class="gallery__swiper-wrapper">
@@ -445,50 +449,10 @@
     </section>
     {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
 
+    {% include "./blocks/get-card.j2" %}
+    {% include "./blocks/train-pack.j2" %}
+    {% include "./blocks/test-train.j2" %}
 
-    {% set trainersTitle = "Тренеры по боксу" %}
-    {% include "./blocks/trainers.j2" %}
-
-    <section class="grid-gallery section pads">
-      <div class="container">
-        <div class="grid-gallery__content">
-          <h2 class="grid-gallery__title title">Тренировки проходят в оборудованном зале единоборств powerhouse gym</h2>
-          <div class="grid-gallery__gallery-container">
-            <div class="grid-gallery__swiper-buttons section__swiper-buttons">
-              <button class="section__swiper-button swiper-button swiper-button--prev" id="grid-gallery-swiper-btn-prev" type="button">
-                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
-                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
-                </svg>
-                <span class="visually-hidden">Перелестнуть назад</span>
-              </button>
-              <button class="section__swiper-button swiper-button swiper-button--next" id="grid-gallery-swiper-btn-next" type="button">
-                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
-                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
-                </svg>
-                <span class="visually-hidden">Перелестнуть вперед</span>
-              </button>
-            </div>
-            <div class="grid-gallery__gallery grid-gallery__swiper section__swiper" id="grid-gallery-swiper">
-              <div class="grid-gallery__gallery-wrapper swiper-wrapper">
-                {% for gridGalleryImageCounter in range(12) %}
-                  <div class="grid-gallery__slide swiper-slide">
-                    <a class="grid-gallery__link-image" href="@img/grid-gallery/{{gridGalleryImageCounter + 1}}.webp" data-grid-gallery-link>
-                      <picture>
-                        <source type="image/webp" srcset="@img/grid-gallery/{{gridGalleryImageCounter + 1}}-preview.webp 1x">
-                        <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{gridGalleryImageCounter + 1}}-preview.jpg" alt="">
-                      </picture>
-                    </a>
-                  </div>
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {% include "./blocks/box-trains.j2" %}
-    {% include "./blocks/trains-swiper-section.j2" %}
     {% include "./blocks/max-result.j2" %}
     {% include "./blocks/contacts.j2" %}
     {% include "./blocks/gym-walk.j2" %}
@@ -496,24 +460,26 @@
     {% include "./blocks/promos.j2" %}
     {% include "./blocks/other-trainings.j2" %}
 
+  </main>
 
     {% block modal %}
       {% include "./blocks/modal-image.j2" %}
     {% endblock %}
-  </main>
+
 {% endblock content %}
 
 {% block js %}
   <script src="./js/swiper-bundle.min.js"></script>
-  <script src="./js/tariffs.min.js"></script>
-  <script src="./js/train-pack.min.js"></script>
-  <script src="./js/grid-gallery.min.js"></script>
+
   <script src="./js/modal-image.min.js"></script>
-  <script src="./js/trains-swiper.min.js"></script>
-  <script src="./js/video-bg.min.js"></script>
   <script src="./js/main.min.js"></script>
-  <script src="./js/gallery.min.js"></script>
+
+  <script src="./js/tariffs.min.js"></script>
   <script src="./js/scale.min.js"></script>
+  <script src="./js/train-pack.min.js"></script>
+  <script src="./js/test-train.min.js"></script>
+  <script src="./js/video-bg.min.js"></script>
+  <script src="./js/gallery.min.js"></script>
   <script src="./js/map.min.js"></script>
   <script src="./js/promos.min.js"></script>
   <script src="./js/tabs.min.js"></script>
