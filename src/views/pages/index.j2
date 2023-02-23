@@ -121,6 +121,18 @@
                   {% set gallerySwiperCnt = 1 %}
                   <div class="gallery__swiper-wrapper">
                     <div class="gallery__swiper gallery__swiper--main swiper">
+                      <button class="gallery__swiper-button gallery__swiper-button--prev" id="gallery-swiper-{{gallerySwiperCnt}}-prev" type="button">
+                        <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                          <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                        </svg>
+                        <span class="visually-hidden">Перелестнуть назад</span>
+                      </button>
+                      <button class="gallery__swiper-button gallery__swiper-button--next" id="gallery-swiper-{{gallerySwiperCnt}}-next" type="button">
+                        <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                          <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                        </svg>
+                        <span class="visually-hidden">Перелестнуть вперед</span>
+                      </button>
                       <div class="swiper-wrapper">
                         <div class="gallery__swiper-slide swiper-slide">
                           <picture class="gallery__swiper-slide-wrapper">
@@ -270,18 +282,7 @@
                       </div>
                     </div>
 
-                    <button class="gallery__swiper-button gallery__swiper-button--prev" id="gallery-swiper-{{gallerySwiperCnt}}-prev" type="button">
-                      <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
-                        <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
-                      </svg>
-                      <span class="visually-hidden">Перелестнуть назад</span>
-                    </button>
-                    <button class="gallery__swiper-button gallery__swiper-button--next" id="gallery-swiper-{{gallerySwiperCnt}}-next" type="button">
-                      <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
-                        <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
-                      </svg>
-                      <span class="visually-hidden">Перелестнуть вперед</span>
-                    </button>
+
                   </div>
                   {% set gallerySwiperCnt = gallerySwiperCnt + 1%}
                 </div>

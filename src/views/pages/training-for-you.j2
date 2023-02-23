@@ -1,0 +1,39 @@
+{% extends "layout.j2" %}
+
+{% set page = "training-for-you" %}
+
+{% block content %}
+  <main class="page-main bg">
+    <div class="breadcumbs">
+      <div class="breadcumbs__container container">
+        <ul class="breadcumbs__list">
+          <li class="breadcumbs__item">
+            <a class="breadcumbs__link" href="./index.html">Главная</a>
+            <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+              <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcumbs__item">
+            <span class="breadcumbs__link breadcumbs__link--current">Подбор тренировок</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Этой страницы нет в дизайне</h1>
+      <a class="link" href="./get-weight.html">Тренировки для набора массы</a>
+    </div>
+
+
+  </main>
+
+{% endblock content %}
+
+{% block js %}
+  {# Вендорские #}
+
+  {# Основные #}
+  <script src="./js/main.min.js"></script>
+  {# Для блоков #}
+{% endblock %}

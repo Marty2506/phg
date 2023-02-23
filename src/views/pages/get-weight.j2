@@ -1,0 +1,444 @@
+{% extends "layout.j2" %}
+
+{% set page = "get-weight" %}
+
+{% block content %}
+  <main class="page-main bg">
+    <section class="video-header video-header--program">
+      <div class="breadcumbs breadcumbs--has-drak-bg">
+        <div class="breadcumbs__container container">
+          <ul class="breadcumbs__list">
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./index.html">Главная</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./training-for-you.html">Подбор тренировок</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <span class="breadcumbs__link breadcumbs__link--current">Тренировки для набора массы</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="video-header__content">
+          <div class="video-header__header">
+            <h1 class="video-header__title page__title page__title--light">Поможем быстро набрать массу <span>в клубе powerhouse gym</span></h1>
+          </div>
+          <p class="video-header__text">Вы увидите результат в зеркале и на весах уже через месяц и даже сможете измерить прогресс с помощью <a class="video-header__link link" href="#fitquest">фитнес-тестирования</a></p>
+
+          <div class="video-header__buttons video-header__buttons--always-column">
+            <p class="video-header__advice">Запишитесь на пробную тренировку, в рамках которой вы пройдете фитнес-тестирование и получите программу тренировок</p>
+            <a class="button button--reverse video-header__program-button" href="#!">Записаться на тренировку</a>
+          </div>
+        </div>
+      </div>
+      <video class="video-header__video" preload="none" loop muted poster="@img/video-header-bg.jpg">
+        <source src="./files/gym-video.mp4" type="video/mp4">
+      </video>
+      <div class="container">
+        <div class="video-header__mobile-image-wrapper">
+          <picture>
+            <source type="image/webp" srcset="@img/video-header-program-mobile.webp 1x">
+            <img class="video-header__mobile-image" src="@img/video-header-program-mobile.jpg" alt="">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <ul class="program-info-list">
+        <li class="program-info-list__item mini-info">
+          <div class="mini-info__content">
+            <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+            <div class="mini-info__main">
+              <p class="mini-info__text">Измерим ваши показатели мышечной массы с помощью фитнес-тестирования Fit Quest</p>
+            </div>
+            <img class="mini-info__icon" src="@img/icons/fitquest-logo.png" alt="" width="145" height="45">
+          </div>
+        </li>
+        <li class="program-info-list__item mini-info">
+          <div class="mini-info__content">
+            <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+            <div class="mini-info__main">
+              <p class="mini-info__text">По итогам тестирования определим точки А и Б. Составим программу в заледля достижения цели. Подберем сопутствующие групповые программы</p>
+            </div>
+          </div>
+        </li>
+        <li class="program-info-list__item mini-info">
+          <div class="mini-info__content">
+            <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+            <div class="mini-info__main">
+              <p class="mini-info__text">Опытные тренеры специализируются на наборе массы и уже помогли достичь результатов 100+ людям</p>
+            </div>
+          </div>
+        </li>
+        <li class="program-info-list__item mini-info">
+          <div class="mini-info__content">
+            <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+            <div class="mini-info__main">
+              <p class="mini-info__text">Вам в помощь премиальные тренажеры, которые помогают качественно прорабатывать все мышцы и сводят к нулю риск получить травму </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <section class="success-stories section pads">
+      <div class="container">
+        <div class="success-stories__content">
+          <h2 class="success-stories__title title">Истории успеха наших посетителей</h2>
+          <div class="success-stories__swiper-container">
+            <div class="success-stories__swiper-buttons section__swiper-buttons">
+              <button class="section__swiper-button swiper-button swiper-button--prev" id="success-stories-swiper-btn-prev" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть назад</span>
+              </button>
+              <button class="section__swiper-button swiper-button swiper-button--next" id="success-stories-swiper-btn-next" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть вперед</span>
+              </button>
+            </div>
+            <div class="success-stories__swiper swiper section__swiper" id="success-stories-swiper">
+              <div class="swiper-wrapper">
+                {% for index in range(5) %}
+                  <div class="success-stories__card swiper-slide section__swiper-slide">
+                    <div class="success-stories__card-content">
+                      <picture class="success-stories__card-image-wrapper">
+                        <source type="image/webp" srcset="@img/success-stories-image.webp 1x">
+                        <img class="success-stories__card-image" src="@img/success-stories-image.jpg" alt="" width="780" height="510" loading="lazy">
+                      </picture>
+                      <div class="success-stories__text-content">
+                        <p class="success-stories__card-title">Набрал 17 кг массы за 6 месяцев</p>
+                        <p class="success-stories__text">Бонусом: увеличил взрывную силу на 20%.<br> Почти в 2 раза показатели жима лежа</p>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include "./blocks/fitquest.j2" %}
+
+    {% set trainersTitle = "Тренеры LesMills BodyPump" %}
+    {% include "./blocks/trainers.j2" %}
+
+    {% set gallerySwiperCnt = 1 %}
+    {% include "./blocks/other-trainings.j2" %}
+    {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
+
+    <section class="trains-swiper-section section pads transparent-bg">
+      <div class="container">
+        <div class="trains-swiper-section__content">
+          {% if trainsSwiperTitle %}
+            <h2 class="trains-swiper-section__title title">{{trainsSwiperTitle | safe}}</h2>
+          {% else %}
+            <h2 class="trains-swiper-section__title title">Подходящие тренировки для набора массы</h2>
+          {% endif %}
+          <div class="trains-swiper-section__swiper-container">
+            <div class="trains-swiper-section__swiper-buttons section__swiper-buttons">
+              <button class="section__swiper-button swiper-button swiper-button--prev" id="trains-swiper-btn-prev" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть назад</span>
+              </button>
+              <button class="section__swiper-button swiper-button swiper-button--next" id="trains-swiper-btn-next" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть вперед</span>
+              </button>
+              </div>
+            <div class="trains-swiper-section__swiper section__swiper swiper" id="trains-swiper">
+              <div class="swiper-wrapper">
+                <div class="trains-swiper-section__swiper-slide swiper-slide">
+                  <div class="program-card">
+                    <div class="program-card__content">
+                      <div class="program-card__header">
+                        <h3 class="visually-hidden"></h3>
+                        <img class="program-card__logo" src="@img/lesmills/card-logos/bodycombat.png" alt="" width="250" height="82">
+                        <img class="program-card__logo program-card__logo--hovered" src="@img/lesmills/card-logos/bodycombat-black.png" alt="" width="250" height="82">
+                      </div>
+                      <div class="program-card__body">
+                        <p class="program-card__description">Самая популярная в мире силовая тренировка со штангой с научно доказанной эффективностью</p>
+                        <ul class="program-card__list list">
+                          <li class="program-card__list-item list__item">Способствует сжиганию калорий и помогает набрать сухую мышечную массу</li>
+                          <li class="program-card__list-item list__item">Основана на многоповторных упражнениях с лёгкими и средними весами в быстром темпе</li>
+                          <li class="program-card__list-item list__item">Усиливает выносливость и взрывную силу в короткие сроки</li>
+                        </ul>
+                        <span class="program-card__duration">50 минут</span>
+                      </div>
+                    </div>
+                    <img class="program-card__bg-image" src="@img/lesmills/bg.jpg" alt="">
+                    <a class="program-card__link" href="./program-page.html"></a>
+                  </div>
+                </div>
+                <div class="trains-swiper-section__swiper-slide swiper-slide">
+                  <div class="program-card">
+                    <div class="program-card__content">
+                      <div class="program-card__header">
+                        <h3 class="visually-hidden"></h3>
+                        <img class="program-card__logo" src="@img/lesmills/card-logos/bodycombat.png" alt="" width="250" height="82">
+                        <img class="program-card__logo program-card__logo--hovered" src="@img/lesmills/card-logos/bodycombat-black.png" alt="" width="250" height="82">
+                      </div>
+                      <div class="program-card__body">
+                        <p class="program-card__description">Самая популярная в мире силовая тренировка со штангой с научно доказанной эффективностью</p>
+                        <ul class="program-card__list list">
+                          <li class="program-card__list-item list__item">Способствует сжиганию калорий и помогает набрать сухую мышечную массу</li>
+                          <li class="program-card__list-item list__item">Основана на многоповторных упражнениях с лёгкими и средними весами в быстром темпе</li>
+                          <li class="program-card__list-item list__item">Усиливает выносливость и взрывную силу в короткие сроки</li>
+                        </ul>
+                        <span class="program-card__duration">50 минут</span>
+                      </div>
+                    </div>
+                    <img class="program-card__bg-image" src="@img/lesmills/bg.jpg" alt="">
+                    <a class="program-card__link" href="./program-page.html"></a>
+                  </div>
+                </div>
+                <div class="trains-swiper-section__swiper-slide swiper-slide">
+                  <div class="program-card">
+                    <div class="program-card__content">
+                      <div class="program-card__header">
+                        <h3 class="visually-hidden"></h3>
+                        <img class="program-card__logo" src="@img/lesmills/card-logos/bodycombat.png" alt="" width="250" height="82">
+                        <img class="program-card__logo program-card__logo--hovered" src="@img/lesmills/card-logos/bodycombat-black.png" alt="" width="250" height="82">
+                      </div>
+                      <div class="program-card__body">
+                        <p class="program-card__description">Самая популярная в мире силовая тренировка со штангой с научно доказанной эффективностью</p>
+                        <ul class="program-card__list list">
+                          <li class="program-card__list-item list__item">Способствует сжиганию калорий и помогает набрать сухую мышечную массу</li>
+                          <li class="program-card__list-item list__item">Основана на многоповторных упражнениях с лёгкими и средними весами в быстром темпе</li>
+                          <li class="program-card__list-item list__item">Усиливает выносливость и взрывную силу в короткие сроки</li>
+                        </ul>
+                        <span class="program-card__duration">50 минут</span>
+                      </div>
+                    </div>
+                    <img class="program-card__bg-image" src="@img/lesmills/bg.jpg" alt="">
+                    <a class="program-card__link" href="./program-page.html"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include "./blocks/max-result.j2" %}
+
+    <section class="photos pads">
+      <div class="photos__container container">
+        <h2 class="photos__title title">фото с тренировок в powerhouse gym</h2>
+        <div class="photos__gallery gallery">
+          {% set imageCount = 1 %}
+          <div class="gallery__swiper-wrapper">
+            <div class="gallery__swiper gallery__swiper--main swiper">
+              <div class="swiper-wrapper">
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-slide swiper-slide">
+                  <picture class="gallery__swiper-slide-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="gallery__swiper gallery__swiper--thumbs gallery__swiper--thumbs-has-title gallery__swiper--with-buttons-in-thumbs swiper">
+              <div class="swiper-wrapper">
+                {% set imageCount = imageCount - 10 %}
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+                <div class="gallery__swiper-thumb swiper-slide">
+                  <picture class="gallery__swiper-thumb-wrapper">
+                    <source type="image/webp" srcset="@img/lesmills/gallery-image-{{imageCount}}.webp 1x, @img/lesmills/gallery-image-{{imageCount}}.webp 2x">
+                    <img class="gallery__image" src="@img/lesmills/gallery-image-{{imageCount}}.jpg" srcset="@img/lesmills/gallery-image-{{imageCount}}.jpg 2x" alt="Описание картинки.">
+                    {% set imageCount = imageCount + 1%}
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <button class="gallery__swiper-button gallery__swiper-button--prev gallery__swiper-button--in-thumbs" id="gallery-swiper-{{gallerySwiperCnt}}-prev" type="button">
+              <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+              </svg>
+              <span class="visually-hidden">Перелестнуть назад</span>
+            </button>
+            <button class="gallery__swiper-button gallery__swiper-button--next gallery__swiper-button--in-thumbs" id="gallery-swiper-{{gallerySwiperCnt}}-next" type="button">
+              <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+              </svg>
+              <span class="visually-hidden">Перелестнуть вперед</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
+
+    {% include "./blocks/contacts.j2" %}
+
+    {% include "./blocks/gym-walk.j2" %}
+    {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
+
+    {% include "./blocks/test-train.j2" %}
+
+    {% include "./blocks/promos.j2" %}
+
+  </main>
+
+{% endblock content %}
+
+{% block js %}
+  {# Вендорские #}
+  <script src="./js/swiper-bundle.min.js"></script>
+  {# Основные #}
+  <script src="./js/main.min.js"></script>
+  <script src="./js/tabs.min.js"></script>
+  {# Для блоков #}
+  <script src="./js/success-stories.min.js"></script>
+  <script src="./js/trains-swiper.min.js"></script>
+  <script src="./js/gallery.min.js"></script>
+  <script src="./js/test-train.min.js"></script>
+  <script src="./js/map.min.js"></script>
+  <script src="./js/promos.min.js"></script>
+{% endblock %}
