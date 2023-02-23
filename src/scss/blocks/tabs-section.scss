@@ -10,7 +10,8 @@
   }
 }
 
-.tabs-section {
+.tabs-section,
+.tabs-section__content {
   display: flex;
   flex-direction: column;
 }

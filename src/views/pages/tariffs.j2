@@ -1,0 +1,238 @@
+{% extends "layout.j2" %}
+
+{% set page = "tariffs" %}
+
+{% block content %}
+  <main class="page-main bg">
+    <div class="breadcumbs">
+      <div class="breadcumbs__container container">
+        <ul class="breadcumbs__list">
+          <li class="breadcumbs__item">
+            <a class="breadcumbs__link" href="./index.html">Главная</a>
+            <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+              <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcumbs__item">
+            <span class="breadcumbs__link breadcumbs__link--current">Тарифы</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="get-card get-card--own-page pads section" id="tariffs">
+      <div class="container">
+        <div class="get-card__content">
+          <h1 class="page__title">Тарифы</h1>
+          <div class="get-card__main">
+            <div class="get-card__subcription red-line">
+              <p class="get-card__subscription-title title">Платите за фитнес <span>раз в месяц</span></p>
+              <p class="get-card__subscription-text">как за интернет или подписку на кино</p>
+              <span class="get-card__subscription-price">2 300 ₽ в месяц</span>
+              <button class="get-card__subscription-button button" type="button">Оформить рассрочку</button>
+            </div>
+            <div class="get-card__about">
+              <div class="get-card__about-block">
+                <p class="get-card__about-sub-title">Все клубные карты<br>включают доступ:</p>
+                <ul class="get-card__about-list list">
+                  <li class="list__item">К тренажерному залу, зоне свободных весов, кроссфита и кардио</li>
+                  <li class="list__item">Всем групповым тренировкам</li>
+                  <li class="list__item">Студии Сайкла с тренером и без</li>
+                  <li class="list__item">Групповым тренировкам в зоне единоборств</li>
+                </ul>
+                <div class="get-card__about-timetable">
+                  <p class="get-card__about-timetable-line">c 6:30 до 24:00 в будни</p>
+                  <p class="get-card__about-timetable-line">с 9:00 до 22:00 в выходные</p>
+                </div>
+              </div>
+              <div class="get-card__about-block">
+                <p class="get-card__about-sub-title">Дополнительно:</p>
+                <ul class="get-card__about-list list">
+                  <li class="list__item">Вводное <a href="#!">фитнес-тестирование FitQuest</a></li>
+                  <li class="list__item">Вводная персональная тренировка с тренером</li>
+                  <li class="list__item">Финская сауна для восстановления и расслабления</li>
+                  <li class="list__item">Бесплатная парковка у входа в клуб</li>
+                </ul>
+              </div>
+            </div>
+            <div class="get-card__tariffs">
+              <div class="get-card__list">
+                <div class="get-card__list-item">
+                  <div class="club-card">
+                    <div class="club-card__content">
+                      <div class="club-card__image-wrapper">
+                        <picture>
+                          <source type="image/webp" srcset="@img/club-cards/12m.webp 1x">
+                          <img class="club-card__image" src="@img/club-cards/12m.png" alt="Клубная карта на 12 месяцев" width="480" height="263">
+                        </picture>
+                      </div>
+                      <div class="club-card__main">
+                        <div class="club-card__price-wrapper">
+                          <span class="club-card__price">23 900 ₽</span>
+                          <p class="club-card__freeze">Бесплатная заморозка <span>на&nbsp;90&nbsp;дней</span></p>
+                        </div>
+                        <button class="club-card__button button" type="button">Забронировать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="get-card__list-item">
+                  <div class="club-card club-card--orange">
+                    <div class="club-card__content">
+                      <div class="club-card__image-wrapper">
+                        <picture>
+                          <source type="image/webp" srcset="@img/club-cards/12m-young.webp 1x">
+                          <img class="club-card__image" src="@img/club-cards/12m-young.png" alt="Клубная карта молодежная на 12 месяцев" width="480" height="263">
+                        </picture>
+                      </div>
+                      <div class="club-card__main">
+                        <div class="club-card__price-wrapper">
+                          <span class="club-card__price">21 900 ₽</span>
+                          <div class="club-card__discount-wrapper">
+                            <span class="club-card__old-price">23 900 ₽</span>
+                            <span class="club-card__discount-value">15%</span>
+                          </div>
+                          <p class="club-card__freeze">Бесплатная заморозка <span>на&nbsp;90&nbsp;дней</span></p>
+                        </div>
+                        <button class="club-card__button button" type="button">Забронировать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="get-card__list-item">
+                  <div class="club-card">
+                    <div class="club-card__content">
+                      <div class="club-card__image-wrapper">
+                        <picture>
+                          <source type="image/webp" srcset="@img/club-cards/12m.webp 1x">
+                          <img class="club-card__image" src="@img/club-cards/12m.png" alt="Клубная карта на 12 месяцев" width="480" height="263">
+                        </picture>
+                      </div>
+                      <div class="club-card__main">
+                        <div class="club-card__price-wrapper">
+                          <span class="club-card__price">23 900 ₽</span>
+                          <p class="club-card__freeze">Бесплатная заморозка <span>на&nbsp;90&nbsp;дней</span></p>
+                        </div>
+                        <button class="club-card__button button" type="button">Забронировать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="get-card__list-item">
+                  <div class="club-card club-card--green">
+                    <div class="club-card__content">
+                      <div class="club-card__image-wrapper">
+                        <picture>
+                          <source type="image/webp" srcset="@img/club-cards/6m.webp 1x">
+                          <img class="club-card__image" src="@img/club-cards/6m.png" alt="Клубная карта на 6 месяцев" width="480" height="263">
+                        </picture>
+                      </div>
+                      <div class="club-card__main">
+                        <div class="club-card__price-wrapper">
+                          <span class="club-card__price">18 900 ₽</span>
+                          <p class="club-card__freeze">Бесплатная заморозка <span>на&nbsp;60&nbsp;дней</span></p>
+                        </div>
+                        <button class="club-card__button button" type="button">Забронировать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="get-card__list-item">
+                  <div class="club-card club-card--blue">
+                    <div class="club-card__content">
+                      <div class="club-card__image-wrapper">
+                        <picture>
+                          <source type="image/webp" srcset="@img/club-cards/12m-10p.webp 1x">
+                          <img class="club-card__image" src="@img/club-cards/12m-10p.png" alt="Клубная карта корпоративная на 12 месяцев на 10 человек" width="480" height="263">
+                        </picture>
+                      </div>
+                      <div class="club-card__main">
+                        <div class="club-card__price-wrapper">
+                          <span class="club-card__price">18 900 ₽</span>
+                          <div class="club-card__discount-wrapper">
+                            <span class="club-card__old-price">23 900 ₽</span>
+                            <span class="club-card__discount-value">25%</span>
+                          </div>
+                          <p class="club-card__freeze">Бесплатная заморозка <span>на&nbsp;60&nbsp;дней</span></p>
+                        </div>
+                        <button class="club-card__button button" type="button">Забронировать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="get-card__list-item">
+                  <div class="club-card club-card--blue">
+                    <div class="club-card__content">
+                      <div class="club-card__image-wrapper">
+                        <picture>
+                          <source type="image/webp" srcset="@img/club-cards/12m-20p.webp 1x">
+                          <img class="club-card__image" src="@img/club-cards/12m-20p.png" alt="Клубная карта корпоративная на 12 месяцев на 20 человек" width="480" height="263">
+                        </picture>
+                      </div>
+                      <div class="club-card__main">
+                        <div class="club-card__price-wrapper">
+                          <span class="club-card__price">17 900 ₽</span>
+                          <div class="club-card__discount-wrapper">
+                            <span class="club-card__old-price">23 900 ₽</span>
+                            <span class="club-card__discount-value">28%</span>
+                          </div>
+                          <p class="club-card__freeze">Бесплатная заморозка <span>на&nbsp;60&nbsp;дней</span></p>
+                        </div>
+                        <button class="club-card__button button" type="button">Забронировать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="get-card__list-item">
+                  <div class="club-card club-card--orange">
+                    <div class="club-card__content">
+                      <div class="club-card__image-wrapper">
+                        <picture>
+                          <source type="image/webp" srcset="@img/club-cards/12m-young.webp 1x">
+                          <img class="club-card__image" src="@img/club-cards/12m-young.png" alt="Клубная карта молодежная на 12 месяцев" width="480" height="263">
+                        </picture>
+                      </div>
+                      <div class="club-card__main">
+                        <div class="club-card__price-wrapper">
+                          <span class="club-card__price">21 900 ₽</span>
+                          <div class="club-card__discount-wrapper">
+                            <span class="club-card__old-price">23 900 ₽</span>
+                            <span class="club-card__discount-value">15%</span>
+                          </div>
+                          <p class="club-card__freeze">Бесплатная заморозка <span>на&nbsp;90&nbsp;дней</span></p>
+                        </div>
+                        <button class="club-card__button button" type="button">Забронировать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include "./blocks/train-pack-with-tabs.j2" %}
+
+    {% set promosAdditionalClass = "no-top-pad-mobile"%}
+    {% include "./blocks/promos.j2" %}
+
+    {% set testTrainAdditionalCLass = "no-top-pad-mobile"%}
+    {% include "./blocks/test-train.j2" %}
+  </main>
+
+{% endblock content %}
+
+{% block js %}
+  {# Вендорские #}
+  <script src="./js/swiper-bundle.min.js"></script>
+  {# Основные #}
+  <script src="./js/main.min.js"></script>
+  <script src="./js/tabs.min.js"></script>
+  {# Для блоков #}
+  <script src="./js/train-pack.min.js"></script>
+  <script src="./js/scale.min.js"></script>
+  <script src="./js/test-train.min.js"></script>
+  <script src="./js/promos.min.js"></script>
+{% endblock %}

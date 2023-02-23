@@ -270,3 +270,28 @@
     width: 100%;
   }
 }
+
+// Для страницы с тарифами
+.get-card--own-page {
+  background-color: transparent;
+  @media (width < $tablet-width) {
+    background-color: $white-color;
+  }
+
+  @media (width >= $laptop-width) {
+    padding-top: 0;
+  }
+
+  & .get-card__list {
+    @media (width < $tablet-width) {
+      padding-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  & .get-card__list-item {
+    width: 100%;
+  }
+}

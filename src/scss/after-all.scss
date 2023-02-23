@@ -1,0 +1,9 @@
+.transparent-bg {
+  background-color: transparent;
+}
+
+.no-top-pad-mobile {
+  @media (width < $tablet-width) {
+    padding-top: 0;
+  }
+}

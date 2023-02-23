@@ -30,6 +30,13 @@
   }
 }
 
+.train-pack__text {
+  @media (width >= $laptop-width) {
+    max-width: 70%;
+    margin-bottom: 40px;
+  }
+}
+
 .train-pack__info-list {
   flex-direction: row;
   flex-wrap: wrap;
