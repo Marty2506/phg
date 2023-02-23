@@ -13,7 +13,7 @@
     padding-bottom: 110px;
   }
 
-  &:nth-child(1) {
+  &:nth-child(2n + 1) {
     background-color: $white-color;
   }
 }
@@ -21,8 +21,15 @@
   display: flex;
   flex-direction: column;
 }
+.fit-test__header {
+  display: flex;
+  flex-direction: column;
+  max-width: 915px;
+  margin-bottom: 20px;
+}
 .fit-test__title {
   margin-bottom: 30px;
+  font-size: clamp(25px, 4vw, 45px);
 
   @media (width >= $laptop-width) {
     margin-bottom: 40px;
@@ -86,6 +93,11 @@
     margin-bottom: 25px;
     font-size: 18px;
   }
+
+  // Если является последним элементом в контейнере, то обнулить нижний марджин
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 .fit-test__list {
   gap: 10px;
@@ -93,6 +105,10 @@
 
   @media (width >= $laptop-width) {
     margin-bottom: 20px;
+  }
+
+  @media (width >= $desktop-width) {
+    margin-bottom: 25px;
   }
 }
 .fit-test__list-item {
@@ -112,7 +128,11 @@
 .fit-test__image-wrapper {
 }
 .fit-test__image {
+  border-radius: 10px;
   @media (width >= $laptop-width) {
     margin-left: auto;
   }
+}
+.fit-test__main .fit-test__image {
+  margin-left: 0;
 }
