@@ -1,0 +1,174 @@
+{% extends "layout.j2" %}
+
+{% set page = "fitness-test" %}
+
+{% block content %}
+  <main class="page-main bg">
+    <section class="video-header video-header--program">
+      <div class="breadcumbs breadcumbs--has-drak-bg">
+        <div class="breadcumbs__container container">
+          <ul class="breadcumbs__list">
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./index.html">Главная</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <span class="breadcumbs__link breadcumbs__link--current">Фитнес-тестирование</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="video-header__content">
+          <div class="video-header__header">
+            <h1 class="visually-hidden">Фитнес-тестирование FitQuest</h1>
+            <p class="video-header__title page__title page__title--light"><span>Фитнес-тестирование FitQuest</span> за 5 минут покажет реальное состояние вашего организма</p>
+          </div>
+          <p class="video-header__text">и подскажет, на каких тренировках нужно сделать акцент</p>
+          <div class="video-header__buttons">
+            <a class="button button--reverse video-header__program-button" href="#!">записаться на фитнес-тестирование</a>
+          </div>
+        </div>
+      </div>
+      <video class="video-header__video" preload="none" loop muted poster="@img/video-header-bg.jpg">
+        <source src="./files/gym-video.mp4" type="video/mp4">
+      </video>
+      <div class="container">
+        <div class="video-header__mobile-image-wrapper">
+          <picture>
+            <source type="image/webp" srcset="@img/video-header-program-mobile.webp 1x">
+            <img class="video-header__mobile-image" src="@img/video-header-program-mobile.jpg" alt="">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <ul class="program-info-list">
+        <li class="program-info-list__item mini-info">
+          <div class="mini-info__content">
+            <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+            <div class="mini-info__main">
+              <span class="mini-info__text">Вы делаете всего 5 упражнений:</span>
+              <ul class="mini-info__list">
+                <li class="mini-info__item">приседания,</li>
+                <li class="mini-info__item">отжимания,</li>
+                <li class="mini-info__item">прыжки,</li>
+                <li class="mini-info__item">балансировку на одной ноге</li>
+                <li class="mini-info__item">бег на месте</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="program-info-list__item mini-info">
+          <div class="mini-info__content">
+            <img class="mini-info__icon" src="@img/icons/graphic.svg" alt="" width="44" height="44">
+            <div class="mini-info__main">
+              <span class="mini-info__text">FitQuest измеряет 8 физических показателей.</span>
+              <p class="mini-info__text">Наш тренер расшифровывает и подсказывает, на каких аспектах здоровья сделать акцент и с чего начать тренировки</p>
+            </div>
+          </div>
+        </li>
+        <li class="program-info-list__item mini-info">
+          <div class="mini-info__content">
+            <img class="mini-info__icon" src="@img/icons/graphic.svg" alt="" width="44" height="44">
+            <div class="mini-info__main">
+              <span class="mini-info__text">Вы сможете проходить<br>тестирование в будущем,</span>
+              <p class="mini-info__text">чтобы отслеживать как меняются ваши показатели после тренировок</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <section class="training-video video-section">
+      <div class="container">
+        <div class="training-video__content video-section__content">
+          <div class="training-video__main video-section__main">
+            <h2 class="training-video__title title">FitQuest оценивает физическую подготовку</h2>
+            <ul class="training-video__list list">
+              <li class="training-video__item list__item">Состав тела</li>
+              <li class="training-video__item list__item">Взрывная сила мышц</li>
+              <li class="training-video__item list__item">Мышечная выносливость верхней и нижней частей тела</li>
+              <li class="training-video__item list__item">Восстановление частоты сердечный сокращений</li>
+              <li class="training-video__item list__item">Баланс и сенсомоторная координация</li>
+            </ul>
+            <p class="trainig-video__text">Групповая тренировка на велотренажерах, построенная по принципу велогонок. Специально подобранная музыка поднимает настроение и помогает не сбавлять темп</p>
+          </div>
+          <div class="training-video__video-wrapper video-section__video-wrapper">
+            <iframe class="video-section__video" width="560" height="315" src="https://www.youtube.com/embed/gQG0PZCZWMs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fit-test section">
+      <div class="fit-test__step-container">
+        <div class="container">
+          <div class="fit-test__content">
+            <h2 class="fit-test__title title">Как проходит фитнес тестирование</h2>
+            <div class="fit-test__two-col-wrapper">
+              <div class="fit-test__main">
+                <span class="fit-test__step-counter">Шаг 1</span>
+                <h3 class="fit-test__sub-title">Измерение показателей состава тела</h3>
+                <p class="fit-test__text">Вы становитесь на платформу. FitQuest посылает через тело слабый электрический сигнал разных частот и получает следюущую информацию.</p>
+                <ul class="fit-test__list list">
+                  <li class="fit-test__list-item list__item">Масса тела (вес)</li>
+                  <li class="fit-test__list-item list__item">Процентная доля жира/масса жира</li>
+                  <li class="fit-test__list-item list__item">Распределение мышц/показания для каждой ноги, руки и туловища</li>
+                  <li class="fit-test__list-item list__item">Общий объем жидкости в теле</li>
+                  <li class="fit-test__list-item list__item">Внеклеточная жидкость•</li>
+                  <li class="fit-test__list-item list__item">Индекс массы тела (ИМТ)•</li>
+                  <li class="fit-test__list-item list__item">Уровень основного обмена•</li>
+                  <li class="fit-test__list-item list__item">Уровень основного обмена•</li>
+                  <li class="fit-test__list-item list__item">Метаболический возраст</li>
+                  <li class="fit-test__list-item list__item">Внутренний жир</li>
+                </ul>
+                <button class="fit-test__button button button--reverse">записаться на фитнес-тестирование</button>
+              </div>
+              <div class="fit-test__image-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="@img/body-composition.webp 1x">
+                  <img class="fit-test__image" src="@img/body-composition.jpg" alt="" loading="lazy" width="983" height="641">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    {% include "./blocks/test-train.j2" %}
+
+    {% include "./blocks/max-result.j2" %}
+
+    {% include "./blocks/contacts.j2" %}
+
+    {% set gallerySwiperCnt = 1 %}
+    {% include "./blocks/gym-walk.j2" %}
+    {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
+
+    {% include "./blocks/promos.j2" %}
+
+    {% include "./blocks/other-trainings.j2" %}
+    {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
+
+  </main>
+
+{% endblock content %}
+
+{% block js %}
+  {# Вендорские #}
+  <script src="./js/swiper-bundle.min.js"></script>
+  {# Основные #}
+  <script src="./js/main.min.js"></script>
+  <script src="./js/tabs.min.js"></script>
+  {# Для блоков #}
+  <script src="./js/gallery.min.js"></script>
+  <script src="./js/test-train.min.js"></script>
+  <script src="./js/map.min.js"></script>
+  <script src="./js/promos.min.js"></script>
+{% endblock %}

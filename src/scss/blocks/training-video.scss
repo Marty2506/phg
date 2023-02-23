@@ -37,6 +37,10 @@
 
   font-size: 18px;
   line-height: 130%;
+
+  @media (width < $laptop-width) {
+    font-size: 16px;
+  }
 }
 
 .training-video__list {
