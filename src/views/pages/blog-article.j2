@@ -1,0 +1,243 @@
+{% extends "layout.j2" %}
+
+{% set page = "blog-article" %}
+
+{% block content %}
+  <main class="page-main bg">
+    <section class="video-header video-header--program video-header--image-instead video-header--article">
+      <div class="breadcumbs breadcumbs--has-drak-bg">
+        <div class="breadcumbs__container container">
+          <ul class="breadcumbs__list">
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./index.html">Главная</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./blog.html">Блог</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <span class="breadcumbs__link breadcumbs__link--current">Как набрать массу эктоморфу в тренажёрном зале, занимаясь 3 раза в неделю</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="video-header__content">
+          <div class="video-header__header">
+            <h1 class="video-header__title page__title page__title--light">Как набрать массу эктоморфу в тренажёрном зале, занимаясь 3 раза в неделю</h1>
+          </div>
+          <p class="video-header__text">Функциональный тренинг — это система физических упражнений, гармонично развивает все физические качества человека: сила, выносливость, скорость, ловкость и гибкость.</p>
+          <div class="video-header__date-views">
+            <div class="video-header__views-wrapper journal-card__views-wrapper">
+              <span class="video-header__date">09.02.2022</span>
+              <div class="journal-card__views">
+                <span class="visually-hidden">Количество просомтров.</span>
+                <span class="video-header__views-cnt journal-card__views-cnt">99</span>
+              </div>
+              <div class="journal-card__views journal-card__views--comments">
+                <span class="visually-hidden">Количество комментариев.</span>
+                <span class="video-header__views-cnt journal-card__views-cnt">12</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="container">
+        <div class="video-header__mobile-image-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: {{laptopWidth}})" srcset="@img/blog-article-header-desktop.webp">
+            <source type="image/webp" srcset="@img/blog-article-header-mobile.webp">
+            <source media="(min-width: {{laptopWidth}})" srcset="@img/blog-article-header-desktop.jpg">
+            <img class="video-header__mobile-image" src="@img/blog-article-header-mobile.jpg" alt="">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <article class="blog-article pads">
+      <div class="container">
+        <div class="blog-article__content">
+          <h1 class="blog-article__title">Функциональный тренинг</h1>
+          <p class="blog-article__paragraph">Функциональный тренинг — это система физических упражнений, гармонично развивает все физические качества человека: сила, выносливость, скорость, ловкость и гибкость.
+Давайте сначала разберёмся что такое логотип и фирменный стиль. Логотип единым словом это лицо бизнеса, компании или услуги в виде отличительного графического знака или символа.
+          </p>
+          <p class="blog-article__paragraph">А фирменный стиль это комплекс мероприятий направленный на единственное оформление визуального образа компании на своём рынке. Фирстиль включает в себя логотип, шрифты, цвета, фирменные узоры или паттерны. Список можно продолжать.
+Важно знать, для того, чтобы фирменный стиль правильно воспринимал ЦА, он должен быть проработан качественно включая в свой посыл идеи и ценности компании.
+Чтобы отличить правильный дизайн от плохого надо просто улучшить свой вкус.
+          </p>
+          <h1 class="blog-article__title">Функциональный тренинг</h1>
+          <p class="blog-article__paragraph">Функциональный тренинг — это система физических упражнений, гармонично развивает все физические качества человека: сила, выносливость, скорость, ловкость и гибкость.
+Давайте сначала разберёмся что такое логотип и фирменный стиль. Логотип единым словом это лицо бизнеса, компании или услуги в виде отличительного графического знака или символа.
+          </p>
+          <p class="blog-article__paragraph">А фирменный стиль это комплекс мероприятий направленный на единственное оформление визуального образа компании на своём рынке. Фирстиль включает в себя логотип, шрифты, цвета, фирменные узоры или паттерны. Список можно продолжать.
+Важно знать, для того, чтобы фирменный стиль правильно воспринимал ЦА, он должен быть проработан качественно включая в свой посыл идеи и ценности компании.
+Чтобы отличить правильный дизайн от плохого надо просто улучшить свой вкус.
+          </p>
+          <img class="blog-article__image" src="@img/news-article-img.jpg" alt="Изображение входа в зал PHG." width="1100" height="574">
+        </div>
+      </div>
+    </article>
+
+    <section class="journal section pads no-top-pads-mobile">
+      <div class="container">
+        <div class="journal__content section__content">
+          <h2 class="journal__title title">Также почитайте</h2>
+          <div class="journal__swiper-container section__swiper-container">
+            <div class="journal__swiper-buttons section__swiper-buttons">
+              <button class="section__swiper-button swiper-button swiper-button--prev" id="journal-swiper-btn-prev" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть назад</span>
+              </button>
+              <button class="section__swiper-button swiper-button swiper-button--next" id="journal-swiper-btn-next" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть вперед</span>
+              </button>
+            </div>
+            <div class="journal__swiper swiper section__swiper" id="journal-swpier">
+              <div class="journal__cards-container swiper-wrapper">
+                <div class="journal__cards-item swiper-slide section__swiper-slide">
+                  <div class="journal-card">
+                    <div class="journal-card__content">
+                      <span class="journal-card__date">09.02.2022</span>
+                      <p class="journal-card__title">Как набрать массу эктоморфу в тренажёрном зале, занимаясь 3 раза в неделю</p>
+                      <div class="journal-card__hidden-content">
+                        <p class="journal-card__text">Функциональный тренинг — это система физических упражнений, гармонично развивает все физические качества человека: сила, выносливость, скорость, ловкость и гибкость.</p>
+                        <div class="journal-card__views-wrapper">
+                          <div class="journal-card__views">
+                            <span class="visually-hidden">Количество просомтров.</span>
+                            <span class="journal-card__views-cnt">99</span>
+                          </div>
+                          <div class="journal-card__views journal-card__views--comments">
+                            <span class="visually-hidden">Количество комментариев.</span>
+                            <span class="journal-card__views-cnt">12</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img class="journal-card__bg" src="@img/journal-card-image-1.jpg" alt="">
+                    <a class="journal-card__link" href="./blog-article.html"></a>
+                  </div>
+                </div>
+                <div class="journal__cards-item swiper-slide section__swiper-slide">
+                  <div class="journal-card">
+                    <div class="journal-card__content">
+                      <span class="journal-card__date">09.02.2022</span>
+                      <p class="journal-card__title">Как набрать массу эктоморфу в тренажёрном зале, занимаясь 3 раза в неделю</p>
+                      <div class="journal-card__hidden-content">
+                        <p class="journal-card__text">Функциональный тренинг — это система физических упражнений, гармонично развивает все физические качества человека: сила, выносливость, скорость, ловкость и гибкость.</p>
+                        <div class="journal-card__views-wrapper">
+                          <div class="journal-card__views">
+                            <span class="visually-hidden">Количество просомтров.</span>
+                            <span class="journal-card__views-cnt">99</span>
+                          </div>
+                          <div class="journal-card__views journal-card__views--comments">
+                            <span class="visually-hidden">Количество комментариев.</span>
+                            <span class="journal-card__views-cnt">12</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img class="journal-card__bg" src="@img/journal-card-image-1.jpg" alt="">
+                    <a class="journal-card__link" href="./blog-article.html"></a>
+                  </div>
+                </div>
+                <div class="journal__cards-item swiper-slide section__swiper-slide">
+                  <div class="journal-card">
+                    <div class="journal-card__content">
+                      <span class="journal-card__date">09.02.2022</span>
+                      <p class="journal-card__title">Как набрать массу эктоморфу в тренажёрном зале, занимаясь 3 раза в неделю</p>
+                      <div class="journal-card__hidden-content">
+                        <p class="journal-card__text">Функциональный тренинг — это система физических упражнений, гармонично развивает все физические качества человека: сила, выносливость, скорость, ловкость и гибкость.</p>
+                        <div class="journal-card__views-wrapper">
+                          <div class="journal-card__views">
+                            <span class="visually-hidden">Количество просомтров.</span>
+                            <span class="journal-card__views-cnt">99</span>
+                          </div>
+                          <div class="journal-card__views journal-card__views--comments">
+                            <span class="visually-hidden">Количество комментариев.</span>
+                            <span class="journal-card__views-cnt">12</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img class="journal-card__bg" src="@img/journal-card-image-1.jpg" alt="">
+                    <a class="journal-card__link" href="./blog-article.html"></a>
+                  </div>
+                </div>
+                <div class="journal__cards-item swiper-slide section__swiper-slide">
+                  <div class="journal-card">
+                    <div class="journal-card__content">
+                      <span class="journal-card__date">09.02.2022</span>
+                      <p class="journal-card__title">Как набрать массу эктоморфу в тренажёрном зале, занимаясь 3 раза в неделю</p>
+                      <div class="journal-card__hidden-content">
+                        <p class="journal-card__text">Функциональный тренинг — это система физических упражнений, гармонично развивает все физические качества человека: сила, выносливость, скорость, ловкость и гибкость.</p>
+                        <div class="journal-card__views-wrapper">
+                          <div class="journal-card__views">
+                            <span class="visually-hidden">Количество просомтров.</span>
+                            <span class="journal-card__views-cnt">99</span>
+                          </div>
+                          <div class="journal-card__views journal-card__views--comments">
+                            <span class="visually-hidden">Количество комментариев.</span>
+                            <span class="journal-card__views-cnt">12</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img class="journal-card__bg" src="@img/journal-card-image-1.jpg" alt="">
+                    <a class="journal-card__link" href="./blog-article.html"></a>
+                  </div>
+                </div>
+                <div class="journal__cards-item swiper-slide section__swiper-slide">
+                  <div class="journal-card">
+                    <div class="journal-card__content">
+                      <span class="journal-card__date">09.02.2022</span>
+                      <p class="journal-card__title">Как набрать массу эктоморфу в тренажёрном зале, занимаясь 3 раза в неделю</p>
+                      <div class="journal-card__hidden-content">
+                        <p class="journal-card__text">Функциональный тренинг — это система физических упражнений, гармонично развивает все физические качества человека: сила, выносливость, скорость, ловкость и гибкость.</p>
+                        <div class="journal-card__views-wrapper">
+                          <div class="journal-card__views">
+                            <span class="visually-hidden">Количество просомтров.</span>
+                            <span class="journal-card__views-cnt">99</span>
+                          </div>
+                          <div class="journal-card__views journal-card__views--comments">
+                            <span class="visually-hidden">Количество комментариев.</span>
+                            <span class="journal-card__views-cnt">12</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img class="journal-card__bg" src="@img/journal-card-image-2.jpg" alt="">
+                    <a class="journal-card__link" href="./blog-article.html"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include "./blocks/subscribe.j2" %}
+  </main>
+
+{% endblock content %}
+
+{% block js %}
+  {# Вендорские #}
+  <script src="./js/swiper-bundle.min.js"></script>
+  {# Основные #}
+  <script src="./js/main.min.js"></script>
+  {# Для блоков #}
+  <script src="./js/journal.min.js"></script>
+  <script src="./js/subscribe.min.js"></script>
+{% endblock %}
