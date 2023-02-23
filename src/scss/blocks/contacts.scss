@@ -15,7 +15,7 @@
   @media (width >= $desktop-width) {
     max-width: 1920px;
     padding-right: 0;
-    padding-left: calc((100% - $desktop-width) / 2 + $desktop-paddings);
+    padding-left: clamp($desktop-paddings, calc((100% - $desktop-width) / 2 + $desktop-paddings), calc((1920px - $desktop-width) / 2 + $desktop-paddings));
   }
 }
 
