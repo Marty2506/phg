@@ -24,7 +24,6 @@
 
 .swiper {
   position: relative;
-
   /* Fix of Webkit flickering */
   z-index: 1;
 
@@ -155,7 +154,6 @@
 
 .swiper-css-mode > .swiper-wrapper {
   overflow: auto;
-
   /* For Firefox */
 
   -ms-overflow-style: none;

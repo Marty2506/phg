@@ -38,18 +38,17 @@
 }
 
 .video-header__title {
-
   & > .video-header__program-icon {
     display: inline-block;
     margin-left: 10px;
   }
+
   @media (width >= $laptop-width) {
     font-size: 50px;
   }
   @media (width >= $semi-desktop-width) {
     font-size: 60px;
   }
-
 }
 
 .video-header__program-icon {

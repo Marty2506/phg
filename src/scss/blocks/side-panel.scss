@@ -16,8 +16,8 @@
 
     gap: 21px;
   }
-
 }
+
 .side-panel--active {
   @media (width >= $side-panel-available) {
     display: flex;
@@ -25,44 +25,56 @@
     animation: showing-animation 0.5s;
   }
 }
+
 .side-panel__button {
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 7px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
+  margin: 0;
+  padding: 0;
+
   text-decoration: none;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  gap: 7px;
 }
-.side-panel__button--test-train {
-}
+
+
+
 .side-panel__icon-wrapper {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 66px;
   height: 66px;
-  border-radius: 50%;
+
   background-color: $white-color;
+  border-radius: 50%;
+
   transition: background-color 0.3s ease;
 }
+
 .side-panel__button-icon {
-  fill: $secondary-color;
   transition: fill 0.3s ease;
+
+  fill: $secondary-color;
 }
+
 .side-panel__button-text {
   margin: 0;
   padding: 0 15px;
-  font-family: $main-font;
+
+  font-weight: 700;
   font-size: 17px;
   line-height: 115%;
+  font-family: $main-font;
   text-align: center;
-  font-weight: 700;
   color: $white-color;
 }
+
 .side-panel__button {
   &:hover,
   &:focus-visible {
@@ -75,10 +87,11 @@
     }
   }
 }
-.side-panel__button--schedule {
-}
-.side-panel__button--tarif {
-}
+
+
+
+
+
 .side-panel__button--go-to-top {
   & .side-panel__button-icon {
     transform: rotate(-90deg);
