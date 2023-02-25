@@ -1,5 +1,5 @@
-.fit-test {
-}
+
+
 .fit-test__step-container {
   padding: 40px 0;
 
@@ -7,7 +7,6 @@
     padding-top: 70px;
     padding-bottom: 80px;
   }
-
   @media (width >= $desktop-width) {
     padding-top: 100px;
     padding-bottom: 110px;
@@ -17,37 +16,43 @@
     background-color: $white-color;
   }
 }
+
 .fit-test__content {
   display: flex;
   flex-direction: column;
 }
+
 .fit-test__header {
   display: flex;
   flex-direction: column;
   max-width: 915px;
   margin-bottom: 20px;
 }
+
 .fit-test__title {
   margin-bottom: 30px;
+
   font-size: clamp(25px, 4vw, 45px);
 
   @media (width >= $laptop-width) {
     margin-bottom: 40px;
   }
-
   @media (width >= $desktop-width) {
     margin-bottom: 45px;
   }
 }
+
 .fit-test__two-col-wrapper {
   display: flex;
   flex-direction: column;
+
   gap: 20px;
 
   @media (width >= $laptop-width) {
     display: grid;
-    grid-template-columns: 430px 1fr;
+
     gap: 50px;
+    grid-template-columns: 430px 1fr;
   }
   @media (width >= $semi-desktop-width) {
     grid-template-columns: 540px 1fr;
@@ -56,41 +61,48 @@
     gap: 125px;
   }
 }
-.fit-test__main {
-}
+
+
+
 .fit-test__step-counter {
   display: inline-block;
   margin: 0;
   margin-bottom: 12px;
   padding: 0;
-  font-family: $header-font;
+
   font-weight: 600;
   font-size: clamp(20px, 4vw, 25px);
   line-height: 130%;
+  font-family: $header-font;
   color: $secondary-color;
 
   @media (width >= $laptop-width) {
     margin-bottom: 25px;
   }
 }
+
 .fit-test__sub-title {
   margin: 0;
   margin-bottom: 12px;
   padding: 0;
-  font-family: $header-font;
+
   font-weight: 600;
-  line-height: 130%;
   font-size: clamp(25px, 4vw, 30px);
+  line-height: 130%;
+  font-family: $header-font;
 }
+
 .fit-test__text {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
+
   font-size: 16px;
   line-height: 130%;
 
   @media (width >= $laptop-width) {
     margin-bottom: 25px;
+
     font-size: 18px;
   }
 
@@ -99,25 +111,29 @@
     margin-bottom: 0;
   }
 }
+
 .fit-test__list {
-  gap: 10px;
   margin-bottom: 12px;
+
+  gap: 10px;
 
   @media (width >= $laptop-width) {
     margin-bottom: 20px;
   }
-
   @media (width >= $desktop-width) {
     margin-bottom: 25px;
   }
 }
+
 .fit-test__list-item {
   @media (width >= $laptop-width) {
     font-size: 18px;
   }
 }
+
 .fit-test__button {
   min-height: 88px;
+
   font-size: 15px;
   line-height: calc(20 / 18 * 100%);
 
@@ -125,14 +141,17 @@
     font-size: 18px;
   }
 }
-.fit-test__image-wrapper {
-}
+
+
+
 .fit-test__image {
   border-radius: 10px;
+
   @media (width >= $laptop-width) {
     margin-left: auto;
   }
 }
+
 .fit-test__main .fit-test__image {
   margin-left: 0;
 }

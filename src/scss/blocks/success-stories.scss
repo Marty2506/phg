@@ -1,26 +1,29 @@
-.success-stories {
-}
-.success-stories__content {
-}
-.success-stories__title {
-}
+
+
+
+
+
+
 .success-stories__swiper-container {
   position: relative;
 }
-.success-stories__swiper-buttons {
-}
-.success-stories__swiper {
-}
-.success-stories__card {
-}
-.section__swiper-slide {
-}
+
+
+
+
+
+
+
+
+
 .success-stories__card-content {
-  width: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
+
   gap: 25px;
 }
+
 .success-stories__card-image-wrapper {
   position: relative;
 
@@ -28,6 +31,7 @@
   height: 0;
   padding-bottom: 65.4%;
 }
+
 .success-stories__card-image {
   position: absolute;
   top: 0;
@@ -38,24 +42,29 @@
 
   object-fit: cover;
 }
+
 .success-stories__text-content {
   display: flex;
   flex-direction: column;
-  gap: 7px;
   max-width: 95%;
+
+  gap: 7px;
 }
+
 .success-stories__card-title {
   margin: 0;
   padding: 0;
-  font-family: $header-font;
+
+  font-weight: 600;
   font-size: clamp(20px, 5vw, 26px);
   line-height: 130%;
-  font-weight: 600;
-
+  font-family: $header-font;
 }
+
 .success-stories__text {
   margin: 0;
   padding: 0;
+
   font-size: 18px;
   line-height: 130%;
 }

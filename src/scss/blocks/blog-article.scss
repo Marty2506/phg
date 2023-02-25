@@ -1,6 +1,7 @@
 .blog-article {
   padding-bottom: 20px;
 }
+
 .blog-article__content {
   display: flex;
   flex-direction: column;
@@ -9,23 +10,29 @@
     max-width: 1000px;
   }
 }
+
 .blog-article__title {
-  margin: 0;
   bottom: 20px;
-  font-family: $header-font;
+
+  margin: 0;
+
   font-weight: 600;
   font-size: 25px;
   line-height: 130%;
+  font-family: $header-font;
 
   @media (width >= $laptop-width) {
-    font-size: 30px;
     margin-bottom: 35px;
+
+    font-size: 30px;
   }
 }
+
 .blog-article__paragraph {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
+
   font-size: 18px;
   line-height: 130%;
 
@@ -33,6 +40,7 @@
     font-size: 20px;
   }
 }
+
 .blog-article__image {
   margin-bottom: 20px;
 }

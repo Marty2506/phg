@@ -71,6 +71,7 @@
           <h3 class="visually-hidden">Свободные веса</h3>
           <div class="gym-info__panel-wrapper">
             <div class="gym-info__panel-main">
+              <span class="gym-info__bg-text">Веса</span>
               <p class="gym-info__panel-title">
                 <span>В зоне свободных весов</span> каждый найдет&nbsp;то, что нужно
               </p>
@@ -81,7 +82,7 @@
               </ul>
               <div class="gym-info__panel-buttons">
                 <a class="button button--reverse" href="#!">Записаться на пробную тренировку</a>
-                <a class="button" href="#!">
+                <a class="button" href="./free-weights-zone.html">
                   <span>Подробнее о зале</span>
                   <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
                     <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
@@ -90,7 +91,7 @@
               </div>
             </div>
             <div class="gym-info__panel-gallery gallery">
-              {% set imageCount = 1 %}
+              {% set SLIDES_NUM = 10 %}
               <div class="gallery__swiper-wrapper">
                 <div class="gallery__swiper gallery__swiper--main swiper">
                   <button class="gallery__swiper-button gallery__swiper-button--prev" id="gallery-swiper-{{gallerySwiperCnt}}-prev" type="button">
@@ -106,176 +107,498 @@
                     <span class="visually-hidden">Перелестнуть вперед</span>
                   </button>
                   <div class="swiper-wrapper">
-                    <div class="gallery__swiper-slide swiper-slide">
-                      <picture class="gallery__swiper-slide-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-slide swiper-slide">
-                      <picture class="gallery__swiper-slide-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-slide swiper-slide">
-                      <picture class="gallery__swiper-slide-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-slide swiper-slide">
-                      <picture class="gallery__swiper-slide-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-slide swiper-slide">
-                      <picture class="gallery__swiper-slide-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-slide swiper-slide">
-                      <picture class="gallery__swiper-slide-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-slide swiper-slide">
-                      <picture class="gallery__swiper-slide-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-slide swiper-slide">
-                      <picture class="gallery__swiper-slide-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-slide swiper-slide">
-                      <picture class="gallery__swiper-slide-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-slide swiper-slide">
-                      <picture class="gallery__swiper-slide-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
+                    {% for imageCount in range(SLIDES_NUM) %}
+                      <div class="gallery__swiper-slide swiper-slide">
+                        <picture class="gallery__swiper-slide-wrapper">
+                          <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x">
+                          <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x" alt="Описание фото {{imageCount + 1}}" loading="lazy" width="1170" height="658">
+                        </picture>
+                      </div>
+                    {% endfor %}
                   </div>
                 </div>
                 <div class="gallery__swiper gallery__swiper--thumbs swiper">
                   <div class="swiper-wrapper">
-                    {% set imageCount = imageCount - 10 %}
-                    <div class="gallery__swiper-thumb swiper-slide">
-                      <picture class="gallery__swiper-thumb-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-thumb swiper-slide">
-                      <picture class="gallery__swiper-thumb-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-thumb swiper-slide">
-                      <picture class="gallery__swiper-thumb-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-thumb swiper-slide">
-                      <picture class="gallery__swiper-thumb-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-thumb swiper-slide">
-                      <picture class="gallery__swiper-thumb-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-thumb swiper-slide">
-                      <picture class="gallery__swiper-thumb-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-thumb swiper-slide">
-                      <picture class="gallery__swiper-thumb-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-thumb swiper-slide">
-                      <picture class="gallery__swiper-thumb-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-thumb swiper-slide">
-                      <picture class="gallery__swiper-thumb-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
-                    <div class="gallery__swiper-thumb swiper-slide">
-                      <picture class="gallery__swiper-thumb-wrapper">
-                        <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x">
-                        <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount}} 2x" alt="Описание картинки.">
-                        {% set imageCount = imageCount + 1%}
-                      </picture>
-                    </div>
+                    {% for imageCount in range(SLIDES_NUM) %}
+                      <div class="gallery__swiper-thumb swiper-slide">
+                        <picture class="gallery__swiper-thumb-wrapper">
+                          <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x">
+                          <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x" alt="Описание фото {{imageCount + 1}}" loading="lazy" width="146" height="100">
+                        </picture>
+                      </div>
+                    {% endfor %}
                   </div>
                 </div>
-
-
               </div>
             </div>
+            {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
           </div>
         </div>
         <div class="gym-info__panel tabs__panel" role="tabpanel" id="gym">
-          <h3 class="gym-info__panel-title">Тренажерный зал</h3>
+          <h3 class="visually-hidden">Тренажерный зал</h3>
+          <div class="gym-info__panel-wrapper">
+            <div class="gym-info__panel-main">
+              <span class="gym-info__bg-text">Трен</span>
+              <p class="gym-info__panel-title">
+                Премиальные тренажеры
+              </p>
+              <div class="gym-info__panel-logos">
+                <div class="gym-info__panel-logos-item">
+                  <picture>
+                    <source type="image/webp" srcset="@img/simulators/life-fitness-logo.webp 1x">
+                    <img class="gym-info__panel-logo-image" src="@img/simulators/life-fitness-logo.png" alt="Логотип life-fitness" width="182" height="53">
+                  </picture>
+                </div>
+                <div class="gym-info__panel-logos-item">
+                  <picture>
+                    <source type="image/webp" srcset="@img/simulators/hammer-strength-logo.webp 1x">
+                    <img class="gym-info__panel-logo-image" src="@img/simulators/hammer-strength-logo.png" alt="Логотип hammer-strength" width="111" height="43">
+                  </picture>
+                </div>
+                <div class="gym-info__panel-logos-item">
+                  <picture>
+                    <source type="image/webp" srcset="@img/simulators/you-steel-logo.webp 1x">
+                    <img class="gym-info__panel-logo-image" src="@img/simulators/you-steel-logo.png" alt="Логотип yousteel" width="94" height="49">
+                  </picture>
+                </div>
+              </div>
+              <p class="gym-info__panel-text">
+                Обеспечивают правильную технику исполнения безопасность упражнений. В итоге вы работаете эффективней и сводите к нулю риск получить травму
+              </p>
+              <div class="gym-info__panel-buttons">
+                <a class="button button--reverse" href="#!">Записаться на пробную тренировку</a>
+                <a class="button" href="./train-equip.html">
+                  <span>Подробнее о тренажерах</span>
+                  <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
+                    <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="gym-info__panel-gallery gallery">
+              {% set SLIDES_NUM = 10 %}
+              <div class="gallery__swiper-wrapper">
+                <div class="gallery__swiper gallery__swiper--main swiper">
+                  <button class="gallery__swiper-button gallery__swiper-button--prev" id="gallery-swiper-{{gallerySwiperCnt}}-prev" type="button">
+                    <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                      <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                    </svg>
+                    <span class="visually-hidden">Перелестнуть назад</span>
+                  </button>
+                  <button class="gallery__swiper-button gallery__swiper-button--next" id="gallery-swiper-{{gallerySwiperCnt}}-next" type="button">
+                    <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                      <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                    </svg>
+                    <span class="visually-hidden">Перелестнуть вперед</span>
+                  </button>
+                  <div class="swiper-wrapper">
+                    {% for imageCount in range(SLIDES_NUM) %}
+                      <div class="gallery__swiper-slide swiper-slide">
+                        <picture class="gallery__swiper-slide-wrapper">
+                          <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x">
+                          <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x" alt="Описание фото {{imageCount + 1}}" loading="lazy" width="1170" height="658">
+                        </picture>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                <div class="gallery__swiper gallery__swiper--thumbs swiper">
+                  <div class="swiper-wrapper">
+                    {% for imageCount in range(SLIDES_NUM) %}
+                      <div class="gallery__swiper-thumb swiper-slide">
+                        <picture class="gallery__swiper-thumb-wrapper">
+                          <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x">
+                          <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x" alt="Описание фото {{imageCount + 1}}" loading="lazy" width="146" height="100">
+                        </picture>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
+          </div>
         </div>
         <div class="gym-info__panel tabs__panel" role="tabpanel" id="crossfit-studio">
-          <h3 class="gym-info__panel-title">Студия кроссфита</h3>
+          <h3 class="visually-hidden">Студия кроссфита</h3>
+          <div class="gym-info__panel-wrapper">
+            <div class="gym-info__panel-main">
+              <span class="gym-info__bg-text">Крос</span>
+              <p class="gym-info__panel-title">
+                <span>В зоне кроссфита Powerhouse Gym</span> есть все для работы со своим весом
+              </p>
+              <p class="gym-info__panel-text">
+                Десятки турников, брусьев и перекладин. Кольца, тяжелые колеса, канаты и молот
+              </p>
+              <div class="gym-info__panel-buttons">
+                <a class="button button--reverse" href="#!">Записаться на пробную тренировку</a>
+                <a class="button" href="./crossfit.html">
+                  <span>Подробнее о зоне кроссфита</span>
+                  <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
+                    <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="gym-info__panel-gallery gallery">
+              {% set SLIDES_NUM = 10 %}
+              <div class="gallery__swiper-wrapper">
+                <div class="gallery__swiper gallery__swiper--main swiper">
+                  <button class="gallery__swiper-button gallery__swiper-button--prev" id="gallery-swiper-{{gallerySwiperCnt}}-prev" type="button">
+                    <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                      <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                    </svg>
+                    <span class="visually-hidden">Перелестнуть назад</span>
+                  </button>
+                  <button class="gallery__swiper-button gallery__swiper-button--next" id="gallery-swiper-{{gallerySwiperCnt}}-next" type="button">
+                    <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                      <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                    </svg>
+                    <span class="visually-hidden">Перелестнуть вперед</span>
+                  </button>
+                  <div class="swiper-wrapper">
+                    {% for imageCount in range(SLIDES_NUM) %}
+                      <div class="gallery__swiper-slide swiper-slide">
+                        <picture class="gallery__swiper-slide-wrapper">
+                          <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x">
+                          <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x" alt="Описание фото {{imageCount + 1}}" loading="lazy" width="1170" height="658">
+                        </picture>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                <div class="gallery__swiper gallery__swiper--thumbs swiper">
+                  <div class="swiper-wrapper">
+                    {% for imageCount in range(SLIDES_NUM) %}
+                      <div class="gallery__swiper-thumb swiper-slide">
+                        <picture class="gallery__swiper-thumb-wrapper">
+                          <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x">
+                          <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x" alt="Описание фото {{imageCount + 1}}" loading="lazy" width="146" height="100">
+                        </picture>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
+          </div>
         </div>
         <div class="gym-info__panel tabs__panel" role="tabpanel" id="cycle-studio">
-          <h3 class="gym-info__panel-title">Студия сайкл</h3>
+          <h3 class="visually-hidden">Студия сайкл</h3>
+          <div class="gym-info__panel-wrapper">
+            <div class="gym-info__panel-main">
+              <span class="gym-info__bg-text">Трен</span>
+              <p class="gym-info__panel-title">
+                <span>Групповые тренировки Сайкл</span> по программам Les Mills
+              </p>
+             <div class="gym-info__panel-logos">
+                <div class="gym-info__panel-logos-item">
+                  <picture>
+                    <source type="image/webp" srcset="@img/cycle-lesmills-rpm-logo.webp 1x">
+                    <img class="gym-info__panel-logo-image" src="@img/cycle-lesmills-rpm-logo.png" alt="Логотип lesmills rpm" width="117" height="46">
+                  </picture>
+                </div>
+                <div class="gym-info__panel-logos-item">
+                  <picture>
+                    <source type="image/webp" srcset="@img/cycle-lesmills-sprint-logo.webp 1x">
+                    <img class="gym-info__panel-logo-image" src="@img/cycle-lesmills-sprint-logo.png" alt="Логотип lesmills sprint" width="144" height="55">
+                  </picture>
+                </div>
+                <div class="gym-info__panel-logos-item">
+                  <picture>
+                    <source type="image/webp" srcset="@img/cycle-lesmills-trip-logo.webp 1x">
+                    <img class="gym-info__panel-logo-image" src="@img/cycle-lesmills-trip-logo.png" alt="Логотип lesmills the trip" width="188" height="49">
+                  </picture>
+                </div>
+              </div>
+              <p class="gym-info__panel-text">
+                Каждая тренировка - шоу и соревнование, а тренер - ведущий. Пока вы путешествуете на велосипеде по вымышленным мирам, ваше тело тело становится сильнее
+              </p>
+              <ul class="gym-info__panel-list list">
+                <li class="list__item"><b>Доступна членам клуба с 7 утра до 12 ночи</b></li>
+              </ul>
+              <div class="gym-info__panel-buttons">
+                <a class="button button--reverse" href="#!">Записаться на пробную тренировку</a>
+                <a class="button" href="./cycle.html">
+                  <span>Подробнее о сайкле</span>
+                  <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
+                    <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="gym-info__panel-gallery gallery">
+              {% set SLIDES_NUM = 10 %}
+              <div class="gallery__swiper-wrapper">
+                <div class="gallery__swiper gallery__swiper--main swiper">
+                  <button class="gallery__swiper-button gallery__swiper-button--prev" id="gallery-swiper-{{gallerySwiperCnt}}-prev" type="button">
+                    <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                      <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                    </svg>
+                    <span class="visually-hidden">Перелестнуть назад</span>
+                  </button>
+                  <button class="gallery__swiper-button gallery__swiper-button--next" id="gallery-swiper-{{gallerySwiperCnt}}-next" type="button">
+                    <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                      <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                    </svg>
+                    <span class="visually-hidden">Перелестнуть вперед</span>
+                  </button>
+                  <div class="swiper-wrapper">
+                    {% for imageCount in range(SLIDES_NUM) %}
+                      <div class="gallery__swiper-slide swiper-slide">
+                        <picture class="gallery__swiper-slide-wrapper">
+                          <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x">
+                          <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x" alt="Описание фото {{imageCount + 1}}" loading="lazy" width="1170" height="658">
+                        </picture>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                <div class="gallery__swiper gallery__swiper--thumbs swiper">
+                  <div class="swiper-wrapper">
+                    {% for imageCount in range(SLIDES_NUM) %}
+                      <div class="gallery__swiper-thumb swiper-slide">
+                        <picture class="gallery__swiper-thumb-wrapper">
+                          <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x">
+                          <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x" alt="Описание фото {{imageCount + 1}}" loading="lazy" width="146" height="100">
+                        </picture>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
+          </div>
         </div>
         <div class="gym-info__panel tabs__panel" role="tabpanel" id="trainings">
-          <h3 class="gym-info__panel-title">Тренировки</h3>
+          <h3 class="visually-hidden">Групповые тренировки</h3>
+          <div class="gym-info__panel-wrapper">
+            <div class="gym-info__panel-main">
+              <span class="gym-info__bg-text">Lesm</span>
+              <p class="gym-info__panel-title">
+                <span>Проверенные в 65 странах</span><br> групповые тренировки
+              </p>
+              <div class="gym-info__panel-logos">
+                <div class="gym-info__panel-logos-item">
+                  <picture>
+                    <source type="image/webp" srcset="@img/color-logos/lesmills.webp 1x">
+                    <img class="gym-info__panel-logo-image" src="@img/color-logos/lesmills.png" alt="Логотип lesmills" width="353" height="47">
+                  </picture>
+                </div>
+              </div>
+              <div class="gym-info__panel-logos">
+                <div class="gym-info__panel-logos-item">
+                  <picture>
+                    <source type="image/webp" srcset="@img/color-logos/lesmills-bodycombat.webp 1x">
+                    <img class="gym-info__panel-logo-image" src="@img/color-logos/lesmills-bodycombat.png" alt="Логотип lesmills bodycombat" width="113" height="27">
+                  </picture>
+                </div>
+                <div class="gym-info__panel-logos-item">
+                  <picture>
+                    <source type="image/webp" srcset="@img/color-logos/lesmills-bodypump.webp 1x">
+                    <img class="gym-info__panel-logo-image" src="@img/color-logos/lesmills-bodypump.png" alt="Логотип lesmills bodypump" width="111" height="31">
+                  </picture>
+                </div>
+                <div class="gym-info__panel-logos-item">
+                  <picture>
+                    <source type="image/webp" srcset="@img/color-logos/lesmills-bodybalance.webp 1x">
+                    <img class="gym-info__panel-logo-image" src="@img/color-logos/lesmills-bodybalance.png" alt="Логотип lesmills bodybalance" width="113" height="31">
+                  </picture>
+                </div>
+              </div>
+              <div class="gym-info__panel-logos">
+                <div class="gym-info__panel-logos-item">
+                  <picture>
+                    <source type="image/webp" srcset="@img/color-logos/lesmills-sprint.webp 1x">
+                    <img class="gym-info__panel-logo-image" src="@img/color-logos/lesmills-sprint.png" alt="Логотип lesmills sprint" width="95" height="37">
+                  </picture>
+                </div>
+                <div class="gym-info__panel-logos-item">
+                  <picture>
+                    <source type="image/webp" srcset="@img/color-logos/lesmills-shbam.webp 1x">
+                    <img class="gym-info__panel-logo-image" src="@img/color-logos/lesmills-shbam.png" alt="Логотип lesmills shbam" width="84" height="37">
+                  </picture>
+                </div>
+                <div class="gym-info__panel-logos-item">
+                  <picture>
+                    <source type="image/webp" srcset="@img/color-logos/lesmills-grit.webp 1x">
+                    <img class="gym-info__panel-logo-image" src="@img/color-logos/lesmills-grit.png" alt="Логотип lesmills grit" width="131" height="25">
+                  </picture>
+                </div>
+              </div>
+              <div class="gym-info__panel-logos">
+                <div class="gym-info__panel-logos-item">
+                  <picture>
+                    <source type="image/webp" srcset="@img/color-logos/lesmills-rpm.webp 1x">
+                    <img class="gym-info__panel-logo-image" src="@img/color-logos/lesmills-rpm.png" alt="Логотип lesmills rpm" width="92" height="38">
+                  </picture>
+                </div>
+                <div class="gym-info__panel-logos-item">
+                  <picture>
+                    <source type="image/webp" srcset="@img/color-logos/lesmills-core.webp 1x">
+                    <img class="gym-info__panel-logo-image" src="@img/color-logos/lesmills-core.png" alt="Логотип lesmills core" width="101" height="29">
+                  </picture>
+                </div>
+                <div class="gym-info__panel-logos-item">
+                  <picture>
+                    <source type="image/webp" srcset="@img/color-logos/lesmills-barre.webp 1x">
+                    <img class="gym-info__panel-logo-image" src="@img/color-logos/lesmills-barre.png" alt="Логотип lesmills rpm" width="80" height="26">
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="gym-info__video loop-video loop-video--no-red-square">
+              <video class="loop-video__content" muted="" loop="" autoplay="" playsinline="" preload="metadata" onloadedmetadata="this.muted = true">
+                <source src="https://bs.boomstream.com/balancer/dDIP3ITQ-GIDwfsOU.mp4#t=0.001" type="video/mp4">
+              </video>
+            </div>
+          </div>
         </div>
         <div class="gym-info__panel tabs__panel" role="tabpanel" id="cardio-zone">
-          <h3 class="gym-info__panel-title">Зона кардио</h3>
+          <h3 class="visually-hidden">Зона кардио</h3>
+          <div class="gym-info__panel-wrapper">
+            <div class="gym-info__panel-main">
+              <span class="gym-info__bg-text">Кард</span>
+              <p class="gym-info__panel-title">
+                <span>Большая зона для кардио тренировок</span> с&nbsp;продвинутыми тренажерами
+              </p>
+              <p class="gym-info__panel-text">
+                Велосипеды, многофункциональные беговые дорожки, степперы,  ходьба в гору, лестница, эллипсы и гребные тренажеры
+              </p>
+              <div class="gym-info__panel-buttons">
+                <a class="button button--reverse" href="#!">Записаться на пробную тренировку</a>
+                <a class="button" href="./cardio-zone.html">
+                  <span>Подробнее о зоне кардио</span>
+                  <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
+                    <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="gym-info__panel-gallery gallery">
+              {% set SLIDES_NUM = 10 %}
+              <div class="gallery__swiper-wrapper">
+                <div class="gallery__swiper gallery__swiper--main swiper">
+                  <button class="gallery__swiper-button gallery__swiper-button--prev" id="gallery-swiper-{{gallerySwiperCnt}}-prev" type="button">
+                    <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                      <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                    </svg>
+                    <span class="visually-hidden">Перелестнуть назад</span>
+                  </button>
+                  <button class="gallery__swiper-button gallery__swiper-button--next" id="gallery-swiper-{{gallerySwiperCnt}}-next" type="button">
+                    <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                      <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                    </svg>
+                    <span class="visually-hidden">Перелестнуть вперед</span>
+                  </button>
+                  <div class="swiper-wrapper">
+                    {% for imageCount in range(SLIDES_NUM) %}
+                      <div class="gallery__swiper-slide swiper-slide">
+                        <picture class="gallery__swiper-slide-wrapper">
+                          <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x">
+                          <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x" alt="Описание фото {{imageCount + 1}}" loading="lazy" width="1170" height="658">
+                        </picture>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                <div class="gallery__swiper gallery__swiper--thumbs swiper">
+                  <div class="swiper-wrapper">
+                    {% for imageCount in range(SLIDES_NUM) %}
+                      <div class="gallery__swiper-thumb swiper-slide">
+                        <picture class="gallery__swiper-thumb-wrapper">
+                          <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x">
+                          <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x" alt="Описание фото {{imageCount + 1}}" loading="lazy" width="146" height="100">
+                        </picture>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
+          </div>
         </div>
         <div class="gym-info__panel tabs__panel" role="tabpanel" id="martial-arts-zone">
-          <h3 class="gym-info__panel-title">Зона единоборств</h3>
+          <h3 class="visually-hidden">Зона единоборств</h3>
+          <div class="gym-info__panel-wrapper">
+            <div class="gym-info__panel-main">
+              <span class="gym-info__bg-text">Крос</span>
+              <p class="gym-info__panel-title">Современный <span>зал&nbsp;единоборств</span></p>
+              <p class="gym-info__panel-text">
+                Боксёрская ферма, татами, боксёрский ринг — все как положено. Крутые тренера по ММА, боксу и кикбоксингу, которые уже достигли результатов сами и готовы помочь достичь их вам
+              </p>
+              <div class="gym-info__panel-buttons">
+                <a class="button" href="./box.html">
+                  <span>Бокс</span>
+                  <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
+                    <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
+                  </svg>
+                </a>
+                <a class="button" href="#!">
+                  <span>ММА</span>
+                  <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
+                    <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
+                  </svg>
+                </a>
+                <a class="button" href="#!">
+                  <span>АРМЕЙСКИЙ РУКОПАШНЫЙ БОЙ</span>
+                  <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
+                    <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
+                  </svg>
+                </a>
+                <a class="button" href="#!">
+                  <span>кикбоксинг</span>
+                  <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
+                    <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="gym-info__panel-gallery gallery">
+              {% set SLIDES_NUM = 10 %}
+              <div class="gallery__swiper-wrapper">
+                <div class="gallery__swiper gallery__swiper--main swiper">
+                  <button class="gallery__swiper-button gallery__swiper-button--prev" id="gallery-swiper-{{gallerySwiperCnt}}-prev" type="button">
+                    <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                      <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                    </svg>
+                    <span class="visually-hidden">Перелестнуть назад</span>
+                  </button>
+                  <button class="gallery__swiper-button gallery__swiper-button--next" id="gallery-swiper-{{gallerySwiperCnt}}-next" type="button">
+                    <svg class="gallery__swiper-button-icon" width="11" height="17" viewBox="0 0 11 17">
+                      <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                    </svg>
+                    <span class="visually-hidden">Перелестнуть вперед</span>
+                  </button>
+                  <div class="swiper-wrapper">
+                    {% for imageCount in range(SLIDES_NUM) %}
+                      <div class="gallery__swiper-slide swiper-slide">
+                        <picture class="gallery__swiper-slide-wrapper">
+                          <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x">
+                          <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x" alt="Описание фото {{imageCount + 1}}" loading="lazy" width="1170" height="658">
+                        </picture>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                <div class="gallery__swiper gallery__swiper--thumbs swiper">
+                  <div class="swiper-wrapper">
+                    {% for imageCount in range(SLIDES_NUM) %}
+                      <div class="gallery__swiper-thumb swiper-slide">
+                        <picture class="gallery__swiper-thumb-wrapper">
+                          <source type="image/webp" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 1x, https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x">
+                          <img class="gallery__image" src="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}}" srcset="https://loremflickr.com/1920/1080/gym,girl/all?{{imageCount + 1}} 2x" alt="Описание фото {{imageCount + 1}}" loading="lazy" width="146" height="100">
+                        </picture>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

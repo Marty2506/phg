@@ -155,12 +155,16 @@
   display: grid;
 
   @media (width >= $tablet-width) {
-    gap: 10px;
-    grid-template-columns: 32% calc(68% - 10px);
+    gap: 20px;
+    grid-template-columns: 32% calc(68% - 20px);
   }
   @media (width >= $laptop-width) {
     gap: 50px;
     grid-template-columns: 32% calc(68% - 50px);
+  }
+  @media (width >= $desktop-width) {
+    gap: 75px;
+    grid-template-columns: 530px calc(100% - 530px - 75px);
   }
   @media (width < $tablet-width) {
     display: flex;
@@ -171,6 +175,8 @@
 }
 
 .gym-info__panel-main {
+  position: relative;
+  z-index: 1;
   @media (width >= $tablet-width) {
     padding-bottom: 55px;
   }
@@ -205,17 +211,40 @@
 
 .gym-info__panel-list {
   max-width: 320px;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 
-  @media (width >= $desktop-width) {
-    margin-bottom: 45px;
+  @media (width >= $laptop-width) {
+    margin-bottom: 25px;
+  }
+}
+.gym-info__panel-logos {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+
+  @media (width >= $laptop-width) {
+    margin-bottom: 25px;
+  }
+}
+.gym-info__panel-text {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 130%;
+  max-width: 370px;
+
+  @media (width >= $laptop-width) {
+    margin-bottom: 25px;
+    font-size: 18px;
   }
 }
 
 .gym-info__panel-buttons {
   display: flex;
   flex-direction: column;
-  max-width: 220px;
+  max-width: 250px;
 
   gap: 10px;
 
@@ -224,6 +253,26 @@
   }
   @media (width >= $desktop-width) {
     max-width: 302px;
+  }
+}
+
+.gym-info__bg-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  font-family: $header-font;
+  font-size: 450px;
+  line-height: 100%;
+  color: transparentize($secondary-color, 0.96);
+  text-transform: uppercase;
+  transform: translate(-152px, 50px);
+  z-index: -1;
+  cursor: default;
+
+  @media (width < $laptop-width) {
+    display: none;
   }
 }
 
