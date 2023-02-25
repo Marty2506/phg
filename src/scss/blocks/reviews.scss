@@ -10,6 +10,11 @@
   }
 }
 
+.reviews--own-page {
+  @media (width >= $laptop-width) {
+    padding-top: 0;
+  }
+}
 
 .reviews__videos {
   position: relative;
