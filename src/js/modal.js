@@ -1,0 +1,75 @@
+// Настройки модалки
+// Общие настройки
+const modalItems = document.querySelectorAll(".modal");
+
+function hideModal() {
+  document.querySelector(".modal--opened").classList.remove("modal--opened");
+  // document.body.classList.remove("modal-opened");
+}
+
+const onModalEscKeydown = (evt) => {
+  if (document.querySelector(".modal--opened") && isEscapeKey(evt)) {
+    evt.preventDefault();
+    hideModal();
+  }
+};
+
+const onOutOfModalClick = (evt) => {
+  if (evt.target.classList.contains("modal")) {
+    hideModal();
+  }
+};
+
+document.addEventListener("keydown", onModalEscKeydown);
+document.addEventListener("click", onOutOfModalClick);
+
+modalItems.forEach((modalItem) => {
+  const closeButton = modalItem.querySelector(".modal__close-button");
+  closeButton.addEventListener("click", hideModal);
+});
+
+// Настройки модалки фитнес тестирования
+const fitTestModalItem = document.querySelector("#modal-fit-test");
+
+if (fitTestModalItem) {
+  const form = fitTestModalItem.querySelector("form");
+  const fitTestModalPristine = new Pristine(
+    form,
+    {
+      classTo: "form__label", // Элемент, на который будут добавляться классы
+      errorTextParent: "form__label-text", // Элемент, куда будет выводиться текст с ошибкой
+      errorTextTag: "span", // Тег, который будет обрамлять текст ошибки
+      errorTextClass: "form__error-message", // Класс для элемента с текстом ошибки
+    },
+    true
+  );
+
+  const formPhone = form.querySelector('input[type="tel"]');
+
+  fitTestModalPristine.addValidator(
+    formPhone,
+    (value) => {
+      return value.length === 18;
+    },
+    "Номер неполный",
+    2,
+    false
+  );
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var valid = fitTestModalPristine.validate();
+  });
+}
+
+// Навесим открывашки модалок фитнес тестирования
+const openFitTestModalButtons = document.querySelectorAll(
+  "[data-fit-test-modal]"
+);
+openFitTestModalButtons.forEach((button) => {
+  button.addEventListener("click", (evt) => {
+    evt.preventDefault(); // Запрет перехода по ссылке
+    fitTestModalItem.classList.add("modal--opened");
+    // document.body.classList.add("modal-opened");
+  });
+});

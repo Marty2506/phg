@@ -19,6 +19,8 @@
 
     {% include "footer.j2" %}
 
+    {% include "./blocks/modal.j2" %}
+
     {% block modal %}{% endblock %}
   </div>
 
@@ -30,6 +32,7 @@
   <script src="./js/burger.min.js"></script>
   <script src="./js/searchbar.min.js"></script>
   <script src="./js/phone-mask.min.js"></script>
+  <script src="./js/modal.min.js"></script>
   {% block js %}{% endblock %}
 </body>
 </html>

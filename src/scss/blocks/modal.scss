@@ -1,0 +1,135 @@
+.modal {
+  position: fixed;
+  z-index: 9999;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  background-color: rgb(99 14 23 / 67%);
+  background-color: transparentize(#000000, 0.3);
+
+  animation: showing-animation 0.3s ease;
+}
+
+.modal--opened {
+  display: flex;
+}
+
+.modal__wrapper {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  width: 100%;
+  max-width: 577px;
+  margin: auto;
+  padding: 0;
+
+  background-color: $bg-color2;
+  border-radius: 1px;
+  @media (width >= $laptop-width) {
+    display: grid;
+    grid-template-columns: 460px 1fr;
+    max-width: 900px;
+  }
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 528px 1fr;
+    // width: 1026px;
+    max-width: 1150px;
+  }
+}
+
+.modal__image-wrapper {
+  @media (width < $laptop-width) {
+    display: none;
+  }
+}
+.modal__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+
+  @media (width >= $tablet-width) {
+
+  }
+
+  @media (width >= $laptop-width) {
+    padding: 50px 35px;
+  }
+  @media (width >= $desktop-width) {
+    padding: 70px 75px;
+  }
+}
+.modal__title,
+.modal__sub-title {
+  margin: 0;
+  padding: 0;
+  line-height: 130%;
+  font-family: $header-font;
+  font-weight: 600;
+}
+.modal__title {
+  font-size: 30px;
+  @media (width >= $laptop-width) {
+    font-size: 40px;
+  }
+}
+.modal__sub-title {
+  font-size: 20px;
+  margin-bottom: 8px;
+  @media (width >= $laptop-width) {
+    font-size: 25px;
+  }
+}
+.modal__text {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 130%;
+}
+.modal__form {
+}
+
+.modal__submit-button {
+  width: 100%;
+  max-width: 325px;
+  height: 70px;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 26px 20px;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 18px;
+  line-height: 27px;
+  color: $white-color;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  transform: translateY(-100%);
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $secondary-color;
+  }
+  &:focus-visible {
+    outline: 2px solid $secondary-color;
+    border-radius: 0.4rem;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
