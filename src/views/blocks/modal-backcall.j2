@@ -1,0 +1,60 @@
+{% set modalTitle = "Мы перезвоним вам в&nbsp;течение 20&nbsp;минут и&nbsp;ответим на&nbsp;вопросы" %}
+{# {% set modalSubTitle = "Мы свяжемся с вами, чтобы согласовать день и время фитнес-тестирования" %} #}
+{% set modalText = "Расскажу о нашем клубе, тренерах и программах. Помогу подобрать тариф или пакет тренировок" %}
+{% set modalId = "modal-backcall" %}
+{% set modalFormId = modalId + "-form" %}
+
+<div class="modal modal--backcall" id="{{modalId | safe}}">
+  <div class="modal__wrapper container">
+    <div class="modal__image-wrapper">
+      <picture>
+        <source type="image/webp" srcset="@img/modal-manager.webp 1x">
+        <img class="modal__image" src="@img/modal-manager.jpg" alt="Фотография менеджера клуба" width="528" height="731">
+      </picture>
+      <div class="modal__manager-data">
+        <p class="modal__manager-name">Дарья</p>
+        <p class="modal__manager-job-title">Менеджер клуба<br>POWERHOUSE GYM</p>
+      </div>
+    </div>
+    <div class="modal__content">
+      <p class="modal__title">{{modalTitle | safe}}</p>
+      {# <p class="modal__sub-title">{{ modalSubTitle | safe }}</p> #}
+      <p class="modal__text">{{ modalText | safe }}</p>
+      <form class="modal__form form" action="https://echo.htmlacademy.ru" method="post" id="{{ modalFormId | safe }}">
+        <div class="form__column">
+          <label class="form__label">
+            <span class="form__label-text">Ваше имя</span>
+            <input class="form__field" type="text" id="{{ modalFormId | safe }}-client-name" name="{{ modalFormId | safe }}-client-name" placeholder="Введите ваше имя">
+          </label>
+          <label class="form__label">
+            <span class="form__label-text">Телефон</span>
+            <input class="form__field" type="tel" id="{{ modalFormId | safe }}-phone" name="{{ modalFormId | safe }}-phone" placeholder="+7 (999) 999-99-99" required data-pristine-required-message="Обязательно к заполнению">
+          </label>
+        </div>
+        <div class="form__row">
+          <button class="modal__submit-button form__sumbit-button button button--reverse" type="submit">Заказать звонок</button>
+          <div class="form__messengers">
+            <a class="messenger messenger--telegram messenger--red" href="#!">
+              <svg class="messenger__icon" width="16" height="14" viewBox="0 0 16 14">
+                <use xlink:href="img/sprite.svg#telegram-icon"></use>
+              </svg>
+              <span class="visually-hidden">Контакт телеграма.</span>
+            </a>
+            <a class="messenger messenger--whatsapp messenger--red" href="#!">
+              <svg class="messenger__icon" width="16" height="17" viewBox="0 0 16 17">
+                <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
+              </svg>
+              <span class="visually-hidden">Контакт вотсапа.</span>
+            </a>
+          </div>
+        </div>
+        <label class="form__label form__label--checkbox">
+          <input class="form__checkbox visually-hidden" type="checkbox" name="{{ modalFormId | safe }}-pricelist-politics" id="{{ modalFormId | safe }}-pricelist-politics" checked>
+          <span class="form__mark"></span>
+          <span class="form__checkbox-label-text">Согласен с <a class="link" href="#!">Политикой конфиденциальности сайта</a></span>
+        </label>
+      </form>
+    </div>
+    <button class="modal__close-button" type="button">закрыть</button>
+  </div>
+</div>

@@ -73,3 +73,49 @@ openFitTestModalButtons.forEach((button) => {
     // document.body.classList.add("modal-opened");
   });
 });
+
+// Настройки модалки обратного звонка
+const backcallModalItem = document.querySelector("#modal-backcall");
+
+if (backcallModalItem) {
+  const form = backcallModalItem.querySelector("form");
+  const backcallModalPristine = new Pristine(
+    form,
+    {
+      classTo: "form__label", // Элемент, на который будут добавляться классы
+      errorTextParent: "form__label-text", // Элемент, куда будет выводиться текст с ошибкой
+      errorTextTag: "span", // Тег, который будет обрамлять текст ошибки
+      errorTextClass: "form__error-message", // Класс для элемента с текстом ошибки
+    },
+    true
+  );
+
+  const formPhone = form.querySelector('input[type="tel"]');
+
+  backcallModalPristine.addValidator(
+    formPhone,
+    (value) => {
+      return value.length === 18;
+    },
+    "Номер неполный",
+    2,
+    false
+  );
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var valid = backcallModalPristine.validate();
+  });
+}
+
+// Навесим открывашки модалок обратного звонка
+const openBackcallModalButtons = document.querySelectorAll(
+  "[data-backcall-modal]"
+);
+openBackcallModalButtons.forEach((button) => {
+  button.addEventListener("click", (evt) => {
+    evt.preventDefault(); // Запрет перехода по ссылке
+    backcallModalItem.classList.add("modal--opened");
+    // document.body.classList.add("modal-opened");
+  });
+});

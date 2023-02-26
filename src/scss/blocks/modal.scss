@@ -42,6 +42,7 @@
 }
 
 .modal__image-wrapper {
+  position: relative;
   @media (width < $laptop-width) {
     display: none;
   }
@@ -51,6 +52,33 @@
   height: 100%;
   object-fit: cover;
 }
+
+.modal__manager-data {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  left: 0;
+  transform: translate(40px, -40px);
+  max-width: 300px;
+}
+.modal__manager-name,
+.modal__manager-job-title {
+  margin: 0;
+  padding: 0;
+  color: $white-color;
+}
+.modal__manager-name {
+  margin-bottom: 5px;
+  font-family: $header-font;
+  font-size: 30px;
+  line-height: 34px;
+}
+.modal__manager-job-title {
+  font-size: 16px;
+  line-height: 130%;
+}
+
 .modal__content {
   display: flex;
   flex-direction: column;
@@ -77,6 +105,7 @@
 }
 .modal__title {
   font-size: 30px;
+  margin-bottom: 5px;
   @media (width >= $laptop-width) {
     font-size: 40px;
   }
@@ -131,5 +160,13 @@
   }
   &:active {
     opacity: 0.6;
+  }
+}
+
+.modal--backcall {
+  & .modal__title {
+    @media (width >= $laptop-width) {
+      font-size: 35px;
+    }
   }
 }
