@@ -1,0 +1,78 @@
+{% set modalId = "modal-club-card" %}
+{% set modalFormId = modalId + "-form" %}
+
+<div class="modal modal--club-card" id="{{modalId | safe}}">
+  <div class="modal__wrapper container">
+    <div class="modal__content">
+      <div class="modal__main">
+        <div class="modal__club-card-wrapper club-card__image-wrapper">
+          <picture>
+            <source type="image/webp" srcset="@img/club-cards/12m.webp 1x">
+            <img class="club-card__image" src="@img/club-cards/12m.png" alt="Клубная карта на 12 месяцев" width="480" height="263">
+          </picture>
+        </div>
+        <form class="modal__form form" action="https://echo.htmlacademy.ru" method="post" id="{{ modalFormId | safe }}">
+          <div class="form__column">
+            <label class="form__label">
+              <span class="form__label-text">Ваше имя</span>
+              <input class="form__field" type="text" id="{{ modalFormId | safe }}-client-name" name="{{ modalFormId | safe }}-client-name" placeholder="Введите ваше имя">
+            </label>
+            <label class="form__label">
+              <span class="form__label-text">Телефон</span>
+              <input class="form__field" type="tel" id="{{ modalFormId | safe }}-phone" name="{{ modalFormId | safe }}-phone" placeholder="+7 (999) 999-99-99" required data-pristine-required-message="Обязательно к заполнению">
+            </label>
+          </div>
+          <div class="form__row">
+            <button class="modal__submit-button form__sumbit-button button button--reverse" type="submit">Забронировать карту</button>
+            <div class="form__messengers">
+              <a class="messenger messenger--telegram messenger--red" href="#!">
+                <svg class="messenger__icon" width="16" height="14" viewBox="0 0 16 14">
+                  <use xlink:href="img/sprite.svg#telegram-icon"></use>
+                </svg>
+                <span class="visually-hidden">Контакт телеграма.</span>
+              </a>
+              <a class="messenger messenger--whatsapp messenger--red" href="#!">
+                <svg class="messenger__icon" width="16" height="17" viewBox="0 0 16 17">
+                  <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
+                </svg>
+                <span class="visually-hidden">Контакт вотсапа.</span>
+              </a>
+            </div>
+          </div>
+          <label class="form__label form__label--checkbox">
+            <input class="form__checkbox visually-hidden" type="checkbox" name="{{ modalFormId | safe }}-pricelist-politics" id="{{ modalFormId | safe }}-pricelist-politics" checked>
+            <span class="form__mark"></span>
+            <span class="form__checkbox-label-text">Согласен с <a class="link" href="#!" target="_blank">Политикой конфиденциальности сайта</a></span>
+          </label>
+        </form>
+      </div>
+      <div class="modal__add">
+        <div class="modal__club-card-about">
+          <div class="get-card__about-block">
+            <p class="get-card__about-sub-title">Все клубные карты<br>включают доступ:</p>
+            <ul class="get-card__about-list list">
+              <li class="list__item">К тренажерному залу, зоне свободных весов, кроссфита и кардио</li>
+              <li class="list__item">Всем групповым тренировкам</li>
+              <li class="list__item">Студии Сайкла с тренером и без</li>
+              <li class="list__item">Групповым тренировкам в зоне единоборств</li>
+            </ul>
+            <div class="get-card__about-timetable">
+              <p class="get-card__about-timetable-line">c 6:30 до 24:00 в будни</p>
+              <p class="get-card__about-timetable-line">с 9:00 до 22:00 в выходные</p>
+            </div>
+          </div>
+          <div class="get-card__about-block">
+            <p class="get-card__about-sub-title">Дополнительно:</p>
+            <ul class="get-card__about-list list">
+              <li class="list__item">Вводное <a href="./fitness-test.html" target="_blank">фитнес-тестирование FitQuest</a></li>
+              <li class="list__item">Вводная персональная тренировка с тренером</li>
+              <li class="list__item">Финская сауна для восстановления и расслабления</li>
+              <li class="list__item">Бесплатная парковка у входа в клуб</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="modal__close-button" type="button">закрыть</button>
+  </div>
+</div>

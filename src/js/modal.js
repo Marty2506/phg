@@ -119,3 +119,49 @@ openBackcallModalButtons.forEach((button) => {
     // document.body.classList.add("modal-opened");
   });
 });
+
+// Настройки модалки клубной карты
+const clubCardModalItem = document.querySelector("#modal-club-card");
+
+if (clubCardModalItem) {
+  const form = clubCardModalItem.querySelector("form");
+  const clubCardModalPristine = new Pristine(
+    form,
+    {
+      classTo: "form__label", // Элемент, на который будут добавляться классы
+      errorTextParent: "form__label-text", // Элемент, куда будет выводиться текст с ошибкой
+      errorTextTag: "span", // Тег, который будет обрамлять текст ошибки
+      errorTextClass: "form__error-message", // Класс для элемента с текстом ошибки
+    },
+    true
+  );
+
+  const formPhone = form.querySelector('input[type="tel"]');
+
+  clubCardModalPristine.addValidator(
+    formPhone,
+    (value) => {
+      return value.length === 18;
+    },
+    "Номер неполный",
+    2,
+    false
+  );
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var valid = clubCardModalPristine.validate();
+  });
+}
+
+// Навесим открывашки модалок клубной карты
+const openClubCardModalButtons = document.querySelectorAll(
+  "[data-club-card-modal]"
+);
+openClubCardModalButtons.forEach((button) => {
+  button.addEventListener("click", (evt) => {
+    evt.preventDefault(); // Запрет перехода по ссылке
+    clubCardModalItem.classList.add("modal--opened");
+    // document.body.classList.add("modal-opened");
+  });
+});
