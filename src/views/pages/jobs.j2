@@ -1,0 +1,82 @@
+{% extends "layout.j2" %}
+
+{% set page = "jobs" %}
+{% set JOBS_NUM = 7 %}
+
+{% block content %}
+  <main class="page-main bg">
+    <div class="breadcumbs">
+      <div class="breadcumbs__container container">
+        <ul class="breadcumbs__list">
+          <li class="breadcumbs__item">
+            <a class="breadcumbs__link" href="./index.html">Главная</a>
+            <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+              <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcumbs__item">
+            <span class="breadcumbs__link breadcumbs__link--current">Вакансии клуба</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="jobs pads">
+      <div class="container">
+        <div class="jobs__content">
+          <h1 class="jobs__title page__title">Вакансии клуба</h1>
+          <p class="jobs__text">Если вас заинтересует вакансия, свяжитесь с отделом кадров по телефону или почте</p>
+          <div class="jobs__contacts">
+            <a class="jobs__link jobs__link--tel" href="tel:+79032038690">+7 (903) 203-86-90</a>
+            <a class="jobs__link jobs__link--email" href="mailto:info@powerhousegym.moscow">info@powerhousegym.moscow</a>
+          </div>
+          <ul class="jobs__list">
+            {% for index in range(JOBS_NUM) %}
+              <li class="jobs__list-item text-card red-line">
+                <div class="text-card__content">
+                  <h3 class="text-card__title">Менеджер по работе с клиентами</h3>
+                  <div class="text-card__group">
+                    <p class="text-card__text">График 5/2 с 9:00 до 18:00<br>Волгоградский проспект 42 корпус 8.</p>
+                  </div>
+                  <div class="text-card__group">
+                    <span class="text-card__sub-title">Что делать:</span>
+                    <ul class="text-card__list list">
+                      <li class="text-card__list-item list__item">Прием‚ расчет‚ оформление и ведение заказов</li>
+                      <li class="text-card__list-item list__item">Отчетность‚ ведение клиентской базы</li>
+                    </ul>
+                  </div>
+                  <div class="text-card__group">
+                    <span class="text-card__sub-title">Ждем от вас</span>
+                    <ul class="text-card__list list">
+                      <li class="text-card__list-item list__item">Опыт работы в фитнес-клубах от 3 лет</li>
+                      <li class="text-card__list-item list__item">Желание и умение работать с людьми</li>
+                      <li class="text-card__list-item list__item">Коммуникабельность‚ работоспособность‚ внимательность</li>
+                    </ul>
+                  </div>
+                  <div class="text-card__group">
+                    <span class="text-card__sub-title">Предлагаем</span>
+                    <ul class="text-card__list list">
+                      <li class="text-card__list-item list__item">Прием‚ расчет‚ оформление и ведение заказов</li>
+                      <li class="text-card__list-item list__item">Отчетность‚ ведение клиентской базы</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+{% endblock content %}
+
+{% block js %}
+  {# Вендорские #}
+
+  {# Основные #}
+  <script src="./js/main.min.js"></script>
+  {# Для блоков #}
+
+{% endblock %}
