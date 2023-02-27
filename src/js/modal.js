@@ -165,3 +165,49 @@ openClubCardModalButtons.forEach((button) => {
     // document.body.classList.add("modal-opened");
   });
 });
+
+// Настройки модалки пакетов тренировок
+const trainPacketModalItem = document.querySelector("#modal-train-packet");
+
+if (trainPacketModalItem) {
+  const form = trainPacketModalItem.querySelector("form");
+  const trainPacketModalPristine = new Pristine(
+    form,
+    {
+      classTo: "form__label", // Элемент, на который будут добавляться классы
+      errorTextParent: "form__label-text", // Элемент, куда будет выводиться текст с ошибкой
+      errorTextTag: "span", // Тег, который будет обрамлять текст ошибки
+      errorTextClass: "form__error-message", // Класс для элемента с текстом ошибки
+    },
+    true
+  );
+
+  const formPhone = form.querySelector('input[type="tel"]');
+
+  trainPacketModalPristine.addValidator(
+    formPhone,
+    (value) => {
+      return value.length === 18;
+    },
+    "Номер неполный",
+    2,
+    false
+  );
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var valid = trainPacketModalPristine.validate();
+  });
+}
+
+// Навесим открывашки модалок клубной карты
+const openTrainPacketModalButtons = document.querySelectorAll(
+  "[data-train-packet-modal]"
+);
+openTrainPacketModalButtons.forEach((button) => {
+  button.addEventListener("click", (evt) => {
+    evt.preventDefault(); // Запрет перехода по ссылке
+    trainPacketModalItem.classList.add("modal--opened");
+    // document.body.classList.add("modal-opened");
+  });
+});

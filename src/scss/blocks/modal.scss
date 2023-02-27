@@ -84,10 +84,7 @@
   flex-direction: column;
   padding: 30px 20px;
   background-color: $bg-color2;
-
-  @media (width >= $tablet-width) {
-
-  }
+  width: 100%;
 
   @media (width >= $laptop-width) {
     padding: 50px 35px;
@@ -219,6 +216,25 @@
 
     @media (width >= $desktop-width) {
       gap: 55px;
+    }
+  }
+}
+
+.modal--train-packet {
+  & .modal__wrapper {
+    display: block;
+    max-width: 625px;
+  }
+
+  & .modal__content {
+    @media (width >= 650px) {
+      padding: 50px 70px;
+    }
+  }
+
+  & .modal__title {
+    @media (width >= 650px) {
+      font-size: 35px;
     }
   }
 }
