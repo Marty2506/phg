@@ -1,0 +1,58 @@
+{% extends "layout.j2" %}
+
+{% set page = "search-results" %}
+
+{% block content %}
+  <main class="page-main bg">
+    <div class="breadcumbs">
+      <div class="breadcumbs__container container">
+        <ul class="breadcumbs__list">
+          <li class="breadcumbs__item">
+            <a class="breadcumbs__link" href="./index.html">Главная</a>
+            <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+              <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcumbs__item">
+            <span class="breadcumbs__link breadcumbs__link--current">Результаты поиска</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {% set SEARCH_RESULTS = 6 %}
+
+    <section class="search-results pads">
+      <div class="container">
+        <div class="search-results__content">
+          <h1 class="search-results__title page__title">Результаты поиска</h1>
+          <p class="search-results__text">по запросу «снижение веса»</p>
+          <ul class="search-results__list">
+            {% for index in range(SEARCH_RESULTS) %}
+              <li class="search-results__list-item search-results__card text-card red-line">
+                <div class="text-card__content">
+                  <h3 class="search-results__card-title text-card__title">Как набрать массу эктоморфу в тренажерном зале, занимаясь 3 раза в неделю</h3>
+                  <div class="text-card__group">
+                    <p class="text-card__text">Программа Les Mills Body Pump способствует.... помогает с такими задачами как снижение веса.... FitQuest измерит 8 физических показателей. Наш тренер расшифрует и подскажет, на каких аспектах здоровья сделать акцент и с чего начать тренировки</p>
+                  </div>
+                </div>
+                <a class="text-card__bg-link" href="./blog-article.html"></a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+{% endblock content %}
+
+{% block js %}
+  {# Вендорские #}
+
+  {# Основные #}
+  <script src="./js/main.min.js"></script>
+  {# Для блоков #}
+
+{% endblock %}

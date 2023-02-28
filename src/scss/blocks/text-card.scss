@@ -1,4 +1,5 @@
 .text-card {
+  position: relative;
   background-color: $white-color;
   padding: 20px 15px;
 
@@ -30,6 +31,11 @@
 }
 .text-card__title {
   font-size: 22px;
+  transition: color 0.3s ease;
+
+  @media (width < $tablet-width) {
+    color: $secondary-color;
+  }
 
   @media (width >= $tablet-width) {
     font-size: 26px;
@@ -59,4 +65,27 @@
 }
 .text-card__list-item {
   font-size: 16px;
+}
+
+.text-card__bg-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+.text-card {
+  &:hover,
+  &:focus-within {
+    & .text-card__title {
+      color: $secondary-color;
+      @media (width < $tablet-width) {
+        color: $font-default;
+      }
+    }
+  }
+  &:active {
+    opacity: 0.6;
+  }
 }
