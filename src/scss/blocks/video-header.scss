@@ -268,7 +268,11 @@
 .video-header__program-button {
   height: 69px;
   padding: 26px 57px;
-  max-width: fit-content;
+
+
+  @media (width >= $tablet-width) {
+    max-width: fit-content;
+  }
 
   @media (width >= $laptop-width) {
     height: 72px;
