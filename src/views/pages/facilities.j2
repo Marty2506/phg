@@ -1,0 +1,84 @@
+{% extends "layout.j2" %}
+
+{% set page = "facilities" %}
+
+{% block content %}
+  <main class="page-main bg">
+    <div class="breadcumbs">
+      <div class="breadcumbs__container container">
+        <ul class="breadcumbs__list">
+          <li class="breadcumbs__item">
+            <a class="breadcumbs__link" href="./index.html">Главная</a>
+            <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+              <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcumbs__item">
+            <span class="breadcumbs__link breadcumbs__link--current">Удобства в клубе</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="facilities pads">
+      <div class="container">
+        <div class="facilities__content">
+          <h1 class="facilities__title page__title">Удобства в клубе</h1>
+          <ul class="facilities__cards">
+            <li class="facilities__card">
+              <div class="facilities__card-content">
+                <p class="facilities__card-text">Финская сауна — бесплатная для обладателей клубных карт</p>
+              </div>
+              <picture class="facilities__image-wrapper">
+                <source type="image/webp" srcset="@img/facilities-sauna.webp 1x">
+                <img class="facilities__image" src="@img/facilities-sauna.jpg" alt="" width="807" height="500">
+              </picture>
+            </li>
+            <li class="facilities__card">
+              <div class="facilities__card-content">
+                <p class="facilities__card-text">В массажном кабинете профессионал сделает вам расслабляющий массаж после тренировки</p>
+              </div>
+              <picture class="facilities__image-wrapper">
+                <source type="image/webp" srcset="@img/facilities-massage.webp 1x">
+                <img class="facilities__image" src="@img/facilities-massage.jpg" alt="" width="807" height="500">
+              </picture>
+            </li>
+            <li class="facilities__card">
+              <div class="facilities__card-content">
+                <p class="facilities__card-text">Сосвренный солярий поможет расслабиться и получить дозу витамина D</p>
+              </div>
+              <picture class="facilities__image-wrapper">
+                <source type="image/webp" srcset="@img/facilities-solarium.webp 1x">
+                <img class="facilities__image" src="@img/facilities-solarium.jpg" alt="" width="807" height="500">
+              </picture>
+            </li>
+            <li class="facilities__card">
+              <div class="facilities__card-content">
+                <p class="facilities__card-text">Бар, забитый спортивным питанием зарубежных брендов</p>
+              </div>
+              <picture class="facilities__image-wrapper">
+                <source type="image/webp" srcset="@img/facilities-bar.webp 1x">
+                <img class="facilities__image" src="@img/facilities-bar.jpg" alt="" width="807" height="500">
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {% set testTrainAdditionalCLass = "has-white-bg"%}
+    {% include "./blocks/test-train.j2" %}
+    {% include "./blocks/promos.j2" %}
+  </main>
+
+{% endblock content %}
+
+{% block js %}
+  {# Вендорские #}
+  <script src="./js/swiper-bundle.min.js"></script>
+  {# Основные #}
+  <script src="./js/main.min.js"></script>
+  {# Для блоков #}
+  <script src="./js/test-train.min.js"></script>
+  <script src="./js/promos.min.js"></script>
+{% endblock %}
