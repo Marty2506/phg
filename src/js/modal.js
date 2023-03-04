@@ -211,3 +211,49 @@ openTrainPacketModalButtons.forEach((button) => {
     // document.body.classList.add("modal-opened");
   });
 });
+
+// Настройки модалки тестовой тренировки
+const testTrainModalItem = document.querySelector("#modal-test-train");
+
+if (testTrainModalItem) {
+  const form = testTrainModalItem.querySelector("form");
+  const testTrainModalPristine = new Pristine(
+    form,
+    {
+      classTo: "form__label", // Элемент, на который будут добавляться классы
+      errorTextParent: "form__label-text", // Элемент, куда будет выводиться текст с ошибкой
+      errorTextTag: "span", // Тег, который будет обрамлять текст ошибки
+      errorTextClass: "form__error-message", // Класс для элемента с текстом ошибки
+    },
+    true
+  );
+
+  const formPhone = form.querySelector('input[type="tel"]');
+
+  testTrainModalPristine.addValidator(
+    formPhone,
+    (value) => {
+      return value.length === 18;
+    },
+    "Номер неполный",
+    2,
+    false
+  );
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var valid = testTrainModalPristine.validate();
+  });
+}
+
+// Навесим открывашки модалок клубной карты
+const openTestTrainModalButtons = document.querySelectorAll(
+  "[data-test-train-modal]"
+);
+openTestTrainModalButtons.forEach((button) => {
+  button.addEventListener("click", (evt) => {
+    evt.preventDefault(); // Запрет перехода по ссылке
+    testTrainModalItem.classList.add("modal--opened");
+    // document.body.classList.add("modal-opened");
+  });
+});
