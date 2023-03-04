@@ -1,0 +1,101 @@
+{% extends "layout.j2" %}
+
+{% set page = "faq" %}
+
+{% block content %}
+  <main class="page-main bg">
+    <div class="breadcumbs">
+      <div class="breadcumbs__container container">
+        <ul class="breadcumbs__list">
+          <li class="breadcumbs__item">
+            <a class="breadcumbs__link" href="./index.html">Главная</a>
+            <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+              <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcumbs__item">
+            <span class="breadcumbs__link breadcumbs__link--current">Ответы на часто задаваемые вопросы</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {% set FAQ_NUM = 10 %}
+    <section class="faq pads">
+      <div class="container">
+        <h1 class="faq__title page__title">Ответы на часто задаваемые вопросы</h1>
+        <div class="faq__content">
+          <div class="faq__main">
+            <ul class="faq__list">
+              {% for index in range (FAQ_NUM) %}
+                <li class="faq__item accordion">
+                  <div class="faq__item-header accordion__header" tabindex="1">Как оплатить абонемент?</div>
+                  <div class="faq__item-content accordion__content">
+                    <p class="faq__item-text">Использование скоростных SSD дисков.Возможность в любое время создать необходимое количество серверов нужной конфигурации. Поддержка масштабирования, позволяющая изменять объем CPU, памяти и диска(ов) Cloud Host серверов.</p>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="faq__side">
+            {% set formId = "faq-form" %}
+            <p class="faq__side-text">Не нашли ответ на свой вопрос?</p>
+            <p class="faq__side-big-text">Задайте его напрямую нашему&nbsp;спецалисту</p>
+            <form class="faq__form form" action="https://echo.htmlacademy.ru" method="post" id="{{ formId | safe }}">
+              <div class="form__column">
+                <label class="form__label">
+                  <span class="form__label-text">Ваш вопрос</span>
+                  <textarea class="faq__form-textarea form__field" id="{{ formId | safe }}-client-name" name="{{ formId | safe }}-client-name" placeholder="Введите ваш вопрос"></textarea>
+                </label>
+                <label class="form__label form__label--maxw325">
+                  <span class="form__label-text">Ваше имя</span>
+                  <input class="form__field" type="text" id="{{ formId | safe }}-client-name" name="{{ formId | safe }}-client-name" placeholder="Введите ваше имя">
+                </label>
+                <label class="form__label form__label--maxw325">
+                  <span class="form__label-text">Ваша почта</span>
+                  <input class="form__field" type="email" id="{{ formId | safe }}-mail" name="{{ formId | safe }}-mail" placeholder="pochta@mail.ru" data-pristine-email-message="Неправильный формат e-mail">
+                </label>
+                <label class="form__label form__label--maxw325">
+                  <span class="form__label-text">Телефон</span>
+                  <input class="form__field" type="tel" id="{{ formId | safe }}-phone" name="{{ formId | safe }}-phone" placeholder="+7 (999) 999-99-99" required data-pristine-required-message="Обязательно к заполнению">
+                </label>
+              </div>
+              <div class="form__row">
+                <button class="modal__submit-button form__sumbit-button button button--reverse" type="submit">Задать вопрос</button>
+                <div class="form__messengers">
+                  <a class="messenger messenger--telegram messenger--red" href="#!">
+                    <svg class="messenger__icon" width="16" height="14" viewBox="0 0 16 14">
+                      <use xlink:href="img/sprite.svg#telegram-icon"></use>
+                    </svg>
+                    <span class="visually-hidden">Контакт телеграма.</span>
+                  </a>
+                  <a class="messenger messenger--whatsapp messenger--red" href="#!">
+                    <svg class="messenger__icon" width="16" height="17" viewBox="0 0 16 17">
+                      <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
+                    </svg>
+                    <span class="visually-hidden">Контакт вотсапа.</span>
+                  </a>
+                </div>
+              </div>
+              <label class="form__label form__label--checkbox">
+                <input class="form__checkbox visually-hidden" type="checkbox" name="{{ formId | safe }}-pricelist-politics" id="{{ formId | safe }}-pricelist-politics" checked>
+                <span class="form__mark"></span>
+                <span class="form__checkbox-label-text">Согласен с <a class="link" href="./privacy-policy.html" target="_blank">Политикой конфиденциальности сайта</a></span>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+{% endblock content %}
+
+{% block js %}
+  {# Общие #}
+  <script src="./js/main.min.js"></script>
+  <script src="./js/accordion.min.js"></script>
+  {# Блочные #}
+  <script src="./js/faq-form.min.js"></script>
+{% endblock %}

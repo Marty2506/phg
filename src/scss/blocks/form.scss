@@ -13,6 +13,10 @@
   gap: 4px;
 }
 
+.form__label--maxw325 {
+  max-width: 325px;
+}
+
 .form__label-text {
   margin: 0;
   padding: 0;
@@ -25,6 +29,7 @@
 .form__field {
   padding: 20px 16px;
 
+  font-family: $main-font;
   font-size: 17px;
   line-height: 25px;
   color: $font-default;
@@ -41,6 +46,11 @@
   &::placeholder {
     opacity: 0.7;
   }
+}
+
+textarea.form__field {
+  resize: none;
+  width: 100%;
 }
 
 .has-white-bg .form__field {
@@ -83,7 +93,7 @@
   align-items: flex-start;
 
   & .form__label {
-    max-width: 325px;
+    // max-width: 325px;
   }
 }
 
