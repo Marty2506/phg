@@ -19,7 +19,15 @@
       </div>
       <div class="page-header__nav">
         <ul class="page-header__nav-list">
-          {% for link in headerNav %}
+          <li class="page-header__nav-list-item">
+            <a class="page-header__nav-link page-header__nav-link--has-icon" href="./timetable.html">
+              <svg class="page-header__timetable-icon" width="17" height="19" viewBox="0 0 17 19">
+                <use xlink:href="img/sprite.svg#timetable-icon"></use>
+              </svg>
+              Расписание
+            </a>
+          </li>
+          {# {% for link in headerNav %}
             {% if link.dropdown %}
               <li class="page-header__nav-list-item page-header__nav-list-item--has-dropdown">
                 <a class="page-header__nav-link page-header__nav-link--has-dropdown" href="{{link.href}}.html">
@@ -28,22 +36,13 @@
                     <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
                   </svg>
                 </a>
-                {# <div class="page-header__nav-dropdown">
-                  <ul class="page-header__nav-dropdown-list">
-                    {% for dropdownLink in link.dropdown %}
-                      <li class="page-header__nav-dropdown-list-item">
-                        <a class="page-header__nav-dropdown-link" href="{{dropdownLink.href}}.html">{{ dropdownLink.title }}</a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </div> #}
               </li>
             {% else %}
               <li class="page-header__nav-list-item">
                 <a class="page-header__nav-link" href="{{link.href}}.html">{{ link.title | safe }}</a>
               </li>
             {% endif %}
-          {% endfor %}
+          {% endfor %} #}
         </ul>
         <div class="page-header__contacts">
           <div class="page-header__messengers">
@@ -68,7 +67,7 @@
           </a>
         </div>
         <a class="page-header__timetable-button" href="./timetable.html">
-          <svg class="page-header__timetable-icon" width="25" height="26" viewBox="0 0 25 26">
+          <svg class="page-header__timetable-icon" width="25" height="26" viewBox="0 0 17 19">
             <use xlink:href="img/sprite.svg#timetable-icon"></use>
           </svg>
           <span class="visually-hidden">Расписание.</span>
@@ -83,7 +82,7 @@
           <svg class="page-header__action-button-icon" width="23" height="29" viewBox="0 0 23 29">
             <use xlink:href="img/sprite.svg#my-account-icon"></use>
           </svg>
-          <span class="visually-hidden">Поиск.</span>
+          <span class="visually-hidden">Личный кабинет.</span>
         </a>
         <button class="page-header__burger burger">
           <span class="burger__text">Меню</span>

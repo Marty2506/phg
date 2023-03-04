@@ -92,10 +92,12 @@ $page-header-paddigns: 7px;
 
 .page-header__nav {
   display: flex;
-  margin-left: auto;
+  flex-grow: 1;
+  justify-content: flex-end;
+  // margin-left: auto;
 
   @media (width < $desktop-width) {
-    margin-left: auto;
+    // margin-left: auto;
     padding-left: 10px;
   }
   @media (width >= $laptop-width) {
@@ -122,8 +124,9 @@ $page-header-paddigns: 7px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  min-width: 340px;
+  min-width: 290px;
   padding: 0 20px;
+  flex-grow: 1;
 
   gap: 12px;
 
@@ -141,8 +144,6 @@ $page-header-paddigns: 7px;
 }
 
 .page-header__nav-list-item {
-  height: 100%;
-
   &--has-dropdown {
     position: relative;
   }
@@ -150,6 +151,7 @@ $page-header-paddigns: 7px;
 
 .page-header__nav-link {
   display: flex;
+  gap: 10px;
   align-items: center;
   height: 100%;
   padding: 5px 0;
@@ -171,6 +173,21 @@ $page-header-paddigns: 7px;
   @media (width >= $desktop-width) {
     font-size: 15px;
     line-height: 17px;
+  }
+}
+
+.page-header__timetable-icon {
+  fill: $bg-color;
+  stroke: $bg-color;
+  transition: all 0.3s ease;
+}
+
+.page-header__nav-link--has-icon {
+  &:hover {
+    & .page-header__timetable-icon {
+      fill: $secondary-color;
+      stroke: $secondary-color;
+    }
   }
 }
 
@@ -259,18 +276,22 @@ $page-header-paddigns: 7px;
   flex-wrap: wrap;
   align-items: center;
   padding: 0 7px;
+  // margin-left: auto;
 
   gap: 8px;
 
   @media (width >= $laptop-width) {
     padding: 0 15px;
+    min-width: 290px;
+
   }
   @media (width < $laptop-width + 200px) {
-    max-width: min-content;
+    // max-width: min-content;
   }
   @media (width >= $desktop-width) {
     max-width: initial;
     padding: 0 25px;
+    min-width: 340px;
   }
 }
 
@@ -282,7 +303,7 @@ $page-header-paddigns: 7px;
   gap: 3px;
 
   @media (width < $desktop-width) {
-    order: 1;
+    // order: 1;
     margin: 0 auto;
   }
   @media (width < $laptop-width) {
