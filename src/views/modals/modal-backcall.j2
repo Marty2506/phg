@@ -22,11 +22,11 @@
       <p class="modal__text">{{ modalText | safe }}</p>
       <form class="modal__form form" action="https://echo.htmlacademy.ru" method="post" id="{{ modalFormId | safe }}">
         <div class="form__column">
-          <label class="form__label">
+          <label class="form__label form__label--maxw325">
             <span class="form__label-text">Ваше имя</span>
             <input class="form__field" type="text" id="{{ modalFormId | safe }}-client-name" name="{{ modalFormId | safe }}-client-name" placeholder="Введите ваше имя">
           </label>
-          <label class="form__label">
+          <label class="form__label form__label--maxw325">
             <span class="form__label-text">Телефон</span>
             <input class="form__field" type="tel" id="{{ modalFormId | safe }}-phone" name="{{ modalFormId | safe }}-phone" placeholder="+7 (999) 999-99-99" required data-pristine-required-message="Обязательно к заполнению">
           </label>
