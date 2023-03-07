@@ -1,0 +1,83 @@
+.app {
+  @media (width >= $laptop-width) {
+    padding-top: 0;
+  }
+}
+.app__content {
+}
+.app__title {
+}
+.app__market-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+
+  @media (width >= $laptop-width) {
+    margin-bottom: 40px;
+  }
+}
+.app__market-link {
+  margin-bottom: 10px;
+  display: inline-block;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &:focus-visible {
+    outline-color: $secondary-color;
+    outline-offset: 3px;
+    outline-width: 3px;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}
+.app__market-link-image {
+  border-radius: 8px;
+}
+.app__info-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 30px;
+
+  @media (width >= $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  @media (width >= $semi-desktop-width) {
+    grid-template-columns: repeat(auto-fit, 500px);
+    gap: 35px;
+    margin-bottom: 70px;
+  }
+}
+.app__info-list {
+  gap: 11px;
+  width: 100%;
+}
+.app__info-list-item {
+  font-size: 16px;
+}
+.app__swiper-container {
+  position: relative;
+}
+.app__swiper-buttons {
+}
+.app__swiper {
+}
+.app__swiper-slide {
+  min-width: 300px;
+  border-radius: 10px;
+
+  @media (width < $desktop-width) {
+    width: min-content;
+  }
+}
+.app__swiper-slide-image {
+}

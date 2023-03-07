@@ -1,0 +1,107 @@
+{% extends "layout.j2" %}
+
+{% set page = "reviews" %}
+
+{% block content %}
+  <main class="page-main bg">
+    <div class="breadcumbs">
+      <div class="breadcumbs__container container">
+        <ul class="breadcumbs__list">
+          <li class="breadcumbs__item">
+            <a class="breadcumbs__link" href="./index.html">Главная</a>
+            <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+              <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcumbs__item">
+            <span class="breadcumbs__link breadcumbs__link--current">Мобильное приложение</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {% set APP_SLIDES_NUM = 10 %}
+
+    <section class="app pads section">
+      <div class="container">
+        <div class="app__content">
+          <h1 class="visually-hidden">Мобильное приложение</h1>
+          <p class="app__title page__title">Мобильное приложение помогает планировать тренировки и быстрее добиваться результатов</p>
+          <div class="app__market-links">
+            <a class="app__market-link" href="#!">
+              <span class="visually-hidden">Скачать мобильное приложение из Google Play</span>
+              <picture>
+                <source type="image/webp" srcset="@img/app-google-play.webp 1x">
+                <img class="app__market-link-image" src="@img/app-google-play.jpg" alt="" width="156" height="43">
+              </picture>
+            </a>
+            <a class="app__market-link" href="#!">
+              <span class="visually-hidden">Скачать мобильное приложение из Google Play</span>
+              <picture>
+                <source type="image/webp" srcset="@img/app-appstore.webp 1x">
+                <img class="app__market-link-image" src="@img/app-appstore.jpg" alt="" width="133" height="43">
+              </picture>
+            </a>
+          </div>
+          <div class="app__info-lists">
+            <ul class="app__info-list list">
+              <li class="app__info-list-item list__item">Замораживать абонемент на 7, 30 или 60 дней</li>
+              <li class="app__info-list-item list__item">Оплачивать любые услуги клуба в один клик: абонемент, аренду шкафчика, пакет тренировок, гостевой визит, и т.д.</li>
+              <li class="app__info-list-item list__item">Выбирать персональных тренеров и записываться к ним онлайн</li>
+              <li class="app__info-list-item list__item">Смотреть расписание  групповых тренировок</li>
+            </ul>
+            <ul class="app__info-list list">
+              <li class="app__info-list-item list__item">Составлять собственное расписание занятий</li>
+              <li class="app__info-list-item list__item">Записываться на групповые тренировки, которые не входят в абонемент: единоборства, сайкл, кроссфит</li>
+              <li class="app__info-list-item list__item">Получать помощь и ответы на вопросы в чате. Менеджеры на связи в рабочие часы</li>
+              <li class="app__info-list-item list__item">Следить за выгодными спецпредложениями и новостями клуба</li>
+            </ul>
+          </div>
+          <div class="app__screens">
+            <h2 class="app__sub-title title">Скриншоты</h2>
+            <div class="app__swiper-container">
+              <div class="app__swiper-buttons section__swiper-buttons">
+                <button class="section__swiper-button swiper-button swiper-button--prev" id="mobile-app-swiper-btn-prev" type="button">
+                  <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                    <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                  </svg>
+                  <span class="visually-hidden">Перелестнуть назад</span>
+                </button>
+                <button class="section__swiper-button swiper-button swiper-button--next" id="mobile-app-swiper-btn-next" type="button">
+                  <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                    <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                  </svg>
+                  <span class="visually-hidden">Перелестнуть вперед</span>
+                </button>
+              </div>
+              <div class="app__swiper section__swiper swiper" id="mobile-app-swiper">
+                <div class="swiper-wrapper">
+                  {% for slideIndex in range(APP_SLIDES_NUM) %}
+                    <div class="app__swiper-slide reviews__in-messengers-swiper-slide section__swiper-slide swiper-slide">
+                      <picture>
+                        <source type="image/webp" srcset="@img/mobile-app-{{(slideIndex % 5) + 1}}.webp 1x">
+                        <img class="app__swiper-slide-image" src="@img/mobile-app-{{(slideIndex % 5) + 1}}.jpg" alt="Скриншот из приложения {{slideIndex + 1}}">
+                      </picture>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+{% endblock content %}
+
+{% block js %}
+  {# Вендорские #}
+  <script src="./js/swiper-bundle.min.js"></script>
+  {# Основные #}
+  <script src="./js/main.min.js"></script>
+  {# Для блоков #}
+  <script src="./js/mobile-app-swiper.min.js"></script>
+{% endblock %}
