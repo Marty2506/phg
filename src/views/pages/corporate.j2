@@ -1,0 +1,175 @@
+{% extends "layout.j2" %}
+
+{% set page = "corporate" %}
+
+{% block content %}
+  <main class="page-main bg">
+    <section class="video-header video-header--corporate">
+      <div class="breadcumbs breadcumbs--has-drak-bg">
+        <div class="breadcumbs__container container">
+          <ul class="breadcumbs__list">
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./index.html">Главная</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./tariffs.html">Тарифы</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <span class="breadcumbs__link breadcumbs__link--current">Корпоративный фитнес</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="video-header__content">
+          <div class="video-header__header">
+            <h1 class="visually-hidden">Корпоративный фитнес</h1>
+            <p class="video-header__title page__title page__title--light">Корпоративный фитнес для ваших сотрудников в клубе powerhouse gym на 25% дешевле</p>
+          </div>
+          <p class="video-header__text">В клубе есть все для достижения максимальных спортивных результатов</p>
+          <div class="video-header__buttons video-header__buttons--always-column">
+            <a class="button video-header__button video-header__button--tour" href="#!">
+              <svg class="video-header__button-icon button__icon" width="35" height="40" viewBox="0 0 35 40">
+                <use xlink:href="img/sprite.svg#play-icon"></use>
+              </svg>
+              <span>тур по клубу</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <video class="video-header__video" preload="none" loop muted poster="@img/video-header-bg.jpg">
+        <source src="./files/gym-video.mp4" type="video/mp4">
+      </video>
+      <div class="container">
+        <div class="video-header__mobile-image-wrapper">
+          <picture>
+            <source type="image/webp" srcset="@img/video-header-program-mobile.webp 1x">
+            <img class="video-header__mobile-image" src="@img/video-header-program-mobile.jpg" alt="">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="get-card pads section" id="tariffs">
+      <h2 class="visually-hidden">О клубных картах</h2>
+      <div class="container">
+        <div class="get-card__content">
+          <div class="get-card__header">
+            <p class="title get-card__title">Тарифы</p>
+          </div>
+          <div class="get-card__main">
+            <div class="get-card__about">
+              <div class="get-card__about-block">
+                <p class="get-card__about-sub-title">Все клубные карты<br>включают доступ:</p>
+                <ul class="get-card__about-list list">
+                  <li class="list__item">К тренажерному залу, зоне свободных весов, кроссфита и кардио</li>
+                  <li class="list__item">Всем групповым тренировкам</li>
+                  <li class="list__item">Студии Сайкла с тренером и без</li>
+                  <li class="list__item">Групповым тренировкам в зоне единоборств</li>
+                </ul>
+                <div class="get-card__about-timetable">
+                  <p class="get-card__about-timetable-line">c 6:30 до 24:00 в будни</p>
+                  <p class="get-card__about-timetable-line">с 9:00 до 22:00 в выходные</p>
+                </div>
+              </div>
+              <div class="get-card__about-block">
+                <p class="get-card__about-sub-title">Дополнительно:</p>
+                <ul class="get-card__about-list list">
+                  <li class="list__item">Вводное <a href="./fitness-test.html" target="_blank">фитнес-тестирование FitQuest</a></li>
+                  <li class="list__item">Вводная персональная тренировка с тренером</li>
+                  <li class="list__item">Финская сауна для восстановления и расслабления</li>
+                  <li class="list__item">Бесплатная парковка у входа в клуб</li>
+                </ul>
+              </div>
+            </div>
+            <div class="get-card__tariffs">
+              <div class="get-card__list get-card__list--without-swiper">
+                <div class="get-card__list-item">
+                  <div class="club-card club-card--blue">
+                    <div class="club-card__content">
+                      <div class="club-card__image-wrapper">
+                        <picture>
+                          <source type="image/webp" srcset="@img/club-cards/12m-10p.webp 1x">
+                          <img class="club-card__image" src="@img/club-cards/12m-10p.png" alt="Клубная карта корпоративная на 12 месяцев на 10 человек" width="480" height="263">
+                        </picture>
+                      </div>
+                      <div class="club-card__main">
+                        <div class="club-card__price-wrapper">
+                          <span class="club-card__price">18 900 ₽</span>
+                          <div class="club-card__discount-wrapper">
+                            <span class="club-card__old-price">23 900 ₽</span>
+                            <span class="club-card__discount-value">25%</span>
+                          </div>
+                          <p class="club-card__freeze">Бесплатная заморозка <span>на&nbsp;60&nbsp;дней</span></p>
+                        </div>
+                        <button class="club-card__button button" type="button" data-club-card-modal>Забронировать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="get-card__list-item">
+                  <div class="club-card club-card--blue">
+                    <div class="club-card__content">
+                      <div class="club-card__image-wrapper">
+                        <picture>
+                          <source type="image/webp" srcset="@img/club-cards/12m-20p.webp 1x">
+                          <img class="club-card__image" src="@img/club-cards/12m-20p.png" alt="Клубная карта корпоративная на 12 месяцев на 20 человек" width="480" height="263">
+                        </picture>
+                      </div>
+                      <div class="club-card__main">
+                        <div class="club-card__price-wrapper">
+                          <span class="club-card__price">17 900 ₽</span>
+                          <div class="club-card__discount-wrapper">
+                            <span class="club-card__old-price">23 900 ₽</span>
+                            <span class="club-card__discount-value">28%</span>
+                          </div>
+                          <p class="club-card__freeze">Бесплатная заморозка <span>на&nbsp;60&nbsp;дней</span></p>
+                        </div>
+                        <button class="club-card__button button" type="button" data-club-card-modal>Забронировать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    {% set gallerySwiperCnt = 1 %}
+    {% set gymInfoTitle = "Каждый найдет<br>тренировку по душе"%}
+    {% include "./blocks/other-trainings.j2" %}
+    {% set gallerySwiperCnt = 7 %} {# из-за того что в other-trainings.j2 6 слайдеров #}
+
+    {% include "./blocks/trainers.j2" %}
+
+    {% include "./blocks/max-result.j2" %}
+
+    {% include "./blocks/contacts.j2" %}
+
+    {% include "./blocks/gym-walk.j2" %}
+    {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
+
+  </main>
+
+{% endblock content %}
+
+{% block js %}
+  {# Вендорские #}
+  <script src="./js/swiper-bundle.min.js"></script>
+  {# Основные #}
+  <script src="./js/main.min.js"></script>
+  <script src="./js/tabs.min.js"></script>
+  {# Для блоков #}
+  <script src="./js/gallery.min.js"></script>
+  <script src="./js/tariffs.min.js"></script>
+  <script src="./js/map.min.js"></script>
+{% endblock %}

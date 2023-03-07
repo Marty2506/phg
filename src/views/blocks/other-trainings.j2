@@ -1,6 +1,9 @@
+{% if gymInfoTitle is not defined %}
+  {% set gymInfoTitle = "Другие тренировки в клубе powerhouse gym" %}
+{% endif %}
 <section class="gym-info gym-info--other-trainings">
   <div class="container">
-    <h2 class="gym-info__title title">Другие тренировки в клубе powerhouse gym</h2>
+    <h2 class="gym-info__title title">{{ gymInfoTitle | safe }}</h2>
   </div>
   <div class="gym-info__tabs tabs">
     <div class="gym-info__tabs-header">

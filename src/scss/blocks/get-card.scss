@@ -298,3 +298,17 @@
     width: 100%;
   }
 }
+
+.get-card__list--without-swiper {
+  @media (width < $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+
+    gap: 15px;
+  }
+
+  & .get-card__list-item {
+    width: 100%;
+  }
+}
