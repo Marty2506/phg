@@ -1,0 +1,294 @@
+{% extends "layout.j2" %}
+
+{% set page = "kid-fitness" %}
+
+{% block content %}
+  <main class="page-main bg">
+    <section class="video-header video-header--corporate">
+      <div class="breadcumbs breadcumbs--has-drak-bg">
+        <div class="breadcumbs__container container">
+          <ul class="breadcumbs__list">
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./index.html">Главная</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <a class="breadcumbs__link" href="./tariffs.html">Тарифы</a>
+              <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
+                <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcumbs__item">
+              <span class="breadcumbs__link breadcumbs__link--current">Детский фитнес в клубе Powerhouse Gym</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="video-header__content">
+          <div class="video-header__header">
+            <h1 class="video-header__title page__title page__title--light">Детский фитнес в клубе powerhouse gym</h1>
+          </div>
+          <p class="video-header__text">Тренируйтесь вместе с ребенком или займите подростка&nbsp;полезным делом после школы</p>
+          <div class="video-header__buttons video-header__buttons--always-column">
+            <a class="button video-header__button video-header__button--tour" href="#!">
+              <svg class="video-header__button-icon button__icon" width="35" height="40" viewBox="0 0 35 40">
+                <use xlink:href="img/sprite.svg#play-icon"></use>
+              </svg>
+              <span>тур по клубу</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <video class="video-header__video" preload="none" loop muted poster="@img/video-header-bg.jpg">
+        <source src="./files/gym-video.mp4" type="video/mp4">
+      </video>
+      <div class="container">
+        <div class="video-header__mobile-image-wrapper">
+          <picture>
+            <source type="image/webp" srcset="@img/video-header-program-mobile.webp 1x">
+            <img class="video-header__mobile-image" src="@img/video-header-program-mobile.jpg" alt="">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="kid-fitness pads">
+      <h2 class="visually-hidden">Для детей разных возрастов.</h2>
+      <div class="container">
+        <div class="kid-fitness__content">
+          <ul class="kid-fitness__cards">
+            <li class="kid-fitness__card">
+              <h3 class="kid-fitness__card-title title">Если у вас ребенок<br> <span>10-14 лет</span></h3>
+              <p class="kid-fitness__card-text">Вы можете ходить на тренировки вместе, показывая хороший пример и одновременно занимаясь собой</p>
+              <div class="kid-fitness__card-image-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="@img/kid-fitness-10-14.webp 1x">
+                  <img class="kid-fitness__card-image" src="@img/kid-fitness-10-14.jpg" alt="" width="799" height="479">
+                </picture>
+              </div>
+            </li>
+            <li class="kid-fitness__card">
+              <h3 class="kid-fitness__card-title title">Если у вас ребенок<br> <span>14-18 лет</span></h3>
+              <p class="kid-fitness__card-text">Займите его после школы спортом вместо просиживания времени в интернете и компьютерных играх</p>
+              <div class="kid-fitness__card-image-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="@img/kid-fitness-14-18.webp 1x">
+                  <img class="kid-fitness__card-image" src="@img/kid-fitness-14-18.jpg" alt="" width="799" height="479">
+                </picture>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="tabs-section section">
+      <div class="container">
+        <div class="tabs-section__content">
+          <h2 class="tabs-section__title title">Тренировки для детей до 14 лет в клубе Powerhouse gym</h2>
+          <div class="section__tabs tabs">
+            <ul class="section__tabs-list tabs__list" role="tablist">
+              <li class="section__tabs-item tabs__item" role="presentation">
+                <button class="section__tabs-button tabs__button active button" type="button">Беговая тренировка</button>
+              </li>
+              <li class="section__tabs-item tabs__item" role="presentation">
+                <button class="section__tabs-button tabs__button button" type="button">Детский сайкл</button>
+              </li>
+              <li class="section__tabs-item tabs__item" role="presentation">
+                <button class="section__tabs-button tabs__button button" type="button">Детский кроссфит</button>
+              </li>
+            </ul>
+            <div class="section__tabs-content tabs__content">
+              <div class="section__tabs-panel tabs__panel active" role="tabpanel">
+                <div class="tabs-section__panel-content training-video video-section">
+                  <div class="training-video__content video-section__content">
+                    <div class="training-video__main video-section__main">
+                      <h3 class="visually-hidden">Беговая тренировка</h3>
+                      <p class="trainig-video__text">Часовая энергорзатртаная беговая тренировка для детей от детского тренера-призера соревнования по бегу<br>Длительность: <b>1 час</b></p>
+                      <ul class="training-video__list list">
+                        <li class="training-video__item list__item">В начале тренировки обязательная разминка</li>
+                        <li class="training-video__item list__item">Отработка техники нанесения ударов</li>
+                        <li class="training-video__item list__item">Отработка в парах или упражнения на снарядах (боксёрский мешок, груша)</li>
+                        <li class="training-video__item list__item">Для желающих регулярные спарринги</li>
+                      </ul>
+                      <div class="training-video__buttons-wrapper">
+                        <button class="training-video__button button button--reverse" type="button" data-test-train-modal>Записаться на пробную тренировку</button>
+                      </div>
+                    </div>
+                    <div class="training-video__video-wrapper video-section__video-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="@img/kid-fitness.webp 1x">
+                        <img class="video-section__image-instead" src="@img/kid-fitness.jpg" alt="">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section__tabs-panel tabs__panel" role="tabpanel">
+                <div class="tabs-section__panel-content training-video video-section">
+                  <div class="training-video__content video-section__content">
+                    <div class="training-video__main video-section__main">
+                      <h3 class="training-video__subtitle">Детский сайкл</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section__tabs-panel tabs__panel" role="tabpanel">
+                <div class="tabs-section__panel-content training-video video-section">
+                  <div class="training-video__content video-section__content">
+                    <div class="training-video__main video-section__main">
+                      <h3 class="training-video__subtitle">Детский кроссфит</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% set trainersTitle = "Детские тренеры" %}
+    {% include "./blocks/trainers.j2" %}
+
+    <section class="get-card pads section" id="tariffs">
+      <div class="container">
+        <div class="get-card__content">
+          <div class="get-card__header">
+            <h2 class="title get-card__title">Подходящие для занятий с ребенком карты в клубе powerhouse gym</h2>
+            <a class="get-card__read-more-button button" href="./tariffs.html">
+              <span>Подробнее о картах</span>
+              <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
+                <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="get-card__main">
+            <div class="get-card__subcription red-line">
+              <p class="get-card__subscription-title title">Платите за фитнес <span>раз в месяц</span></p>
+              <p class="get-card__subscription-text">как за интернет или подписку на кино</p>
+              <span class="get-card__subscription-price">2 300 ₽ в месяц</span>
+              <button class="get-card__subscription-button button" type="button" data-backcall-modal>Оформить рассрочку</button>
+            </div>
+            <div class="get-card__about">
+              <div class="get-card__about-block">
+                <p class="get-card__about-sub-title">Все клубные карты<br>включают доступ:</p>
+                <ul class="get-card__about-list list">
+                  <li class="list__item">К тренажерному залу, зоне свободных весов, кроссфита и кардио</li>
+                  <li class="list__item">Всем групповым тренировкам</li>
+                  <li class="list__item">Студии Сайкла с тренером и без</li>
+                  <li class="list__item">Групповым тренировкам в зоне единоборств</li>
+                </ul>
+                <div class="get-card__about-timetable">
+                  <p class="get-card__about-timetable-line">c 6:30 до 24:00 в будни</p>
+                  <p class="get-card__about-timetable-line">с 9:00 до 22:00 в выходные</p>
+                </div>
+              </div>
+              <div class="get-card__about-block">
+                <p class="get-card__about-sub-title">Дополнительно:</p>
+                <ul class="get-card__about-list list">
+                  <li class="list__item">Вводное <a href="#!">фитнес-тестирование FitQuest</a></li>
+                  <li class="list__item">Вводная персональная тренировка с тренером</li>
+                  <li class="list__item">Финская сауна для восстановления и расслабления</li>
+                  <li class="list__item">Бесплатная парковка у входа в клуб</li>
+                </ul>
+              </div>
+            </div>
+            <div class="get-card__tariffs">
+              <div class="get-card__list">
+                <div class="get-card__list-item">
+                  <div class="club-card">
+                    <div class="club-card__content">
+                      <div class="club-card__image-wrapper">
+                        <picture>
+                          <source type="image/webp" srcset="@img/club-cards/12m.webp 1x">
+                          <img class="club-card__image" src="@img/club-cards/12m.png" alt="Клубная карта на 12 месяцев" width="480" height="263">
+                        </picture>
+                      </div>
+                      <div class="club-card__main">
+                        <div class="club-card__price-wrapper">
+                          <span class="club-card__price">23 900 ₽</span>
+                          <p class="club-card__freeze">Бесплатная заморозка <span>на&nbsp;90&nbsp;дней</span></p>
+                        </div>
+                        <button class="club-card__button button" type="button" data-club-card-modal>Забронировать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="get-card__list-item">
+                  <div class="club-card club-card--orange">
+                    <div class="club-card__content">
+                      <div class="club-card__image-wrapper">
+                        <picture>
+                          <source type="image/webp" srcset="@img/club-cards/12m-young.webp 1x">
+                          <img class="club-card__image" src="@img/club-cards/12m-young.png" alt="Клубная карта молодежная на 12 месяцев" width="480" height="263">
+                        </picture>
+                      </div>
+                      <div class="club-card__main">
+                        <div class="club-card__price-wrapper">
+                          <span class="club-card__price">21 900 ₽</span>
+                          <div class="club-card__discount-wrapper">
+                            <span class="club-card__old-price">23 900 ₽</span>
+                            <span class="club-card__discount-value">15%</span>
+                          </div>
+                          <p class="club-card__freeze">Бесплатная заморозка <span>на&nbsp;90&nbsp;дней</span></p>
+                        </div>
+                        <button class="club-card__button button" type="button" data-club-card-modal>Забронировать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="get-card__list-item">
+                  <div class="club-card club-card--green">
+                    <div class="club-card__content">
+                      <div class="club-card__image-wrapper">
+                        <picture>
+                          <source type="image/webp" srcset="@img/club-cards/6m.webp 1x">
+                          <img class="club-card__image" src="@img/club-cards/6m.png" alt="Клубная карта на 6 месяцев" width="480" height="263">
+                        </picture>
+                      </div>
+                      <div class="club-card__main">
+                        <div class="club-card__price-wrapper">
+                          <span class="club-card__price">18 900 ₽</span>
+                          <p class="club-card__freeze">Бесплатная заморозка <span>на&nbsp;60&nbsp;дней</span></p>
+                        </div>
+                        <button class="club-card__button button" type="button" data-club-card-modal>Забронировать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {# TODO: Вставить блок с расписанием #}
+
+    {% include "./blocks/contacts.j2" %}
+
+    {% include "./blocks/max-result.j2" %}
+
+    {% set gallerySwiperCnt = 1 %}
+    {% include "./blocks/gym-walk.j2" %}
+    {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
+
+  </main>
+
+{% endblock content %}
+
+{% block js %}
+  {# Вендорские #}
+  <script src="./js/swiper-bundle.min.js"></script>
+  {# Основные #}
+  <script src="./js/main.min.js"></script>
+  <script src="./js/tabs.min.js"></script>
+  {# Для блоков #}
+  <script src="./js/gallery.min.js"></script>
+  <script src="./js/tariffs.min.js"></script>
+  <script src="./js/map.min.js"></script>
+{% endblock %}
