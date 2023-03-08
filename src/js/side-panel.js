@@ -3,7 +3,7 @@ const sidePanel = document.querySelector(".side-panel");
 if (sidePanel) {
   const tariffButton = sidePanel.querySelector("#side-panel-tariff");
   const tariffSection = document.querySelector("#tariffs");
-  const scheduleSection = document.querySelector("#schedule");
+  const scheduleSection = document.querySelector("#timetable");
   const scrollUpButton = sidePanel.querySelector("#side-panel-to-top");
   const scheduleButton = sidePanel.querySelector("#side-panel-schedule");
 

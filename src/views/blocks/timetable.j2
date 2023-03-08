@@ -1,7 +1,11 @@
-<section class="timetable pads">
+{% if timetableTitle is not defined %}
+  {% set timetableTitle = "Расписание клуба" %}
+{% endif %}
+
+<section class="timetable pads" id="timetable">
   <div class="container">
     <div class="timetable__content">
-      <h2 class="timetable__title title">Расписание клуба</h2>
+      <h2 class="timetable__title title">{{ timetableTitle | safe }}</h2>
       <p>Здесь должно быть расписание</p>
     </div>
   </div>

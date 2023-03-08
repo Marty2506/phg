@@ -126,12 +126,12 @@
                       </ul>
                       <div class="training-video__buttons-wrapper">
                         <button class="training-video__button button button--reverse" type="button" data-test-train-modal>Записаться на пробную тренировку</button>
-                        <button class="training-video__button button" type="button">
+                        <a class="training-video__button button" href="./cycle-program.html">
                           <span>подробнее о тренировке</span>
                           <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
                             <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
                           </svg>
-                        </button>
+                        </a>
                       </div>
                     </div>
                     <div class="training-video__video-wrapper video-section__video-wrapper">
@@ -152,12 +152,12 @@
                       </ul>
                       <div class="training-video__buttons-wrapper">
                         <button class="training-video__button button button--reverse" type="button" data-test-train-modal>Записаться на пробную тренировку</button>
-                        <button class="training-video__button button" type="button">
+                        <a class="training-video__button button" href="./cycle-program.html">
                           <span>подробнее о тренировке</span>
                           <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
                             <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
                           </svg>
-                        </button>
+                        </a>
                       </div>
                     </div>
                     <div class="training-video__video-wrapper video-section__video-wrapper">
@@ -178,12 +178,12 @@
                       </ul>
                       <div class="training-video__buttons-wrapper">
                         <button class="training-video__button button button--reverse" type="button" data-test-train-modal>Записаться на пробную тренировку</button>
-                        <button class="training-video__button button" type="button">
+                        <a class="training-video__button button" href="./cycle-program.html">
                           <span>подробнее о тренировке</span>
                           <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
                             <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
                           </svg>
-                        </button>
+                        </a>
                       </div>
                     </div>
                     <div class="training-video__video-wrapper video-section__video-wrapper">
@@ -204,12 +204,12 @@
                       </ul>
                       <div class="training-video__buttons-wrapper">
                         <button class="training-video__button button button--reverse" type="button" data-test-train-modal>Записаться на пробную тренировку</button>
-                        <button class="training-video__button button" type="button">
+                        <a class="training-video__button button" href="./cycle-program.html">
                           <span>подробнее о тренировке</span>
                           <svg class="button__icon" width="8" height="14" viewBox="0 0 8 14">
                             <use xlink:href="img/sprite.svg#button-arrow-icon"></use>
                           </svg>
-                        </button>
+                        </a>
                       </div>
                     </div>
                     <div class="training-video__video-wrapper video-section__video-wrapper">
@@ -450,6 +450,8 @@
     </section>
     {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
 
+    {% set timetableTitle = "Расписание тренировок сайкл" %}
+    {% include "./blocks/timetable.j2" %}
     {% include "./blocks/get-card.j2" %}
     {% include "./blocks/train-pack.j2" %}
     {% include "./blocks/test-train.j2" %}
