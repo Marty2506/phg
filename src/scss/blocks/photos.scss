@@ -8,12 +8,24 @@
   }
 }
 
-
-
 .photos__title {
   margin-bottom: 30px;
 
+  @media (width >= $laptop-width) {
+    max-width: 80%;
+  }
+
   @media (width >= $desktop-width) {
     margin-bottom: 45px;
+  }
+}
+
+.photos--white-bg {
+  background-color: $white-color;
+  @media (width >= $laptop-width) {
+    padding-bottom: 70px;
+  }
+  @media (width >= $desktop-width) {
+    padding-bottom: 80px;
   }
 }

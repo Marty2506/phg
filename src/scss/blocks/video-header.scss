@@ -314,7 +314,8 @@
 .video-header--program,
 .video-header--zone,
 .video-header--article,
-.video-header--corporate {
+.video-header--corporate,
+.video-header--cross {
   display: flex;
   flex-direction: column;
   padding-top: 45px;
@@ -366,7 +367,15 @@
 
   & .video-header__content {
     @media (width >= $laptop-width) {
-      max-width: 80%;
+      max-width: 82%;
+    }
+  }
+}
+
+.video-header--cross {
+  & .video-header__content {
+    @media (width >= $laptop-width) {
+      max-width: 82%;
     }
   }
 }

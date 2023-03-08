@@ -1,10 +1,10 @@
 {% extends "layout.j2" %}
 
-{% set page = "program-page" %}
+{% set page = "crossfit" %}
 
 {% block content %}
   <main class="page-main">
-    <section class="video-header video-header--program">
+    <section class="video-header video-header--cross">
       <div class="breadcumbs breadcumbs--has-drak-bg">
         <div class="breadcumbs__container container">
           <ul class="breadcumbs__list">
@@ -15,13 +15,13 @@
               </svg>
             </li>
             <li class="breadcumbs__item">
-              <a class="breadcumbs__link" href="./programs.html">Программы</a>
+              <a class="breadcumbs__link" href="./gym.html">О зале</a>
               <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
                 <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
               </svg>
             </li>
             <li class="breadcumbs__item">
-              <span class="breadcumbs__link breadcumbs__link--current">LesMills BodyPump</span>
+              <span class="breadcumbs__link breadcumbs__link--current">Кроссфит</span>
             </li>
           </ul>
         </div>
@@ -29,21 +29,12 @@
       <div class="container">
         <div class="video-header__content">
           <div class="video-header__header">
-            <h1 class="video-header__title page__title page__title--light">LesMills BODYPUMP</h1>
-            <picture class="video-header__program-icon">
-              <source media="(min-width: {{laptopWidth}}" srcset="@img/lesmills/bodypump.png">
-              <img src="@img/lesmills/bodypump-black.png" alt="">
-            </picture>
+            <h1 class="visually-hidden">Кроссфит</h1>
+            <p class="video-header__title page__title page__title--light">Повышайте силу и выносливость на&nbsp;тренировках по кроссфиту в фитнес-клубе powerhouse gym</p>
           </div>
-          <p class="video-header__text">Самая популярная в мире силовая тренировка со штангой&nbsp;с&nbsp;научно доказанной эффективностью</p>
-          <ul class="video-header__list list">
-            <li class="video-header__list-item list__item"><b>Продолжительность:</b><br>30-60 минут</li>
-            <li class="video-header__list-item list__item"><b>Уровень:</b><br>Новичок</li>
-            <li class="video-header__list-item list__item"><b>Сжигает:</b><br>до 540 калорий</li>
-          </ul>
+          <p class="video-header__text">У нас есть все для этого. Десятки турников, брусьев и перекладин. Кольца, тяжелые колеса, канаты и молот. А главное - опытный тренер и более эффективные групповые тренировки</p>
           <div class="video-header__buttons">
-            <a class="button button--reverse video-header__program-button" href="#!">посмотреть расписание</a>
-            <button class="button button--has-dark-bg-laptop video-header__program-button" type="button" data-test-train-modal>пробная тренировка</button>
+            <button class="button button--reverse video-header__program-button" type="button" data-test-train-modal>Записаться на пробную тренировку</button>
           </div>
         </div>
       </div>
@@ -61,68 +52,47 @@
     </section>
 
     <div class="container">
-        <ul class="program-info-list program-info-list--gray">
-          <li class="program-info-list__item mini-info">
-            <div class="mini-info__content">
-              <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
-              <div class="mini-info__main">
-                <p class="mini-info__text">Способствует сжиганию калорий и помогает набрать сухую мышечную массу</p>
-              </div>
+      <ul class="program-info-list program-info-list--gray program-info-list--cross">
+        <li class="program-info-list__item mini-info">
+          <div class="mini-info__content">
+            <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+            <div class="mini-info__main">
+              <p class="mini-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione blanditiis voluptates dignissimos ad quos explicabo ab eaque et. Soluta dolorum id est.</p>
             </div>
-          </li>
-          <li class="program-info-list__item mini-info">
-            <div class="mini-info__content">
-              <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
-              <div class="mini-info__main">
-                <p class="mini-info__text">Основана на многоповторных упражнениях с лёгкими и средними весами в быстром темпе</p>
-              </div>
+          </div>
+        </li>
+        <li class="program-info-list__item mini-info">
+          <div class="mini-info__content">
+            <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+            <div class="mini-info__main">
+              <p class="mini-info__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam laudantium rerum sequi doloremque quos molestias.</p>
             </div>
-          </li>
-          <li class="program-info-list__item mini-info">
-            <div class="mini-info__content">
-              <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
-              <div class="mini-info__main">
-                <p class="mini-info__text">Усиливает выносливость и взрывную силу в короткие сроки</p>
-              </div>
+          </div>
+        </li>
+        <li class="program-info-list__item mini-info">
+          <div class="mini-info__content">
+            <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+            <div class="mini-info__main">
+              <p class="mini-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequuntur harum ea voluptates quaerat placeat voluptatibus delectus nobis quos expedita!</p>
             </div>
-          </li>
-          <li class="program-info-list__item mini-info">
-            <div class="mini-info__content">
-              <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
-              <div class="mini-info__main">
-                <p class="mini-info__text">За одну тренировку вы прорабатывает все основные группы мышц</p>
-              </div>
+          </div>
+        </li>
+        <li class="program-info-list__item mini-info">
+          <div class="mini-info__content">
+            <img class="mini-info__icon" src="@img/icons/yoga-icon.svg" alt="" width="45" height="44">
+            <div class="mini-info__main">
+              <p class="mini-info__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi hic animi pariatur quasi distinctio repellendus rem libero aliquam, tenetur nemo?</p>
             </div>
-          </li>
-        </ul>
+          </div>
+        </li>
+      </ul>
     </div>
 
-    <section class="training-video video-section">
-      <div class="container">
-        <div class="training-video__content video-section__content">
-          <div class="training-video__main video-section__main">
-            <h2 class="training-video__title title">Как проходит тренировка LesMills Bodypump</h2>
-            <ul class="training-video__list list">
-              <li class="training-video__item list__item">Под стимулирующую трендовую музыку с использованием штанги и  набором весов от 2-ух до 60-ти кг.</li>
-              <li class="training-video__item list__item">Включает основные упражнения: приседания, выпады, наклоны, тяги, жимы и разгибания</li>
-              <li class="training-video__item list__item">Длится 59 минут и состоит из 8 частей, каждая из которых направлена на работу с определённой группой мышц и сопровождается своим музыкальным треком</li>
-              <li class="training-video__item list__item">Тренировка начинается и заканчивается разминкой, также со своим музыкальным треком</li>
-              <li class="training-video__item list__item">Во время занятий используются гантели, степ-платформа и специальная мини-штанга</li>
-            </ul>
-          </div>
-          <div class="training-video__video-wrapper video-section__video-wrapper">
-            <iframe class="video-section__video" width="560" height="315" src="https://www.youtube.com/embed/vtIQcIMr7iM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {% include "./blocks/fitquest.j2" %}
-
+    {# Счетчик для свайпера в gym-walk #}
     {% set gallerySwiperCnt = 1 %}
-    <section class="photos pads">
+    <section class="photos photos--white-bg pads">
       <div class="photos__container container">
-        <h2 class="photos__title title">фото с тренировок LesMills Bodypump</h2>
+        <h2 class="photos__title title"><span>Современная укомплектованная площадка</span> для&nbsp;кроссфита и работы со своими весом</h2>
         <div class="photos__gallery gallery">
           {% set imageCount = 1 %}
           <div class="gallery__swiper-wrapper">
@@ -294,39 +264,142 @@
     </section>
     {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
 
+    <section class="about-zone section pads">
+      <div class="container">
+        <div class="about-zone__content">
+          <h2 class="about-zone__title title">Полный комплект инвентаря для работы со&nbsp;своим телом в зоне кроссфита</h2>
+          <div class="about-zone__swiper-container">
+            <div class="about-zone__swiper-buttons section__swiper-buttons">
+              <button class="section__swiper-button swiper-button swiper-button--prev" id="about-zone-swiper-btn-prev" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть назад</span>
+              </button>
+              <button class="section__swiper-button swiper-button swiper-button--next" id="about-zone-swiper-btn-next" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть вперед</span>
+              </button>
+            </div>
+            <div class="about-zone__swiper swiper section__swiper" id="about-zone-swiper">
+              <div class="swiper-wrapper">
+                <div class="about-zone__card swiper-slide section__swiper-slide">
+                  <div class="about-zone__card-content">
+                    <p class="about-zone__card-title">Молот</p>
+                    <picture class="about-zone__card-image-wrapper">
+                      <source type="image/webp" srcset="@img/about-zone-image.webp 1x">
+                      <img class="about-zone__card-image" src="@img/about-zone-image.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="about-zone__card swiper-slide section__swiper-slide">
+                  <div class="about-zone__card-content">
+                    <p class="about-zone__card-title">Колеса от грузовика</p>
+                    <picture class="about-zone__card-image-wrapper">
+                      <source type="image/webp" srcset="@img/about-zone-image.webp 1x">
+                      <img class="about-zone__card-image" src="@img/about-zone-image.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="about-zone__card swiper-slide section__swiper-slide">
+                  <div class="about-zone__card-content">
+                    <p class="about-zone__card-title">Степперы</p>
+                    <picture class="about-zone__card-image-wrapper">
+                      <source type="image/webp" srcset="@img/about-zone-image.webp 1x">
+                      <img class="about-zone__card-image" src="@img/about-zone-image.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="about-zone__card swiper-slide section__swiper-slide">
+                  <div class="about-zone__card-content">
+                    <p class="about-zone__card-title">Степперы</p>
+                    <picture class="about-zone__card-image-wrapper">
+                      <source type="image/webp" srcset="@img/about-zone-image.webp 1x">
+                      <img class="about-zone__card-image" src="@img/about-zone-image.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    {% set trainersTitle = "Тренеры LesMills BodyPump" %}
+    <section class="grid-gallery section pads">
+      <div class="container">
+        <div class="grid-gallery__content">
+          <h2 class="grid-gallery__title title">Фото с тренировок в зоне кроссфита</h2>
+          <div class="grid-gallery__gallery-container">
+            <div class="grid-gallery__swiper-buttons section__swiper-buttons">
+              <button class="section__swiper-button swiper-button swiper-button--prev" id="grid-gallery-swiper-btn-prev" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть назад</span>
+              </button>
+              <button class="section__swiper-button swiper-button swiper-button--next" id="grid-gallery-swiper-btn-next" type="button">
+                <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
+                  <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
+                </svg>
+                <span class="visually-hidden">Перелестнуть вперед</span>
+              </button>
+            </div>
+            <div class="grid-gallery__gallery grid-gallery__swiper section__swiper" id="grid-gallery-swiper">
+              <div class="grid-gallery__gallery-wrapper swiper-wrapper">
+                {% for gridGalleryImageCounter in range(12) %}
+                  <div class="grid-gallery__slide swiper-slide">
+                    <a class="grid-gallery__link-image" href="@img/grid-gallery/{{(gridGalleryImageCounter % 6) + 1}}.webp" data-grid-gallery-link>
+                      <picture>
+                        <source type="image/webp" srcset="@img/grid-gallery/{{(gridGalleryImageCounter % 6) + 1}}-preview.webp 1x">
+                        <img class="grid-gallery__slide-image" src="@img/grid-gallery/{{(gridGalleryImageCounter % 6) + 1}}-preview.jpg" alt="">
+                      </picture>
+                    </a>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          <button class="button button--show-more" type="button">показать еще</button>
+        </div>
+      </div>
+    </section>
+
+    {% set trainersTitle = "Опытные тренеры помогут достичь результата" %}
+    {% set trainersText = "Помогут подобрать подходящие веса, достичь правильной техники выполнения упражнений и отследить прогресс" %}
     {% include "./blocks/trainers.j2" %}
-
+    {% set getCardTitle = "Получите неограниченный доступ <span>к зоне кардио</span>, оформив клубную карту" %}
     {% include "./blocks/get-card.j2" %}
-
-    {% include "./blocks/train-pack.j2" %}
     {% include "./blocks/test-train.j2" %}
     {% include "./blocks/max-result.j2" %}
     {% include "./blocks/contacts.j2" %}
+
     {% include "./blocks/gym-walk.j2" %}
-    {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
     {% include "./blocks/promos.j2" %}
+    {# Счетчик для свайпера в other-trainings #}
+    {% set gallerySwiperCnt = gallerySwiperCnt + 1 %}
     {% include "./blocks/other-trainings.j2" %}
 
 
-
   </main>
-
-  {% include "./blocks/side-panel.j2" %}
-
 {% endblock content %}
+
+{% block modal %}
+  {% include "./blocks/modal-image.j2" %}
+{% endblock %}
 
 {% block js %}
   <script src="./js/swiper-bundle.min.js"></script>
-  <script src="./js/side-panel.min.js"></script>
-  <script src="./js/tariffs.min.js"></script>
-  <script src="./js/train-pack.min.js"></script>
-  <script src="./js/main.min.js"></script>
+  <script src="./js/about-zone.min.js"></script>
+  <script src="./js/grid-gallery.min.js"></script>
+  <script src="./js/modal-image.min.js"></script>
   <script src="./js/gallery.min.js"></script>
-  <script src="./js/scale.min.js"></script>
+  <script src="./js/tariffs.min.js"></script>
   <script src="./js/test-train.min.js"></script>
   <script src="./js/map.min.js"></script>
   <script src="./js/promos.min.js"></script>
   <script src="./js/tabs.min.js"></script>
+  <script src="./js/main.min.js"></script>
 {% endblock %}
