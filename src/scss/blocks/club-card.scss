@@ -23,13 +23,25 @@
   padding-bottom: 54.8%;
 }
 
-.club-card__image {
+
+.club-card__image,
+.club-card__link {
   position: absolute;
   top: 0;
   left: 0;
 
   width: 100%;
   height: 100%;
+}
+
+.club-card__link {
+  z-index: 1;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: transparentize(#000, 0.8);
+  }
 }
 
 .club-card__main {
@@ -118,13 +130,19 @@
 
 .club-card__button {
   margin-top: auto;
+  &:hover,
+  &:focus-visible {
+    color: $white-color;
+    background-color: $secondary-color;
+  }
 }
 
 .club-card--green {
   & .club-card__button {
     border-color: $green-color;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       background-color: $green-color;
     }
   }
@@ -134,7 +152,8 @@
   & .club-card__button {
     border-color: $blue-color;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       background-color: $blue-color;
     }
   }
@@ -144,7 +163,8 @@
   & .club-card__button {
     border-color: $orange-color;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       background-color: $orange-color;
     }
   }
