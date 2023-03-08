@@ -1,0 +1,15 @@
+.timetable {
+  background-color: $white-color;
+}
+.timetable--own-page {
+  background-color: transparent;
+  @media (width >= $laptop-width) {
+    padding-top: 0;
+  }
+}
+.timetable__content {
+  display: flex;
+  flex-direction: column;
+}
+.timetable__title {
+}
