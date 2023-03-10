@@ -41,6 +41,11 @@ ol {
     color: $font-default;
   }
 }
+.link--has-dark-bg {
+  &:hover {
+    color: $bg-color2;
+  }
+}
 
 .pads {
   padding-top: 50px;
