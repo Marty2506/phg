@@ -142,7 +142,7 @@
                       <span class="visually-hidden">Перелестнуть вперед</span>
                     </button>
                   </div>
-                  <div class="reviews__videos-swiper section__swiper swiper" id="section-swiper-{{reviewsVideoSwiperCnt}}" data-reviews-video-swiper>
+                  <div class="reviews__videos-swiper section__swiper swiper" id="reviews-video-swiper-{{reviewsVideoSwiperCnt}}" data-reviews-video-swiper>
                     <div class="swiper-wrapper">
                       {% for slideIndex in range(VIDEO_REVIEWS_NUM) %}
                         <div class="reviews__videos-swiper-slide section__swiper-slide swiper-slide">
@@ -159,20 +159,20 @@
                 <div class="reviews__in-messengers">
                   {% set reviewsInMessengersSwiperCnt = 1 %}
                   <div class="section__swiper-buttons">
-                    <button class="section__swiper-button swiper-button swiper-button--prev" id="reviews-video-swiper-{{reviewsInMessengersSwiperCnt}}-btn-prev" type="button">
+                    <button class="section__swiper-button swiper-button swiper-button--prev" id="reviews-in-messengers-swiper-{{reviewsInMessengersSwiperCnt}}-btn-prev" type="button">
                       <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
                         <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
                       </svg>
                       <span class="visually-hidden">Перелестнуть назад</span>
                     </button>
-                    <button class="section__swiper-button swiper-button swiper-button--next" id="reviews-video-swiper-{{reviewsInMessengersSwiperCnt}}-btn-next" type="button">
+                    <button class="section__swiper-button swiper-button swiper-button--next" id="reviews-in-messengers-swiper-{{reviewsInMessengersSwiperCnt}}-btn-next" type="button">
                       <svg class="swiper-button-icon" width="14" height="23" viewBox="0 0 11 17">
                         <use xlink:href="img/sprite.svg#swiper-arrow-icon"></use>
                       </svg>
                       <span class="visually-hidden">Перелестнуть вперед</span>
                     </button>
                   </div>
-                  <div class="reviews__in-messengers-swiper section__swiper swiper" id="section-swiper-{{reviewsInMessengersSwiperCnt}}" data-reviews-in-messengers-swiper>
+                  <div class="reviews__in-messengers-swiper section__swiper swiper" id="reviews-in-messengers-swiper-{{reviewsInMessengersSwiperCnt}}" data-reviews-in-messengers-swiper>
                     <div class="swiper-wrapper">
                       {% for slideIndex in range(MESSENGERS_REVIEWS_NUM) %}
                         <div class="reviews__in-messengers-swiper-slide section__swiper-slide swiper-slide">

@@ -1,31 +1,28 @@
 {% extends "layout.j2" %}
 
-{% set page = "reviews" %}
+{% set page = "after-request" %}
 
 {% block content %}
-  <main class="page-main bg">
-    <div class="breadcumbs">
-      <div class="breadcumbs__container container">
-        <ul class="breadcumbs__list">
-          <li class="breadcumbs__item">
-            <a class="breadcumbs__link" href="./index.html">Главная</a>
-            <svg class="breadcumbs__arrow" width="6" height="9" viewBox="0 0 6 9">
-              <use xlink:href="img/sprite.svg#breadcumbs-arrow"></use>
-            </svg>
-          </li>
-          <li class="breadcumbs__item">
-            <span class="breadcumbs__link breadcumbs__link--current">Отзывы</span>
-          </li>
-        </ul>
+  <main class="page-main">
+    <section class="after-request pads">
+      <div class="container">
+        <div class="after-request__content">
+          <h1 class="visually-hidden">Ответ на полученную заявку</h1>
+          <p class="after-request__title title">Мы получили вашу заявку и <span>свяжемся с&nbsp;вами в течение 10 минут</span>, чтобы ответить на вопросы</p>
+          <p class="after-request__text">Пока ждете, посмотрите тур по клубу с руководителем и экс-бодибилдером Александром Вишняком</p>
+          <div class="after-request__video-wrapper">
+            <iframe class="video-section__video" width="560" height="315" src="https://www.youtube.com/embed/bK9ZwzDDrM0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
     {% set VIDEO_REVIEWS_NUM = 3 %}
     {% set MESSENGERS_REVIEWS_NUM = 10 %}
-    <section class="reviews reviews--own-page section">
+    <section class="reviews section">
       <div class="container">
         <div class="reviews__content">
-          <h1 class="page__title">Отзывы</h1>
+          <h2 class="reviews__title title">Почитайте отзывы о клубе</h2>
           <div class="section__tabs tabs">
             <ul class="section__tabs-list tabs__list" role="tablist">
               <li class="section__tabs-item tabs__item" role="presentation">
@@ -58,7 +55,7 @@
                       {% for slideIndex in range(VIDEO_REVIEWS_NUM) %}
                         <div class="reviews__videos-swiper-slide section__swiper-slide swiper-slide">
                           <div class="reviews__video-wrapper">
-                            <iframe class="reviews__video" width="560" height="315" src="https://www.youtube.com/embed/vtIQcIMr7iM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe class="reviews__video" width="560" height="315" src="https://www.youtube.com/embed/vtIQcIMr7iM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                           </div>
                         </div>
                       {% endfor %}
@@ -89,7 +86,7 @@
                         <div class="reviews__in-messengers-swiper-slide section__swiper-slide swiper-slide">
                           <picture>
                             <source type="image/webp" srcset="@img/messenger-review.webp 1x">
-                            <img class="reviews__in-messengers-image" src="@img/messenger-review.jpg" alt="Отзыв в мессенджере {{slideIndex + 1}}">
+                            <img class="reviews__in-messengers-image" src="@img/messenger-review.jpg" alt="Отзыв в мессенджере {{slideIndex + 1}}" loading="lazy">
                           </picture>
                         </div>
                       {% endfor %}
@@ -102,16 +99,17 @@
         </div>
       </div>
     </section>
+
+    {% set trainersTitle = "Посмотрите тренеров powerhouse gym" %}
+    {% include "./blocks/trainers.j2" %}
   </main>
 
 {% endblock content %}
 
 {% block js %}
-  {# Вендорские #}
   <script src="./js/swiper-bundle.min.js"></script>
-  {# Основные #}
   <script src="./js/main.min.js"></script>
   <script src="./js/tabs.min.js"></script>
-  {# Для блоков #}
+  <script src="./js/gallery.min.js"></script>
   <script src="./js/reviews-swipers.min.js"></script>
 {% endblock %}

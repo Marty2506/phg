@@ -119,6 +119,10 @@
     {
       "title": "Подбор тренировок",
       "href": "training-for-you"
+    },
+    {
+      "title": "Служебные страницы",
+      "href": "service-pages"
     }
   ],
   "footerNav": [
