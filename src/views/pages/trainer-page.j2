@@ -77,7 +77,7 @@
                     <div class="trainer__main-swiper-slide gallery__swiper-slide swiper-slide">
                       <picture class="trainer__slide-wrapper">
                         <source type="image/webp" srcset="@img/trainer-slide-{{slideIndex + 1}}.webp 1x">
-                        <img class="gallery__image" src="@img/trainer-slide-{{slideIndex + 1}}.jpg" alt="Описание слайда {{slideIndex + 1}}">
+                        <img class="gallery__image" src="@img/trainer-slide-{{slideIndex + 1}}.jpg" alt="Описание слайда {{slideIndex + 1}}" width="1148" height="694" loading="lazy">
                       </picture>
                       {% if slideIndex == 0 %}
                         <a class="trainer__play-video-button button button--reverse button--play" href="./files/ryan.mp4" data-play-video-button>
@@ -97,7 +97,7 @@
                     <div class="gallery__swiper-thumb swiper-slide">
                       <picture class="gallery__swiper-thumb-wrapper">
                         <source type="image/webp" srcset="@img/trainer-slide-{{slideIndex + 1}}-preview.webp 1x">
-                        <img class="gallery__image" src="@img/trainer-slide-{{slideIndex + 1}}-preview.jpg" alt="Превью слайда {{slideIndex + 1}}">
+                        <img class="gallery__image" src="@img/trainer-slide-{{slideIndex + 1}}-preview.jpg" alt="Превью слайда {{slideIndex + 1}}" width="143" height="100" loading="lazy">
                       </picture>
                     </div>
                   {% endfor %}
