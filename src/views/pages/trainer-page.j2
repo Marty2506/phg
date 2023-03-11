@@ -80,7 +80,7 @@
                         <img class="gallery__image" src="@img/trainer-slide-{{slideIndex + 1}}.jpg" alt="Описание слайда {{slideIndex + 1}}">
                       </picture>
                       {% if slideIndex == 0 %}
-                        <a class="trainer__play-video-button button button--reverse button--play" href="#!">
+                        <a class="trainer__play-video-button button button--reverse button--play" href="./files/ryan.mp4" data-play-video-button>
                           <svg class="button__icon" width="33" height="30" viewBox="0 0 35 40">
                             <use xlink:href="img/sprite.svg#play-icon"></use>
                           </svg>
@@ -199,10 +199,12 @@
 
 {% endblock content %}
 
+
 {% block js %}
   <script src="./js/swiper-bundle.min.js"></script>
   <script src="./js/gallery.min.js"></script>
   <script src="./js/reviews-swipers.min.js"></script>
   <script src="./js/main.min.js"></script>
   <script src="./js/tabs.min.js"></script>
+  <script src="./js/modal-video.min.js"></script>
 {% endblock %}

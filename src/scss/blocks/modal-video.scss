@@ -1,0 +1,62 @@
+.modal-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: auto;
+
+  background-color: rgb(0 0 0 / 90%);
+}
+
+.modal-video--opened {
+  display: flex;
+}
+
+.modal-video__close-button {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  padding: 5px;
+  font-size: 18px;
+  line-height: 27px;
+  color: $white-color;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  transform: translateY(-100%);
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $secondary-color;
+  }
+  &:focus-visible {
+    outline: 2px solid $secondary-color;
+    border-radius: 0.4rem;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.modal-video__content-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin: auto;
+  padding: 0;
+
+  animation-name: zoom;
+  animation-duration: 0.6s;
+
+  @media (min-width: $tablet-width) {
+    max-width: 80%;
+  }
+}
