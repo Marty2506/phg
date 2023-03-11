@@ -13,6 +13,10 @@
 
   transition: all 0.4s ease;
 
+  @media (width < $laptop-width) {
+    display: none;
+  }
+
   &:hover {
     transform: scale(1.05) translate(5px, -5px);
   }
