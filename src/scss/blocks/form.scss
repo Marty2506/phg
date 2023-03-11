@@ -29,9 +29,9 @@
 .form__field {
   padding: 20px 16px;
 
-  font-family: $main-font;
   font-size: 17px;
   line-height: 25px;
+  font-family: $main-font;
   color: $font-default;
 
   background-color: $white-color;
@@ -49,8 +49,9 @@
 }
 
 textarea.form__field {
-  resize: none;
   width: 100%;
+
+  resize: none;
 }
 
 .has-white-bg .form__field {

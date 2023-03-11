@@ -1,9 +1,9 @@
 .loop-video {
   position: relative;
+  z-index: 1;
 
   display: flex;
   flex-direction: column;
-  z-index: 1;
 
   @media (width >= $laptop-width) {
     &::after {
@@ -20,6 +20,7 @@
     }
   }
 }
+
 .loop-video--no-red-square {
   &::after {
     content: none;

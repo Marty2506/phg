@@ -94,6 +94,7 @@ $page-header-paddigns: 7px;
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
+
   // margin-left: auto;
 
   @media (width < $desktop-width) {
@@ -122,11 +123,11 @@ $page-header-paddigns: 7px;
 
 .page-header__nav-list {
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
   align-items: center;
   min-width: 290px;
   padding: 0 20px;
-  flex-grow: 1;
 
   gap: 12px;
 
@@ -151,7 +152,6 @@ $page-header-paddigns: 7px;
 
 .page-header__nav-link {
   display: flex;
-  gap: 10px;
   align-items: center;
   height: 100%;
   padding: 5px 0;
@@ -166,6 +166,8 @@ $page-header-paddigns: 7px;
 
   transition: opacity, color 0.3s ease;
 
+  gap: 10px;
+
   &:hover {
     color: $secondary-color;
   }
@@ -177,9 +179,10 @@ $page-header-paddigns: 7px;
 }
 
 .page-header__timetable-icon {
+  transition: all 0.3s ease;
+
   fill: $bg-color;
   stroke: $bg-color;
-  transition: all 0.3s ease;
 }
 
 .page-header__nav-link--has-icon {
@@ -281,17 +284,16 @@ $page-header-paddigns: 7px;
   gap: 8px;
 
   @media (width >= $laptop-width) {
-    padding: 0 15px;
     min-width: 290px;
-
+    padding: 0 15px;
   }
   @media (width < $laptop-width + 200px) {
     // max-width: min-content;
   }
   @media (width >= $desktop-width) {
+    min-width: 340px;
     max-width: initial;
     padding: 0 25px;
-    min-width: 340px;
   }
 }
 

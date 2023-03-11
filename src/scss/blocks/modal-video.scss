@@ -22,23 +22,26 @@
   position: absolute;
   top: 0;
   right: 8px;
+
   padding: 5px;
+
   font-size: 18px;
   line-height: 27px;
   color: $white-color;
+
   background-color: transparent;
   border: none;
+  transform: translateY(-100%);
   cursor: pointer;
 
-  transform: translateY(-100%);
   transition: color 0.3s ease;
 
   &:hover {
     color: $secondary-color;
   }
   &:focus-visible {
-    outline: 2px solid $secondary-color;
     border-radius: 0.4rem;
+    outline: 2px solid $secondary-color;
   }
   &:active {
     opacity: 0.6;
@@ -47,6 +50,7 @@
 
 .modal-video__content-wrapper {
   position: relative;
+
   display: flex;
   justify-content: center;
   max-width: 100%;

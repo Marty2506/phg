@@ -4,24 +4,25 @@
   @media (width >= $laptop-width) {
     padding-bottom: 40px;
   }
-
   @media (width >= $desktop-width) {
     padding-bottom: 50px;
   }
 }
-.kid-fitness__content {
-}
+
+
+
 .kid-fitness__cards {
   display: flex;
   flex-direction: column;
+
   gap: 20px;
 
   @media (width >= $tablet-width) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
 
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
   @media (width >= $laptop-width) {
     gap: 40px;
   }
@@ -29,33 +30,41 @@
     gap: 50px;
   }
 }
+
 .kid-fitness__card {
   display: flex;
   flex-direction: column;
 }
+
 .kid-fitness__card-title,
 .kid-fitness__card-text {
   max-width: 535px;
 }
+
 .kid-fitness__card-title {
   margin-bottom: 10px;
 }
+
 .kid-fitness__card-text {
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
-  line-height: 130%;
+
   font-size: 16px;
+  line-height: 130%;
 
   @media (width >= $laptop-width) {
     font-size: 18px;
   }
 }
+
 .kid-fitness__card-image-wrapper {
-  margin-top: auto;
   width: 100%;
+  margin-top: auto;
 }
+
 .kid-fitness__card-image {
   width: 100%;
+
   object-fit: cover;
 }

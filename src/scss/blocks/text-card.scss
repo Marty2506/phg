@@ -1,12 +1,13 @@
 .text-card {
   position: relative;
-  background-color: $white-color;
+
   padding: 20px 15px;
+
+  background-color: $white-color;
 
   @media (width >= $tablet-width) {
     padding: 30px 50px;
   }
-
   @media (width >= $laptop-width) {
     padding: 40px 60px;
     padding-bottom: 60px;
@@ -16,46 +17,55 @@
     padding-bottom: 80px;
   }
 }
+
 .text-card__content {
   display: flex;
   flex-direction: column;
+
   gap: 20px;
 }
+
 .text-card__title,
 .text-card__sub-title {
   margin: 0;
   padding: 0;
+
+  font-weight: 600;
   line-height: 130%;
   font-family: $header-font;
-  font-weight: 600;
 }
+
 .text-card__title {
   font-size: 22px;
+
   transition: color 0.3s ease;
 
   @media (width < $tablet-width) {
     color: $secondary-color;
   }
-
   @media (width >= $tablet-width) {
     font-size: 26px;
   }
-
   @media (width >= $laptop-width) {
     font-size: 30px;
   }
 }
+
 .text-card__sub-title {
   margin-bottom: 10px;
+
   font-size: 16px;
 }
+
 .text-card__group {
   display: flex;
   flex-direction: column;
 }
+
 .text-card__text {
   margin: 0;
   padding: 0;
+
   font-size: 16px;
   line-height: 130%;
 }
@@ -63,6 +73,7 @@
 .text-card__list {
   gap: 10px;
 }
+
 .text-card__list-item {
   font-size: 16px;
 }
@@ -71,15 +82,19 @@
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
+
   text-decoration: none;
 }
+
 .text-card {
   &:hover,
   &:focus-within {
     & .text-card__title {
       color: $secondary-color;
+
       @media (width < $tablet-width) {
         color: $font-default;
       }

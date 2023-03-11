@@ -177,6 +177,7 @@
 .gym-info__panel-main {
   position: relative;
   z-index: 1;
+
   @media (width >= $tablet-width) {
     padding-bottom: 55px;
   }
@@ -217,26 +218,31 @@
     margin-bottom: 25px;
   }
 }
+
 .gym-info__panel-logos {
   display: flex;
-  gap: 15px;
   align-items: flex-start;
   margin-bottom: 20px;
+
+  gap: 15px;
 
   @media (width >= $laptop-width) {
     margin-bottom: 25px;
   }
 }
+
 .gym-info__panel-text {
+  max-width: 370px;
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
+
   font-size: 16px;
   line-height: 130%;
-  max-width: 370px;
 
   @media (width >= $laptop-width) {
     margin-bottom: 25px;
+
     font-size: 18px;
   }
 }
@@ -260,15 +266,18 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: -1;
+
   margin: 0;
   padding: 0;
-  font-family: $header-font;
+
   font-size: 450px;
   line-height: 100%;
+  font-family: $header-font;
   color: transparentize($secondary-color, 0.96);
   text-transform: uppercase;
+
   transform: translate(-152px, 50px);
-  z-index: -1;
   cursor: default;
 
   @media (width < $laptop-width) {

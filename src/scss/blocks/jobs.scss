@@ -1,13 +1,14 @@
 .jobs {
-
   @media (width >= $laptop-width) {
     padding-top: 0;
   }
 }
+
 .jobs__content {
   display: flex;
   flex-direction: column;
 }
+
 .jobs__title {
   margin-bottom: 20px;
 
@@ -15,42 +16,51 @@
     margin-bottom: 22px;
   }
 }
+
 .jobs__text {
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
+
   font-size: 16px;
   line-height: 130%;
 
   @media (width >= $laptop-width) {
-    font-size: 20px;
     margin-bottom: 15px;
+
+    font-size: 20px;
   }
 }
+
 .jobs__contacts {
-  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
+
   gap: 2px;
 
   @media (width >= $laptop-width) {
-    margin-bottom: 40px;
     flex-direction: row;
+    margin-bottom: 40px;
+
     gap: 30px;
   }
   @media (width >= $desktop-width) {
     margin-bottom: 70px;
+
     gap: 45px;
   }
 }
+
 .jobs__link {
   display: inline-block;
   margin: 0;
   padding: 2px;
-  text-decoration: none;
-  color: $font-default;
+
   font-size: 20px;
   line-height: 120%;
+  color: $font-default;
+  text-decoration: none;
 
   &:hover {
     color: $secondary-color;
@@ -59,33 +69,31 @@
   @media (width >= $laptop-width) {
     font-size: 30px;
   }
-
   @media (width >= $desktop-width) {
     font-size: 35px;
   }
+}
 
-}
-.jobs__link--tel {
-}
-.jobs__link--email {
-}
+
+
+
+
 .jobs__list {
   display: flex;
   flex-direction: column;
+
   gap: 15px;
 
   @media (width >= $tablet-width) {
     gap: 30px;
   }
-
   @media (width >= $laptop-width) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
     gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
   }
   @media (width >= $desktop-width) {
     gap: 75px;
   }
-}
-.jobs__list-item {
 }

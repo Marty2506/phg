@@ -36,11 +36,13 @@
 
 .club-card__link {
   z-index: 1;
+
   text-decoration: none;
+
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: transparentize(#000, 0.8);
+    background-color: transparentize(#000000, 0.8);
   }
 }
 
@@ -133,6 +135,7 @@
   &:hover,
   &:focus-visible {
     color: $white-color;
+
     background-color: $secondary-color;
   }
 }

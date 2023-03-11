@@ -1,32 +1,38 @@
-.accordion {
-}
+
+
 .accordion__header {
-  cursor: default;
   position: relative;
+
+  cursor: default;
 
   &::after {
     content: "";
     position: absolute;
     top: 50%;
     right: 0;
-    height: 24px;
+
     width: 12px;
+    height: 24px;
 
     background-image: url("@img/icons/accordion-arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
+    transform: translateY(var(--acc-pos)) rotate(var(--acc-rot));
+
+    transition: transform 0.3s ease;
+
     --acc-pos: -50%;
     --acc-rot: 0deg;
-    transform: translateY(var(--acc-pos)) rotate(var(--acc-rot));
-    transition: transform 0.3s ease;
   }
 }
+
 .accordion__content {
   max-height: 0;
   overflow: hidden;
 
   transition: max-height 0.25s ease-out;
 }
+
 .accordion--opened {
   & .accordion__header {
     &::after {
