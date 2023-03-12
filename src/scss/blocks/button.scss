@@ -133,3 +133,27 @@
     height: 70px;
   }
 }
+
+.button:disabled,
+.button[disabled] {
+  border-color: #999999;
+  background-color: #cccccc;
+  color: #666666;
+  opacity: 1;
+}
+
+.button--form-submitted {
+  &::after {
+    content: "";
+    width: 22px;
+    height: 17px;
+    background-image: url('@img/icons/form-submitted-check.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.button.button--form-submitted {
+  color: $white-color;
+  background-color: transparentize($secondary-color, 0.2);
+}
